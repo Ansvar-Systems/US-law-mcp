@@ -75,7 +75,7 @@ export async function validateCitation(
   // Strategy 2: extract section number from citation (e.g. "18 USC 1030" → "%1030%")
   if (!provRow) {
     const sectionMatch = trimmed.match(/§?\s*(\d[\w.-]*(?:\([a-zA-Z0-9]+\))*)/);
-    if (sectionMatch) {
+    if (sectionMatch?.[1]) {
       const sectionRef = sectionMatch[1].replace(/[%_]/g, '\\$&');
       provRow = db.prepare(provBaseSql + ` AND p.section_number LIKE ? ESCAPE '\\' LIMIT 1`).get(
         docId, docShort, `%${sectionRef}%`,
