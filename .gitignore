@@ -1,0 +1,9 @@
+node_modules/
+dist/
+data/database.db
+data/seed/raw/
+*.db-journal
+*.db-wal
+*.db-shm
+.vercel/
+.env

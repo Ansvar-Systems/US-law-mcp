@@ -1,0 +1,45 @@
+{
+  "name": "@ansvar/us-law-mcp",
+  "version": "0.1.0",
+  "mcpName": "us.ansvar/us-law-mcp",
+  "description": "US federal and state cybersecurity/privacy law MCP server with cross-state comparison",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "us-law-mcp": "dist/index.js"
+  },
+  "files": ["dist", "data/database.db", "server.json"],
+  "scripts": {
+    "build": "tsc",
+    "build:db": "tsx scripts/build-db.ts",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:contract": "vitest run __tests__/contract/",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit",
+    "validate": "npm run lint && npm test && npm run test:contract",
+    "ingest:federal": "tsx scripts/ingest/federal.ts",
+    "ingest:states": "tsx scripts/ingest/states.ts",
+    "ingest:classify": "tsx scripts/ingest/classify.ts",
+    "ingest:all": "npm run ingest:federal && npm run ingest:states && npm run ingest:classify"
+  },
+  "dependencies": {
+    "@ansvar/mcp-sqlite": "^1.0.0",
+    "@modelcontextprotocol/sdk": "^1.25.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.29",
+    "@vercel/node": "^5.6.3",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "engines": { "node": ">=18" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ansvar-Systems/US-law-mcp.git"
+  },
+  "author": "Ansvar Systems AB <hello@ansvar.ai>",
+  "license": "Apache-2.0"
+}

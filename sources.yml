@@ -1,0 +1,34 @@
+schema_version: "1.0"
+mcp_name: "US Law MCP"
+jurisdiction: "US"
+
+sources:
+  - name: "US Code (USLM)"
+    authority: "Office of the Law Revision Counsel, US House of Representatives"
+    official_portal: "https://uscode.house.gov"
+    retrieval_method: "XML_DOWNLOAD"
+    update_frequency: "monthly"
+    license_or_terms:
+      type: "Public Domain"
+      url: "https://uscode.house.gov/about/info.shtml"
+      summary: "US federal law is public domain"
+    coverage:
+      scope: "Titles 6, 15, 18, 42, 44, 47 (cybersecurity/privacy focus)"
+      limitations: "Not all USC titles included"
+    languages:
+      - "en"
+
+  - name: "State Legislative Portals"
+    authority: "Individual state legislatures (50 states)"
+    official_portal: "Various (see state-law-index.yml)"
+    retrieval_method: "HTML_SCRAPE"
+    update_frequency: "quarterly"
+    license_or_terms:
+      type: "Public Domain"
+      url: "N/A"
+      summary: "State law is public domain (US government works doctrine)"
+    coverage:
+      scope: "Cybersecurity, data privacy, breach notification statutes"
+      limitations: "Not full state codes -- focused on cyber/privacy"
+    languages:
+      - "en"
