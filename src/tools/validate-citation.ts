@@ -57,16 +57,38 @@ export async function validateCitation(
   }
 
   // Try to match a provision section_number within the matched document
-  const provSql = `
+  // Strategy 1: direct LIKE match on citation
+  let provRow: { section_number: string | null; title: string | null } | undefined;
+  const provBaseSql = `
     SELECT p.section_number, p.title
     FROM legal_provisions AS p
     JOIN legal_documents AS d ON p.document_id = d.id
-    WHERE (d.identifier = ? OR d.short_name = ?) AND p.section_number LIKE ?
-    LIMIT 1
+    WHERE (d.identifier = ? OR d.short_name = ?)
   `;
-  const provRow = db.prepare(provSql).get(
-    docRow.identifier ?? '', docRow.short_name ?? '', likePattern
-  ) as { section_number: string | null; title: string | null } | undefined;
+  const docId = docRow.identifier ?? '';
+  const docShort = docRow.short_name ?? '';
+
+  provRow = db.prepare(provBaseSql + ` AND p.section_number LIKE ? ESCAPE '\\' LIMIT 1`).get(
+    docId, docShort, likePattern,
+  ) as typeof provRow;
+
+  // Strategy 2: extract section number from citation (e.g. "18 USC 1030" → "%1030%")
+  if (!provRow) {
+    const sectionMatch = trimmed.match(/§?\s*(\d[\w.-]*(?:\([a-zA-Z0-9]+\))*)/);
+    if (sectionMatch) {
+      const sectionRef = sectionMatch[1].replace(/[%_]/g, '\\$&');
+      provRow = db.prepare(provBaseSql + ` AND p.section_number LIKE ? ESCAPE '\\' LIMIT 1`).get(
+        docId, docShort, `%${sectionRef}%`,
+      ) as typeof provRow;
+    }
+  }
+
+  // Strategy 3: return first provision of the matched document as fallback
+  if (!provRow) {
+    provRow = db.prepare(provBaseSql + ` ORDER BY p.order_index LIMIT 1`).get(
+      docId, docShort,
+    ) as typeof provRow;
+  }
 
   return {
     results: {

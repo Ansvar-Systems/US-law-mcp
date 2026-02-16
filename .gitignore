@@ -7,3 +7,4 @@ data/source/
 *.db-shm
 .vercel/
 .env
+.vercel

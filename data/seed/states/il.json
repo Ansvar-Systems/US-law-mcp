@@ -4,30 +4,89 @@
       "jurisdiction": "US-IL",
       "title": "Illinois Personal Information Protection Act",
       "identifier": "815 ILCS 530/",
-      "short_name": "IL Breach",
+      "short_name": "IL PIPA",
       "document_type": "statute",
       "status": "in_force",
       "effective_date": "2006-06-27",
       "last_amended": "2020-01-01",
       "source_url": "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2702&ChapterID=67"
+    },
+    {
+      "jurisdiction": "US-IL",
+      "title": "Biometric Information Privacy Act",
+      "identifier": "740 ILCS 14/",
+      "short_name": "BIPA",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2008-10-03",
+      "last_amended": "2024-08-02",
+      "source_url": "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=3004&ChapterID=57"
     }
   ],
   "provisions": [
     {
       "document_index": 0,
       "jurisdiction": "US-IL",
-      "section_number": "",
-      "title": "LawServer",
-      "text": "Ask an employment law question, get an answer ASAP!Thousands of highly rated, verified employment lawyers Specialties include: Employment Law, EEOC, Pension and Compensation, Harassment Law, Discrimination Law, Termination Law, General Legal and more.Click here to chat with a lawyer about your rights.\n\nChicago Civil Rights Employment Law Firm",
+      "section_number": "530/5",
+      "title": "Definitions",
+      "text": "As used in this Act: \"Data collector\" means any State agency, unit of local government, or any individual, corporation, or other entity that for any purpose, whether by automated collection or otherwise, handles, collects, disseminates, or otherwise deals with nonpublic personal information. \"Breach of the security of the system data\" or \"breach\" means unauthorized acquisition of computerized data that compromises the security, confidentiality, or integrity of personal information maintained by the data collector. Good faith acquisition of personal information by an employee or agent of the data collector for a legitimate purpose of the data collector is not a breach of the security of the system data, provided that the personal information is not used for a purpose unrelated to the data collector or subject to further unauthorized disclosure. \"Personal information\" means an individual first name or first initial and last name in combination with any one or more of the following data elements, when the data elements are not encrypted or redacted: (1) Social Security number; (2) driver license number or State identification card number; (3) account number or credit or debit card number, or an account number or credit card number in combination with any required security code, access code, or password that would permit access to an individual financial account; (4) medical information; (5) health insurance information; or (6) unique biometric data.",
       "order_index": 1
     },
     {
       "document_index": 0,
       "jurisdiction": "US-IL",
-      "section_number": "",
-      "title": "LawServer",
-      "text": "Ask a business law question, get an answer ASAP!Thousands of highly rated, verified business lawyers.Click here to chat with a lawyer about your rights.\n\nOur law firm can help you with your legal problems whether you need a tr…",
+      "section_number": "530/10",
+      "title": "Notice of breach",
+      "text": "Any data collector that owns or licenses personal information concerning an Illinois resident shall notify the resident at no charge that there has been a breach of the security of the system data following discovery or notification of the breach. The disclosure notification shall be made in the most expedient time possible and without unreasonable delay, consistent with any measures necessary to determine the scope of the breach and to restore the reasonable integrity of the data system. Notice required by this Section may be delayed if an appropriate law enforcement agency determines that notification will interfere with a criminal investigation and provides the data collector with a written request for the delay. Notice to Illinois residents shall not be provided solely through an email unless consent has been obtained. The notification shall include (1) the toll-free numbers and addresses for consumer reporting agencies; (2) the toll-free number, address, and website address for the FTC; and (3) a statement that the individual can obtain information from these sources about fraud alerts and security freezes.",
       "order_index": 2
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-IL",
+      "section_number": "530/12",
+      "title": "Notice to Attorney General",
+      "text": "Any data collector that is required to issue notice to more than 500 Illinois residents as a result of a single breach shall, within the time period for providing notice, also provide notice to the Attorney General. The notification to the Attorney General shall include: (1) a description of the nature of the breach; (2) the number of Illinois residents affected or potentially affected; (3) steps taken to investigate the breach; (4) a description of the types of personal information involved; (5) the date of the breach and its discovery; (6) whether notification was delayed due to a law enforcement investigation; (7) contact information for the data collector; and (8) the date the notice was or will be distributed.",
+      "order_index": 3
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-IL",
+      "section_number": "530/20",
+      "title": "Enforcement and penalties",
+      "text": "A violation of this Act constitutes an unlawful practice under the Consumer Fraud and Deceptive Business Practices Act. The Attorney General shall have exclusive authority to bring an action for a violation. The State may recover for each violation civil penalties up to $50,000 per violation, or up to $100,000 per violation if the violation involves a person 65 years of age or older. No private right of action is provided under this Act for breach notification failure.",
+      "order_index": 4
+    },
+    {
+      "document_index": 1,
+      "jurisdiction": "US-IL",
+      "section_number": "14/5",
+      "title": "Legislative findings; intent",
+      "text": "The General Assembly finds all of the following: Biometrics are unlike other unique identifiers that are used to access finances or other sensitive information. Social Security numbers, when compromised, can be changed. Biometrics, however, are biologically unique to the individual; therefore, once compromised, the individual has no recourse, is at heightened risk for identity theft, and is likely to withdraw from biometric-facilitated transactions. The full ramifications of biometric technology are not fully known. The public welfare, security, and safety will be served by regulating the collection, use, safeguarding, handling, storage, retention, and destruction of biometric identifiers and information.",
+      "order_index": 1
+    },
+    {
+      "document_index": 1,
+      "jurisdiction": "US-IL",
+      "section_number": "14/10",
+      "title": "Definitions",
+      "text": "In this Act: \"Biometric identifier\" means a retina or iris scan, fingerprint, voiceprint, or scan of hand or face geometry. Biometric identifiers do not include writing samples, written signatures, photographs, human biological samples used for valid scientific testing or screening, demographic data, tattoo descriptions, or physical descriptions such as height, weight, hair color, or eye color. \"Biometric information\" means any information, regardless of how it is captured, converted, stored, or shared, based on an individual biometric identifier used to identify an individual. Biometric information does not include information derived from items or procedures excluded under the definition of biometric identifiers. \"Confidential and sensitive information\" means personal information that can be used to uniquely identify an individual or an individual account or property. \"Private entity\" means any individual, partnership, corporation, limited liability company, association, or other group, however organized, but does not include a State or local government agency. \"Written release\" means informed written consent or, in the context of employment, a release executed by an employee as a condition of employment.",
+      "order_index": 2
+    },
+    {
+      "document_index": 1,
+      "jurisdiction": "US-IL",
+      "section_number": "14/15",
+      "title": "Retention; collection; disclosure; destruction",
+      "text": "(a) A private entity in possession of biometric identifiers or biometric information must develop a written policy, made available to the public, establishing a retention schedule and guidelines for permanently destroying biometric identifiers and biometric information when the initial purpose for collecting or obtaining such identifiers or information has been satisfied or within 3 years of the individual last interaction with the private entity, whichever occurs first. (b) No private entity may collect, capture, purchase, receive through trade, or otherwise obtain a person biometric identifier or biometric information unless it first: (1) informs the subject or the subject legally authorized representative in writing that a biometric identifier or biometric information is being collected or stored; (2) informs the subject or the subject legally authorized representative in writing of the specific purpose and length of term for which a biometric identifier or biometric information is being collected, stored, and used; and (3) receives a written release executed by the subject of the biometric identifier or biometric information. (c) No private entity in possession of a biometric identifier or biometric information may sell, lease, trade, or otherwise profit from a person biometric identifier or biometric information. (d) No private entity in possession of a biometric identifier or biometric information may disclose, redisclose, or otherwise disseminate a person biometric identifier or biometric information unless: (1) the subject or the subject legally authorized representative consents to the disclosure; (2) the disclosure completes a financial transaction requested or authorized by the subject; (3) the disclosure is required by State or Federal law or municipal ordinance; or (4) the disclosure is required pursuant to a valid warrant or subpoena.",
+      "order_index": 3
+    },
+    {
+      "document_index": 1,
+      "jurisdiction": "US-IL",
+      "section_number": "14/20",
+      "title": "Right of action",
+      "text": "Any person aggrieved by a violation of this Act shall have a right of action in a State circuit court or as a supplemental claim in federal district court against an offending party. A prevailing party may recover for each violation: (1) against a private entity that negligently violates a provision of this Act, liquidated damages of $1,000 or actual damages, whichever is greater; (2) against a private entity that intentionally or recklessly violates a provision of this Act, liquidated damages of $5,000 or actual damages, whichever is greater; (3) reasonable attorneys fees and costs, including expert witness fees and other litigation expenses; (4) other relief, including an injunction, as the State or federal court may deem appropriate. Pursuant to the August 2024 amendment, damages under this Section are assessed on a per-violation basis but not per each individual scan or collection; a single course of conduct involving the same type of biometric data from the same person constitutes a single violation.",
+      "order_index": 4
     }
   ]
 }
