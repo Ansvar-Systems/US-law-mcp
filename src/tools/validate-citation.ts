@@ -33,15 +33,18 @@ export async function validateCitation(
   const jurisdictionClause = jurisdiction ? 'AND d.jurisdiction = ?' : '';
   const baseParams = jurisdiction ? [jurisdiction] : [];
 
+  // Escape LIKE wildcards in user input
+  const escaped = trimmed.replace(/[%_]/g, '\\$&');
+  const likePattern = `%${escaped}%`;
+
   // Check document match (identifier or short_name)
   const docSql = `
     SELECT d.jurisdiction, d.title, d.identifier, d.short_name, d.status
     FROM legal_documents AS d
-    WHERE (d.identifier LIKE ? OR d.short_name LIKE ? OR d.title LIKE ?)
+    WHERE (d.identifier LIKE ? ESCAPE '\\' OR d.short_name LIKE ? ESCAPE '\\' OR d.title LIKE ? ESCAPE '\\')
     ${jurisdictionClause}
     LIMIT 1
   `;
-  const likePattern = `%${trimmed}%`;
   const docRow = db.prepare(docSql).get(likePattern, likePattern, likePattern, ...baseParams) as {
     jurisdiction: string; title: string; identifier: string | null; short_name: string | null; status: string;
   } | undefined;
