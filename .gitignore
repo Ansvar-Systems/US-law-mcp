@@ -1,6 +1,5 @@
 node_modules/
 dist/
-data/database.db
 data/seed/raw/
 data/source/
 *.db-journal

@@ -131,6 +131,23 @@ describe('compare_requirements', () => {
       expect(r.subcategory).toBe('timeline');
     }
   });
+
+  it('compares breach_notification/timeline across CA, NY, TX', async () => {
+    const res = await compareRequirements(db, {
+      category: 'breach_notification',
+      subcategory: 'timeline',
+      jurisdictions: ['US-CA', 'US-NY', 'US-TX'],
+    });
+
+    expect(res.results.length).toBeGreaterThanOrEqual(3);
+    const jurisdictions = res.results.map(r => r.jurisdiction);
+    expect(jurisdictions).toContain('US-CA');
+    expect(jurisdictions).toContain('US-NY');
+    expect(jurisdictions).toContain('US-TX');
+    // TX has a 60-day notification deadline
+    const txResult = res.results.find(r => r.jurisdiction === 'US-TX');
+    expect(txResult!.notification_days).toBe(60);
+  });
 });
 
 // ---------------------------------------------------------------------------
@@ -150,6 +167,31 @@ describe('get_state_requirements', () => {
     // Texas TDPSA includes right to opt out
     const subcategories = res.results.map(r => r.subcategory);
     expect(subcategories).toContain('right_to_opt_out');
+  });
+
+  it('returns privacy_rights entries for US-CA including right_to_know', async () => {
+    const res = await getStateRequirements(db, {
+      jurisdiction: 'US-CA',
+      category: 'privacy_rights',
+    });
+
+    expect(res.results.length).toBeGreaterThanOrEqual(2);
+    expect(res.results.every(r => r.jurisdiction === 'US-CA')).toBe(true);
+    const subcategories = res.results.map(r => r.subcategory);
+    expect(subcategories).toContain('right_to_know');
+    expect(subcategories).toContain('right_to_delete');
+    expect(subcategories).toContain('right_to_opt_out');
+  });
+
+  it('returns breach_notification entries for US-CA', async () => {
+    const res = await getStateRequirements(db, {
+      jurisdiction: 'US-CA',
+      category: 'breach_notification',
+    });
+
+    expect(res.results.length).toBeGreaterThanOrEqual(1);
+    expect(res.results.every(r => r.jurisdiction === 'US-CA')).toBe(true);
+    expect(res.results.every(r => r.category === 'breach_notification')).toBe(true);
   });
 });
 

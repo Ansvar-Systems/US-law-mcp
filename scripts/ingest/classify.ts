@@ -50,6 +50,10 @@ function main(): void {
     'SELECT id FROM legal_documents WHERE short_name = ?'
   );
 
+  const findDocumentFuzzy = db.prepare(
+    'SELECT id FROM legal_documents WHERE short_name LIKE ? || \'%\' OR ? LIKE short_name || \'%\' LIMIT 1'
+  );
+
   const findProvision = db.prepare(
     'SELECT id FROM legal_provisions WHERE document_id = ? AND section_number = ?'
   );
@@ -72,8 +76,11 @@ function main(): void {
         continue;
       }
 
-      // Look up document
-      const doc = findDocument.get(req.law_short_name) as { id: number } | undefined;
+      // Look up document — try exact match first, then fuzzy (LIKE) match
+      let doc = findDocument.get(req.law_short_name) as { id: number } | undefined;
+      if (!doc) {
+        doc = findDocumentFuzzy.get(req.law_short_name, req.law_short_name) as { id: number } | undefined;
+      }
       if (!doc) {
         console.error(`  WARNING: Document not found: ${req.law_short_name} — skipping`);
         skipped++;
