@@ -1,0 +1,13 @@
+{
+  "name": "us.ansvar/us-law-mcp",
+  "version": "0.1.0",
+  "description": "US federal and state cybersecurity/privacy law MCP server with cross-state comparison",
+  "transport": ["stdio", "streamable-http"],
+  "capabilities": ["statutes", "cross_state_comparison"],
+  "jurisdiction": "US",
+  "homepage": "https://github.com/Ansvar-Systems/US-law-mcp",
+  "endpoints": {
+    "http": "https://us-law-mcp.vercel.app/mcp",
+    "health": "https://us-law-mcp.vercel.app/health"
+  }
+}
