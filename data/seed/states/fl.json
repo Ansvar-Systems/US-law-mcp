@@ -1,0 +1,41 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-FL",
+      "title": "Florida Information Protection Act",
+      "identifier": "Fla. Stat. § 501.171",
+      "short_name": "FIPA",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2014-07-01",
+      "last_amended": "2023-07-01",
+      "source_url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0501/Sections/0501.171.html"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FL",
+      "section_number": "§ 501.171(3)",
+      "title": "30-day notification requirement",
+      "text": "A covered entity shall provide notice to each individual in this state whose personal information was, or the covered entity reasonably believes to have been, accessed as a result of the breach. Notice to individuals shall be made as expeditiously as practicable and without unreasonable delay, taking into account the time necessary to allow the covered entity to determine the scope of the breach of security, to identify individuals affected by the breach, and to restore the reasonable integrity of the data system that was breached, but no later than 30 days after the determination of the breach or reason to believe the breach occurred unless subject to a delay authorized under paragraph (b). A covered entity that is required to provide notice to more than 1,000 individuals shall also provide notice to all consumer reporting agencies.",
+      "order_index": 1
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FL",
+      "section_number": "§ 501.171(4)",
+      "title": "Notification to Department of Legal Affairs",
+      "text": "A covered entity shall provide notice to the Department of Legal Affairs of any breach of security affecting 500 or more individuals in this state. Such notice must be provided to the department as expeditiously as practicable, but no later than 30 days after the determination of the breach or reason to believe the breach occurred. The notice must include: a synopsis of the events surrounding the breach at the time notice is provided; the number of individuals in this state who were or potentially have been affected by the breach; any services related to the breach being offered or scheduled to be offered, without charge, by the covered entity to individuals, and instructions on how to use such services; a copy of the notice provided or to be provided to individuals; and the name, address, telephone number, and e-mail address of the employee or agent of the covered entity from whom additional information may be obtained about the breach.",
+      "order_index": 2
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FL",
+      "section_number": "§ 501.171(9)",
+      "title": "Penalties for violations",
+      "text": "A violation of this section shall be treated as an unfair or deceptive trade practice in any action brought by the Department of Legal Affairs. In addition, a civil penalty not to exceed $500,000 per breach may be assessed. A covered entity that fails to provide notice as required under subsection (3) is liable for a civil penalty not to exceed $1,000 per day for each day the breach goes undisclosed beyond 30 days, up to 180 days, and after 180 days a civil penalty not to exceed $50,000 for each subsequent 30-day period, not to exceed a total of $500,000.",
+      "order_index": 3
+    }
+  ]
+}

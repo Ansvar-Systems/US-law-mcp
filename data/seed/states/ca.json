@@ -1,0 +1,68 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-CA",
+      "title": "California Consumer Privacy Act / California Privacy Rights Act",
+      "identifier": "Cal. Civ. Code §§ 1798.100-1798.199.100",
+      "short_name": "CCPA",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2020-01-01",
+      "last_amended": "2023-01-01",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?division=3.&part=4.&lawCode=CIV&title=1.81.5"
+    },
+    {
+      "jurisdiction": "US-CA",
+      "title": "California Data Breach Notification Law",
+      "identifier": "Cal. Civ. Code § 1798.82",
+      "short_name": "CA Breach Notification",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2003-07-01",
+      "last_amended": "2021-01-01",
+      "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1798.82.&lawCode=CIV"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-CA",
+      "section_number": "§ 1798.100",
+      "title": "Right to know what personal information is collected",
+      "text": "A consumer shall have the right to request that a business that collects a consumer's personal information disclose to that consumer the categories and specific pieces of personal information the business has collected. A business that collects a consumer's personal information shall, at or before the point of collection, inform consumers as to the categories of personal information to be collected and the purposes for which the categories of personal information shall be used. A business shall not collect additional categories of personal information or use personal information collected for additional purposes without providing the consumer with notice consistent with this section.",
+      "order_index": 1
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-CA",
+      "section_number": "§ 1798.105",
+      "title": "Right to delete personal information",
+      "text": "A consumer shall have the right to request that a business delete any personal information about the consumer which the business has collected from the consumer. A business that collects personal information about consumers shall disclose the consumer's rights to request the deletion of the consumer's personal information. A business that receives a verifiable consumer request from a consumer to delete the consumer's personal information shall delete the consumer's personal information from its records, notify any service providers or contractors to delete the consumer's personal information from their records, and notify all third parties to whom the business has sold or shared such personal information to delete the consumer's personal information unless this proves impossible or involves disproportionate effort.",
+      "order_index": 2
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-CA",
+      "section_number": "§ 1798.120",
+      "title": "Right to opt out of sale or sharing of personal information",
+      "text": "A consumer shall have the right, at any time, to direct a business that sells or shares consumers' personal information to third parties not to sell or share the consumer's personal information. This right may be referred to as the right to opt-out of sale or sharing. A business that sells or shares consumers' personal information to or with third parties shall provide notice to consumers that this information may be sold or shared and that consumers have the right to opt-out of the sale or sharing of their personal information. A business shall provide a clear and conspicuous link on the business's internet homepage, titled 'Do Not Sell or Share My Personal Information,' to an Internet web page that enables a consumer, or a person authorized by the consumer, to opt-out of the sale or sharing of the consumer's personal information.",
+      "order_index": 3
+    },
+    {
+      "document_index": 1,
+      "jurisdiction": "US-CA",
+      "section_number": "§ 1798.82(a)",
+      "title": "Breach notification requirement",
+      "text": "A person or business that conducts business in California, and that owns or licenses computerized data that includes personal information, shall disclose a breach of the security of the system following discovery or notification of the breach in the security of the data to a resident of California whose unencrypted personal information was, or is reasonably believed to have been, acquired by an unauthorized person. The disclosure shall be made in the most expedient time possible and without unreasonable delay, consistent with the legitimate needs of law enforcement or any measures necessary to determine the scope of the breach and restore the reasonable integrity of the data system.",
+      "order_index": 1
+    },
+    {
+      "document_index": 1,
+      "jurisdiction": "US-CA",
+      "section_number": "§ 1798.82(f)",
+      "title": "Notification to Attorney General",
+      "text": "A person or business that is required to issue a security breach notification pursuant to this section to more than 500 California residents as a result of a single breach of the security system shall electronically submit a single sample copy of that security breach notification, excluding any personally identifiable information, to the Attorney General. A single sample copy of a security breach notification shall not be deemed to be within the scope of the California Public Records Act.",
+      "order_index": 2
+    }
+  ]
+}

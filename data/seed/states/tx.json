@@ -1,0 +1,60 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-TX",
+      "title": "Texas Identity Theft Enforcement and Protection Act - Breach Notification",
+      "identifier": "Tex. Bus. & Com. Code § 521.053",
+      "short_name": "TX Breach Notification",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2009-09-01",
+      "last_amended": "2023-09-01",
+      "source_url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.521.htm"
+    },
+    {
+      "jurisdiction": "US-TX",
+      "title": "Texas Data Privacy and Security Act",
+      "identifier": "Tex. Bus. & Com. Code § 541",
+      "short_name": "TDPSA",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2024-07-01",
+      "last_amended": "2024-07-01",
+      "source_url": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=88R&Bill=HB4"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-TX",
+      "section_number": "§ 521.053(b)",
+      "title": "60-day notification requirement",
+      "text": "A person who conducts business in this state and owns or licenses computerized data that includes sensitive personal information shall disclose any breach of system security, after discovering or receiving notification of the breach, to any individual whose sensitive personal information was, or is reasonably believed to have been, acquired by an unauthorized person. The disclosure shall be made as quickly as possible, except that the disclosure may be delayed if a law enforcement agency determines that the notification will impede a criminal investigation and the notification is delayed at the request of the law enforcement agency. In any case, the disclosure shall be made not later than the 60th day after the date on which the person determines that the breach occurred.",
+      "order_index": 1
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-TX",
+      "section_number": "§ 521.053(d)",
+      "title": "Attorney General notification",
+      "text": "If a person is required to notify at one time more than 250 residents of this state under this section, the person shall notify the attorney general not later than the 60th day after the date on which the person determines that the breach occurred. The notification under this subsection must include: a detailed description of the nature and circumstances of the breach or the use of sensitive personal information acquired as a result of the breach; the number of residents of this state affected by the breach at the time of notification; the measures taken by the person regarding the breach; any measures the person intends to take regarding the breach after the notification; and information regarding whether law enforcement is engaged in investigating the breach.",
+      "order_index": 2
+    },
+    {
+      "document_index": 1,
+      "jurisdiction": "US-TX",
+      "section_number": "§ 541.101",
+      "title": "Consumer rights",
+      "text": "A consumer has the right to: confirm whether a controller is processing the consumer's personal data and access such personal data; correct inaccuracies in the consumer's personal data, taking into account the nature of the personal data and the purposes of the processing of the consumer's personal data; delete personal data provided by, or obtained about, the consumer; obtain a copy of the consumer's personal data that the consumer previously provided to the controller in a portable and, to the extent technically feasible, readily usable format that allows the consumer to transmit the data to another controller without hindrance, where the processing is carried out by automated means; and opt out of the processing of the personal data for purposes of targeted advertising, the sale of personal data, or profiling in furtherance of a decision that produces a legal or similarly significant effect concerning the consumer.",
+      "order_index": 1
+    },
+    {
+      "document_index": 1,
+      "jurisdiction": "US-TX",
+      "section_number": "§ 541.051",
+      "title": "Data protection assessments",
+      "text": "A controller shall conduct and document a data protection assessment of each of the following processing activities involving personal data: the processing of personal data for purposes of targeted advertising; the sale of personal data; the processing of personal data for purposes of profiling, where such profiling presents a reasonably foreseeable risk of unfair or deceptive treatment of, or unlawful disparate impact on, consumers; the processing of sensitive data; and any processing activities involving personal data that present a heightened risk of harm to consumers. Data protection assessments conducted under this section shall identify and weigh the benefits that may flow, directly and indirectly, from the processing to the controller, the consumer, other stakeholders, and the public against the potential risks to the rights of the consumer associated with such processing, as mitigated by safeguards that can be employed by the controller to reduce such risks.",
+      "order_index": 2
+    }
+  ]
+}
