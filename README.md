@@ -10,7 +10,7 @@ US federal and state cybersecurity/privacy law MCP server providing full-text se
 ## Features
 
 - **Federal statutes** from uscode.house.gov -- Titles 6, 15, 18, 42, 44, 47
-- **State law coverage** -- CA, NY, TX, FL, IL (and expanding)
+- **All 50 states + DC** -- comprehensive breach notification, privacy, and cybersecurity statutes
 - **Cross-state comparison** for breach notification, privacy rights, and cybersecurity requirements
 - **Full-text search** with BM25 ranking
 - **Citation validation** -- verify that a legal citation exists in the database
@@ -21,7 +21,7 @@ US federal and state cybersecurity/privacy law MCP server providing full-text se
 | Source | Authority | Coverage | License |
 |--------|-----------|----------|---------|
 | US Code (USLM) | Office of the Law Revision Counsel | Titles 6, 15, 18, 42, 44, 47 | Public Domain |
-| State Legislative Portals | Individual state legislatures | Cybersecurity, privacy, breach notification statutes | Public Domain |
+| State Legislative Portals | Individual state legislatures | All 50 states + DC: cybersecurity, privacy, breach notification | Public Domain |
 
 ## Available Tools
 
@@ -72,18 +72,9 @@ npm run validate   # lint + test + contract tests
 
 ## Jurisdictions
 
-Current coverage:
+**53 jurisdictions**: US Federal + all 50 states + DC
 
-| Code | Jurisdiction |
-|------|-------------|
-| US-FED | United States -- Federal (USC) |
-| US-CA | California |
-| US-NY | New York |
-| US-TX | Texas |
-| US-FL | Florida |
-| US-IL | Illinois |
-
-Additional states will be added over time.
+`US-FED` `US-AL` `US-AK` `US-AZ` `US-AR` `US-CA` `US-CO` `US-CT` `US-DE` `US-DC` `US-FL` `US-GA` `US-HI` `US-ID` `US-IL` `US-IN` `US-IA` `US-KS` `US-KY` `US-LA` `US-ME` `US-MD` `US-MA` `US-MI` `US-MN` `US-MS` `US-MO` `US-MT` `US-NE` `US-NV` `US-NH` `US-NJ` `US-NM` `US-NY` `US-NC` `US-ND` `US-OH` `US-OK` `US-OR` `US-PA` `US-RI` `US-SC` `US-SD` `US-TN` `US-TX` `US-UT` `US-VT` `US-VA` `US-WA` `US-WV` `US-WI` `US-WY`
 
 ## License
 
