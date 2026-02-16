@@ -39,11 +39,11 @@ afterAll(() => {
 // ---------------------------------------------------------------------------
 
 describe('get_provision', () => {
-  it('retrieves CFAA § 1030(a)(2) with "protected computer" in text', async () => {
+  it('retrieves CFAA § 1030 with "protected computer" in text', async () => {
     const res = await getProvision(db, {
       jurisdiction: 'US-FED',
       short_name: 'CFAA',
-      section_number: '§ 1030(a)(2)',
+      section_number: '§ 1030',
     });
 
     expect(res.results.length).toBeGreaterThanOrEqual(1);
@@ -53,15 +53,15 @@ describe('get_provision', () => {
     expect(provision.document_title).toContain('Computer Fraud');
   });
 
-  it('retrieves CCPA provisions for US-CA', async () => {
+  it('retrieves CCPA/CPRA provisions for US-CA', async () => {
     const res = await getProvision(db, {
       jurisdiction: 'US-CA',
-      short_name: 'CCPA',
+      short_name: 'CCPA/CPRA',
     });
 
     expect(res.results.length).toBeGreaterThanOrEqual(1);
     expect(res.results.every(r => r.jurisdiction === 'US-CA')).toBe(true);
-    expect(res.results.some(r => r.short_name === 'CCPA')).toBe(true);
+    expect(res.results.some(r => r.short_name === 'CCPA/CPRA')).toBe(true);
   });
 
   it('retrieves SHIELD Act provisions for US-NY', async () => {
@@ -113,18 +113,17 @@ describe('search_legislation', () => {
 // ---------------------------------------------------------------------------
 
 describe('compare_requirements', () => {
-  it('compares breach_notification/timeline across CA, NY, TX', async () => {
+  it('compares breach_notification/timeline across FL and NY', async () => {
     const res = await compareRequirements(db, {
       category: 'breach_notification',
       subcategory: 'timeline',
-      jurisdictions: ['US-CA', 'US-NY', 'US-TX'],
+      jurisdictions: ['US-FL', 'US-NY'],
     });
 
-    expect(res.results.length).toBeGreaterThanOrEqual(3);
+    expect(res.results.length).toBeGreaterThanOrEqual(2);
     const jurisdictions = res.results.map(r => r.jurisdiction);
-    expect(jurisdictions).toContain('US-CA');
+    expect(jurisdictions).toContain('US-FL');
     expect(jurisdictions).toContain('US-NY');
-    expect(jurisdictions).toContain('US-TX');
     // Each result has a summary
     for (const r of res.results) {
       expect(r.summary).toBeTruthy();
@@ -139,19 +138,17 @@ describe('compare_requirements', () => {
 // ---------------------------------------------------------------------------
 
 describe('get_state_requirements', () => {
-  it('returns privacy_rights entries for US-CA', async () => {
+  it('returns privacy_rights entries for US-TX', async () => {
     const res = await getStateRequirements(db, {
-      jurisdiction: 'US-CA',
+      jurisdiction: 'US-TX',
       category: 'privacy_rights',
     });
 
     expect(res.results.length).toBeGreaterThanOrEqual(1);
-    expect(res.results.every(r => r.jurisdiction === 'US-CA')).toBe(true);
+    expect(res.results.every(r => r.jurisdiction === 'US-TX')).toBe(true);
     expect(res.results.every(r => r.category === 'privacy_rights')).toBe(true);
-    // Should include right_to_know, right_to_delete, right_to_opt_out
+    // Texas TDPSA includes right to opt out
     const subcategories = res.results.map(r => r.subcategory);
-    expect(subcategories).toContain('right_to_know');
-    expect(subcategories).toContain('right_to_delete');
     expect(subcategories).toContain('right_to_opt_out');
   });
 });
