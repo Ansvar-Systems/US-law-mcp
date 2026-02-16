@@ -8,7 +8,11 @@
   "bin": {
     "us-law-mcp": "dist/index.js"
   },
-  "files": ["dist", "data/database.db", "server.json"],
+  "files": [
+    "dist",
+    "data/database.db",
+    "server.json"
+  ],
   "scripts": {
     "build": "tsc",
     "build:db": "tsx scripts/build-db.ts",
@@ -29,13 +33,18 @@
     "@modelcontextprotocol/sdk": "^1.25.3"
   },
   "devDependencies": {
+    "@types/cheerio": "^0.22.35",
     "@types/node": "^22.15.29",
     "@vercel/node": "^5.6.3",
+    "cheerio": "^1.2.0",
+    "fast-xml-parser": "^5.3.6",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "vitest": "^4.0.18"
   },
-  "engines": { "node": ">=18" },
+  "engines": {
+    "node": ">=18"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ansvar-Systems/US-law-mcp.git"
