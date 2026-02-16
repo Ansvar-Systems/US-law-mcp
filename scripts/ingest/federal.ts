@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const DB_PATH = path.resolve(__dirname, '..', '..', 'data', 'database.db');
-const SEED_FILE = path.resolve(__dirname, '..', '..', 'data', 'seed', 'federal', 'statutes.json');
+const SEED_DIR = path.resolve(__dirname, '..', '..', 'data', 'seed', 'federal');
 
 interface DocumentSeed {
   jurisdiction: string;
@@ -43,8 +43,11 @@ function main(): void {
     process.exit(1);
   }
 
-  const raw = fs.readFileSync(SEED_FILE, 'utf-8');
-  const seed = JSON.parse(raw) as SeedData;
+  const seedFiles = fs.readdirSync(SEED_DIR).filter(f => f.endsWith('.json')).sort();
+  if (seedFiles.length === 0) {
+    console.error(`No JSON files found in ${SEED_DIR}`);
+    process.exit(1);
+  }
 
   const db = new Database(DB_PATH);
   db.pragma('journal_mode = DELETE');
@@ -60,38 +63,49 @@ function main(): void {
     VALUES (?, ?, ?, ?, ?, ?)
   `);
 
+  let totalDocs = 0;
+  let totalProvs = 0;
+
   const ingestAll = db.transaction(() => {
-    // Insert documents, track IDs
-    const docIds: number[] = [];
-    for (const doc of seed.documents) {
-      const info = insertDoc.run(doc.jurisdiction, doc.title, doc.identifier, doc.short_name, doc.document_type, doc.status, doc.effective_date, doc.last_amended, doc.source_url);
-      // Get the ID (either just inserted or existing)
-      if (info.changes > 0) {
-        docIds.push(Number(info.lastInsertRowid));
-      } else {
-        const existing = db.prepare('SELECT id FROM legal_documents WHERE identifier = ? AND jurisdiction = ?').get(doc.identifier, doc.jurisdiction) as { id: number };
-        docIds.push(existing.id);
+    for (const file of seedFiles) {
+      const filePath = path.join(SEED_DIR, file);
+      const raw = fs.readFileSync(filePath, 'utf-8');
+      const seed = JSON.parse(raw) as SeedData;
+      const label = path.basename(file, '.json');
+
+      console.log(`  Processing ${label} (${file})...`);
+
+      // Insert documents, track IDs
+      const docIds: number[] = [];
+      for (const doc of seed.documents) {
+        const info = insertDoc.run(doc.jurisdiction, doc.title, doc.identifier, doc.short_name, doc.document_type, doc.status, doc.effective_date, doc.last_amended, doc.source_url);
+        // Get the ID (either just inserted or existing)
+        if (info.changes > 0) {
+          docIds.push(Number(info.lastInsertRowid));
+        } else {
+          const existing = db.prepare('SELECT id FROM legal_documents WHERE identifier = ? AND jurisdiction = ?').get(doc.identifier, doc.jurisdiction) as { id: number };
+          docIds.push(existing.id);
+        }
+      }
+
+      totalDocs += seed.documents.length;
+
+      // Insert provisions
+      for (const prov of seed.provisions) {
+        const docId = docIds[prov.document_index];
+        if (docId === undefined) {
+          console.error(`    WARNING: No document at index ${prov.document_index} for provision ${prov.section_number}`);
+          continue;
+        }
+        insertProv.run(docId, prov.jurisdiction, prov.section_number, prov.title, prov.text, prov.order_index);
+        totalProvs++;
       }
     }
-
-    console.log(`  Inserted ${seed.documents.length} documents`);
-
-    // Insert provisions
-    let provCount = 0;
-    for (const prov of seed.provisions) {
-      const docId = docIds[prov.document_index];
-      if (docId === undefined) {
-        console.error(`  WARNING: No document at index ${prov.document_index} for provision ${prov.section_number}`);
-        continue;
-      }
-      insertProv.run(docId, prov.jurisdiction, prov.section_number, prov.title, prov.text, prov.order_index);
-      provCount++;
-    }
-
-    console.log(`  Inserted ${provCount} provisions`);
   });
 
   ingestAll();
+
+  console.log(`  Total: ${totalDocs} documents, ${totalProvs} provisions across ${seedFiles.length} files`);
 
   // Rebuild FTS index
   console.log('  Rebuilding FTS index...');

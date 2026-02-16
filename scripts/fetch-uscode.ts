@@ -1,6 +1,10 @@
 #!/usr/bin/env tsx
 /**
- * fetch-uscode.ts — Download USC XML from GovInfo and extract target sections
+ * fetch-uscode.ts — Download USC section text from Cornell LII and build seed JSONs
+ *
+ * Source: Cornell Law Information Institute (https://www.law.cornell.edu/uscode/text/)
+ * Fetches individual USC sections as HTML, extracts statutory text with cheerio,
+ * and writes per-title seed JSON files for the ingestion pipeline.
  *
  * Usage:
  *   npm run fetch:federal                  # fetch all required titles
@@ -10,7 +14,7 @@
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { XMLParser } from 'fast-xml-parser';
+import * as cheerio from 'cheerio';
 
 import {
   FEDERAL_TARGETS,
@@ -25,11 +29,51 @@ const ROOT = path.resolve(__dirname, '..');
 const CACHE_DIR = path.join(ROOT, 'data', 'source', 'usc');
 const SEED_DIR = path.join(ROOT, 'data', 'seed', 'federal');
 
-// ── GovInfo bulk-data URL pattern (USLM XML) ──────────────────────
-const USC_YEAR = 2023;
-function govInfoUrl(titleNum: number): string {
-  return `https://www.govinfo.gov/bulkdata/USCODE/${USC_YEAR}/title${titleNum}/USCODE-${USC_YEAR}-title${titleNum}.xml`;
+// ── Cornell LII URL ────────────────────────────────────────────────
+function cornellUrl(titleNum: number, section: string): string {
+  return `https://www.law.cornell.edu/uscode/text/${titleNum}/${section}`;
 }
+
+// ── Explicit section lists per target ──────────────────────────────
+// Pre-computed: these are the actual existing USC sections within each range.
+// Using explicit lists avoids probing for non-existent sections.
+const SECTION_LISTS: Record<string, string[]> = {
+  // Title 18
+  '18 USC 1030': ['1030'],
+  '18 USC 1028-1028A': ['1028', '1028A'],
+  '18 USC 2511-2522': Array.from({ length: 12 }, (_, i) => String(2511 + i)),
+  '18 USC 2701-2712': Array.from({ length: 12 }, (_, i) => String(2701 + i)),
+  '18 USC 3121-3127': Array.from({ length: 7 }, (_, i) => String(3121 + i)),
+
+  // Title 15
+  '15 USC 45': ['45'],
+  '15 USC 6501-6506': Array.from({ length: 6 }, (_, i) => String(6501 + i)),
+  '15 USC 6801-6827': [
+    ...Array.from({ length: 9 }, (_, i) => String(6801 + i)),
+    ...Array.from({ length: 7 }, (_, i) => String(6821 + i)),
+  ],
+  '15 USC 7701-7713': Array.from({ length: 13 }, (_, i) => String(7701 + i)),
+  '15 USC 1681-1681x': [
+    '1681',
+    ...'abcdefghijklmnopqrstuvwx'.split('').map((l) => `1681${l}`),
+  ],
+
+  // Title 42
+  '42 USC 1320d-1320d-9': [
+    '1320d',
+    ...Array.from({ length: 9 }, (_, i) => `1320d-${i + 1}`),
+  ],
+
+  // Title 44
+  '44 USC 3551-3558': Array.from({ length: 8 }, (_, i) => String(3551 + i)),
+
+  // Title 20
+  '20 USC 1232g': ['1232g'],
+
+  // Title 47
+  '47 USC 222': ['222'],
+  '47 USC 551': ['551'],
+};
 
 // ── CLI flags ──────────────────────────────────────────────────────
 interface CliFlags {
@@ -84,253 +128,115 @@ interface SeedFile {
   provisions: SeedProvision[];
 }
 
-// ── XML download with caching ──────────────────────────────────────
-async function downloadTitle(titleNum: number): Promise<string> {
-  const cacheFile = path.join(CACHE_DIR, `title${titleNum}.xml`);
+// ── HTML download with caching ─────────────────────────────────────
+async function downloadSection(
+  titleNum: number,
+  section: string,
+): Promise<string | null> {
+  const cacheFile = path.join(CACHE_DIR, `t${titleNum}_s${section}.html`);
 
-  // Use cached file if it exists and is less than 7 days old
+  // Use cached file if it exists and is less than 30 days old
   if (fs.existsSync(cacheFile)) {
     const stat = fs.statSync(cacheFile);
     const ageMs = Date.now() - stat.mtimeMs;
-    const sevenDays = 7 * 24 * 60 * 60 * 1000;
-    if (ageMs < sevenDays) {
-      console.log(`  Using cached XML for Title ${titleNum}`);
+    const thirtyDays = 30 * 24 * 60 * 60 * 1000;
+    if (ageMs < thirtyDays) {
       return fs.readFileSync(cacheFile, 'utf-8');
     }
   }
 
-  const url = govInfoUrl(titleNum);
-  console.log(`  Downloading Title ${titleNum} from ${url} ...`);
+  const url = cornellUrl(titleNum, section);
 
-  const resp = await fetch(url);
+  const resp = await fetch(url, { signal: AbortSignal.timeout(30_000) });
   if (!resp.ok) {
-    throw new Error(`Failed to download Title ${titleNum}: ${resp.status} ${resp.statusText}`);
+    console.warn(`    WARNING: HTTP ${resp.status} for ${url}`);
+    return null;
   }
 
-  const xml = await resp.text();
+  const html = await resp.text();
+
+  // Check for error pages
+  if (html.includes('Page not found') || !html.includes('tab-pane')) {
+    console.warn(`    WARNING: Section ${section} not found at Cornell LII`);
+    return null;
+  }
 
   // Cache it
   fs.mkdirSync(CACHE_DIR, { recursive: true });
-  fs.writeFileSync(cacheFile, xml, 'utf-8');
-  console.log(`  Cached to ${path.relative(ROOT, cacheFile)} (${(xml.length / 1024 / 1024).toFixed(1)} MB)`);
+  fs.writeFileSync(cacheFile, html, 'utf-8');
 
-  return xml;
+  return html;
 }
 
-// ── Section matching helpers ───────────────────────────────────────
+// ── HTML text extraction ────────────────────────────────────────────
 
-/**
- * Normalize a section identifier string to a comparable form.
- * USC XML identifiers look like "/us/usc/t18/s1030" or "/us/usc/t15/s6501".
- * We extract just the section part after the last "/s".
- */
-function extractSectionId(identifier: string): string {
-  const match = identifier.match(/\/s(.+)$/);
-  return match ? match[1]! : identifier;
-}
+function parseSection(html: string): { heading: string; text: string } {
+  const $ = cheerio.load(html);
 
-/**
- * Check if a section number falls within a target's range.
- * Handles pure numeric ranges and alphanumeric suffixes (e.g. "1028A", "1320d-9", "1681x").
- */
-function sectionMatches(sectionId: string, target: FederalTarget): boolean {
-  const start = String(target.sections.start);
-  const end = target.sections.end !== undefined ? String(target.sections.end) : start;
+  // Extract heading from page title: "18 U.S. Code § 1030 - Heading | ..."
+  const pageTitle = $('title').text();
+  const headingMatch = pageTitle.match(/§\s*\S+\s*-\s*([^|]+)/);
+  const heading = headingMatch ? headingMatch[1]!.trim() : 'Untitled section';
 
-  // Exact match for single-section targets
-  if (start === end) {
-    // Match the section itself or any subsection (e.g. "1030" matches "1030", "1030a")
-    return sectionId === start || sectionId.startsWith(start + '/');
-  }
+  // Extract statute body from the active tab pane
+  const body = $('.tab-pane.active').text().trim();
 
-  // For ranges, try numeric comparison first
-  const numericSection = parseLeadingNumber(sectionId);
-  const numericStart = parseLeadingNumber(start);
-  const numericEnd = parseLeadingNumber(end);
-
-  if (numericSection !== null && numericStart !== null && numericEnd !== null) {
-    // If the leading numbers are in range, that's a match
-    if (numericSection >= numericStart && numericSection <= numericEnd) {
-      return true;
-    }
-    // Also check if section is a sub-section like "1320d-2" where base is "1320d"
-    // and the range is "1320d" to "1320d-9"
-    if (sectionId.startsWith(start.replace(/-\d+$/, ''))) {
-      return sectionMatchesAlpha(sectionId, start, end);
-    }
-    return false;
-  }
-
-  // Fall back to string/alpha comparison for non-numeric sections
-  return sectionMatchesAlpha(sectionId, start, end);
-}
-
-function parseLeadingNumber(s: string): number | null {
-  const match = s.match(/^(\d+)/);
-  return match ? parseInt(match[1]!, 10) : null;
-}
-
-function sectionMatchesAlpha(sectionId: string, start: string, end: string): boolean {
-  // Pad for lexicographic comparison: "1681" <= "1681a" <= "1681x"
-  const padded = (s: string) => s.replace(/(\d+)/g, (m) => m.padStart(10, '0'));
-  const ps = padded(sectionId);
-  const pStart = padded(start);
-  const pEnd = padded(end);
-  return ps >= pStart && ps <= pEnd;
-}
-
-// ── XML text extraction ────────────────────────────────────────────
-
-/**
- * Recursively extract text content from a parsed XML node.
- * The fast-xml-parser preserves structure; we flatten to plain text.
- */
-function extractText(node: unknown): string {
-  if (node === null || node === undefined) return '';
-  if (typeof node === 'string') return node;
-  if (typeof node === 'number' || typeof node === 'boolean') return String(node);
-
-  if (Array.isArray(node)) {
-    return node.map(extractText).join(' ');
-  }
-
-  if (typeof node === 'object') {
-    const obj = node as Record<string, unknown>;
-    const parts: string[] = [];
-    for (const key of Object.keys(obj)) {
-      // Skip attribute keys (prefixed with @_)
-      if (key.startsWith('@_')) continue;
-      parts.push(extractText(obj[key]));
-    }
-    return parts.join(' ');
-  }
-
-  return '';
-}
-
-/** Clean up extracted text: collapse whitespace, trim */
-function cleanText(raw: string): string {
-  return raw
+  // Clean up: collapse whitespace, fix punctuation spacing
+  const cleaned = body
     .replace(/\s+/g, ' ')
     .replace(/\s([.,;:)])/g, '$1')
     .replace(/([(\[])\s/g, '$1')
     .trim();
+
+  return { heading, text: cleaned };
 }
 
-/**
- * Try to extract a heading/title from a section node.
- * USLM sections typically have a <heading> child element.
- */
-function extractHeading(section: Record<string, unknown>): string {
-  if (typeof section['heading'] === 'string') return section['heading'];
-  if (section['heading'] && typeof section['heading'] === 'object') {
-    return cleanText(extractText(section['heading']));
-  }
-  // Try num + heading combo
-  const num = section['num'] ? cleanText(extractText(section['num'])) : '';
-  return num || 'Untitled section';
+// ── Delay helper (be polite to Cornell) ─────────────────────────────
+function delay(ms: number): Promise<void> {
+  return new Promise((r) => setTimeout(r, ms));
 }
 
 // ── Main parsing logic ─────────────────────────────────────────────
 
-function parseTitle(xml: string, titleNum: number): SeedFile {
-  const parser = new XMLParser({
-    ignoreAttributes: false,
-    attributeNamePrefix: '@_',
-    textNodeName: '#text',
-    preserveOrder: false,
-    trimValues: true,
-  });
+async function processTarget(
+  target: FederalTarget,
+  docIndex: number,
+  seed: SeedFile,
+): Promise<number> {
+  const sections = SECTION_LISTS[target.identifier];
+  if (!sections) {
+    console.error(`    No section list found for ${target.identifier}`);
+    return 0;
+  }
 
-  const doc = parser.parse(xml) as Record<string, unknown>;
+  let orderIndex = 0;
 
-  // Collect all <section> elements with identifiers from the parsed tree
-  const sections: Array<{ identifier: string; node: Record<string, unknown> }> = [];
-  collectSections(doc, sections);
+  for (const section of sections) {
+    const html = await downloadSection(target.usc_title, section);
+    if (!html) continue;
 
-  console.log(`  Found ${sections.length} total sections in Title ${titleNum}`);
+    const { heading, text } = parseSection(html);
 
-  // Get targets for this title
-  const targets = FEDERAL_TARGETS.filter((t) => t.usc_title === titleNum);
+    if (text.length < 20) {
+      console.warn(`    Skipping ${section}: too short (${text.length} chars)`);
+      continue;
+    }
 
-  const seed: SeedFile = { documents: [], provisions: [] };
-
-  for (const target of targets) {
-    const docIndex = seed.documents.length;
-
-    // Build document entry
-    seed.documents.push({
+    orderIndex++;
+    seed.provisions.push({
+      document_index: docIndex,
       jurisdiction: 'US-FED',
-      title: target.name,
-      identifier: target.identifier,
-      short_name: target.short_name,
-      document_type: target.document_type,
-      status: target.status,
-      effective_date: target.effective_date,
-      last_amended: target.last_amended,
-      source_url: govInfoUrl(titleNum),
+      section_number: `\u00a7 ${section}`,
+      title: heading,
+      text,
+      order_index: orderIndex,
     });
 
-    // Find matching sections
-    let orderIndex = 0;
-    for (const { identifier, node } of sections) {
-      const sectionId = extractSectionId(identifier);
-      if (sectionMatches(sectionId, target)) {
-        orderIndex++;
-        const heading = extractHeading(node);
-        const text = cleanText(extractText(node));
-
-        if (text.length < 10) continue; // Skip empty/trivial sections
-
-        seed.provisions.push({
-          document_index: docIndex,
-          jurisdiction: 'US-FED',
-          section_number: `\u00a7 ${sectionId}`,
-          title: heading,
-          text,
-          order_index: orderIndex,
-        });
-      }
-    }
-
-    console.log(`  ${target.short_name}: ${orderIndex} provisions extracted`);
+    // Be polite: small delay between requests
+    await delay(200);
   }
 
-  return seed;
-}
-
-/**
- * Recursively walk the parsed XML tree and collect all elements
- * that have an @_identifier attribute matching the USC section pattern.
- */
-function collectSections(
-  node: unknown,
-  out: Array<{ identifier: string; node: Record<string, unknown> }>,
-): void {
-  if (node === null || node === undefined || typeof node !== 'object') return;
-
-  if (Array.isArray(node)) {
-    for (const item of node) {
-      collectSections(item, out);
-    }
-    return;
-  }
-
-  const obj = node as Record<string, unknown>;
-
-  // Check if this node has a section identifier
-  const id = obj['@_identifier'];
-  if (typeof id === 'string' && /\/us\/usc\/t\d+\/s/.test(id)) {
-    out.push({ identifier: id, node: obj });
-    // Don't recurse into matched sections — we'll extract text from them directly
-    return;
-  }
-
-  // Recurse into child elements
-  for (const key of Object.keys(obj)) {
-    if (key.startsWith('@_')) continue;
-    collectSections(obj[key], out);
-  }
+  return orderIndex;
 }
 
 // ── Main ───────────────────────────────────────────────────────────
@@ -338,11 +244,12 @@ function collectSections(
 async function main(): Promise<void> {
   const flags = parseFlags();
 
-  console.log('=== US Law MCP — Federal USC XML Fetcher ===\n');
+  console.log('=== US Law MCP \u2014 Federal USC Fetcher (Cornell LII) ===\n');
 
-  const titles = flags.titleFilter !== null
-    ? REQUIRED_TITLES.filter((t) => t === flags.titleFilter)
-    : REQUIRED_TITLES;
+  const titles =
+    flags.titleFilter !== null
+      ? REQUIRED_TITLES.filter((t) => t === flags.titleFilter)
+      : REQUIRED_TITLES;
 
   if (titles.length === 0) {
     console.error(`No matching titles found for --title ${flags.titleFilter}`);
@@ -351,36 +258,66 @@ async function main(): Promise<void> {
 
   // ── Dry run: just list targets ───────────────────────────────────
   if (flags.dryRun) {
-    console.log('DRY RUN — listing targets without downloading:\n');
+    console.log('DRY RUN \u2014 listing targets without downloading:\n');
+    let totalSections = 0;
     for (const titleNum of titles) {
       const targets = FEDERAL_TARGETS.filter((t) => t.usc_title === titleNum);
       console.log(`Title ${titleNum}:`);
       for (const t of targets) {
+        const secs = SECTION_LISTS[t.identifier] ?? [];
         const range = t.sections.end
           ? `\u00a7\u00a7 ${t.sections.start}\u2013${t.sections.end}`
           : `\u00a7 ${t.sections.start}`;
-        console.log(`  ${t.short_name.padEnd(20)} ${range.padEnd(20)} ${t.name}`);
+        console.log(
+          `  ${t.short_name.padEnd(20)} ${range.padEnd(20)} ${secs.length} sections`,
+        );
+        totalSections += secs.length;
       }
     }
-    console.log(`\nTotal: ${FEDERAL_TARGETS.filter((t) => titles.includes(t.usc_title)).length} statutes across ${titles.length} USC titles`);
-    console.log(`Source: GovInfo bulk data (${USC_YEAR})`);
+    console.log(
+      `\nTotal: ${FEDERAL_TARGETS.filter((t) => titles.includes(t.usc_title)).length} statutes, ${totalSections} sections across ${titles.length} USC titles`,
+    );
+    console.log('Source: Cornell LII (https://www.law.cornell.edu/uscode/)');
     return;
   }
 
   // ── Fetch and parse ──────────────────────────────────────────────
   fs.mkdirSync(SEED_DIR, { recursive: true });
+  fs.mkdirSync(CACHE_DIR, { recursive: true });
 
   for (const titleNum of titles) {
-    console.log(`\n── Title ${titleNum} ──`);
-    const xml = await downloadTitle(titleNum);
-    const seed = parseTitle(xml, titleNum);
+    console.log(`\n\u2500\u2500 Title ${titleNum} \u2500\u2500`);
+
+    const targets = FEDERAL_TARGETS.filter((t) => t.usc_title === titleNum);
+    const seed: SeedFile = { documents: [], provisions: [] };
+
+    for (const target of targets) {
+      const docIndex = seed.documents.length;
+
+      seed.documents.push({
+        jurisdiction: 'US-FED',
+        title: target.name,
+        identifier: target.identifier,
+        short_name: target.short_name,
+        document_type: target.document_type,
+        status: target.status,
+        effective_date: target.effective_date,
+        last_amended: target.last_amended,
+        source_url: `https://www.law.cornell.edu/uscode/text/${target.usc_title}`,
+      });
+
+      const count = await processTarget(target, docIndex, seed);
+      console.log(`  ${target.short_name}: ${count} provisions extracted`);
+    }
 
     const outFile = path.join(SEED_DIR, `title${titleNum}.json`);
     fs.writeFileSync(outFile, JSON.stringify(seed, null, 2) + '\n', 'utf-8');
 
     const docCount = seed.documents.length;
     const provCount = seed.provisions.length;
-    console.log(`  Wrote ${outFile} (${docCount} documents, ${provCount} provisions)`);
+    console.log(
+      `  Wrote ${path.relative(ROOT, outFile)} (${docCount} documents, ${provCount} provisions)`,
+    );
   }
 
   console.log('\nDone.');
