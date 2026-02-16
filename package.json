@@ -1,7 +1,7 @@
 {
   "name": "@ansvar/us-law-mcp",
   "version": "0.1.0",
-  "mcpName": "us.ansvar/us-law-mcp",
+  "mcpName": "eu.ansvar/us-law-mcp",
   "description": "US federal and state cybersecurity/privacy law MCP server with cross-state comparison",
   "type": "module",
   "main": "dist/index.js",
@@ -16,12 +16,17 @@
   "scripts": {
     "build": "tsc",
     "build:db": "tsx scripts/build-db.ts",
+    "build:db:free": "tsx scripts/build-db-free.ts",
     "dev": "tsx src/index.ts",
     "start": "node dist/index.js",
     "test": "vitest run",
     "test:contract": "vitest run __tests__/contract/",
+    "test:coverage": "vitest run --coverage",
     "test:watch": "vitest",
-    "lint": "tsc --noEmit",
+    "lint": "eslint src/ __tests__/",
+    "lint:fix": "eslint --fix src/ __tests__/",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "validate": "npm run lint && npm test && npm run test:contract",
     "fetch:federal": "tsx scripts/fetch-uscode.ts",
     "fetch:states": "tsx scripts/fetch-states.ts",
@@ -37,13 +42,18 @@
     "@modelcontextprotocol/sdk": "^1.25.3"
   },
   "devDependencies": {
+    "@eslint/js": "^9.27.0",
     "@types/cheerio": "^0.22.35",
     "@types/node": "^22.15.29",
     "@vercel/node": "^5.6.3",
+    "@vitest/coverage-v8": "^4.0.18",
     "cheerio": "^1.2.0",
+    "eslint": "^9.27.0",
     "fast-xml-parser": "^5.3.6",
+    "prettier": "^3.5.3",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
+    "typescript-eslint": "^8.33.1",
     "vitest": "^4.0.18"
   },
   "engines": {
@@ -54,5 +64,28 @@
     "url": "git+https://github.com/Ansvar-Systems/US-law-mcp.git"
   },
   "author": "Ansvar Systems AB <hello@ansvar.ai>",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai",
+    "claude",
+    "us-law",
+    "united-states",
+    "legal",
+    "cybersecurity",
+    "privacy",
+    "breach-notification",
+    "compliance",
+    "federal",
+    "state-law",
+    "ansvar"
+  ],
+  "bugs": {
+    "url": "https://github.com/Ansvar-Systems/US-law-mcp/issues"
+  },
+  "homepage": "https://github.com/Ansvar-Systems/US-law-mcp#readme"
 }

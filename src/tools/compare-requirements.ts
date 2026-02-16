@@ -5,7 +5,7 @@ import { generateResponseMetadata, type ToolResponse } from '../utils/metadata.j
 export interface CompareRequirementsInput {
   category: string;
   subcategory?: string;
-  jurisdictions: string[] | 'all';
+  jurisdictions: string[];
 }
 
 export interface CompareRequirementsResult {
@@ -38,7 +38,8 @@ export async function compareRequirements(
     params.push(input.subcategory);
   }
 
-  if (input.jurisdictions !== 'all' && Array.isArray(input.jurisdictions)) {
+  const isAll = Array.isArray(input.jurisdictions) && input.jurisdictions.length === 1 && input.jurisdictions[0] === 'all';
+  if (!isAll && Array.isArray(input.jurisdictions)) {
     if (input.jurisdictions.length === 0) {
       return { results: [], _metadata: generateResponseMetadata(db) };
     }

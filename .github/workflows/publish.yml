@@ -1,0 +1,127 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# NPM PUBLISH WORKFLOW
+# ═══════════════════════════════════════════════════════════════════════════
+#
+# Automatically publishes to npm when a version tag is pushed.
+#
+# To trigger:
+#   1. Update version in package.json
+#   2. Commit: git commit -am "Release v0.2.0"
+#   3. Tag: git tag v0.2.0
+#   4. Push: git push origin main --tags
+#
+# Requirements:
+#   - NPM_TOKEN secret configured in repository settings
+#   - Repository has id-token: write permission for provenance
+#
+# ═══════════════════════════════════════════════════════════════════════════
+
+name: Publish to npm
+
+on:
+  push:
+    tags:
+      - 'v*' # Trigger on tags like v0.1.0, v1.0.0, etc.
+
+jobs:
+  # ─────────────────────────────────────────────────────────────────────────
+  # TEST JOB
+  # ─────────────────────────────────────────────────────────────────────────
+  # Run tests before publishing
+  # ─────────────────────────────────────────────────────────────────────────
+
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Build database
+        run: npm run build:db
+
+      - name: Ingest all data
+        run: npm run ingest:all
+
+      - name: Build
+        run: npm run build
+
+      - name: Run tests
+        run: npm test
+
+      - name: Run contract tests
+        run: npm run test:contract
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # PUBLISH JOB
+  # ─────────────────────────────────────────────────────────────────────────
+  # Publish to npm with provenance
+  # ─────────────────────────────────────────────────────────────────────────
+
+  publish:
+    needs: test
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write # Required for GitHub Release SBOM attachment
+      id-token: write # Required for npm provenance
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Build database
+        run: npm run build:db
+
+      - name: Ingest all data
+        run: npm run ingest:all
+
+      - name: Build
+        run: npm run build
+
+      # ─────────────────────────────────────────────────────────────────────
+      # PUBLISH
+      # ─────────────────────────────────────────────────────────────────────
+      # --access public: Publish as public package
+      # --provenance: Include build provenance (requires id-token permission)
+      # ─────────────────────────────────────────────────────────────────────
+
+      - name: Generate SBOM
+        uses: anchore/sbom-action@v0
+        with:
+          format: cyclonedx-json
+          output-file: sbom.cdx.json
+
+      - name: Publish to npm
+        run: npm publish --access public --provenance
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Attach SBOM to GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: sbom.cdx.json
+          append_body: true
+          body: |
+            ### Supply Chain Artifacts
+            - `sbom.cdx.json` — CycloneDX SBOM for this release

@@ -1,0 +1,106 @@
+{
+  "version": "1.0",
+  "mcp_name": "US Law MCP",
+  "tests": [
+    {
+      "id": "us-001",
+      "category": "article_retrieval",
+      "description": "Retrieve CFAA § 1030 from federal statutes",
+      "tool": "get_provision",
+      "input": { "jurisdiction": "US-FED", "short_name": "CFAA", "section_number": "§ 1030" },
+      "assertions": { "result_not_empty": true, "text_contains": ["protected computer"] }
+    },
+    {
+      "id": "us-002",
+      "category": "article_retrieval",
+      "description": "Retrieve CCPA/CPRA provisions for California",
+      "tool": "get_provision",
+      "input": { "jurisdiction": "US-CA", "short_name": "CCPA/CPRA" },
+      "assertions": { "result_not_empty": true }
+    },
+    {
+      "id": "us-003",
+      "category": "article_retrieval",
+      "description": "Retrieve SHIELD Act provisions for New York",
+      "tool": "get_provision",
+      "input": { "jurisdiction": "US-NY", "short_name": "SHIELD Act" },
+      "assertions": { "result_not_empty": true, "text_contains": ["Stop Hacks"] }
+    },
+    {
+      "id": "us-004",
+      "category": "search",
+      "description": "Search for encryption personal information across all jurisdictions",
+      "tool": "search_legislation",
+      "input": { "query": "encryption personal information" },
+      "assertions": { "result_not_empty": true, "min_results": 1 }
+    },
+    {
+      "id": "us-005",
+      "category": "search",
+      "description": "Search for breach notification across all jurisdictions",
+      "tool": "search_legislation",
+      "input": { "query": "breach notification" },
+      "assertions": { "result_not_empty": true, "min_results": 1 }
+    },
+    {
+      "id": "us-006",
+      "category": "citation_roundtrip",
+      "description": "Validate CFAA as a known citation",
+      "tool": "validate_citation",
+      "input": { "citation": "CFAA" },
+      "assertions": { "field_equals": { "valid": true } }
+    },
+    {
+      "id": "us-007",
+      "category": "citation_roundtrip",
+      "description": "Validate HIPAA as a known citation",
+      "tool": "validate_citation",
+      "input": { "citation": "HIPAA" },
+      "assertions": { "field_equals": { "valid": true } }
+    },
+    {
+      "id": "us-008",
+      "category": "negative_test",
+      "description": "Non-existent jurisdiction US-ZZ returns empty",
+      "tool": "search_legislation",
+      "input": { "query": "breach notification", "jurisdiction": "US-ZZ" },
+      "assertions": { "result_empty": true }
+    },
+    {
+      "id": "us-009",
+      "category": "negative_test",
+      "description": "Non-existent law returns empty",
+      "tool": "get_provision",
+      "input": { "jurisdiction": "US-FED", "short_name": "NONEXISTENT_LAW_XYZ" },
+      "assertions": { "result_empty": true }
+    },
+    {
+      "id": "us-010",
+      "category": "cross_state_comparison",
+      "description": "Compare breach notification timeline across CA, NY, TX",
+      "tool": "compare_requirements",
+      "input": {
+        "category": "breach_notification",
+        "subcategory": "timeline",
+        "jurisdictions": ["US-CA", "US-NY", "US-TX"]
+      },
+      "assertions": { "result_not_empty": true, "min_results": 3 }
+    },
+    {
+      "id": "us-011",
+      "category": "currency_check",
+      "description": "HIPAA should be in force",
+      "tool": "check_currency",
+      "input": { "jurisdiction": "US-FED", "short_name": "HIPAA" },
+      "assertions": { "field_equals": { "is_current": true, "status": "in_force" } }
+    },
+    {
+      "id": "us-012",
+      "category": "negative_test",
+      "description": "Non-existent law currency check returns not_found",
+      "tool": "check_currency",
+      "input": { "jurisdiction": "US-FED", "short_name": "NONEXISTENT" },
+      "assertions": { "field_equals": { "status": "not_found", "is_current": false } }
+    }
+  ]
+}

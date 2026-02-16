@@ -1,0 +1,94 @@
+name: Check for Legal Data Updates
+
+on:
+  schedule:
+    - cron: '0 6 * * 1' # Weekly Monday at 06:00 UTC
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check-updates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Check uscode.house.gov for updates
+        id: check
+        run: |
+          # Check the US Code release point page for updates
+          HTTP_STATUS=$(curl -sSf -o /dev/null -w "%{http_code}" "https://uscode.house.gov/download/releasepoints/us/pl/index.html" || echo "000")
+          echo "http_status=$HTTP_STATUS" >> "$GITHUB_OUTPUT"
+
+          if [ "$HTTP_STATUS" = "200" ]; then
+            echo "status=ok" >> "$GITHUB_OUTPUT"
+          else
+            echo "status=error" >> "$GITHUB_OUTPUT"
+          fi
+        continue-on-error: true
+
+      - name: Create issue if check succeeded
+        if: steps.check.outputs.status == 'ok'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // Check for existing open issue to avoid duplicates
+            const { data: existingIssues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: 'data-update,automated',
+              state: 'open'
+            });
+
+            if (existingIssues.length > 0) {
+              console.log('Open data-update issue already exists, skipping creation');
+              return;
+            }
+
+            const today = new Date().toISOString().split('T')[0];
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[Auto] Check US Code for updates - ${today}`,
+              body: [
+                '## US Code Update Check',
+                '',
+                'The weekly check has run. Please verify if new public laws or US Code release points are available.',
+                '',
+                '### Sources to check',
+                '- [US Code Release Points](https://uscode.house.gov/download/releasepoints/us/pl/index.html)',
+                '- [Recent Public Laws](https://www.congress.gov/public-laws)',
+                '- [USLM XML Bulk Data](https://uscode.house.gov/download/download.shtml)',
+                '',
+                '### Actions',
+                '1. Compare current data against latest release points',
+                '2. If updates exist, run `npm run fetch:all` to download new data',
+                '3. Run `npm run build:db && npm run ingest:all` to rebuild the database',
+                '4. Run `npm test && npm run test:contract` to validate',
+                '5. Close this issue when done',
+                '',
+                '_This issue was created automatically by the check-updates workflow._'
+              ].join('\n'),
+              labels: ['data-update', 'automated']
+            });

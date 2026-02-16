@@ -65,11 +65,9 @@ export const TOOLS: Tool[] = [
         category: { type: 'string', description: 'Category: breach_notification, privacy_rights, cybersecurity, sector_specific' },
         subcategory: { type: 'string', description: 'Subcategory (e.g. "timeline", "penalties", "right_to_delete")' },
         jurisdictions: {
-          description: 'Array of jurisdiction codes (e.g. ["US-CA", "US-NY", "US-TX"]) or "all" for all states',
-          oneOf: [
-            { type: 'array', items: { type: 'string' } },
-            { type: 'string', enum: ['all'] },
-          ],
+          type: 'array',
+          items: { type: 'string' },
+          description: 'Array of jurisdiction codes (e.g. ["US-CA", "US-NY", "US-TX"]). Use ["all"] for all states.',
         },
       },
       required: ['category', 'jurisdictions'],
