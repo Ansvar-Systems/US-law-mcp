@@ -1,0 +1,25 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-DC",
+      "title": "DC Security Breach Notification Act",
+      "identifier": "D.C. Code § 28-3851 et seq.",
+      "short_name": "DC Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2007-03-08",
+      "last_amended": "2020-06-17",
+      "source_url": "https://code.dccouncil.gov/us/dc/council/code/titles/28/chapters/38/subchapters/II"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-DC",
+      "section_number": "unknown",
+      "title": "",
+      "text": "Subchapter II. Consumer Security Breach Notification. | D.C. Law Library\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n\n \n \n\n \n\n \n \n\n \n \n\n \n\n \n \n \n Toggle mobile menu\n \n \n \n \n \nCode of the District of Columbia\n\n \n \n\n \nSubchapter II. Consumer Security Breach Notification.",
+      "order_index": 1
+    }
+  ]
+}

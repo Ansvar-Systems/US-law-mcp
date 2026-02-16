@@ -1,0 +1,25 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-MS",
+      "title": "Mississippi Data Breach Notification Law",
+      "identifier": "Miss. Code § 75-24-29",
+      "short_name": "MS Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2011-07-01",
+      "last_amended": "2011-07-01",
+      "source_url": "https://law.justia.com/codes/mississippi/title-75/chapter-24/in-general/section-75-24-29/"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-MS",
+      "section_number": "§ 75-24-29",
+      "title": "Notification of security breach",
+      "order_index": 1,
+      "text": "Any person who conducts business in this state and who owns or licenses computerized personal information of any resident of Mississippi shall disclose any breach of security to any Mississippi resident whose personal information was, or is reasonably believed to have been, acquired by an unauthorized person. The notification shall be made without unreasonable delay, consistent with the legitimate needs of law enforcement, and consistent with any measures necessary to determine the scope of the breach and to restore the reasonable integrity of the data system."
+    }
+  ]
+}

@@ -8,7 +8,7 @@
  * extract meaningful provisions from a page.
  */
 import * as cheerio from 'cheerio';
-import { registerParser, type ParsedProvision } from './index.js';
+import { registerParser, type ParsedProvision } from './registry.js';
 
 /** Broad section number pattern for plain-text scanning */
 const SECTION_RE = /(?:§§?\s*(\d+[\w.-]*)|Sec(?:tion|\.)\s+(\d+[\w.-]*)|Art(?:icle|\.)\s+(\d+[\w.-]*))/gi;

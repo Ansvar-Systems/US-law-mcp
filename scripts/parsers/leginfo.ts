@@ -9,7 +9,7 @@
  * Sections may have headings in bold or italic tags immediately after the number.
  */
 import * as cheerio from 'cheerio';
-import { registerParser, type ParsedProvision } from './index.js';
+import { registerParser, type ParsedProvision } from './registry.js';
 
 /** Match California-style section numbers: "1798.82." or "1798.100." */
 const CA_SECTION_RE = /^(\d+(?:\.\d+)*)\.\s*/;

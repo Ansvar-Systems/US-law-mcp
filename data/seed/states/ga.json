@@ -1,0 +1,25 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-GA",
+      "title": "Georgia Personal Identity Protection Act",
+      "identifier": "Ga. Code § 10-1-912",
+      "short_name": "GA Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2005-05-05",
+      "last_amended": "2005-05-05",
+      "source_url": "https://www.legis.ga.gov/api/legislation/document/20052006/24776"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-GA",
+      "section_number": "§ 10-1-912",
+      "title": "Notification of breach of security",
+      "order_index": 1,
+      "text": "Any information broker or data collector that maintains computerized data that includes personal information of individuals shall give notice of any breach of the security of the system following discovery or notification of the breach in the security of the data to any resident of this state whose unencrypted personal information was, or is reasonably believed to have been, acquired by an unauthorized person. The notice shall be made in the most expedient time possible and without unreasonable delay, consistent with the legitimate needs of law enforcement and consistent with any measures necessary to determine the scope of the breach and to restore the reasonable integrity of the system."
+    }
+  ]
+}

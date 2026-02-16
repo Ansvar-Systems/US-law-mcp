@@ -1,0 +1,25 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-OK",
+      "title": "Oklahoma Security Breach Notification Act",
+      "identifier": "Okla. Stat. tit. 24, § 161 et seq.",
+      "short_name": "OK Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2006-11-01",
+      "last_amended": "2008-11-01",
+      "source_url": "https://www.oscn.net/applications/oscn/deliverdocument.asp?citeID=440863"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-OK",
+      "section_number": "§ 163",
+      "title": "Notification of breach",
+      "order_index": 1,
+      "text": "Any individual or entity that owns or licenses computerized data that includes personal information of an Oklahoma resident shall disclose any breach of the security of the system following discovery or notification of the breach of the security of the system to any resident of this state whose unencrypted and unredacted personal information was or is reasonably believed to have been accessed and acquired by an unauthorized person and that causes, or the individual or entity reasonably believes has caused or will cause, identity theft or other fraud to any resident of this state."
+    }
+  ]
+}

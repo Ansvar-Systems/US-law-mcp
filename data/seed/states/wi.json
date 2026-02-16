@@ -1,0 +1,25 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-WI",
+      "title": "Wisconsin Notice of Unauthorized Acquisition of Personal Information",
+      "identifier": "Wis. Stat. § 134.98",
+      "short_name": "WI Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2006-03-31",
+      "last_amended": "2006-03-31",
+      "source_url": "https://docs.legis.wisconsin.gov/statutes/statutes/134/98"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-WI",
+      "section_number": "§ 134.98",
+      "title": "Notice of unauthorized acquisition of personal information",
+      "order_index": 1,
+      "text": "An entity whose principal place of business is located in this state or an entity that maintains or licenses personal information in this state shall, if the entity knows that personal information in the entity's possession has been acquired by a person whom the entity has not authorized to acquire the personal information, make reasonable efforts to notify each subject of the personal information. The notice shall be given within a reasonable time, not to exceed 45 days after the entity learns of the acquisition of personal information."
+    }
+  ]
+}

@@ -2,67 +2,43 @@
   "documents": [
     {
       "jurisdiction": "US-NY",
-      "title": "Stop Hacks and Improve Electronic Data Security Act",
-      "identifier": "NY Gen. Bus. Law § 899-aa",
-      "short_name": "SHIELD Act",
+      "title": "New York Information Security Breach and Notification Act",
+      "identifier": "N.Y. Gen. Bus. Law § 899-aa",
+      "short_name": "NY Breach",
       "document_type": "statute",
       "status": "in_force",
-      "effective_date": "2020-03-21",
-      "last_amended": "2020-03-21",
+      "effective_date": "2005-12-07",
+      "last_amended": "2019-10-23",
       "source_url": "https://www.nysenate.gov/legislation/laws/GBS/899-AA"
     },
     {
       "jurisdiction": "US-NY",
-      "title": "New York Department of Financial Services Cybersecurity Regulation",
-      "identifier": "23 NYCRR 500",
-      "short_name": "DFS 500",
-      "document_type": "regulation",
+      "title": "Stop Hacks and Improve Electronic Data Security Act",
+      "identifier": "N.Y. Gen. Bus. Law § 899-bb",
+      "short_name": "SHIELD Act",
+      "document_type": "statute",
       "status": "in_force",
-      "effective_date": "2017-03-01",
-      "last_amended": "2023-11-01",
-      "source_url": "https://www.dfs.ny.gov/industry_guidance/cybersecurity"
+      "effective_date": "2020-03-21",
+      "last_amended": "2019-07-25",
+      "source_url": "https://www.nysenate.gov/legislation/laws/GBS/899-BB"
     }
   ],
   "provisions": [
     {
       "document_index": 0,
       "jurisdiction": "US-NY",
-      "section_number": "§ 899-aa(1)",
-      "title": "Definitions",
-      "text": "For the purposes of this section, 'breach of the security of the system' shall mean unauthorized access to or acquisition of, or access to or acquisition without valid authorization, of computerized data that compromises the security, confidentiality, or integrity of private information maintained by a business. Good faith access to, or acquisition of, private information by an employee or agent of the business for the purposes of the business is not a breach of the security of the system, provided that the private information is not used or subject to unauthorized disclosure. In determining whether information has been accessed, or is reasonably believed to have been accessed, by an unauthorized person or a person without valid authorization, such business may consider, among other factors, indications that the information was viewed, communicated with, used, or altered by a person without valid authorization or by an unauthorized person.",
-      "order_index": 1
-    },
-    {
-      "document_index": 0,
-      "jurisdiction": "US-NY",
-      "section_number": "§ 899-aa(2)",
-      "title": "Notification requirement",
-      "text": "Any person or business which conducts business in New York state, and which owns or licenses computerized data which includes private information shall disclose any breach of the security of the system following discovery or notification of the breach in the security of the system to any resident of New York state whose private information was, or is reasonably believed to have been, accessed or acquired by a person without valid authorization. The disclosure shall be made in the most expedient time possible and without unreasonable delay, consistent with the legitimate needs of law enforcement or any measures necessary to determine the scope of the breach and restore the reasonable integrity of the data system.",
-      "order_index": 2
-    },
-    {
-      "document_index": 0,
-      "jurisdiction": "US-NY",
-      "section_number": "§ 899-aa(8)",
-      "title": "Reasonable security requirement",
-      "text": "Any person or business that owns or licenses computerized data which includes private information of a resident of New York shall develop, implement and maintain reasonable safeguards to protect the security, confidentiality and integrity of the private information including, but not limited to, disposal of data. Such safeguards shall be consistent with the safeguards for protection of personal information and information of a similar character set forth in any federal or New York state regulations by which the person or business is regulated.",
-      "order_index": 3
+      "section_number": "§ 899-aa",
+      "title": "Notification of unauthorized acquisition of private information",
+      "order_index": 1,
+      "text": "Any person or business which conducts business in New York state, and which owns or licenses computerized data which includes private information shall disclose any breach of the security of the system following discovery or notification of the breach in the security of the system to any resident of New York state whose private information was, or is reasonably believed to have been, acquired by a person without valid authorization. The disclosure shall be made in the most expedient time possible and without unreasonable delay, consistent with the legitimate needs of law enforcement."
     },
     {
       "document_index": 1,
       "jurisdiction": "US-NY",
-      "section_number": "§ 500.02",
-      "title": "Cybersecurity program",
-      "text": "Each covered entity shall maintain a cybersecurity program designed to protect the confidentiality, integrity and availability of the covered entity's information systems. The cybersecurity program shall be based on the covered entity's risk assessment and designed to perform core cybersecurity functions including: identify and assess internal and external cybersecurity risks that may threaten the security or integrity of nonpublic information stored on the covered entity's information systems; use defensive infrastructure and the implementation of policies and procedures to protect the covered entity's information systems, and the nonpublic information stored on those information systems, from unauthorized access, use or other malicious acts; detect cybersecurity events; respond to identified or detected cybersecurity events to mitigate any negative effects; recover from cybersecurity events and restore normal operations and services; and fulfill applicable regulatory reporting obligations.",
-      "order_index": 1
-    },
-    {
-      "document_index": 1,
-      "jurisdiction": "US-NY",
-      "section_number": "§ 500.12",
-      "title": "Encryption of nonpublic information",
-      "text": "As part of its cybersecurity program, based on its risk assessment, each covered entity shall implement a written policy requiring encryption that meets industry standards, to protect nonpublic information held or transmitted by the covered entity both in transit over external networks and at rest. To the extent that a covered entity determines that encryption of nonpublic information in transit over external networks or at rest is infeasible, the covered entity may instead secure such nonpublic information using effective alternative compensating controls reviewed and approved by the covered entity's CISO. Such compensating controls shall be reviewed by the CISO at least annually.",
-      "order_index": 2
+      "section_number": "§ 899-bb",
+      "title": "Reasonable security requirement (SHIELD Act)",
+      "order_index": 2,
+      "text": "Any person or business that owns or licenses computerized data which includes private information of a resident of New York shall develop, implement and maintain reasonable safeguards to protect the security, confidentiality and integrity of the private information including, but not limited to, disposal of data. The SHIELD Act requires implementation of a data security program that includes reasonable administrative, technical, and physical safeguards. Small businesses may scale safeguards appropriate to their size and complexity, nature and scope of activities, and sensitivity of personal information collected."
     }
   ]
 }

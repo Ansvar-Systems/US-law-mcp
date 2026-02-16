@@ -1,0 +1,33 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-ME",
+      "title": "Maine Notice of Risk to Personal Data Act",
+      "identifier": "Me. Rev. Stat. tit. 10, § 1348 et seq.",
+      "short_name": "ME Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2006-01-31",
+      "last_amended": "2019-09-19",
+      "source_url": "https://legislature.maine.gov/statutes/10/title10sec1348.html"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-ME",
+      "section_number": "§ 1348.",
+      "title": "Security breach notice requirements",
+      "text": "Security breach notice requirements\n              \n                \n                  1. \n                                Notification to residents. \n                                The following provisions apply to notification to residents by information brokers and other persons.\n                                     \n                                \n                \n                  A.\n                                        If an information broker that maintains computerized data that includes personal information becomes aware of a breach of the security of the system, the information broker shall conduct in good faith a reasonable and prompt investigation to determine the likelihood that personal information has been or will be misused and shall give notice of a breach of the security of the system following discovery or notification of the security breach to a resident of this State whose personal information has been, or is reasonably believed to have been, acquired by an unauthorized person.\n                                     \n                                [PL 2005, c. 583,  (NEW); PL 2005, c. 583,  (AFF).]\n                \n                  B.\n                                        If any other person who maintains computerized data that includes personal information becomes aware of a breach of the security of the system, the person shall conduct in good faith a reasonable and prompt investigation to determine the likelihood that personal information has been or will be misused and shall give notice of a breach of the security of the system following discovery or notification of the security breach to a resident of this State if misuse of the personal information has occurred or if it is reasonably possible that misuse will occur.\n                                     \n                                [PL 2005, c. 583,  (NEW); PL 2005, c. 583,  (AFF).]\n                The notices required under paragraphs A and B must be made as expediently as possible and without unreasonable delay, consistent with the legitimate needs of law enforcement pursuant to sub or with measures necessary to determine the scope of the security breach and restore the reasonable integrity, security and confidentiality of the data in the system. If there is no delay of notification due to law enforcement investigation pursuant to sub, the notices must be made no more than 30 days after the person identified in paragraph A or B becomes aware of a breach of security and identifies its scope.\n                                     \n                                \n                [PL 2019, c. 512,  (AMD).]\n              \n              \n                \n                  2. \n                                Notification to person maintaining personal information. \n                                A 3rd-party entity that maintains, on behalf of a person, computerized data that includes personal information that the 3rd-party entity does not own shall notify the person maintaining personal information of a breach of the security of the system immediately following discovery if the personal information was, or is reasonably believed to have been, acquired by an unauthorized person.\n                                     \n                                \n                [PL 2005, c. 583,  (AMD); PL 2005, c. 583,  (AFF).]\n              \n              \n                \n                  3. \n                                Delay of notification; criminal investigation by law enforcement. \n                                If, after the completion of an investigation required by sub, notification is required under this section, the notification required by this section may be delayed for no longer than 7 business days after a law enforcement agency determines that the notification will not compromise a criminal investigation.\n                                     \n                                \n                [PL 2009, c. 161,  (AMD); PL 2009, c. 161,  (AFF).]\n              \n              \n                \n                  4. \n                                Notification to consumer reporting agencies. \n                                If a person discovers a breach of the security of the system that requires notification to more than 1,000 persons at a single time, the person shall also notify, without unreasonable delay, consumer reporting agencies that compile and maintain files on consumers on a nationwide basis, as defined in 15 United States Code, (p).  Notification must include the date of the breach, an estimate of the number of persons affected by the breach, if known, and the actual or anticipated date that persons were or will be notified of the breach.\n                                     \n                                \n                [PL 2005, c. 583,  (AMD); PL 2005, c. 583,  (AFF).]\n              \n              \n                \n                  5. \n                                Notification to state regulators. \n                                When notice of a breach of the security of the system is required under sub, the person shall notify the appropriate state regulators within the Department of Professional and Financial Regulation, or if the person is not regulated by the department, the Attorney General.\n                                     \n                                \n                [PL 2005, c. 583,  (AMD); PL 2005, c. 583,  (AFF).]\n              \n              \n                        SECTION HISTORY\n                        PL 2005, c. 379,  (NEW). PL 2005, c. 379,  (AFF). PL 2005, c. 583,  (AMD). PL 2005, c. 583,  (AFF). PL 2009, c. 161,  (AMD). PL 2009, c. 161,  (AFF). PL 2019, c. 512,  (AMD).",
+      "order_index": 1
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-ME",
+      "section_number": "§ 1348.",
+      "title": "Security breach notice requirements",
+      "text": "Security breach notice requirements",
+      "order_index": 2
+    }
+  ]
+}

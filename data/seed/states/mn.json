@@ -1,0 +1,92 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-MN",
+      "title": "Minnesota Data Breach Notification",
+      "identifier": "Minn. Stat. § 325E.61",
+      "short_name": "MN Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2006-01-01",
+      "last_amended": "2023-07-01",
+      "source_url": "https://www.revisor.mn.gov/statutes/cite/325E.61"
+    },
+    {
+      "jurisdiction": "US-MN",
+      "title": "Minnesota Consumer Data Privacy Act",
+      "identifier": "Minn. Stat. ch. 325O",
+      "short_name": "MNCDPA",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2025-07-31",
+      "last_amended": "2024-05-24",
+      "source_url": "https://www.revisor.mn.gov/statutes/cite/325O"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-MN",
+      "section_number": "§ 325E.61",
+      "title": "",
+      "text": "\n325E.60\n325E.63\nResources\nSearch Minnesota Statutes\nAbout Minnesota Statutes\n2025 Statutes New, Amended or Repealed\n2025 Table of Chapters\n2025 Statutes Topics (Index)\nChapter 325E\nTable of Sections\nFull Chapter Text\nVersion List",
+      "order_index": 1
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-MN",
+      "section_number": "§ 325E.61",
+      "title": "",
+      "text": "\nVersion List\nRecent History\n2006 Subd. 1 Amended 2006 c 233 s 1\n2006 Subd. 4 Amended 2006 c 233 s 1\n2006 Subd. 5 Amended 2006 c 212 art 1 s 17\n2005 325E.61 New 2005 c 167 s 1\n325E.61 DATA WAREHOUSES; NOTICE REQUIRED FOR CERTAIN DISCLOSURES.\n§\nSubdivision 1.Disclosure of personal information; notice required.\n(a) Any person or business that conducts business in this state, and that owns or licenses data that includes personal information, shall disclose any breach of the security of the system following discovery or notification of the breach in the security of the data to any resident of this state whose unencrypted personal information was, or is reasonably believed to have been, acquired by an unauthorized person. The disclosure must be made in the most expedient time possible and without unreasonable delay, consistent with the legitimate needs of law enforcement, as provided in paragraph (c), or with any measures necessary to determine the scope of the breach, identify the individuals affected, and restore the reasonable integrity of the data system.\n(b) Any person or business that maintains data that includes personal information that the person or business does not own shall notify the owner or licensee of the information of any breach of the security of the data immediately following discovery, if the personal information was, or is reasonably believed to have been, acquired by an unauthorized person.\n(c) The notification required by this section and section 13.055, subdivision 6, may be delayed to a date certain if a law enforcement agency affirmatively determines that the notification will impede a criminal investigation.",
+      "order_index": 2
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-MN",
+      "section_number": "§ 13.055",
+      "title": "",
+      "text": "(d) For purposes of this section and , subdivision 6, \"breach of the security of the system\" means unauthorized acquisition of computerized data that compromises the security, confidentiality, or integrity of personal information maintained by the person or business. Good faith acquisition of personal information by an employee or agent of the person or business for the purposes of the person or business is not a breach of the security system, provided that the personal information is not used or subject to further unauthorized disclosure.",
+      "order_index": 3
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-MN",
+      "section_number": "§ 13.055",
+      "title": "",
+      "text": "(e) For purposes of this section and , subdivision 6, \"personal information\" means an individual's first name or first initial and last name in combination with any one or more of the following data elements, when the data element is not secured by encryption or another method of technology that makes electronic data unreadable or unusable, or was secured and the encryption key, password, or other means necessary for reading or using the data was also acquired:\n(1) Social Security number;\n(2) driver's license number or Minnesota identification card number; or\n(3) account number or credit or debit card number, in combination with any required security code, access code, or password that would permit access to an individual's financial account.",
+      "order_index": 4
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-MN",
+      "section_number": "§ 13.055",
+      "title": "",
+      "text": "(f) For purposes of this section and , subdivision 6, \"personal information\" does not include publicly available information that is lawfully made available to the general public from federal, state, or local government records.",
+      "order_index": 5
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-MN",
+      "section_number": "§ 13.055",
+      "title": "",
+      "text": "(g) For purposes of this section and , subdivision 6, \"notice\" may be provided by one of the following methods:\n(1) written notice to the most recent available address the person or business has in its records;\n(2) electronic notice, if the person's primary method of communication with the individual is by electronic means, or if the notice provided is consistent with the provisions regarding electronic records and signatures in United States Code, title 15, section 7001; or\n(3) substitute notice, if the person or business demonstrates that the cost of providing notice would exceed $250,000, or that the affected class of subject persons to be notified exceeds 500,000, or the person or business does not have sufficient contact information. Substitute notice must consist of all of the following:\n(i) email notice when the person or business has an email address for the subject persons;\n(ii) conspicuous posting of the notice on the website page of the person or business, if the person or business maintains one; and\n(iii) notification to major statewide media.\n(h) Notwithstanding paragraph (g), a person or business that maintains its own notification procedures as part of an information security policy for the treatment of personal information and is otherwise consistent with the timing requirements of this section and section 13.055, subdivision 6, shall be deemed to be in compliance with the notification requirements of this section and section 13.055, subdivision 6, if the person or business notifies subject persons in accordance with its policies in the event of a breach of security of the system.\n§\nSubd. 2.Coordination with consumer reporting agencies.\nIf a person discovers circumstances requiring notification under this section and section 13.055, subdivision 6, of more than 500 persons at one time, the person shall also notify, within 48 hours, all consumer reporting agencies that compile and maintain files on consumers on a nationwide basis, as defined by United States Code, title 15, section 1681a, of the timing, distribution, and content of the notices.\n§\nSubd. 3.Waiver prohibited.\nAny waiver of the provisions of this section and section 13.055, subdivision 6, is contrary to public policy and is void and unenforceable.\n§\nSubd. 4.Exemption.",
+      "order_index": 6
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-MN",
+      "section_number": "§ 13.055",
+      "title": "This section and , subdivision 6, do not apply to any \"financial institution\" as defined by United States Code, title 15, (3).",
+      "text": "This section and , subdivision 6, do not apply to any \"financial institution\" as defined by United States Code, title 15, (3).\n§\nSubd. 5.",
+      "order_index": 7
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-MN",
+      "section_number": "§ 13.055",
+      "title": "[Renumbered 13.055, subd 6]",
+      "text": "[Renumbered 13.055, subd 6]\n§\nSubd. 6.Remedies and enforcement.\nThe attorney general shall enforce this section and section 13.055, subdivision 6, under section 8.31.\nHistory:\n2005 c 167 s 1; 2006 c 212 art 1 s 17,24; 2006 c 233 s 7,8\nOfficial Publication of the State of Minnesota\nRevisor of Statutes",
+      "order_index": 8
+    }
+  ]
+}

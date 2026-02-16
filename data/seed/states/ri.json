@@ -1,0 +1,44 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-RI",
+      "title": "Rhode Island Identity Theft Protection Act",
+      "identifier": "R.I. Gen. Laws § 11-49.3-1 et seq.",
+      "short_name": "RI Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2006-07-10",
+      "last_amended": "2016-06-29",
+      "source_url": "http://webserver.rilegislature.gov/Statutes/TITLE11/11-49.3/INDEX.htm"
+    },
+    {
+      "jurisdiction": "US-RI",
+      "title": "Rhode Island Data Transparency and Privacy Protection Act",
+      "identifier": "R.I. Gen. Laws § 6-48.1-1 et seq.",
+      "short_name": "RIDTPPA",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2026-01-01",
+      "last_amended": "2024-06-25",
+      "source_url": "http://webserver.rilegislature.gov/Statutes/TITLE6/6-48.1/INDEX.htm"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-RI",
+      "section_number": "§ 11-49.3-4",
+      "title": "Notification of breach",
+      "order_index": 1,
+      "text": "Any municipal agency, state agency or person that owns or licenses computerized data that includes personal information shall provide notification of any breach of the security of the system following the discovery of the breach of the security of the system to any resident of Rhode Island whose personal information was, or is reasonably believed to have been, acquired by an unauthorized person or entity. The notification shall be made in the most expedient time possible but no later than forty-five (45) calendar days after confirmation of the breach and the ability to ascertain the information required to fulfill the notice requirements."
+    },
+    {
+      "document_index": 1,
+      "jurisdiction": "US-RI",
+      "section_number": "§ 6-48.1-3",
+      "title": "Consumer data rights",
+      "order_index": 2,
+      "text": "A consumer has the right to: (1) Confirm whether or not a controller is processing the consumer's personal data and access such personal data; (2) Correct inaccuracies in the consumer's personal data; (3) Delete personal data provided by, or obtained about, the consumer; (4) Obtain a copy of the consumer's personal data that the consumer previously provided to the controller in a portable format."
+    }
+  ]
+}

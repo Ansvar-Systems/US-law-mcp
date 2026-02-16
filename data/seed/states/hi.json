@@ -1,0 +1,25 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-HI",
+      "title": "Hawaii Security Breach of Personal Information",
+      "identifier": "Haw. Rev. Stat. § 487N-2",
+      "short_name": "HI Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2007-01-01",
+      "last_amended": "2008-07-01",
+      "source_url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0487N/HRS_0487N-0002.htm"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-HI",
+      "section_number": "§ 487N-2",
+      "title": "Notice of security breach",
+      "order_index": 1,
+      "text": "Any business that owns or licenses personal information of residents of Hawaii, any business that conducts business in Hawaii that owns or licenses personal information in any form (whether computerized, paper, or otherwise), or any government agency that collects personal information for specific government purposes shall provide notice to the affected person that there has been a security breach following discovery or notification of the breach. The notice shall be made without unreasonable delay, consistent with the legitimate needs of law enforcement, and consistent with any measures necessary to determine sufficient contact information, determine the scope of the breach, and restore the reasonable integrity, security, and confidentiality of the data system."
+    }
+  ]
+}

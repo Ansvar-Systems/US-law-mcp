@@ -1,0 +1,44 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-NE",
+      "title": "Nebraska Financial Data Protection and Consumer Notification Act",
+      "identifier": "Neb. Rev. Stat. § 87-801 et seq.",
+      "short_name": "NE Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2006-07-14",
+      "last_amended": "2016-07-21",
+      "source_url": "https://nebraskalegislature.gov/laws/statutes.php?statute=87-801"
+    },
+    {
+      "jurisdiction": "US-NE",
+      "title": "Nebraska Data Privacy Act",
+      "identifier": "Neb. Rev. Stat. § 87-1101 et seq.",
+      "short_name": "NEDPA",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2025-01-01",
+      "last_amended": "2024-04-17",
+      "source_url": "https://nebraskalegislature.gov/laws/statutes.php?statute=87-1101"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-NE",
+      "section_number": "§ 87-802",
+      "title": "Breach of security - disclosure required",
+      "order_index": 1,
+      "text": "Any individual or commercial entity that conducts business in Nebraska and that owns or licenses computerized data that includes personal information about a resident of Nebraska shall, when it becomes aware of a breach of the security of the system, conduct in good faith a reasonable and prompt investigation to determine the likelihood that personal information has been or will be used for an unauthorized purpose. If the investigation determines that the use of information about a Nebraska resident for an unauthorized purpose has occurred or is reasonably likely to occur, the individual or commercial entity shall give notice to the affected Nebraska resident."
+    },
+    {
+      "document_index": 1,
+      "jurisdiction": "US-NE",
+      "section_number": "§ 87-1102",
+      "title": "Consumer data rights",
+      "order_index": 2,
+      "text": "A consumer may invoke any of the following rights with regard to the consumer's personal data: (1) Confirm whether a controller is processing the consumer's personal data and access such personal data; (2) Correct inaccuracies in the consumer's personal data; (3) Delete personal data provided by or obtained about the consumer; (4) Obtain a copy of the consumer's personal data processed by the controller; and (5) Opt out of the processing of personal data for purposes of targeted advertising, sale of personal data, or profiling."
+    }
+  ]
+}

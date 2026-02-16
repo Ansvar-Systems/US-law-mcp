@@ -1,0 +1,25 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-WV",
+      "title": "West Virginia Breach of Security of Consumer Information",
+      "identifier": "W. Va. Code § 46A-2A-101 et seq.",
+      "short_name": "WV Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2008-06-06",
+      "last_amended": "2008-06-06",
+      "source_url": "https://www.wvlegislature.gov/wvcode/ChapterEntire.cfm?chap=46a&art=2A"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-WV",
+      "section_number": "§ 46A-2A-102",
+      "title": "Notice of breach",
+      "order_index": 1,
+      "text": "An individual or entity that owns or licenses computerized data that includes personal information shall give notice of any breach of the security of the system following discovery or notification of the breach of the security of the system to any resident of this state whose unencrypted and unredacted personal information was, or is reasonably believed to have been, accessed and acquired by an unauthorized person and that causes, or the individual or entity reasonably believes has caused or will cause, identity theft or other fraud to any resident of this state."
+    }
+  ]
+}

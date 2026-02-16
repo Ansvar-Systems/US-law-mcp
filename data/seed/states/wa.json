@@ -1,0 +1,25 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-WA",
+      "title": "Washington Data Breach Notification",
+      "identifier": "Wash. Rev. Code § 19.255.010 et seq.",
+      "short_name": "WA Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2005-07-24",
+      "last_amended": "2019-05-07",
+      "source_url": "https://app.leg.wa.gov/rcw/default.aspx?cite=19.255"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-WA",
+      "section_number": "§ 19.255",
+      "title": "Chapter  19.255 RCW",
+      "text": "PERSONAL INFORMATION—NOTICE OF SECURITY BREACHES\nSections\nHTMLPDF 19.255.005Definitions.HTMLPDF 19.255.010Personal information—Notice of security breaches.HTMLPDF 19.255.020Liability of processors, businesses, and vendors.HTMLPDF 19.255.030Federal law—Covered entities—Financial institutions.HTMLPDF 19.255.040Consumer protection.",
+      "order_index": 1
+    }
+  ]
+}

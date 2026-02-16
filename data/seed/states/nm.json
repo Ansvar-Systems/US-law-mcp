@@ -1,0 +1,25 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-NM",
+      "title": "New Mexico Data Breach Notification Act",
+      "identifier": "N.M. Stat. § 57-12C-1 et seq.",
+      "short_name": "NM Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2017-06-16",
+      "last_amended": "2017-06-16",
+      "source_url": "https://nmonesource.com/nmos/nmsa/en/item/4352/index.do"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-NM",
+      "section_number": "§ 57-12C-6",
+      "title": "Notification of security breach",
+      "order_index": 1,
+      "text": "Any person that owns or licenses personal identifying information of a New Mexico resident shall, when the person becomes aware of a security breach, provide notification to each New Mexico resident whose personal identifying information is reasonably believed to have been subject to a security breach. The notification shall be provided within forty-five calendar days following the discovery of a security breach, consistent with the legitimate needs of law enforcement."
+    }
+  ]
+}

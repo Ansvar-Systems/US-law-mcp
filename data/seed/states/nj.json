@@ -1,0 +1,44 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-NJ",
+      "title": "New Jersey Data Breach Notification Law",
+      "identifier": "N.J. Stat. § 56:8-161 et seq.",
+      "short_name": "NJ Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2006-01-01",
+      "last_amended": "2019-09-17",
+      "source_url": "https://www.njleg.state.nj.us/Bills/2004/AL05/198_.HTM"
+    },
+    {
+      "jurisdiction": "US-NJ",
+      "title": "New Jersey Data Privacy Act",
+      "identifier": "N.J. Stat. § 56:8-166.1 et seq.",
+      "short_name": "NJDPA",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2025-01-15",
+      "last_amended": "2024-01-16",
+      "source_url": "https://www.njleg.state.nj.us/Bills/2024/S0332_R3.HTM"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-NJ",
+      "section_number": "§ 56:8-163",
+      "title": "Disclosure of breach of security",
+      "order_index": 1,
+      "text": "Any business that conducts business in New Jersey, or any public entity that compiles or maintains computerized records that include personal information, shall disclose any breach of security of those computerized records following discovery or notification of the breach to any customer who is a resident of New Jersey whose personal information was, or is reasonably believed to have been, accessed by an unauthorized person. The disclosure shall be made in the most expedient time possible and without unreasonable delay, consistent with the legitimate needs of law enforcement."
+    },
+    {
+      "document_index": 1,
+      "jurisdiction": "US-NJ",
+      "section_number": "§ 56:8-166.2",
+      "title": "Consumer rights",
+      "order_index": 2,
+      "text": "A consumer shall have the right to: (1) Confirm whether a controller is processing the consumer's personal data and to access the personal data; (2) Correct inaccuracies in the consumer's personal data; (3) Delete personal data provided by, or obtained about, the consumer; (4) Obtain a copy of the consumer's personal data processed by the controller, in a portable and readily usable format; and (5) Opt out of the processing of the personal data for purposes of targeted advertising, sale of personal data, or profiling."
+    }
+  ]
+}

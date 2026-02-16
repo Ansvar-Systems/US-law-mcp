@@ -1,0 +1,33 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-AR",
+      "title": "Arkansas Personal Information Protection Act",
+      "identifier": "Ark. Code § 4-110-101 et seq.",
+      "short_name": "AR Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2005-08-12",
+      "last_amended": "2019-04-16",
+      "source_url": "https://www.arkleg.state.ar.us/Bills/FTPDocument?path=%2FACS%2F2005%2FPublic%2FACT1526.pdf"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-AR",
+      "section_number": "§ 4-110-103",
+      "title": "Disclosure of breach of security of computerized personal information",
+      "order_index": 1,
+      "text": "Any person or business that acquires, owns, or licenses computerized data that includes personal information shall disclose any breach of the security of the system following discovery or notification of the breach of the security of the system to any resident of Arkansas whose unencrypted personal information was, or is reasonably believed to have been, acquired by an unauthorized person. The disclosure shall be made in the most expedient time and manner possible and without unreasonable delay, consistent with the legitimate needs of law enforcement or any measures necessary to determine the scope of the breach and to restore the reasonable integrity of the data system."
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-AR",
+      "section_number": "§ 4-110-104",
+      "title": "Definitions",
+      "order_index": 2,
+      "text": "As used in this subchapter: (1) \"Breach of the security of the system\" means unauthorized acquisition of computerized data that compromises the security, confidentiality, or integrity of personal information maintained by a person or business. (2) \"Personal information\" means an individual's first name or first initial and last name in combination with any one or more of the following data elements when either the name or the data element is not encrypted or redacted: (A) Social Security number; (B) Driver's license number or Arkansas identification card number; (C) Account number, credit card number, or debit card number in combination with any required security code, access code, or password that would permit access to an individual's financial account."
+    }
+  ]
+}

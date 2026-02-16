@@ -1,0 +1,25 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-SD",
+      "title": "South Dakota Data Breach Notification",
+      "identifier": "S.D. Codified Laws § 22-40-19 et seq.",
+      "short_name": "SD Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2018-07-01",
+      "last_amended": "2018-03-21",
+      "source_url": "https://sdlegislature.gov/Statutes/Codified_Laws/2078844"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-SD",
+      "section_number": "§ 22-40-21",
+      "title": "Notification of breach",
+      "order_index": 1,
+      "text": "Any information holder that has had a breach of system security shall disclose the breach of system security to any resident of this state whose personal or protected information was, or is reasonably believed to have been, acquired by an unauthorized person. The disclosure shall be made within sixty days from the discovery or notification of the breach of system security, unless a longer period of time is required due to the legitimate needs of law enforcement."
+    }
+  ]
+}

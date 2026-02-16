@@ -1,0 +1,209 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-VT",
+      "title": "Vermont Security Breach Notice Act",
+      "identifier": "Vt. Stat. tit. 9, § 2430 et seq.",
+      "short_name": "VT Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2007-01-01",
+      "last_amended": "2012-05-08",
+      "source_url": "https://legislature.vermont.gov/statutes/chapter/09/062"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-VT",
+      "section_number": "§ 2430.",
+      "title": "Definitions",
+      "text": "Definitions",
+      "order_index": 1
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-VT",
+      "section_number": "§ 2431.",
+      "title": "Acquisition of brokered personal information; prohibitions",
+      "text": "Acquisition of brokered personal information; prohibitions\nSubchapter 002: SECURITY BREACH NOTICE ACT",
+      "order_index": 2
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-VT",
+      "section_number": "§ 2435.",
+      "title": "Notice of security breaches",
+      "text": "Notice of security breaches\nSubchapter 003: SOCIAL SECURITY NUMBER PROTECTION ACT",
+      "order_index": 3
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-VT",
+      "section_number": "§ 2440.",
+      "title": "Social Security number protection",
+      "text": "Social Security number protection\nSubchapter 003A: STUDENT PRIVACY",
+      "order_index": 4
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-VT",
+      "section_number": "§ 2443.",
+      "title": "Definitions",
+      "text": "Definitions",
+      "order_index": 5
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-VT",
+      "section_number": "§ 2443a.",
+      "title": "Operator prohibitions",
+      "text": "Operator prohibitions",
+      "order_index": 6
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-VT",
+      "section_number": "§ 2443b.",
+      "title": "Operator duties",
+      "text": "Operator duties",
+      "order_index": 7
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-VT",
+      "section_number": "§ 2443c.",
+      "title": "Permissive use or disclosure",
+      "text": "Permissive use or disclosure",
+      "order_index": 8
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-VT",
+      "section_number": "§ 2443d.",
+      "title": "Operator actions that are not prohibited",
+      "text": "Operator actions that are not prohibited",
+      "order_index": 9
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-VT",
+      "section_number": "§ 2443e.",
+      "title": "Applicability",
+      "text": "Applicability",
+      "order_index": 10
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-VT",
+      "section_number": "§ 2443f.",
+      "title": "Enforcement",
+      "text": "Enforcement\nSubchapter 004: DOCUMENT SAFE DESTRUCTION ACT",
+      "order_index": 11
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-VT",
+      "section_number": "§ 2445.",
+      "title": "Safe destruction of documents containing personal information",
+      "text": "Safe destruction of documents containing personal information\nSubchapter 005: DATA BROKERS",
+      "order_index": 12
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-VT",
+      "section_number": "§ 2446.",
+      "title": "Annual registration",
+      "text": "Annual registration",
+      "order_index": 13
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-VT",
+      "section_number": "§ 2447.",
+      "title": "Data broker duty to protect information; standards; technical requirements",
+      "text": "Data broker duty to protect information; standards; technical requirements\nSubchapter 006: VERMONT AGE-APPROPRIATE DESIGN CODE ACT",
+      "order_index": 14
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-VT",
+      "section_number": "§ 2449a.",
+      "title": "Definitions [Effective January 1, 2027]",
+      "text": "Definitions [Effective January 1, 2027]",
+      "order_index": 15
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-VT",
+      "section_number": "§ 2449b.",
+      "title": "Exclusions [Effective January 1, 2027]",
+      "text": "Exclusions [Effective January 1, 2027]",
+      "order_index": 16
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-VT",
+      "section_number": "§ 2449c.",
+      "title": "Minimum duty of care [Effective January 1, 2027]",
+      "text": "Minimum duty of care [Effective January 1, 2027]",
+      "order_index": 17
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-VT",
+      "section_number": "§ 2449d.",
+      "title": "Required default privacy settings and tools [Effective January 1, 2027]",
+      "text": "Required default privacy settings and tools [Effective January 1, 2027]",
+      "order_index": 18
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-VT",
+      "section_number": "§ 2449e.",
+      "title": "Transparency [Effective January 1, 2027]",
+      "text": "Transparency [Effective January 1, 2027]",
+      "order_index": 19
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-VT",
+      "section_number": "§ 2449f.",
+      "title": "Prohibited data and design practices [Effective January 1, 2027]",
+      "text": "Prohibited data and design practices [Effective January 1, 2027]",
+      "order_index": 20
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-VT",
+      "section_number": "§ 2449g.",
+      "title": "Age assurance privacy [Effective January 1, 2027]",
+      "text": "Age assurance privacy [Effective January 1, 2027]",
+      "order_index": 21
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-VT",
+      "section_number": "§ 2449h.",
+      "title": "Enforcement [Effective January 1, 2027]",
+      "text": "Enforcement [Effective January 1, 2027]",
+      "order_index": 22
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-VT",
+      "section_number": "§ 2449i.",
+      "title": "Limitations [Effective January 1, 2027]",
+      "text": "Limitations [Effective January 1, 2027]",
+      "order_index": 23
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-VT",
+      "section_number": "§ 2449j.",
+      "title": "Rights and freedoms of covered minors [Effective January 1, 2027]",
+      "text": "Rights and freedoms of covered minors [Effective January 1, 2027]\nFull Text of Chapter",
+      "order_index": 24
+    }
+  ]
+}

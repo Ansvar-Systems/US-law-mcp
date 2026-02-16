@@ -1,0 +1,25 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-PA",
+      "title": "Pennsylvania Breach of Personal Information Notification Act",
+      "identifier": "73 Pa. Stat. § 2303",
+      "short_name": "PA Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2006-06-20",
+      "last_amended": "2022-11-03",
+      "source_url": "https://www.legis.state.pa.us/cfdocs/legis/LI/uconsCheck.cfm?txtType=HTM&yr=2005&sessInd=0&smthLwInd=0&act=94&chpt=0&sctn=3&subsctn=0"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-PA",
+      "section_number": "§ 2303",
+      "title": "Notification of breach of personal information",
+      "order_index": 1,
+      "text": "An entity that maintains, stores or manages computerized data that includes personal information shall provide notice of any breach of the security of the system following discovery of the breach of the security of the system to any resident of this Commonwealth whose unencrypted and unredacted personal information was, or is reasonably believed to have been, accessed and acquired by an unauthorized person. Except as provided in subsection (c) or in order to take any measures necessary to determine the scope of the breach and to restore the reasonable integrity of the data system, the notice shall be made without unreasonable delay."
+    }
+  ]
+}

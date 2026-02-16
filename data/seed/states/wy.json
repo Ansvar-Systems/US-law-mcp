@@ -1,0 +1,25 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-WY",
+      "title": "Wyoming Data Breach Notification",
+      "identifier": "Wyo. Stat. § 40-12-501 et seq.",
+      "short_name": "WY Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2007-07-01",
+      "last_amended": "2007-07-01",
+      "source_url": "https://wyoleg.gov/NXT/gateway.dll/Statutes/title40/chapter12/article5"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-WY",
+      "section_number": "§ 40-12-502",
+      "title": "Notification of security breach",
+      "order_index": 1,
+      "text": "Any individual or commercial entity that conducts business in Wyoming and that owns or licenses computerized data that includes personal identifying information about a resident of Wyoming shall, when it becomes aware of a breach of the security of the system, conduct in good faith a reasonable and prompt investigation to determine the likelihood that personal identifying information has been or will be misused. If the investigation determines that the misuse of information about a Wyoming resident has occurred or is reasonably likely to occur, the individual or commercial entity shall give notice as soon as possible to the affected Wyoming resident."
+    }
+  ]
+}

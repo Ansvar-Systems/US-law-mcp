@@ -1,0 +1,44 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-UT",
+      "title": "Utah Protection of Personal Information Act",
+      "identifier": "Utah Code § 13-44-101 et seq.",
+      "short_name": "UT Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2007-01-01",
+      "last_amended": "2019-05-14",
+      "source_url": "https://le.utah.gov/xcode/Title13/Chapter44/13-44.html"
+    },
+    {
+      "jurisdiction": "US-UT",
+      "title": "Utah Consumer Privacy Act",
+      "identifier": "Utah Code § 13-61-101 et seq.",
+      "short_name": "UCPA",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2023-12-31",
+      "last_amended": "2022-03-24",
+      "source_url": "https://le.utah.gov/xcode/Title13/Chapter61/13-61.html"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-UT",
+      "section_number": "§ 13-44-202",
+      "title": "Notification of system breach",
+      "order_index": 1,
+      "text": "Any person who owns or licenses computerized data that includes personal information concerning a Utah resident shall, when the person becomes aware of a breach of system security, provide notification to the affected Utah resident. The person shall provide notification in the most expedient time possible without unreasonable delay. A person who owns or licenses computerized data that includes personal information and discovers a breach of system security relating to the personal information shall also provide notification to the attorney general."
+    },
+    {
+      "document_index": 1,
+      "jurisdiction": "US-UT",
+      "section_number": "§ 13-61-201",
+      "title": "Consumer rights under UCPA",
+      "order_index": 2,
+      "text": "A consumer has the right to: (1) confirm whether or not a controller is processing the consumer's personal data and access the personal data; (2) delete personal data that the consumer has provided to the controller; (3) obtain a copy of the consumer's personal data in a portable and readily usable format that allows the consumer to transmit the data to another controller; and (4) opt out of the processing of the consumer's personal data for purposes of targeted advertising or sale of personal data."
+    }
+  ]
+}

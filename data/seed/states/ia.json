@@ -1,0 +1,116 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-IA",
+      "title": "Iowa Breach of Security Notification",
+      "identifier": "Iowa Code § 715C.1 et seq.",
+      "short_name": "IA Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2008-07-01",
+      "last_amended": "2014-07-01",
+      "source_url": "https://www.legis.iowa.gov/law/iowaCode/sections?codeChapter=715C"
+    },
+    {
+      "jurisdiction": "US-IA",
+      "title": "Iowa Consumer Data Protection Act",
+      "identifier": "Iowa Code ch. 715D",
+      "short_name": "IACDPA",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2025-01-01",
+      "last_amended": "2023-03-29",
+      "source_url": "https://www.legis.iowa.gov/law/iowaCode/sections?codeChapter=715D"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-IA",
+      "section_number": "§ 715C.1",
+      "title": "Definitions.",
+      "text": "Definitions.\nPDF\nRTF",
+      "order_index": 1
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-IA",
+      "section_number": "§ 715C.2",
+      "title": "Security breach — notification requirements — remedies.",
+      "text": "Security breach — notification requirements — remedies.\nPDF\nRTF",
+      "order_index": 2
+    },
+    {
+      "document_index": 1,
+      "jurisdiction": "US-IA",
+      "section_number": "§ 715D.1",
+      "title": "Definitions.",
+      "text": "Definitions.\nPDF\nRTF",
+      "order_index": 1
+    },
+    {
+      "document_index": 1,
+      "jurisdiction": "US-IA",
+      "section_number": "§ 715D.2",
+      "title": "Scope and exemptions.",
+      "text": "Scope and exemptions.\nPDF\nRTF",
+      "order_index": 2
+    },
+    {
+      "document_index": 1,
+      "jurisdiction": "US-IA",
+      "section_number": "§ 715D.3",
+      "title": "Consumer data rights.",
+      "text": "Consumer data rights.\nPDF\nRTF",
+      "order_index": 3
+    },
+    {
+      "document_index": 1,
+      "jurisdiction": "US-IA",
+      "section_number": "§ 715D.4",
+      "title": "Data controller duties.",
+      "text": "Data controller duties.\nPDF\nRTF",
+      "order_index": 4
+    },
+    {
+      "document_index": 1,
+      "jurisdiction": "US-IA",
+      "section_number": "§ 715D.5",
+      "title": "Processor duties.",
+      "text": "Processor duties.\nPDF\nRTF",
+      "order_index": 5
+    },
+    {
+      "document_index": 1,
+      "jurisdiction": "US-IA",
+      "section_number": "§ 715D.6",
+      "title": "Processing data — exemptions.",
+      "text": "Processing data — exemptions.\nPDF\nRTF",
+      "order_index": 6
+    },
+    {
+      "document_index": 1,
+      "jurisdiction": "US-IA",
+      "section_number": "§ 715D.7",
+      "title": "Limitations.",
+      "text": "Limitations.\nPDF\nRTF",
+      "order_index": 7
+    },
+    {
+      "document_index": 1,
+      "jurisdiction": "US-IA",
+      "section_number": "§ 715D.8",
+      "title": "Enforcement — penalties.",
+      "text": "Enforcement — penalties.\nPDF\nRTF",
+      "order_index": 8
+    },
+    {
+      "document_index": 1,
+      "jurisdiction": "US-IA",
+      "section_number": "§ 715D.9",
+      "title": "Preemption.",
+      "text": "Preemption.\nPDF\nRTF",
+      "order_index": 9
+    }
+  ]
+}

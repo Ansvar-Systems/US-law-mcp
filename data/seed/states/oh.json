@@ -1,0 +1,44 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-OH",
+      "title": "Ohio Data Breach Notification",
+      "identifier": "Ohio Rev. Code § 1349.19",
+      "short_name": "OH Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2006-02-17",
+      "last_amended": "2018-11-02",
+      "source_url": "https://codes.ohio.gov/ohio-revised-code/section-1349.19"
+    },
+    {
+      "jurisdiction": "US-OH",
+      "title": "Ohio Data Protection Act (Cybersecurity Safe Harbor)",
+      "identifier": "Ohio Rev. Code § 1354.01 et seq.",
+      "short_name": "OH DPA",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2018-11-02",
+      "last_amended": "2018-08-03",
+      "source_url": "https://codes.ohio.gov/ohio-revised-code/chapter-1354"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-OH",
+      "section_number": "§ 1349.19",
+      "title": "Notification of breach",
+      "order_index": 1,
+      "text": "Any person that owns or licenses computerized data that includes personal information shall disclose any breach of the security of the system, following its discovery or notification of the breach of the security of the system, to any resident of this state whose personal information was, or reasonably is believed to have been, accessed and acquired by an unauthorized person if the access and acquisition by the unauthorized person causes or reasonably is believed will cause a material risk of identity theft or other fraud to the resident."
+    },
+    {
+      "document_index": 1,
+      "jurisdiction": "US-OH",
+      "section_number": "§ 1354.02",
+      "title": "Cybersecurity safe harbor",
+      "order_index": 2,
+      "text": "A covered entity that creates, maintains, and complies with a written cybersecurity program that contains administrative, technical, and physical safeguards for the protection of both personal information and restricted information and that reasonably conforms to an industry recognized cybersecurity framework shall have an affirmative defense to any cause of action sounding in tort that is brought under the laws of this state or in the courts of this state and that alleges that the failure to implement reasonable information security controls resulted in a data breach concerning personal information or restricted information."
+    }
+  ]
+}

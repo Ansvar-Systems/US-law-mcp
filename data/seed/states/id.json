@@ -1,0 +1,25 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-ID",
+      "title": "Idaho Data Breach Notification Act",
+      "identifier": "Idaho Code § 28-51-104 et seq.",
+      "short_name": "ID Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2006-07-01",
+      "last_amended": "2006-07-01",
+      "source_url": "https://legislature.idaho.gov/statutesrules/idstat/Title28/T28CH51/"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-ID",
+      "section_number": "§ 28-51-105",
+      "title": "Disclosure of breach of the security of computerized personal information",
+      "order_index": 1,
+      "text": "Any agency, individual or the commercial entity that conducts business in Idaho and that owns or licenses computerized data that includes personal information about a resident of Idaho shall, when it becomes aware of a breach of the security of the system, provide notice of the breach of the security of the system to the affected Idaho resident. Notice shall be made in the most expedient time possible and without unreasonable delay, consistent with the legitimate needs of law enforcement, and consistent with any measures necessary to determine the scope of the breach and to restore the reasonable integrity of the system."
+    }
+  ]
+}

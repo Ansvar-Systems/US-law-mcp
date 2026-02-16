@@ -1,0 +1,44 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-OR",
+      "title": "Oregon Consumer Identity Theft Protection Act",
+      "identifier": "Or. Rev. Stat. § 646A.604",
+      "short_name": "OR Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2007-10-01",
+      "last_amended": "2019-09-29",
+      "source_url": "https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html"
+    },
+    {
+      "jurisdiction": "US-OR",
+      "title": "Oregon Consumer Privacy Act",
+      "identifier": "Or. Rev. Stat. § 646A.570 et seq.",
+      "short_name": "OCPA",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2024-07-01",
+      "last_amended": "2023-07-18",
+      "source_url": "https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-OR",
+      "section_number": "§ 646A.604",
+      "title": "Notification of breach of security",
+      "order_index": 1,
+      "text": "Any person that owns, maintains or otherwise possesses data that includes a consumer's personal information that is used in the course of the person's business, vocation, occupation or volunteer activities and that was subject to a breach of security shall, after the person discovers or is notified of the breach of security, give notice of the breach to the consumer, the Attorney General, and, where applicable, consumer reporting agencies. Notification must be given no later than 45 days after discovery."
+    },
+    {
+      "document_index": 1,
+      "jurisdiction": "US-OR",
+      "section_number": "§ 646A.570",
+      "title": "Consumer rights under OCPA",
+      "order_index": 2,
+      "text": "A consumer has the right to: (a) Confirm whether a controller is processing the consumer's personal data and access such data; (b) Correct inaccuracies in the consumer's personal data; (c) Delete personal data provided by or obtained about the consumer; (d) Obtain a copy of the consumer's personal data; (e) Opt out of the processing of personal data for purposes of targeted advertising, sale of personal data, or profiling in furtherance of decisions that produce legal or similarly significant effects concerning the consumer."
+    }
+  ]
+}

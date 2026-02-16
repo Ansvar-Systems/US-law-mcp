@@ -1,0 +1,25 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-NC",
+      "title": "North Carolina Identity Theft Protection Act",
+      "identifier": "N.C. Gen. Stat. § 75-61 et seq.",
+      "short_name": "NC Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2005-12-01",
+      "last_amended": "2005-12-01",
+      "source_url": "https://www.ncleg.gov/EnactedLegislation/Statutes/PDF/BySection/Chapter_75/GS_75-65.pdf"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-NC",
+      "section_number": "§ 75-65",
+      "title": "Protection from security breaches",
+      "order_index": 1,
+      "text": "Any business that owns or licenses personal information of residents of North Carolina or any business that conducts business in North Carolina that owns or licenses personal information in any form (whether computerized, paper, or otherwise) shall provide notice to the affected person that there has been a security breach following discovery of the breach. The disclosure notification shall be made without unreasonable delay, consistent with the legitimate needs of law enforcement, and consistent with any measures necessary to determine sufficient contact information and to determine the scope of the breach and restore the reasonable integrity, security, and confidentiality of the data system."
+    }
+  ]
+}

@@ -13,7 +13,7 @@
  *   - "Chapter 1234, Section 5"
  */
 import * as cheerio from 'cheerio';
-import { registerParser, type ParsedProvision } from './index.js';
+import { registerParser, type ParsedProvision } from './registry.js';
 
 // ── Section number patterns (ordered from most to least specific) ──
 

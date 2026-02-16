@@ -1,0 +1,44 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-CT",
+      "title": "Connecticut Data Breach Notification Law",
+      "identifier": "Conn. Gen. Stat. § 36a-701b",
+      "short_name": "CT Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2005-10-01",
+      "last_amended": "2021-10-01",
+      "source_url": "https://www.cga.ct.gov/current/pub/chap_669.htm#sec_36a-701b"
+    },
+    {
+      "jurisdiction": "US-CT",
+      "title": "Connecticut Data Privacy Act",
+      "identifier": "Conn. Gen. Stat. § 42-515 et seq.",
+      "short_name": "CTDPA",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2023-07-01",
+      "last_amended": "2023-07-01",
+      "source_url": "https://www.cga.ct.gov/current/pub/chap_743dd.htm"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-CT",
+      "section_number": "§ 36a-701b",
+      "title": "Breach of security - notification",
+      "order_index": 1,
+      "text": "Any person who conducts business in this state, and who, in the ordinary course of such person's business, owns, licenses or maintains computerized data that includes personal information, shall provide notice of any breach of security following the discovery of the breach to any resident of this state whose personal information was breached or is reasonably believed to have been breached. Such notice shall be made without unreasonable delay but not later than sixty days after the discovery of the breach, subject to the legitimate needs of law enforcement."
+    },
+    {
+      "document_index": 1,
+      "jurisdiction": "US-CT",
+      "section_number": "§ 42-515",
+      "title": "Definitions",
+      "order_index": 2,
+      "text": "As used in this chapter: (1) \"Consent\" means a clear affirmative act signifying a consumer's freely given, specific, informed and unambiguous agreement to allow the processing of personal data relating to the consumer. (2) \"Consumer\" means an individual who is a resident of this state. (3) \"Controller\" means a person that, alone or jointly with others, determines the purpose and means of processing personal data. (4) \"Personal data\" means any information that is linked or reasonably linkable to an identified or identifiable individual. \"Personal data\" does not include de-identified data or publicly available information."
+    }
+  ]
+}

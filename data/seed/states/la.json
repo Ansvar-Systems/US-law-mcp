@@ -1,0 +1,25 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-LA",
+      "title": "Louisiana Database Security Breach Notification Law",
+      "identifier": "La. Rev. Stat. § 51:3071 et seq.",
+      "short_name": "LA Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2006-01-01",
+      "last_amended": "2018-08-01",
+      "source_url": "https://www.legis.la.gov/legis/Law.aspx?d=322028"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-LA",
+      "section_number": "§ 51:3074",
+      "title": "Notification of breach of security",
+      "order_index": 1,
+      "text": "Any person that conducts business in the state or that owns or licenses computerized data that includes personal information, shall, following discovery of a breach in the security of the system, notify any resident of the state whose personal information was, or is reasonably believed to have been, acquired by an unauthorized person through the breach of the security of the system, when the personal information was not encrypted. The notification shall be made in the most expedient time possible and without unreasonable delay but not later than sixty days after the breach is discovered, consistent with the legitimate needs of law enforcement."
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-AL",
+      "title": "Alabama Data Breach Notification Act",
+      "identifier": "Ala. Code § 8-38-1 et seq.",
+      "short_name": "AL Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2018-06-01",
+      "last_amended": "2018-03-28",
+      "source_url": "https://alisondb.legislature.state.al.us/alison/CodeOfAlabama/1975/Coatoc.htm"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-AL",
+      "section_number": "§ 8-38-2",
+      "title": "Definitions",
+      "order_index": 1,
+      "text": "As used in this chapter, the following terms have the following meanings: (1) BREACH OF SECURITY or BREACH. The unauthorized acquisition of data in electronic form containing sensitive personally identifying information. Acquisition of data through good faith but unauthorized means by an employee or agent of a covered entity is not a breach of security, so long as the sensitive personally identifying information is not used for a purpose unrelated to the business or subject to further unauthorized use."
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-AL",
+      "section_number": "§ 8-38-3",
+      "title": "Notification requirements",
+      "order_index": 2,
+      "text": "A covered entity shall conduct in good faith a prompt investigation of a suspected or actual breach of security. If the investigation determines that sensitive personally identifying information has been acquired or is reasonably believed to have been acquired by an unauthorized person and is reasonably likely to cause substantial harm to the individuals to whom the information relates, the covered entity shall give notice of the breach as expeditiously as possible and without unreasonable delay, taking into account the time necessary to allow the covered entity to conduct an investigation, but no later than 45 days from the determination that a breach has or is reasonably believed to have occurred."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-IN",
+      "title": "Indiana Disclosure of Security Breach",
+      "identifier": "Ind. Code § 24-4.9-1-1 et seq.",
+      "short_name": "IN Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2006-07-01",
+      "last_amended": "2023-07-01",
+      "source_url": "http://iga.in.gov/laws/2024/ic/titles/24#24-4.9"
+    },
+    {
+      "jurisdiction": "US-IN",
+      "title": "Indiana Consumer Data Protection Act",
+      "identifier": "Ind. Code § 24-15-1-1 et seq.",
+      "short_name": "INCDPA",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2026-01-01",
+      "last_amended": "2023-05-01",
+      "source_url": "http://iga.in.gov/laws/2024/ic/titles/24#24-15"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-IN",
+      "section_number": "§ 24-4.9-3-1",
+      "title": "Disclosure of breach",
+      "order_index": 1,
+      "text": "After discovering or being notified of a breach of the security of data, the data base owner shall disclose the breach to an Indiana resident whose unencrypted personal information was or may have been acquired by an unauthorized person, or whose encrypted personal information was or may have been acquired by an unauthorized person with access to the encryption key."
+    },
+    {
+      "document_index": 1,
+      "jurisdiction": "US-IN",
+      "section_number": "§ 24-15-2-1",
+      "title": "Consumer data rights",
+      "order_index": 2,
+      "text": "A consumer may invoke any of the following rights with regard to the consumer's personal data that is processed by a controller: (1) The right to confirm whether or not a controller is processing the consumer's personal data and to access the consumer's personal data. (2) The right to correct inaccuracies in the consumer's personal data. (3) The right to delete personal data provided by or obtained about the consumer. (4) The right to obtain a copy of the consumer's personal data that the consumer previously provided to the controller."
+    }
+  ]
+}

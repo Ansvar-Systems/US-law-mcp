@@ -1,0 +1,25 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-MI",
+      "title": "Michigan Identity Theft Protection Act",
+      "identifier": "Mich. Comp. Laws § 445.72",
+      "short_name": "MI Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2007-07-02",
+      "last_amended": "2007-07-02",
+      "source_url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-445-72"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-MI",
+      "section_number": "§ 445.72",
+      "title": "Notice of security breach",
+      "order_index": 1,
+      "text": "Unless the person or agency determines that the security breach has not or is not likely to cause substantial loss or injury to, or result in identity theft with respect to, 1 or more residents of this state, a person or agency that owns or licenses data that are included in a database that includes any personal information of a resident of this state shall provide a notice of any breach of the security of the database to each resident of this state who meets one or more of the following: (a) That resident's unencrypted and unredacted personal information was accessed and acquired by an unauthorized person. (b) That resident's personal information was accessed and acquired in encrypted form by a person with unauthorized access to the encryption key."
+    }
+  ]
+}

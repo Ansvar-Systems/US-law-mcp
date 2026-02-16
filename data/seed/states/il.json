@@ -3,24 +3,13 @@
     {
       "jurisdiction": "US-IL",
       "title": "Illinois Personal Information Protection Act",
-      "identifier": "815 ILCS 530",
-      "short_name": "IL PIPA",
+      "identifier": "815 ILCS 530/",
+      "short_name": "IL Breach",
       "document_type": "statute",
       "status": "in_force",
       "effective_date": "2006-06-27",
-      "last_amended": "2024-01-01",
-      "source_url": "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2702"
-    },
-    {
-      "jurisdiction": "US-IL",
-      "title": "Biometric Information Privacy Act",
-      "identifier": "740 ILCS 14",
-      "short_name": "BIPA",
-      "document_type": "statute",
-      "status": "in_force",
-      "effective_date": "2008-10-03",
-      "last_amended": "2024-08-02",
-      "source_url": "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=3004"
+      "last_amended": "2020-01-01",
+      "source_url": "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2702&ChapterID=67"
     }
   ],
   "provisions": [
@@ -28,33 +17,17 @@
       "document_index": 0,
       "jurisdiction": "US-IL",
       "section_number": "§ 530/10",
-      "title": "Breach notification requirement",
-      "text": "Any data collector that owns or licenses personal information concerning a resident of Illinois shall notify the resident at no charge that there has been a breach of the security of the system data following discovery or notification of the breach. The disclosure notification shall be made in the most expedient time possible and without unreasonable delay, consistent with any measures necessary to determine the scope of the breach and restore the reasonable integrity, security, and confidentiality of the data system. Any data collector that is required to issue breach notification to more than 500 Illinois residents as a result of a single breach of the security of the system data shall also provide notice to the Attorney General within the same timeframe.",
-      "order_index": 1
+      "title": "Notice of breach",
+      "order_index": 1,
+      "text": "Any data collector that owns or licenses personal information concerning a resident of Illinois shall notify the resident at no charge that there has been a breach of the security of the system data following discovery or notification of the breach. The disclosure notification shall be made in the most expedient time possible and without unreasonable delay, consistent with any measures necessary to determine the scope of the breach and restore the reasonable integrity, security, and confidentiality of the data system."
     },
     {
       "document_index": 0,
       "jurisdiction": "US-IL",
-      "section_number": "§ 530/20",
-      "title": "Enforcement and violations",
-      "text": "A violation of this Act constitutes an unlawful practice under the Consumer Fraud and Deceptive Business Practices Act. All remedies, penalties, and authority granted to the Attorney General by the Consumer Fraud and Deceptive Business Practices Act shall be available for the enforcement of this Act. The Attorney General may also bring an action in the name of the People of the State of Illinois to enforce the provisions of this Act. Violations are subject to civil penalties of up to $50,000 for each violation, and up to $100,000 for violations involving the personal information of persons aged 65 or older.",
-      "order_index": 2
-    },
-    {
-      "document_index": 1,
-      "jurisdiction": "US-IL",
-      "section_number": "§ 14/15",
-      "title": "Consent required for collection of biometric data",
-      "text": "No private entity may collect, capture, purchase, receive through trade, or otherwise obtain a person's or a customer's biometric identifier or biometric information, unless it first: informs the subject or the subject's legally authorized representative in writing that a biometric identifier or biometric information is being collected or stored; informs the subject or the subject's legally authorized representative in writing of the specific purpose and length of term for which a biometric identifier or biometric information is being collected, stored, and used; and receives a written release executed by the subject of the biometric identifier or biometric information or the subject's legally authorized representative. No private entity in possession of a biometric identifier or biometric information may sell, lease, trade, or otherwise profit from a person's or a customer's biometric identifier or biometric information.",
-      "order_index": 1
-    },
-    {
-      "document_index": 1,
-      "jurisdiction": "US-IL",
-      "section_number": "§ 14/20",
-      "title": "Private right of action",
-      "text": "Any person aggrieved by a violation of this Act shall have a right of action in a State circuit court or as a supplemental claim in federal district court against an offending party. A prevailing party may recover for each violation: against a private entity that negligently violates a provision of this Act, liquidated damages of $1,000 or actual damages, whichever is greater; against a private entity that intentionally or recklessly violates a provision of this Act, liquidated damages of $5,000 or actual damages, whichever is greater; reasonable attorneys' fees and costs, including expert witness fees and other litigation expenses; and other relief, including an injunction, as the State or federal court may deem appropriate.",
-      "order_index": 2
+      "section_number": "§ 530/5",
+      "title": "Definitions",
+      "order_index": 2,
+      "text": "In this Act: \"Breach of the security of the system data\" or \"breach\" means unauthorized acquisition of computerized data that compromises the security, confidentiality, or integrity of personal information maintained by the data collector. \"Personal information\" means an individual's first name or first initial and last name in combination with any one or more of the following data elements, when either the name or the data elements are not encrypted or redacted: (1) Social Security number; (2) driver's license number or State identification card number; (3) account number or credit or debit card number, or an account number or credit card number in combination with any required security code, access code, or password that would permit access to an individual's financial account."
     }
   ]
 }
