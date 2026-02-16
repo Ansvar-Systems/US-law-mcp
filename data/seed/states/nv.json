@@ -16,18 +16,18 @@
     {
       "document_index": 0,
       "jurisdiction": "US-NV",
-      "section_number": "§ 603A.220",
-      "title": "Disclosure of breach of security",
-      "order_index": 1,
-      "text": "Any data collector who owns or licenses computerized data which includes personal information shall disclose any breach of the security of the system data to any resident of this State whose unencrypted personal information was, or is reasonably believed to have been, acquired by an unauthorized person. The disclosure must be made in the most expedient time possible and without unreasonable delay, consistent with the legitimate needs of law enforcement."
+      "section_number": "",
+      "title": "LawServer",
+      "text": "1.  Whenever used in the Statutes of Nevada and Nevada Revised Statutes, the term ‘county’ includes Carson City.\n\n2.  Except as limited by the Charter of Carson City or by ordinances enacted by authority thereof, those provisions of the Statutes of Nevada or Nevada Revised Statutes which refer to the several counties apply equally to Carson City.",
+      "order_index": 1
     },
     {
       "document_index": 0,
       "jurisdiction": "US-NV",
-      "section_number": "§ 603A.210",
-      "title": "Security measures",
-      "order_index": 2,
-      "text": "A data collector that maintains records which contain personal information of a resident of this State shall implement and maintain reasonable security measures to protect those records from unauthorized access, acquisition, destruction, use, modification or disclosure."
+      "section_number": "",
+      "title": "LawServer",
+      "text": "Except as otherwise expressly provided in a particular statute or required by the context, ‘person’ means a natural person, any form of business or social organization and any other nongovernmental legal entity including, but not limited to, a corporation, partnership, association, trust or unincorporated organization. The term does not include a government, governmental agency or political subdivision of a government.",
+      "order_index": 2
     }
   ]
 }

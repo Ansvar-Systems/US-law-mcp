@@ -15,11 +15,67 @@
   "provisions": [
     {
       "document_index": 0,
+      "section_number": "§ 22-40-19",
+      "title": "Definition of terms",
+      "text": "Terms in §§ 22-40-19 to 22-40-26, inclusive, mean:\n(1) \"Breach of system security,\" the unauthorized acquisition of unencrypted computerized data or encrypted computerized data and the encryption key by any person that materially compromises the security, confidentiality, or integrity of personal or protected information maintained by the information holder. The term does not include the good faith acquisition of personal or protected information by an employee or agent of the information holder for the purposes of the information holder if the personal or protected information is not used or subject to further unauthorized disclosure;\n(2) \"Encrypted,\" computerized data that is rendered unusable, unreadable, or indecipherable without the use of a decryption process or key or in accordance with the Federal Information Processing Standard 140-2 in effect on January 1, 2018;\n(3) \"Information holder,\" any person or business that conducts business in this state, and that owns or licenses computerized personal or protected information of residents of this state;\n(4) \"Personal information,\" a person's first name or first initial and last name, in combination with any one or more of the following data elements:\n(a) Social security number;\n(b) Driver license number or other unique identification number created or collected by a government body;\n(c) Account, credit card, or debit card number, in combination with any required security code, access code, password, routing number, PIN, or any additional information that would permit access to a person's financial account;\n(d) Health information as defined in 45 CFR 160.103; or\n(e) An identification number assigned to a person by the person's employer in combination with any required security code, access code, password, or biometric data generated from measurements or analysis of human body characteristics for authentication purposes.\nThe term does not include information that is lawfully made available to the general public from federal, state, or local government records or information that has been redacted, or otherwise made unusable; and\n(5) \"Protected information,\" includes:\n(a) A user name or email address, in combination with a password, security question answer, or other information that permits access to an online account; and\n(b) Account number or credit or debit card number, in combination with any required security code, access code, or password that permits access to a person's financial account;\n(6) \"Unauthorized person,\" any person not authorized to acquire or disclose personal information, or any person authorized by the information holder to access personal information who has acquired or disclosed the personal information outside the guidelines for access of disclosure established by the information holder.",
       "jurisdiction": "US-SD",
+      "order_index": 1
+    },
+    {
+      "document_index": 0,
+      "section_number": "§ 22-40-20",
+      "title": "Notice of breach of system security — Exception",
+      "text": "Following the discovery by or notification to an information holder of a breach of system security an information holder shall disclose in accordance with § 22-40-22 the breach of system security to any resident of this state whose personal or protected information was, or is reasonably believed to have been, acquired by an unauthorized person. A disclosure under this section shall be made not later than sixty days from the discovery or notification of the breach of system security, unless a longer period of time is required due to the legitimate needs of law enforcement as provided under § 22-40-21. An information holder is not required to make a disclosure under this section if, following an appropriate investigation and notice to the attorney general, the information holder reasonably determines that the breach will not likely result in harm to the affected person. The information holder shall document the determination under this section in writing and maintain the documentation for not less than three years.\n\nAny information holder that experiences a breach of system security under this section shall disclose to the attorney general by mail or electronic mail any breach of system security that exceeds two hundred fifty residents of this state.",
+      "jurisdiction": "US-SD",
+      "order_index": 2
+    },
+    {
+      "document_index": 0,
       "section_number": "§ 22-40-21",
-      "title": "Notification of breach",
-      "order_index": 1,
-      "text": "Any information holder that has had a breach of system security shall disclose the breach of system security to any resident of this state whose personal or protected information was, or is reasonably believed to have been, acquired by an unauthorized person. The disclosure shall be made within sixty days from the discovery or notification of the breach of system security, unless a longer period of time is required due to the legitimate needs of law enforcement."
+      "title": "Delay of notice that would impede criminal investigation",
+      "text": "A notification required under § 22-40-20 may be delayed if a law enforcement agency determines that the notification will impede a criminal investigation. If the notification is delayed, the notification shall be made not later than thirty days after the law enforcement agency determines that notification will not compromise the criminal investigation.",
+      "jurisdiction": "US-SD",
+      "order_index": 3
+    },
+    {
+      "document_index": 0,
+      "section_number": "§ 22-40-22",
+      "title": "Types of notice of breach of system security",
+      "text": "A disclosure under § 22-40-20 may be provided by:\n(1) Written notice;\n(2) Electronic notice, if the electronic notice is consistent with the provisions regarding electronic records and signatures set forth in 15 U.S.C. § 7001 in effect as of January 1, 2018, or if the information holder's primary method of communication with the resident of this state has been by electronic means; or\n(3) Substitute notice, if the information holder demonstrates that the cost of providing notice would exceed two hundred fifty thousand dollars, that the affected class of persons to be notified exceeds five hundred thousand persons, or that the information holder does not have sufficient contact information and the notice consists of each of the following:\n(a) Email notice, if the information holder has an email address for the subject persons;\n(b) Conspicuous posting of the notice on the information holder's website, if the information holder maintains a website page; and\n(c) Notification to statewide media.",
+      "jurisdiction": "US-SD",
+      "order_index": 4
+    },
+    {
+      "document_index": 0,
+      "section_number": "§ 22-40-23",
+      "title": "Notice in accordance with information holder's policies",
+      "text": "Notwithstanding § 22-40-22, if an information holder maintains its own notification procedure as part of an information security policy for the treatment of personal or protected information and the policy is otherwise consistent with the timing requirements of this section, the information holder is in compliance with the notification requirements of § 22-40-22 if the information holder notifies each person in accordance with the information holder's policies in the event of a breach of system security.",
+      "jurisdiction": "US-SD",
+      "order_index": 5
+    },
+    {
+      "document_index": 0,
+      "section_number": "§ 22-40-24",
+      "title": "Notice to consumer reporting agencies",
+      "text": "If an information holder discovers circumstances that require notification pursuant to § 22-40-20 the information holder shall also notify, without unreasonable delay, all consumer reporting agencies, as defined under 15 U.S.C. § 1681a in effect as of January 1, 2018, and any other credit bureau or agency that compiles and maintains files on consumers on a nationwide basis, of the timing, distribution, and content of the notice.",
+      "jurisdiction": "US-SD",
+      "order_index": 6
+    },
+    {
+      "document_index": 0,
+      "section_number": "§ 22-40-25",
+      "title": "Prosecution for violations",
+      "text": "The attorney general may prosecute each failure to disclose under the provisions of §§ 22-40-19 to 22-40-26, inclusive, as a deceptive act or practice under § 37-24-6. In addition to any remedy provided under chapter 37-24, the attorney general may bring an action to recover on behalf of the state a civil penalty of not more than ten thousand dollars per day per violation. The attorney general may recover attorney's fees and any costs associated with any action brought under this section.",
+      "jurisdiction": "US-SD",
+      "order_index": 7
+    },
+    {
+      "document_index": 0,
+      "section_number": "§ 22-40-26",
+      "title": "Notice in accordance with federal law",
+      "text": "Notwithstanding any other provisions in §§ 22-40-19 to 22-40-26, inclusive, any information holder that is regulated by federal law or regulation, including the Health Insurance Portability and Accountability Act of 1996 (P.L. 104-191, as amended) or the Gramm Leach Bliley Act (15 U.S.C. § 6801 et seq., as amended) and that maintains procedures for a breach of system security pursuant to the laws, rules, regulations, guidance, or guidelines established by its primary or functional federal regulator is deemed to be in compliance with this chapter if the information holder notifies affected South Dakota residents in accordance with the provisions of the applicable federal law or regulation.",
+      "jurisdiction": "US-SD",
+      "order_index": 8
     }
   ]
 }

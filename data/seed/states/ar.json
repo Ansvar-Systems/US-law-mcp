@@ -15,19 +15,35 @@
   "provisions": [
     {
       "document_index": 0,
-      "jurisdiction": "US-AR",
       "section_number": "§ 4-110-103",
-      "title": "Disclosure of breach of security of computerized personal information",
-      "order_index": 1,
-      "text": "Any person or business that acquires, owns, or licenses computerized data that includes personal information shall disclose any breach of the security of the system following discovery or notification of the breach of the security of the system to any resident of Arkansas whose unencrypted personal information was, or is reasonably believed to have been, acquired by an unauthorized person. The disclosure shall be made in the most expedient time and manner possible and without unreasonable delay, consistent with the legitimate needs of law enforcement or any measures necessary to determine the scope of the breach and to restore the reasonable integrity of the data system."
+      "title": "Disclosure of breach of security",
+      "text": "(a) Any person or business that acquires, owns, or licenses computerized data that includes personal information shall disclose any breach of the security of the system following discovery or notification of the breach of the security of the system to any resident of Arkansas whose unencrypted personal information was, or is reasonably believed to have been, acquired by an unauthorized person.\n\n(b) The disclosure shall be made in the most expedient time and manner possible and without unreasonable delay, consistent with the legitimate needs of law enforcement, as provided in § 4-110-105, or any measures necessary to determine the scope of the breach and to restore the reasonable integrity of the data system.\n\n(c) Any person or business that maintains computerized data that includes personal information that the person or business does not own shall notify the owner or licensee of the information of any breach of the security of the system immediately following discovery if the personal information was, or is reasonably believed to have been, acquired by an unauthorized person.",
+      "jurisdiction": "US-AR",
+      "order_index": 1
     },
     {
       "document_index": 0,
-      "jurisdiction": "US-AR",
       "section_number": "§ 4-110-104",
+      "title": "Methods of disclosure",
+      "text": "(a) The disclosure required under this subchapter may be provided by one (1) of the following methods:\n(1) Written notice;\n(2) Electronic notice, if the notice provided is consistent with the provisions regarding electronic records and signatures set forth in 15 U.S.C. § 7001;\n(3) Substitute notice, if the person or business demonstrates that the cost of providing notice would exceed two hundred fifty thousand dollars ($250,000), or that the affected class of consumers to be notified exceeds five hundred thousand (500,000), or the person or business does not have sufficient contact information. Substitute notice shall consist of all of the following: (A) Email notice when the person or business has an email address for the subject persons; (B) Conspicuous posting of the notice on the website page of the person or business, if the person or business maintains one; and (C) Notification to major statewide media.\n\n(b) A person or business that maintains its own notification procedures as part of an information security policy for the treatment of personal information and is otherwise consistent with the timing requirements of this subchapter shall be deemed to be in compliance with the notification requirements of this subchapter if the person or business notifies subject persons in accordance with its policies in the event of a breach of security of the system.",
+      "jurisdiction": "US-AR",
+      "order_index": 2
+    },
+    {
+      "document_index": 0,
+      "section_number": "§ 4-110-105",
+      "title": "Law enforcement",
+      "text": "The notification required by this subchapter may be delayed if a law enforcement agency determines that the notification will impede a criminal investigation. The notification required by this subchapter shall be made after the law enforcement agency determines that the notification will not compromise the investigation.",
+      "jurisdiction": "US-AR",
+      "order_index": 3
+    },
+    {
+      "document_index": 0,
+      "section_number": "§ 4-110-102",
       "title": "Definitions",
-      "order_index": 2,
-      "text": "As used in this subchapter: (1) \"Breach of the security of the system\" means unauthorized acquisition of computerized data that compromises the security, confidentiality, or integrity of personal information maintained by a person or business. (2) \"Personal information\" means an individual's first name or first initial and last name in combination with any one or more of the following data elements when either the name or the data element is not encrypted or redacted: (A) Social Security number; (B) Driver's license number or Arkansas identification card number; (C) Account number, credit card number, or debit card number in combination with any required security code, access code, or password that would permit access to an individual's financial account."
+      "text": "As used in this subchapter:\n(1) \"Breach of the security of the system\" means unauthorized acquisition of computerized data that compromises the security, confidentiality, or integrity of personal information maintained by a person or business. Good faith acquisition of personal information by an employee or agent of the person or business for the purposes of the person or business is not a breach of the security of the system, provided that the personal information is not used or subject to further unauthorized disclosure.\n(7) \"Personal information\" means an individual's first name or first initial and his or her last name in combination with any one (1) or more of the following data elements when either the name or the data element is not encrypted or redacted: (A) Social Security number; (B) Driver's license number or Arkansas identification card number; (C) Account number, credit card number, or debit card number in combination with any required security code, access code, or password that would permit access to an individual's financial account; (D) Medical information; and (E) A biometric indicator.",
+      "jurisdiction": "US-AR",
+      "order_index": 4
     }
   ]
 }

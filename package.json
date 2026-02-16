@@ -25,6 +25,7 @@
     "validate": "npm run lint && npm test && npm run test:contract",
     "fetch:federal": "tsx scripts/fetch-uscode.ts",
     "fetch:states": "tsx scripts/fetch-states.ts",
+    "fetch:states:lawserver": "tsx scripts/fetch-states-lawserver.ts",
     "fetch:all": "npm run fetch:federal && npm run fetch:states",
     "ingest:federal": "tsx scripts/ingest/federal.ts",
     "ingest:states": "tsx scripts/ingest/states.ts",

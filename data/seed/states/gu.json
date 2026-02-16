@@ -1,0 +1,33 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-GU",
+      "title": "Guam Data Breach Notification Act",
+      "identifier": "10 GCA § 48A101 et seq.",
+      "short_name": "GU Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2018-03-30",
+      "last_amended": "2018-03-30",
+      "source_url": "https://www.guamlegislature.com/laws-and-codes/"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-GU",
+      "section_number": "§ 48A102",
+      "title": "Definitions",
+      "text": "As used in this Chapter:\n(a) 'Breach of the security of the system' means unauthorized acquisition of computerized data that compromises the security, confidentiality, or integrity of personal information maintained by an individual or a commercial entity. Good faith acquisition of personal information by an employee or agent of an individual or a commercial entity for the purposes of the individual or commercial entity is not a breach of the security of the system, provided that the personal information is not used or subject to further unauthorized disclosure.\n(b) 'Commercial entity' means a corporation, business trust, estate, trust, partnership, limited partnership, limited liability partnership, limited liability company, association, organization, joint venture, government, governmental subdivision, agency, or instrumentality, or any other legal entity, whether for profit or not for profit.\n(c) 'Individual' means a natural person.\n(d) 'Personal information' means a Guam resident's first name or first initial and last name in combination with any one or more of the following data elements that relate to the resident if either the name or the data elements are not encrypted, redacted, or otherwise altered by any method or technology in such a manner that the name or data elements are unreadable: (1) Social security number; (2) Driver's license number or Guam identification card number; (3) Account number or credit or debit card number, in combination with any required security code, access code, or password that would permit access to a resident's financial account; (4) Unique biometric data, such as a fingerprint, voice print, or retina or iris image, or other unique physical representation.",
+      "order_index": 1
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-GU",
+      "section_number": "§ 48A103",
+      "title": "Notice of breach of security",
+      "text": "(a) An individual or a commercial entity that conducts business in Guam and that owns or licenses computerized data that includes personal information about a Guam resident shall, when it becomes aware of a breach of the security of the system, conduct in good faith a reasonable and prompt investigation to determine the likelihood that personal information has been or will be used for an unauthorized purpose. If the investigation determines that the misuse of information about a Guam resident has occurred or is reasonably likely to occur, the individual or commercial entity shall give notice to the affected Guam resident. Notice shall be made in the most expedient time possible and without unreasonable delay, consistent with the legitimate needs of law enforcement and consistent with any measures necessary to determine the scope of the breach and to restore the reasonable integrity of the computerized data system.\n(b) An individual or a commercial entity that maintains computerized data that includes personal information that the individual or commercial entity does not own shall give notice to the owner or licensee of the information of any breach of the security of the system as soon as possible and without unreasonable delay following discovery.\n(c) The notification required by this section may be delayed if a law enforcement agency determines that the notification will impede a criminal investigation. The notification required by this section shall be made after the law enforcement agency determines that the notification will not compromise the investigation.\n(d) Notice required by this section may be provided by one of the following methods: (1) Written notice; (2) Electronic notice, if the notice provided is consistent with the provisions regarding electronic records and signatures set forth in 15 U.S.C. § 7001; (3) Substitute notice, if the individual or the commercial entity demonstrates that the cost of providing notice will exceed $10,000, that the affected class of Guam residents to be notified exceeds 5,000, or that the individual or commercial entity does not have sufficient contact information to provide written or electronic notice.",
+      "order_index": 2
+    }
+  ]
+}

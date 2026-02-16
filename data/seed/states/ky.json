@@ -27,10 +27,26 @@
     {
       "document_index": 0,
       "jurisdiction": "US-KY",
-      "section_number": "§ 243.540",
-      "title": "Invalid Statute KRS 243.540",
-      "text": "Invalid Statute KRS 243.540\nThe link you have followed was to a version of a statute that was in effect at the time the document was prepared but has been superseded by a later version or repealed and is no longer valid.\nFor the current version of the statute, click KRS 243.540.\nFor the superseded version, contact the Reviser of Statutes by e-mail at reviser@lrc.ky.gov",
+      "section_number": "",
+      "title": "LawServer",
+      "text": "If you've been injured in Kentucky, call the Lexington and Louisville perso…",
       "order_index": 1
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-KY",
+      "section_number": "",
+      "title": "LawServer",
+      "text": "Ask a business law question, get an answer ASAP!Thousands of highly rated, verified business lawyers.Click here to chat with a lawyer about your rights.\n\nIf you've been injured in Kentucky, call the Lexington and Louisville perso…",
+      "order_index": 2
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-KY",
+      "section_number": "",
+      "title": "LawServer",
+      "text": "Ask a business law question, get an answer ASAP!Thousands of highly rated, verified business lawyers.Click here to chat with a lawyer about your rights.\n\nIf you've been injured in Kentucky, call the Lexington and Louisville perso…",
+      "order_index": 3
     }
   ]
 }

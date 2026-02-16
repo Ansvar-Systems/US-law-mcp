@@ -16,18 +16,98 @@
     {
       "document_index": 0,
       "jurisdiction": "US-AL",
-      "section_number": "§ 8-38-2",
-      "title": "Definitions",
-      "order_index": 1,
-      "text": "As used in this chapter, the following terms have the following meanings: (1) BREACH OF SECURITY or BREACH. The unauthorized acquisition of data in electronic form containing sensitive personally identifying information. Acquisition of data through good faith but unauthorized means by an employee or agent of a covered entity is not a breach of security, so long as the sensitive personally identifying information is not used for a purpose unrelated to the business or subject to further unauthorized use."
+      "section_number": "§ 8-38-1",
+      "title": "Short title",
+      "text": "This chapter may be cited and shall be known as the Alabama Data Breach Notification Act of 2018.",
+      "order_index": 1
     },
     {
       "document_index": 0,
       "jurisdiction": "US-AL",
-      "section_number": "§ 8-38-3",
-      "title": "Notification requirements",
-      "order_index": 2,
-      "text": "A covered entity shall conduct in good faith a prompt investigation of a suspected or actual breach of security. If the investigation determines that sensitive personally identifying information has been acquired or is reasonably believed to have been acquired by an unauthorized person and is reasonably likely to cause substantial harm to the individuals to whom the information relates, the covered entity shall give notice of the breach as expeditiously as possible and without unreasonable delay, taking into account the time necessary to allow the covered entity to conduct an investigation, but no later than 45 days from the determination that a breach has or is reasonably believed to have occurred."
+      "section_number": "§ 8-38-2",
+      "title": "Definitions",
+      "text": "For the purposes of this chapter, the following terms have the following meanings:\n\n(1) BREACH OF SECURITY or BREACH. The unauthorized acquisition of data in electronic form containing sensitive personally identifying information. Acquisition of data in good faith by an employee or agent of a covered entity is not a breach of security, so long as the sensitive personally identifying information is not used for a purpose other than a lawful purpose of the covered entity or is not subject to further unauthorized disclosure.\n\n(2) COVERED ENTITY. A person, sole proprietorship, partnership, government entity, corporation, nonprofit, trust, estate, cooperative association, or other business entity that acquires or uses sensitive personally identifying information.\n\n(3) INDIVIDUAL. A resident of the State of Alabama whose sensitive personally identifying information was, or the covered entity reasonably believes to have been, acquired by an unauthorized person as a result of the breach.\n\n(4) PERSON. An individual; corporation; business trust; estate trust; partnership; limited liability company; association; joint venture; government; governmental subdivision, agency, or instrumentality; public corporation; or any other legal or commercial entity.\n\n(5) SENSITIVE PERSONALLY IDENTIFYING INFORMATION.\n\n(a) An Alabama resident's first name or first initial and last name in combination with one or more of the following with respect to the same Alabama resident:\n\n1. A non-truncated Social Security number or tax identification number.\n\n2. A non-truncated driver license number, state-issued identification card number, passport number, military identification number, or other unique identification number issued on a government document used to verify the identity of a specific individual.\n\n3. A financial account number, including a bank account number, credit card number, or debit card number, in combination with any security code, access code, password, expiration date, or PIN, that is necessary to access the financial account or to conduct a transaction that will credit or debit the financial account.\n\n4. Any information regarding an individual's medical history, mental or physical condition, or medical treatment or diagnosis by a health care professional.\n\n5. An individual's health insurance policy number or subscriber identification number and any unique identifier used by a health insurer to identify the individual.\n\n6. A user name or email address, in combination with a password or security question and answer that would permit access to an online account affiliated with the covered entity that is reasonably likely to contain or is used to obtain sensitive personally identifying information.\n\n(b) A user name or email address, in combination with a password or security question and answer that would permit access to an online account affiliated with the covered entity that is reasonably likely to contain or is used to obtain sensitive personally identifying information.",
+      "order_index": 2
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-AL",
+      "section_number": "",
+      "title": "LawServer",
+      "text": "Ask a business law question, get an answer ASAP!Thousands of highly rated, verified business lawyers.Click here to chat with a lawyer about your rights.",
+      "order_index": 3
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-AL",
+      "section_number": "",
+      "title": "LawServer",
+      "text": "Ask a business law question, get an answer ASAP!Thousands of highly rated, verified business lawyers.Click here to chat with a lawyer about your rights.",
+      "order_index": 4
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-AL",
+      "section_number": "",
+      "title": "LawServer",
+      "text": "Ask a business law question, get an answer ASAP!Thousands of highly rated, verified business lawyers.Click here to chat with a lawyer about your rights.",
+      "order_index": 5
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-AL",
+      "section_number": "",
+      "title": "LawServer",
+      "text": "Ask a business law question, get an answer ASAP!Thousands of highly rated, verified business lawyers.Click here to chat with a lawyer about your rights.",
+      "order_index": 6
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-AL",
+      "section_number": "",
+      "title": "LawServer",
+      "text": "Ask a business law question, get an answer ASAP!Thousands of highly rated, verified business lawyers.Click here to chat with a lawyer about your rights.\n\nIf a covered entity discovers circumstances requiring notice under Section 8-38-5 of more than 1,000 individuals at a single time, the entity shall also notify, without unreasonable delay, all consumer reporting agencies that compile and maintain files on consumers on a nationwide basis, as defined in the Fair Credit Reporting Act, 15 U.S.C. § 1681a, of the timing, distribution, and content of the notices.",
+      "order_index": 7
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-AL",
+      "section_number": "",
+      "title": "LawServer",
+      "text": "Ask a business law question, get an answer ASAP!Thousands of highly rated, verified business lawyers.Click here to chat with a lawyer about your rights.\n\nIn the event a third-party agent has experienced a breach of security in the system maintained by the agent, the agent shall notify the covered entity of the breach of security as expeditiously as possible and without unreasonable delay, but no later than 10 days following the determination of the breach of security or reason to believe the breach occurred. After receiving notice from a third-party agent, a covered entity shall provide notices required under Sections 8-38-5 and 8-38-6. A third-party agent, in cooperation with a covered entity, shall provide information in the possession of the third-party agent so that the covered entity can comply with its notice requirements. A covered entity may enter into a contractual agreement with a third-party agent whereby the third-party agent agrees to handle notifications required under this chapter.",
+      "order_index": 8
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-AL",
+      "section_number": "",
+      "title": "LawServer",
+      "text": "Ask a business law question, get an answer ASAP!Thousands of highly rated, verified business lawyers.Click here to chat with a lawyer about your rights.",
+      "order_index": 9
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-AL",
+      "section_number": "",
+      "title": "LawServer",
+      "text": "Ask a business law question, get an answer ASAP!Thousands of highly rated, verified business lawyers.Click here to chat with a lawyer about your rights.\n\nA covered entity or third-party agent shall take reasonable measures to dispose, or arrange for the disposal, of records containing sensitive personally identifying information within its custody or control when the records are no longer to be retained pursuant to applicable law, regulations, or business needs. Disposal shall include shredding, erasing, or otherwise modifying the personal information in the records to make it unreadable or undecipherable through any reasonable means consistent with industry standards.",
+      "order_index": 10
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-AL",
+      "section_number": "",
+      "title": "LawServer",
+      "text": "An entity subject to or regulated by federal laws, rules, regulations, procedures, or guidance on data breach notification established or enforced by the federal government is exempt from this chapter as long as the entity does all of the following:\n\nAsk a business law question, get an answer ASAP!Thousands of highly rated, verified business lawyers.Click here to chat with a lawyer about your rights.",
+      "order_index": 11
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-AL",
+      "section_number": "",
+      "title": "LawServer",
+      "text": "An entity subject to or regulated by state laws, rules, regulations, procedures, or guidance on data breach notification that are established or enforced by state government, and are at least as thorough as the notice requirements provided by this chapter, is exempt from this chapter so long as the entity does all of the following:\n\nAsk a business law question, get an answer ASAP!Thousands of highly rated, verified business lawyers.Click here to chat with a lawyer about your rights.",
+      "order_index": 12
     }
   ]
 }

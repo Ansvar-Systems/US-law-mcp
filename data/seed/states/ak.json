@@ -15,11 +15,43 @@
   "provisions": [
     {
       "document_index": 0,
+      "section_number": "§ 45.48.010",
+      "title": "Disclosure of breach of security",
+      "text": "(a) An information collector that owns or licenses personal information about an Alaska resident, or an information collector that maintains personal information about an Alaska resident, shall, after discovering or being notified of a breach of the security of a system that contains personal information, in the most expedient time possible and without unreasonable delay, and except as provided in (c) and (d) of this section, notify each Alaska resident whose personal information was subject to the breach of security. The disclosure notification shall be made in the most expedient time possible and without unreasonable delay, consistent with the legitimate needs of law enforcement as provided in (c) of this section and consistent with any measures necessary to determine the scope of the breach and to restore the reasonable integrity of the system.\n\n(b) An information collector required to make a disclosure under (a) of this section shall make the disclosure to the Alaska resident by one of the following means:\n(1) written notice;\n(2) electronic notice, if the notice provided is consistent with the provisions regarding electronic records and signatures set out in 15 U.S.C. 7001 (Electronic Signatures in Global and National Commerce Act);\n(3) substitute notice, if the information collector demonstrates that the cost of providing notice would exceed $150,000, or that the affected class of residents to be notified exceeds 300,000, or the information collector does not have sufficient contact information. Substitute notice consists of all of the following: (A) e-mail notice when the information collector has an e-mail address for the subject persons; (B) conspicuous posting of the notice on the Internet website of the information collector, if the information collector maintains an Internet website; and (C) notification to major statewide media.\n\n(c) The notification required by (a) of this section may be delayed if a law enforcement agency determines that the notification will impede a criminal investigation. The notification required by this section shall be made after the law enforcement agency determines that it will not compromise the investigation.\n\n(d) An information collector that maintains a security policy for the treatment of personal information and that includes provisions for the type of breach of the security of the system that occurred is considered to be in compliance with the notification requirements of this section if the information collector provides notice, and is otherwise consistent with the timing requirements of this section.",
       "jurisdiction": "US-AK",
-      "section_number": "§ 2025-2026",
-      "title": "34th Legislature(2025-2026)",
-      "text": "34th Legislature(2025-2026)\nAlaska Statutes 2024\nX\n2024->StatutesTitle 1. General Provisions.  Title 2. Aeronautics.  Title 3. Agriculture, Animals, and Food.  Title 4. Alcoholic Beverages.  Title 5. Amusements and Sports.  Title 6. Banks and Financial Institutions.  Title 7. Boroughs.  Title 8. Business and Professions.  Title 9. Code of Civil Procedure.  Title 10. Corporations and Associations.  Title 11. Criminal Law.  Title 12. Code of Criminal Procedure.  Title 13. Decedents' Estates, Guardianships, Transfers, Trusts, and Health Care Decisions.  Title 14. Education, Libraries, and Museums.  Title 15. Elections.  Title 16. Fish and Game.  Title 17. Food and Drugs.  Title 18. Health, Safety, Housing, Human Rights, and Public Defender.  Title 19. Highways and Ferries.  Title 20. Infants and Incompetents.  Title 21. Insurance.  Title 22. Judiciary.  Title 23. Labor and Workers' Compensation.  Title 24. Legislature and Lobbying.  Title 25. Marital and Domestic Relations.  Title 26. Military Affairs, Veterans, Disasters, and Aerospace.  Title 27. Mining.  Title 28. Motor Vehicles.  Title 29. Municipal Government.  Title 30. Navigation, Harbors, Shipping, and Transportation Facilities.  Title 31. Oil and Gas.  Title 32. Partnership.  Title 33. Probation, Prisons, Pardons, and Prisoners.  Title 34. Property.  Title 35. Public Buildings, Works, and Improvements.  Title 36. Public Contracts.  Title 37. Public Finance.  Title 38. Public Land.  Title 39. Public Officers and Employees.  Title 40. Public Records and Recorders.  Title 41. Public Resources.  Title 42. Public Utilities and Carriers and Energy Programs.  Title 43. Revenue and Taxation.  Title 44. State Government.  Title 45. Trade and Commerce.  Title 46. Water, Air, Energy, and Environmental Conservation.  Title 47. Welfare, Social Services, and Institutions.",
       "order_index": 1
+    },
+    {
+      "document_index": 0,
+      "section_number": "§ 45.48.020",
+      "title": "Application to third-party information collectors",
+      "text": "An information collector that maintains personal information about an Alaska resident but does not own or license the information shall notify the owner or licensee of the information of any breach of the security of the system containing the personal information immediately after discovery if the personal information was, or is reasonably believed to have been, acquired by an unauthorized person.",
+      "jurisdiction": "US-AK",
+      "order_index": 2
+    },
+    {
+      "document_index": 0,
+      "section_number": "§ 45.48.030",
+      "title": "Waiver",
+      "text": "A waiver of a provision of this chapter is contrary to public policy and is void and unenforceable.",
+      "jurisdiction": "US-AK",
+      "order_index": 3
+    },
+    {
+      "document_index": 0,
+      "section_number": "§ 45.48.040",
+      "title": "Notice to consumer reporting agencies",
+      "text": "If an information collector discovers a breach of the security of the system requiring notification under AS 45.48.010 to more than 1,000 Alaska residents, the information collector shall also notify, without unreasonable delay, all consumer reporting agencies that compile and maintain files on consumers on a nationwide basis, as defined in 15 U.S.C. 1681a(p), of the timing, distribution, and content of the notices. This section does not apply to an information collector who is required to notify consumer reporting agencies of a breach of the security of the system under other state or federal law.",
+      "jurisdiction": "US-AK",
+      "order_index": 4
+    },
+    {
+      "document_index": 0,
+      "section_number": "§ 45.48.090",
+      "title": "Definitions",
+      "text": "In this chapter,\n(1) \"breach of the security of the system\" means unauthorized acquisition, or reasonable belief of unauthorized acquisition, of personal information that compromises the security, confidentiality, or integrity of the personal information maintained by the information collector; \"breach of the security of the system\" does not include good faith acquisition of personal information by an employee or agent of the information collector for the purposes of the information collector if the personal information is not used or subject to further unauthorized disclosure;\n(2) \"encrypted\" means rendered unusable, unreadable, or indecipherable to an unauthorized person through a security technology or methodology generally accepted in the field of information security;\n(3) \"information collector\" means a person that, for any purpose, whether by automated collection or otherwise, handles, collects, disseminates, or otherwise deals with nonpublic personal information;\n(4) \"personal information\" means a combination of (A) an individual's name; and (B) one or more of the following information elements: (i) the individual's social security number; (ii) the individual's driver's license number or state identification card number; (iii) the individual's account number, credit card number, or debit card number that, in combination with any required security code, access code, or password, would permit access to an individual's financial account; and the data elements described in this paragraph are not encrypted or redacted, or were encrypted and the encryption key was also acquired.",
+      "jurisdiction": "US-AK",
+      "order_index": 5
     }
   ]
 }

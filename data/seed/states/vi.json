@@ -1,0 +1,25 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-VI",
+      "title": "Virgin Islands Identity Theft Prevention Act",
+      "identifier": "V.I. Code tit. 14, § 2208",
+      "short_name": "VI Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2005-10-17",
+      "last_amended": "2005-10-17",
+      "source_url": "https://www.vilegislature.org/"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-VI",
+      "section_number": "§ 2208",
+      "title": "Security breach notification",
+      "text": "(a) Any individual or commercial entity that conducts business in the Virgin Islands and that owns or licenses computerized data that includes personal information shall disclose any breach of the security of the system following discovery or notification of the breach of the security of the system to any resident of the Virgin Islands whose unencrypted personal information was, or is reasonably believed to have been, acquired by an unauthorized person. The disclosure shall be made in the most expedient time possible and without unreasonable delay, consistent with the legitimate needs of law enforcement or with any measures necessary to determine the scope of the breach and to restore the reasonable integrity of the data system.\n(b) Any individual or commercial entity that maintains computerized data that includes personal information that the individual or commercial entity does not own shall notify the owner or licensee of the information of any breach of the security of the system immediately following discovery, if the personal information was, or is reasonably believed to have been, acquired by an unauthorized person.\n(c) The notification required by this section may be delayed if a law enforcement agency determines that the notification will impede a criminal investigation. The notification required by this section shall be made after the law enforcement agency determines that the notification will not compromise the investigation.\n(d) For purposes of this section: (1) 'Breach of the security of the system' means unauthorized acquisition of computerized data that compromises the security, confidentiality, or integrity of personal information maintained by the individual or commercial entity. Good faith acquisition of personal information by an employee or agent of the individual or commercial entity for the purposes of the individual or commercial entity is not a breach of the security of the system, provided that the personal information is not used or subject to further unauthorized disclosure. (2) 'Personal information' means an individual's first name or first initial and last name in combination with any one or more of the following data elements, when either the name or the data elements are not encrypted: (i) Social Security number; (ii) Driver's license number or Virgin Islands identification card number; (iii) Financial account number, or credit or debit card number, in combination with any required security code, access code, or password that would permit access to an individual's financial account.\n(e) Notice may be provided by written notice, electronic notice consistent with 15 U.S.C. § 7001, or substitute notice if the cost of providing notice exceeds $10,000, the affected class exceeds 5,000, or the entity does not have sufficient contact information.",
+      "order_index": 1
+    }
+  ]
+}

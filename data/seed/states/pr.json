@@ -1,0 +1,33 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-PR",
+      "title": "Puerto Rico Citizen Information on Data Banks Security Act",
+      "identifier": "P.R. Laws tit. 10, § 4051 et seq.",
+      "short_name": "PR Breach",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "2006-01-05",
+      "last_amended": "2006-01-05",
+      "source_url": "https://www.lexjuris.com/"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-PR",
+      "section_number": "§ 4051",
+      "title": "Definitions",
+      "text": "For purposes of this chapter, the following terms shall have the meaning set forth below:\n(a) 'Breach of the security of the system' means the unauthorized access and acquisition of computerized data that compromises the security, confidentiality, or integrity of personal information maintained by an entity. Good faith acquisition of personal information by an employee or agent of the entity for the purposes of the entity is not a breach of the security of the system, provided that the personal information is not used or subject to further unauthorized disclosure.\n(b) 'Entity' means any person, natural or juridical, that conducts business in Puerto Rico and maintains, stores, or manages computerized data that includes personal information.\n(c) 'Personal information' means an individual's first name or initial and last name in combination with any one or more of the following data elements, when either the name or the data elements are not encrypted: (1) Social security number; (2) Driver's license number or Puerto Rico identification card number; (3) Account number, credit or debit card number, in combination with any required security code, access code, or password that would permit access to an individual's financial account.",
+      "order_index": 1
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-PR",
+      "section_number": "§ 4052",
+      "title": "Notification of breach of security",
+      "text": "(a) Any entity that conducts business in the Commonwealth of Puerto Rico, and that in the course of such business, owns, licenses, or maintains computerized data that includes personal information, shall disclose any breach of the security of the system following discovery of the breach to any resident of Puerto Rico whose unencrypted personal information was, or is reasonably believed to have been, acquired by an unauthorized person.\n(b) The disclosure shall be made in the most expedient time possible and without unreasonable delay, consistent with the legitimate needs of law enforcement or any measures necessary to determine the scope of the breach and to restore the reasonable integrity of the data system.\n(c) Any entity that maintains computerized data that includes personal information that the entity does not own shall notify the owner or licensee of the information of any breach of the security of the system immediately following discovery, if the personal information was, or is reasonably believed to have been, acquired by an unauthorized person.\n(d) The notification required by this section may be delayed if a law enforcement agency determines that the notification will impede a criminal investigation. The notification required by this section shall be made after the law enforcement agency determines that the notification will not compromise the investigation.\n(e) Notice may be provided by one of the following methods: (1) Written notice; (2) Electronic notice, if the notice is consistent with the provisions regarding electronic records and signatures set forth in 15 U.S.C. § 7001; (3) Substitute notice, if the entity demonstrates that the cost of providing notice would exceed $100,000, or that the affected class of subject persons to be notified exceeds 100,000, or the entity does not have sufficient contact information. Substitute notice shall consist of all of the following: (i) E-mail notice when the entity has an e-mail address for the subject persons; (ii) Conspicuous posting of the notice on the entity's Internet website; and (iii) Notification to major statewide media.\n(f) An entity that maintains its own notification procedures as part of an information security policy for the treatment of personal information and is otherwise consistent with the timing requirements of this chapter shall be deemed to be in compliance if the entity notifies subject persons in accordance with its policies.",
+      "order_index": 2
+    }
+  ]
+}

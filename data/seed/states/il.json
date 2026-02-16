@@ -16,18 +16,18 @@
     {
       "document_index": 0,
       "jurisdiction": "US-IL",
-      "section_number": "§ 530/10",
-      "title": "Notice of breach",
-      "order_index": 1,
-      "text": "Any data collector that owns or licenses personal information concerning a resident of Illinois shall notify the resident at no charge that there has been a breach of the security of the system data following discovery or notification of the breach. The disclosure notification shall be made in the most expedient time possible and without unreasonable delay, consistent with any measures necessary to determine the scope of the breach and restore the reasonable integrity, security, and confidentiality of the data system."
+      "section_number": "",
+      "title": "LawServer",
+      "text": "Ask an employment law question, get an answer ASAP!Thousands of highly rated, verified employment lawyers Specialties include: Employment Law, EEOC, Pension and Compensation, Harassment Law, Discrimination Law, Termination Law, General Legal and more.Click here to chat with a lawyer about your rights.\n\nChicago Civil Rights Employment Law Firm",
+      "order_index": 1
     },
     {
       "document_index": 0,
       "jurisdiction": "US-IL",
-      "section_number": "§ 530/5",
-      "title": "Definitions",
-      "order_index": 2,
-      "text": "In this Act: \"Breach of the security of the system data\" or \"breach\" means unauthorized acquisition of computerized data that compromises the security, confidentiality, or integrity of personal information maintained by the data collector. \"Personal information\" means an individual's first name or first initial and last name in combination with any one or more of the following data elements, when either the name or the data elements are not encrypted or redacted: (1) Social Security number; (2) driver's license number or State identification card number; (3) account number or credit or debit card number, or an account number or credit card number in combination with any required security code, access code, or password that would permit access to an individual's financial account."
+      "section_number": "",
+      "title": "LawServer",
+      "text": "Ask a business law question, get an answer ASAP!Thousands of highly rated, verified business lawyers.Click here to chat with a lawyer about your rights.\n\nOur law firm can help you with your legal problems whether you need a tr…",
+      "order_index": 2
     }
   ]
 }
