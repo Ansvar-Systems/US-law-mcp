@@ -47,7 +47,7 @@ describe('get_provision', () => {
     });
 
     expect(res.results.length).toBeGreaterThanOrEqual(1);
-    const provision = res.results[0];
+    const provision = res.results[0]!;
     expect(provision.text).toContain('protected computer');
     expect(provision.jurisdiction).toBe('US-FED');
     expect(provision.document_title).toContain('Computer Fraud');
@@ -72,7 +72,7 @@ describe('get_provision', () => {
 
     expect(res.results.length).toBeGreaterThanOrEqual(1);
     expect(res.results.every(r => r.jurisdiction === 'US-NY')).toBe(true);
-    expect(res.results[0].document_title).toContain('Stop Hacks');
+    expect(res.results[0]!.document_title).toContain('Stop Hacks');
   });
 });
 
@@ -91,7 +91,7 @@ describe('search_legislation', () => {
     // Should find results from at least 2 jurisdictions (e.g. NY DFS 500 encryption + CA/other states)
     expect(jurisdictions.size).toBeGreaterThanOrEqual(1);
     // At least one result should have a snippet
-    expect(res.results[0].snippet).toBeTruthy();
+    expect(res.results[0]!.snippet).toBeTruthy();
   });
 
   it('finds results for "breach notification" with valid snippet format', async () => {

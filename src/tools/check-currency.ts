@@ -29,10 +29,10 @@ export async function checkCurrency(
   let docParams: string[];
 
   if (input.law_identifier) {
-    docSql = 'SELECT * FROM legal_documents WHERE jurisdiction = ? AND identifier = ?';
+    docSql = 'SELECT jurisdiction, title, identifier, short_name, status, effective_date, last_amended FROM legal_documents WHERE jurisdiction = ? AND identifier = ?';
     docParams = [jurisdiction, input.law_identifier];
   } else if (input.short_name) {
-    docSql = 'SELECT * FROM legal_documents WHERE jurisdiction = ? AND short_name = ?';
+    docSql = 'SELECT jurisdiction, title, identifier, short_name, status, effective_date, last_amended FROM legal_documents WHERE jurisdiction = ? AND short_name = ?';
     docParams = [jurisdiction, input.short_name];
   } else {
     return {

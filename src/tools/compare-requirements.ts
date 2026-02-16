@@ -39,6 +39,9 @@ export async function compareRequirements(
   }
 
   if (input.jurisdictions !== 'all' && Array.isArray(input.jurisdictions)) {
+    if (input.jurisdictions.length === 0) {
+      return { results: [], _metadata: generateResponseMetadata(db) };
+    }
     const placeholders = input.jurisdictions.map(() => '?').join(', ');
     conditions.push(`sr.jurisdiction IN (${placeholders})`);
     params.push(...input.jurisdictions);
