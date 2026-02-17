@@ -51,6 +51,9 @@ export const JURISDICTIONS: Record<string, string> = {
   'US-WI': 'Wisconsin',
   'US-WY': 'Wyoming',
   'US-DC': 'District of Columbia',
+  'US-GU': 'Guam',
+  'US-PR': 'Puerto Rico',
+  'US-VI': 'Virgin Islands',
 };
 
 export type JurisdictionCode = keyof typeof JURISDICTIONS;

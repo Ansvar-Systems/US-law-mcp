@@ -1,5 +1,6 @@
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import { execSync } from 'child_process';
+import * as fs from 'fs';
 import Database from '@ansvar/mcp-sqlite';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
@@ -34,6 +35,21 @@ afterAll(() => {
   db?.close();
 });
 
+interface GoldenFixture {
+  tests: Array<{
+    id: string;
+    tool: string;
+    input: Record<string, unknown>;
+    assertions: {
+      result_not_empty?: boolean;
+      result_empty?: boolean;
+      min_results?: number;
+      text_contains?: string[];
+      field_equals?: Record<string, unknown>;
+    };
+  }>;
+}
+
 // ---------------------------------------------------------------------------
 // get_provision — Article retrieval
 // ---------------------------------------------------------------------------
@@ -61,6 +77,23 @@ describe('get_provision', () => {
 
     expect(res.results.length).toBeGreaterThanOrEqual(1);
     expect(res.results.every(r => r.jurisdiction === 'US-CA')).toBe(true);
+    expect(res.results.some(r => r.short_name === 'CCPA/CPRA')).toBe(true);
+    expect(res.results.every(r => (r.section_number ?? '').startsWith('§ '))).toBe(true);
+    expect(res.results.every(r => r.title !== 'LawServer')).toBe(true);
+    expect(res.results.every(r => !/Ask a litigation question/i.test(r.text))).toBe(true);
+
+    const rightToDelete = res.results.find(r => r.section_number === '§ 1798.105');
+    expect(rightToDelete).toBeTruthy();
+    expect(rightToDelete!.title).toContain('Right to Delete');
+  });
+
+  it('supports alias/partial short_name lookup for CCPA', async () => {
+    const res = await getProvision(db, {
+      jurisdiction: 'US-CA',
+      short_name: 'CCPA',
+    });
+
+    expect(res.results.length).toBeGreaterThanOrEqual(1);
     expect(res.results.some(r => r.short_name === 'CCPA/CPRA')).toBe(true);
   });
 
@@ -216,6 +249,7 @@ describe('negative cases', () => {
     });
 
     expect(res.results).toHaveLength(0);
+    expect(res.hints && res.hints.length > 0).toBe(true);
   });
 });
 
@@ -241,6 +275,15 @@ describe('list_sources', () => {
       expect(r.provision_count).toBeGreaterThanOrEqual(1);
       expect(r.jurisdiction_name).toBeTruthy();
     }
+  });
+
+  it('maps territory codes to readable jurisdiction names', async () => {
+    const res = await listSources(db);
+    const byJurisdiction = new Map(res.results.map(r => [r.jurisdiction, r.jurisdiction_name]));
+
+    expect(byJurisdiction.get('US-GU')).toBe('Guam');
+    expect(byJurisdiction.get('US-PR')).toBe('Puerto Rico');
+    expect(byJurisdiction.get('US-VI')).toBe('Virgin Islands');
   });
 });
 
@@ -292,5 +335,78 @@ describe('check_currency', () => {
     expect(res.results.is_current).toBe(false);
     expect(res.results.status).toBe('not_found');
     expect(res.results.warnings.length).toBeGreaterThanOrEqual(1);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// fixture-driven golden tests
+// ---------------------------------------------------------------------------
+
+describe('golden fixture alignment', () => {
+  it('satisfies fixture assertions in fixtures/golden-tests.json', async () => {
+    const fixturePath = path.resolve(PROJECT_ROOT, 'fixtures', 'golden-tests.json');
+    const fixture = JSON.parse(fs.readFileSync(fixturePath, 'utf-8')) as GoldenFixture;
+
+    for (const tc of fixture.tests) {
+      let output: unknown;
+
+      switch (tc.tool) {
+        case 'get_provision':
+          output = await getProvision(db, tc.input as unknown as Parameters<typeof getProvision>[1]);
+          break;
+        case 'search_legislation':
+          output = await searchLegislation(db, tc.input as unknown as Parameters<typeof searchLegislation>[1]);
+          break;
+        case 'compare_requirements':
+          output = await compareRequirements(db, tc.input as unknown as Parameters<typeof compareRequirements>[1]);
+          break;
+        case 'get_state_requirements':
+          output = await getStateRequirements(db, tc.input as unknown as Parameters<typeof getStateRequirements>[1]);
+          break;
+        case 'validate_citation':
+          output = await validateCitation(db, tc.input as unknown as Parameters<typeof validateCitation>[1]);
+          break;
+        case 'check_currency':
+          output = await checkCurrency(db, tc.input as unknown as Parameters<typeof checkCurrency>[1]);
+          break;
+        default:
+          throw new Error(`Unsupported fixture tool "${tc.tool}" in ${tc.id}`);
+      }
+
+      const results = (output as { results: unknown }).results;
+      const assertions = tc.assertions;
+
+      if (assertions.result_not_empty) {
+        if (Array.isArray(results)) {
+          expect(results.length, `${tc.id}: expected non-empty array`).toBeGreaterThan(0);
+        } else {
+          expect(results, `${tc.id}: expected truthy object result`).toBeTruthy();
+        }
+      }
+
+      if (assertions.result_empty) {
+        expect(Array.isArray(results), `${tc.id}: expected array result for empty assertion`).toBe(true);
+        expect((results as unknown[]).length, `${tc.id}: expected empty array`).toBe(0);
+      }
+
+      if (assertions.min_results !== undefined) {
+        expect(Array.isArray(results), `${tc.id}: expected array result for min_results`).toBe(true);
+        expect((results as unknown[]).length, `${tc.id}: expected min_results >= ${assertions.min_results}`)
+          .toBeGreaterThanOrEqual(assertions.min_results);
+      }
+
+      if (assertions.text_contains && assertions.text_contains.length > 0) {
+        const haystack = JSON.stringify(results).toLowerCase();
+        for (const token of assertions.text_contains) {
+          expect(haystack, `${tc.id}: expected token "${token}"`).toContain(token.toLowerCase());
+        }
+      }
+
+      if (assertions.field_equals) {
+        for (const [field, expected] of Object.entries(assertions.field_equals)) {
+          expect((results as Record<string, unknown>)[field], `${tc.id}: expected ${field}`).toEqual(expected);
+        }
+      }
+    }
   });
 });

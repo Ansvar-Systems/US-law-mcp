@@ -102,13 +102,15 @@ function cacheFilename(url: string): string {
 
 async function fetchHtml(url: string, cacheDir: string): Promise<string | null> {
   const cacheFile = path.join(cacheDir, cacheFilename(url));
+  const hasCache = fs.existsSync(cacheFile);
+  const staleCache = hasCache ? fs.readFileSync(cacheFile, 'utf-8') : null;
 
   // Use cached file if < 30 days old
-  if (fs.existsSync(cacheFile)) {
+  if (hasCache) {
     const stat = fs.statSync(cacheFile);
     const ageMs = Date.now() - stat.mtimeMs;
     if (ageMs < 30 * 24 * 60 * 60 * 1000) {
-      return fs.readFileSync(cacheFile, 'utf-8');
+      return staleCache;
     }
   }
 
@@ -125,6 +127,10 @@ async function fetchHtml(url: string, cacheDir: string): Promise<string | null> 
 
     if (!resp.ok) {
       console.warn(`    WARNING: HTTP ${resp.status} for ${url}`);
+      if (staleCache) {
+        console.warn(`    WARNING: Using stale cache for ${url}`);
+        return staleCache;
+      }
       return null;
     }
 
@@ -135,6 +141,10 @@ async function fetchHtml(url: string, cacheDir: string): Promise<string | null> 
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err);
     console.warn(`    WARNING: Failed to fetch ${url}: ${msg}`);
+    if (staleCache) {
+      console.warn(`    WARNING: Using stale cache for ${url}`);
+      return staleCache;
+    }
     return null;
   }
 }
@@ -579,10 +589,10 @@ const LAWSERVER_MAP: Record<string, LawServerMapping> = {
 function extractSectionLinks(html: string, pageUrl: string): string[] {
   const $ = cheerio.load(html);
   const links: string[] = [];
+  const scope = $('#content_box .post-content, article .post-content, .law-body').first();
+  const anchors = scope.length > 0 ? scope.find('a[href]') : $('a[href]');
 
-  // LawServer uses relative links in the content area
-  // Section links are typically in the main content, linking to individual statute sections
-  $('a[href]').each((_i, el) => {
+  anchors.each((_i, el) => {
     const href = $(el).attr('href');
     if (!href) return;
 
@@ -613,6 +623,7 @@ function extractSectionLinks(html: string, pageUrl: string): string[] {
       // Resolve relative URL
       const resolvedUrl = new URL(href, pageUrl).href;
       if (resolvedUrl.includes('lawserver.com/law/state/')) {
+        if (resolvedUrl === pageUrl) return;
         links.push(resolvedUrl);
       }
     }
@@ -629,116 +640,108 @@ interface ExtractedSection {
   text: string;
 }
 
+function normalizeText(text: string): string {
+  return text
+    .replace(/\u00A0/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function cleanHeadingTitle(rawTitle: string, sectionToken: string | null): string {
+  const dashMatch = rawTitle.match(/\s[–—-]\s(.+)$/);
+  if (dashMatch?.[1]) {
+    return normalizeText(dashMatch[1]);
+  }
+
+  if (sectionToken) {
+    const idx = rawTitle.indexOf(sectionToken);
+    if (idx >= 0) {
+      const afterSection = rawTitle.slice(idx + sectionToken.length);
+      const cleaned = normalizeText(afterSection.replace(/^[\s.:;–—-]+/, ''));
+      if (cleaned) return cleaned;
+    }
+  }
+
+  return normalizeText(rawTitle);
+}
+
+function parseSectionFromUrl(url: string): string | null {
+  try {
+    const pathname = new URL(url).pathname;
+    const slug = pathname.split('/').pop() ?? '';
+    const match = slug.match(/_(\d[\dA-Za-z-]*)$/);
+    if (!match?.[1]) return null;
+    const sectionToken = pathname.includes('/state/california/codes/california_civil_code_')
+      ? match[1].replace(/-/g, '.')
+      : match[1];
+    return `§ ${sectionToken}`;
+  } catch {
+    return null;
+  }
+}
+
+function isLawServerNoiseLine(text: string): boolean {
+  const value = normalizeText(text);
+  if (!value) return true;
+  if (/^Ask a litigation question, get an answer ASAP!?$/i.test(value)) return true;
+  if (/^Thousands of highly rated, verified litigation lawyers\.?$/i.test(value)) return true;
+  if (/^Click here to chat with a lawyer about your rights\.?$/i.test(value)) return true;
+  return false;
+}
+
 function extractSectionText(html: string, url: string): ExtractedSection | null {
   const $ = cheerio.load(html);
+  const post = $('article .post').first();
 
-  // Extract the title from h1 or h2
-  let titleEl = $('h1').first();
-  if (!titleEl.length) {
-    titleEl = $('h2').first();
-  }
-  let rawTitle = titleEl.text().trim();
+  // Extract the section heading (avoid site logo/title header)
+  const titleEl = post.find('h1.title, header h1.title, h1.title, h1').first();
+  const rawTitle = normalizeText(titleEl.text());
   if (!rawTitle) return null;
 
-  // Parse section number and title from heading
-  // Formats: "Alabama Code 8-38-1. Short title"
-  //          "California Civil Code 1798.100 – General Duties..."
-  //          "N.Y. General Business Law 899-AA – Notification..."
-  let sectionNumber = '';
-  let title = rawTitle;
+  const breadcrumbText = normalizeText(post.find('#breadcrumbs .here').first().text());
+  const breadcrumbSectionMatch = breadcrumbText.match(/§\s*([0-9A-Za-z.:-]+)/);
+  const headingSectionMatch = rawTitle.match(/\b(\d[\dA-Za-z]*(?:[.:-][\dA-Za-z]+)+)\b/);
+  const sectionToken = breadcrumbSectionMatch?.[1]
+    ?? headingSectionMatch?.[1]
+    ?? null;
+  const sectionNumber = sectionToken ? `§ ${sectionToken}` : (parseSectionFromUrl(url) ?? '');
 
-  // Try to extract section number: look for patterns like "8-38-1", "1798.100", "899-AA", "501.171"
-  const sectionMatch = rawTitle.match(
-    /(?:§\s*)?(\d+[-.][\w.]+(?:[-.][\w.]+)*)(?:\s*[.–—-]\s*(.+))?$/
-  );
-  if (sectionMatch) {
-    sectionNumber = `§ ${sectionMatch[1]}`;
-    title = sectionMatch[2]?.trim() || rawTitle;
-  } else {
-    // Try alternative: extract last numeric portion
-    const altMatch = rawTitle.match(/\b(\d+[A-Za-z]?[-_.]\d+[A-Za-z]?(?:[-_.]\d+[A-Za-z]?)*)\b/);
-    if (altMatch) {
-      sectionNumber = `§ ${altMatch[1]}`;
-      // Extract title after the number
-      const afterNum = rawTitle.substring(rawTitle.indexOf(altMatch[1]!) + altMatch[1]!.length);
-      const titlePart = afterNum.replace(/^[\s.–—-]+/, '').trim();
-      title = titlePart || rawTitle;
-    }
-  }
+  let title = cleanHeadingTitle(rawTitle, sectionToken);
 
-  // Extract the body text
-  // LawServer puts statute text in paragraphs within the main content area
-  // We need to avoid navigation, sidebars, footer, and attorney listings
+  // Extract the body text from statute container only.
   const textParts: string[] = [];
+  const lawBody = post.find('.law-body').first();
+  const contentRoot = lawBody.length > 0
+    ? lawBody
+    : post.find('.post-content').first().length > 0
+      ? post.find('.post-content').first()
+      : post;
 
-  // Strategy: find the main content area after the h1/h2 heading
-  // and before sidebars/footers
-  const mainContent = $('article, .entry-content, .content, main').first();
-  const container = mainContent.length ? mainContent : $('body');
+  contentRoot
+    .find('script, style, noscript, .text-ad, #definitions, .ja-gadget-virtual-assistant-subtle')
+    .remove();
 
-  // Collect all paragraph text, list items, and content after the heading
-  let foundHeading = false;
-  container.find('h1, h2, h3, h4, h5, h6, p, ol, ul, blockquote, div.statute-text, pre').each((_i, el) => {
-    const tag = el.tagName?.toLowerCase();
-    const elText = $(el).text().trim();
-
-    // Skip empty elements
-    if (!elText) return;
-
-    // Start collecting after we find the main heading
-    if ((tag === 'h1' || tag === 'h2') && elText === rawTitle) {
-      foundHeading = true;
-      return;
-    }
-
-    if (!foundHeading) return;
-
-    // Stop at "Related" sections, attorney blocks, footer content
-    if (/^(Related|Featured|Terms Used|Find a|Similar|See Also|Law Summaries)/i.test(elText)) return;
-    if (/attorneys?|lawyers?/i.test(elText) && elText.length < 100) return;
-    if (/^(Previous section|Next section|Table of Contents)/i.test(elText)) return;
-
-    // Skip "Terms Used In..." definition blocks (h4 headers for them)
-    if (tag === 'h4' && /^Terms Used In/i.test(elText)) {
-      return;
-    }
-
-    // Skip h3/h4/h5/h6 that are navigation headers
-    if ((tag === 'h3' || tag === 'h4' || tag === 'h5' || tag === 'h6') &&
-        /chapter|article|title|subchapter|part/i.test(elText) &&
-        !/(definition|section|subsection)/i.test(elText)) {
-      return;
-    }
-
-    // For lists, extract text properly
-    if (tag === 'ol' || tag === 'ul') {
-      $(el).find('li').each((_li, liEl) => {
-        const liText = $(liEl).text().trim();
-        if (liText) {
-          textParts.push(liText);
-        }
-      });
-      return;
-    }
-
-    // For paragraphs, take the text directly
-    if (tag === 'p') {
-      textParts.push(elText);
-      return;
-    }
+  contentRoot.find('p, li, blockquote, pre').each((_i, el) => {
+    const line = normalizeText($(el).text());
+    if (!line) return;
+    if (isLawServerNoiseLine(line)) return;
+    textParts.push(line);
   });
 
-  // If we didn't find text after heading, try a more aggressive approach
-  if (textParts.length === 0) {
-    // Get all <p> elements, filter out navigational/boilerplate content
-    container.find('p').each((_i, el) => {
-      const t = $(el).text().trim();
-      if (!t) return;
-      if (t.length < 10) return;
-      if (/^(Previous|Next|Table of|Related|Featured|Find a)/i.test(t)) return;
-      if (/attorneys?|lawyers?|sponsored/i.test(t) && t.length < 100) return;
-      textParts.push(t);
-    });
+  // On LawServer pages the first paragraph often contains the true section title.
+  const firstLine = textParts[0];
+  const looksLikeClause = firstLine ? /^\([a-z0-9]+\)\s/i.test(firstLine) : false;
+  if (
+    firstLine &&
+    !looksLikeClause &&
+    firstLine.length <= 180 &&
+    title.includes('…')
+  ) {
+    title = firstLine;
+  }
+
+  if (firstLine && normalizeText(firstLine) === normalizeText(title)) {
+    textParts.shift();
   }
 
   const text = textParts.join('\n\n').trim();
@@ -746,7 +749,11 @@ function extractSectionText(html: string, url: string): ExtractedSection | null 
   // Skip if we got essentially no statute text
   if (text.length < 50) return null;
 
-  return { sectionNumber, title, text };
+  return {
+    sectionNumber,
+    title: title || rawTitle,
+    text,
+  };
 }
 
 // ── Process a single statute ────────────────────────────────────────

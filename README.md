@@ -11,7 +11,7 @@
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Ansvar-Systems/US-law-mcp/badge)](https://scorecard.dev/viewer/?uri=github.com/Ansvar-Systems/US-law-mcp)
 [![Provisions](https://img.shields.io/badge/provisions-504-blue)](#whats-included)
 
-Query **91 US federal and state statutes** across **all 50 states + DC** -- from CFAA and HIPAA to California's CCPA/CPRA, New York's SHIELD Act, and Texas TDPSA -- directly from Claude, Cursor, or any MCP-compatible client.
+Query **91 US federal and state statutes** across **all 50 states + DC + key US territories** -- from CFAA and HIPAA to California's CCPA/CPRA, New York's SHIELD Act, and Texas TDPSA -- directly from Claude, Cursor, or any MCP-compatible client.
 
 If you're building legal tech, compliance tools, or doing US cybersecurity/privacy research, this is your verified reference database.
 
@@ -131,15 +131,15 @@ Once connected, just ask naturally:
 | Category | Count | Details |
 |----------|-------|---------|
 | **Federal Statutes** | 15 laws | CFAA, HIPAA, ECPA, GLBA, COPPA, FISMA, CISA, FTC Act, and more |
-| **State Statutes** | 76 laws | All 50 states + DC: breach notification, privacy, cybersecurity |
+| **State Statutes** | 76 laws | All 50 states + DC + Guam/Puerto Rico/US Virgin Islands: breach notification, privacy, cybersecurity |
 | **Provisions** | 504 sections | Full-text searchable with FTS5 |
 | **State Requirements** | 104 classified | Breach notification, privacy rights, cybersecurity obligations |
 | **Requirement Categories** | 20 types | Timeline, scope, penalties, rights, obligations |
-| **Jurisdictions** | 53 | Federal + 50 states + DC |
+| **Jurisdictions** | 55 | Federal + 50 states + DC + Guam/Puerto Rico/US Virgin Islands |
 | **Database Size** | ~3 MB | Optimized SQLite, portable |
 | **Weekly Updates** | Automated | Freshness checks against uscode.house.gov |
 
-**Verified data only** -- every provision is sourced from official government publications. Zero LLM-generated content.
+**No LLM-generated statute text** -- provisions are fetched from published legal sources and stored verbatim for retrieval/search.
 
 ---
 
@@ -169,26 +169,26 @@ Returns structured data with notification deadlines, scope, and penalties for ea
 
 ## Jurisdictions
 
-**53 jurisdictions**: US Federal + all 50 states + DC
+**55 jurisdictions**: US Federal + all 50 states + DC + Guam/Puerto Rico/US Virgin Islands
 
-`US-FED` `US-AL` `US-AK` `US-AZ` `US-AR` `US-CA` `US-CO` `US-CT` `US-DE` `US-DC` `US-FL` `US-GA` `US-HI` `US-ID` `US-IL` `US-IN` `US-IA` `US-KS` `US-KY` `US-LA` `US-ME` `US-MD` `US-MA` `US-MI` `US-MN` `US-MS` `US-MO` `US-MT` `US-NE` `US-NV` `US-NH` `US-NJ` `US-NM` `US-NY` `US-NC` `US-ND` `US-OH` `US-OK` `US-OR` `US-PA` `US-RI` `US-SC` `US-SD` `US-TN` `US-TX` `US-UT` `US-VT` `US-VA` `US-WA` `US-WV` `US-WI` `US-WY`
+`US-FED` `US-AL` `US-AK` `US-AZ` `US-AR` `US-CA` `US-CO` `US-CT` `US-DE` `US-DC` `US-FL` `US-GA` `US-GU` `US-HI` `US-ID` `US-IL` `US-IN` `US-IA` `US-KS` `US-KY` `US-LA` `US-ME` `US-MD` `US-MA` `US-MI` `US-MN` `US-MS` `US-MO` `US-MT` `US-NE` `US-NV` `US-NH` `US-NJ` `US-NM` `US-NY` `US-NC` `US-ND` `US-OH` `US-OK` `US-OR` `US-PA` `US-PR` `US-RI` `US-SC` `US-SD` `US-TN` `US-TX` `US-UT` `US-VT` `US-VA` `US-VI` `US-WA` `US-WV` `US-WI` `US-WY`
 
 ---
 
 ## Data Sources & Freshness
 
-All content is sourced from authoritative US government databases:
+All content is sourced from authoritative legal publications:
 
 - **[US Code (USLM)](https://uscode.house.gov/)** -- Office of the Law Revision Counsel, official XML
-- **[State Legislative Portals](https://www.congress.gov/state-legislature-websites)** -- Individual state legislature publications
+- **[State Legislative Portals](https://www.congress.gov/state-legislature-websites)** -- individual state legislature publications and state-source captures
 
 ### Automated Freshness Checks (Weekly)
 
-A [weekly GitHub Actions workflow](.github/workflows/check-updates.yml) monitors US Code release points and creates issues when updates are available.
+A [weekly GitHub Actions workflow](.github/workflows/check-updates.yml) monitors US Code release points, refreshes federal data, rebuilds the database, runs tests, and opens a PR when changes are detected.
 
 | Source | Check | Method |
 |--------|-------|--------|
-| **US Code releases** | uscode.house.gov release points | HTTP status check |
+| **US Code releases** | uscode.house.gov release points | Release-link digest change detection |
 | **Public laws** | congress.gov/public-laws | Manual review triggered |
 | **State amendments** | State legislature portals | Periodic manual review |
 
@@ -216,7 +216,7 @@ See [SECURITY.md](SECURITY.md) for the full policy and vulnerability reporting.
 
 > **THIS TOOL IS NOT LEGAL ADVICE**
 >
-> Statute text is sourced from official US government publications. However:
+> Statute text is sourced from official/legal publications. However:
 > - This is a **research tool**, not a substitute for professional legal counsel
 > - **State law coverage focuses on cybersecurity, privacy, and breach notification** -- it does not cover all areas of law
 > - **Verify critical citations** against primary sources for court filings

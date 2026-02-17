@@ -6,7 +6,7 @@ sources:
   - name: "US Code (USLM)"
     authority: "Office of the Law Revision Counsel, US House of Representatives"
     official_portal: "https://uscode.house.gov"
-    retrieval_method: "XML_DOWNLOAD"
+    retrieval_method: "USLM_SECTION_XML"
     update_frequency: "monthly"
     license_or_terms:
       type: "Public Domain"

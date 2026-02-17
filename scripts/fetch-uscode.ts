@@ -1,10 +1,10 @@
 #!/usr/bin/env tsx
 /**
- * fetch-uscode.ts — Download USC section text from Cornell LII and build seed JSONs
+ * fetch-uscode.ts — Download USC section text from official US Code (USLM) endpoints.
  *
- * Source: Cornell Law Information Institute (https://www.law.cornell.edu/uscode/text/)
- * Fetches individual USC sections as HTML, extracts statutory text with cheerio,
- * and writes per-title seed JSON files for the ingestion pipeline.
+ * Source: Office of the Law Revision Counsel (uscode.house.gov)
+ * Fetches section-level USLM XML from official US Code endpoints, extracts
+ * statutory text, and writes per-title seed JSON files for the ingestion pipeline.
  *
  * Usage:
  *   npm run fetch:federal                  # fetch all required titles
@@ -29,12 +29,19 @@ const ROOT = path.resolve(__dirname, '..');
 const CACHE_DIR = path.join(ROOT, 'data', 'source', 'usc');
 const SEED_DIR = path.join(ROOT, 'data', 'seed', 'federal');
 
-// ── Cornell LII URL ────────────────────────────────────────────────
-function cornellUrl(titleNum: number, section: string): string {
-  return `https://www.law.cornell.edu/uscode/text/${titleNum}/${section}`;
+// ── Official US Code (USLM) section URL builder ───────────────────
+const USLM_VIEW_URL = 'https://uscode.house.gov/view.xhtml';
+
+export function buildUslmSectionUrl(titleNum: number, section: string): string {
+  const url = new URL(USLM_VIEW_URL);
+  url.searchParams.set('req', `granuleid:USC-prelim-title${titleNum}-section${section}`);
+  url.searchParams.set('num', '0');
+  url.searchParams.set('edition', 'prelim');
+  url.searchParams.set('f', 'xml');
+  return url.toString();
 }
 
-// ── Explicit section lists per target ──────────────────────────────
+// ── Explicit section lists per target ─────────────────────────────
 // Pre-computed: these are the actual existing USC sections within each range.
 // Using explicit lists avoids probing for non-existent sections.
 const SECTION_LISTS: Record<string, string[]> = {
@@ -128,70 +135,95 @@ interface SeedFile {
   provisions: SeedProvision[];
 }
 
-// ── HTML download with caching ─────────────────────────────────────
-async function downloadSection(
+// ── XML download with caching ──────────────────────────────────────
+async function downloadSectionXml(
   titleNum: number,
   section: string,
 ): Promise<string | null> {
-  const cacheFile = path.join(CACHE_DIR, `t${titleNum}_s${section}.html`);
+  const cacheFile = path.join(CACHE_DIR, `t${titleNum}_s${section}.xml`);
+  const hasCache = fs.existsSync(cacheFile);
+  const staleCached = hasCache ? fs.readFileSync(cacheFile, 'utf-8') : null;
 
   // Use cached file if it exists and is less than 30 days old
-  if (fs.existsSync(cacheFile)) {
+  if (hasCache) {
     const stat = fs.statSync(cacheFile);
     const ageMs = Date.now() - stat.mtimeMs;
     const thirtyDays = 30 * 24 * 60 * 60 * 1000;
     if (ageMs < thirtyDays) {
-      return fs.readFileSync(cacheFile, 'utf-8');
+      return staleCached;
     }
   }
 
-  const url = cornellUrl(titleNum, section);
+  const url = buildUslmSectionUrl(titleNum, section);
+  try {
+    const resp = await fetch(url, {
+      signal: AbortSignal.timeout(30_000),
+      headers: {
+        'User-Agent': 'Ansvar-US-Law-MCP/0.1 (legal-research)',
+        Accept: 'application/xml,text/xml;q=0.9,text/html;q=0.8,*/*;q=0.5',
+      },
+      redirect: 'follow',
+    });
 
-  const resp = await fetch(url, { signal: AbortSignal.timeout(30_000) });
-  if (!resp.ok) {
-    console.warn(`    WARNING: HTTP ${resp.status} for ${url}`);
-    return null;
+    if (!resp.ok) {
+      console.warn(`    WARNING: HTTP ${resp.status} for ${url}`);
+      return staleCached;
+    }
+
+    const xml = await resp.text();
+    if (!xml.includes('<section') && !xml.includes(':section')) {
+      console.warn(`    WARNING: Section ${section} not found at official US Code endpoint`);
+      return staleCached;
+    }
+
+    fs.mkdirSync(CACHE_DIR, { recursive: true });
+    fs.writeFileSync(cacheFile, xml, 'utf-8');
+    return xml;
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    console.warn(`    WARNING: Fetch failed for ${url}: ${message}`);
+    return staleCached;
   }
-
-  const html = await resp.text();
-
-  // Check for error pages
-  if (html.includes('Page not found') || !html.includes('tab-pane')) {
-    console.warn(`    WARNING: Section ${section} not found at Cornell LII`);
-    return null;
-  }
-
-  // Cache it
-  fs.mkdirSync(CACHE_DIR, { recursive: true });
-  fs.writeFileSync(cacheFile, html, 'utf-8');
-
-  return html;
 }
 
-// ── HTML text extraction ────────────────────────────────────────────
+// ── XML text extraction ─────────────────────────────────────────────
 
-function parseSection(html: string): { heading: string; text: string } {
-  const $ = cheerio.load(html);
+interface ParsedSection {
+  heading: string;
+  text: string;
+}
 
-  // Extract heading from page title: "18 U.S. Code § 1030 - Heading | ..."
-  const pageTitle = $('title').text();
-  const headingMatch = pageTitle.match(/§\s*\S+\s*-\s*([^|]+)/);
-  const heading = headingMatch ? headingMatch[1]!.trim() : 'Untitled section';
-
-  // Extract statute body from the active tab pane
-  const body = $('.tab-pane.active').text().trim();
-
-  // Clean up: collapse whitespace, fix punctuation spacing
-  const cleaned = body
-    .replace(/\s+/g, ' ')
-    .replace(/\s([.,;:)])/g, '$1')
-    .replace(/([(\[])\s/g, '$1')
+function normalizeStatuteText(raw: string): string {
+  return raw
+    .replace(/\u00A0/g, ' ')
+    .replace(/\r/g, '')
+    .replace(/[ \t]+\n/g, '\n')
+    .replace(/\n{3,}/g, '\n\n')
+    .replace(/[ \t]{2,}/g, ' ')
     .trim();
-
-  return { heading, text: cleaned };
 }
 
-// ── Delay helper (be polite to Cornell) ─────────────────────────────
+export function parseUslmSectionXml(xml: string, fallbackSection: string): ParsedSection | null {
+  const $ = cheerio.load(xml, { xmlMode: true });
+
+  const sectionEl = $('section').first().length > 0
+    ? $('section').first()
+    : $('*[name="section"]').first();
+  if (!sectionEl.length) return null;
+
+  const heading = sectionEl.find('heading').first().text().trim() || `Section ${fallbackSection}`;
+
+  const contentEl = sectionEl.find('content').first();
+  const extractionRoot = contentEl.length > 0 ? contentEl.clone() : sectionEl.clone();
+  extractionRoot.find('sourceCredit, note, notes, editorialNote, toc').remove();
+
+  const text = normalizeStatuteText(extractionRoot.text());
+  if (text.length < 20) return null;
+
+  return { heading, text };
+}
+
+// ── Delay helper (be polite to uscode.house.gov) ───────────────────
 function delay(ms: number): Promise<void> {
   return new Promise((r) => setTimeout(r, ms));
 }
@@ -210,15 +242,13 @@ async function processTarget(
   }
 
   let orderIndex = 0;
-
   for (const section of sections) {
-    const html = await downloadSection(target.usc_title, section);
-    if (!html) continue;
+    const xml = await downloadSectionXml(target.usc_title, section);
+    if (!xml) continue;
 
-    const { heading, text } = parseSection(html);
-
-    if (text.length < 20) {
-      console.warn(`    Skipping ${section}: too short (${text.length} chars)`);
+    const parsed = parseUslmSectionXml(xml, section);
+    if (!parsed) {
+      console.warn(`    Skipping ${section}: parse failed`);
       continue;
     }
 
@@ -227,12 +257,12 @@ async function processTarget(
       document_index: docIndex,
       jurisdiction: 'US-FED',
       section_number: `\u00a7 ${section}`,
-      title: heading,
-      text,
+      title: parsed.heading,
+      text: parsed.text,
       order_index: orderIndex,
     });
 
-    // Be polite: small delay between requests
+    // Small delay between requests
     await delay(200);
   }
 
@@ -244,7 +274,7 @@ async function processTarget(
 async function main(): Promise<void> {
   const flags = parseFlags();
 
-  console.log('=== US Law MCP \u2014 Federal USC Fetcher (Cornell LII) ===\n');
+  console.log('=== US Law MCP — Federal USC Fetcher (Official USLM) ===\n');
 
   const titles =
     flags.titleFilter !== null
@@ -258,7 +288,7 @@ async function main(): Promise<void> {
 
   // ── Dry run: just list targets ───────────────────────────────────
   if (flags.dryRun) {
-    console.log('DRY RUN \u2014 listing targets without downloading:\n');
+    console.log('DRY RUN — listing targets without downloading:\n');
     let totalSections = 0;
     for (const titleNum of titles) {
       const targets = FEDERAL_TARGETS.filter((t) => t.usc_title === titleNum);
@@ -266,8 +296,8 @@ async function main(): Promise<void> {
       for (const t of targets) {
         const secs = SECTION_LISTS[t.identifier] ?? [];
         const range = t.sections.end
-          ? `\u00a7\u00a7 ${t.sections.start}\u2013${t.sections.end}`
-          : `\u00a7 ${t.sections.start}`;
+          ? `§§ ${t.sections.start}–${t.sections.end}`
+          : `§ ${t.sections.start}`;
         console.log(
           `  ${t.short_name.padEnd(20)} ${range.padEnd(20)} ${secs.length} sections`,
         );
@@ -277,7 +307,7 @@ async function main(): Promise<void> {
     console.log(
       `\nTotal: ${FEDERAL_TARGETS.filter((t) => titles.includes(t.usc_title)).length} statutes, ${totalSections} sections across ${titles.length} USC titles`,
     );
-    console.log('Source: Cornell LII (https://www.law.cornell.edu/uscode/)');
+    console.log('Source: uscode.house.gov (Official USLM endpoint)');
     return;
   }
 
@@ -286,13 +316,14 @@ async function main(): Promise<void> {
   fs.mkdirSync(CACHE_DIR, { recursive: true });
 
   for (const titleNum of titles) {
-    console.log(`\n\u2500\u2500 Title ${titleNum} \u2500\u2500`);
+    console.log(`\n── Title ${titleNum} ──`);
 
     const targets = FEDERAL_TARGETS.filter((t) => t.usc_title === titleNum);
     const seed: SeedFile = { documents: [], provisions: [] };
 
     for (const target of targets) {
       const docIndex = seed.documents.length;
+      const firstSection = String(target.sections.start);
 
       seed.documents.push({
         jurisdiction: 'US-FED',
@@ -303,7 +334,7 @@ async function main(): Promise<void> {
         status: target.status,
         effective_date: target.effective_date,
         last_amended: target.last_amended,
-        source_url: `https://www.law.cornell.edu/uscode/text/${target.usc_title}`,
+        source_url: buildUslmSectionUrl(target.usc_title, firstSection),
       });
 
       const count = await processTarget(target, docIndex, seed);
@@ -313,17 +344,18 @@ async function main(): Promise<void> {
     const outFile = path.join(SEED_DIR, `title${titleNum}.json`);
     fs.writeFileSync(outFile, JSON.stringify(seed, null, 2) + '\n', 'utf-8');
 
-    const docCount = seed.documents.length;
-    const provCount = seed.provisions.length;
     console.log(
-      `  Wrote ${path.relative(ROOT, outFile)} (${docCount} documents, ${provCount} provisions)`,
+      `  Wrote ${path.relative(ROOT, outFile)} (${seed.documents.length} documents, ${seed.provisions.length} provisions)`,
     );
   }
 
   console.log('\nDone.');
 }
 
-main().catch((err) => {
-  console.error('Fatal error:', err);
-  process.exit(1);
-});
+const entryFile = process.argv[1] ? path.resolve(process.argv[1]) : '';
+if (entryFile === __filename) {
+  main().catch((err) => {
+    console.error('Fatal error:', err);
+    process.exit(1);
+  });
+}

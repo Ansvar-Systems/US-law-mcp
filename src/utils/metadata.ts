@@ -25,7 +25,7 @@ export function generateResponseMetadata(db?: Database): ResponseMetadata {
     data_freshness: dataFreshness,
     disclaimer: 'NOT LEGAL ADVICE. This tool is for research purposes only. Always verify citations with official sources (uscode.house.gov, official state legislative portals) before relying on them in legal matters.',
     source_authority: {
-      primary_source: 'US Code (uscode.house.gov) for federal statutes; official state legislative portals for state law',
+      primary_source: 'US Code (uscode.house.gov, USLM) for federal statutes; official state legislative portals and curated state-source captures for state law',
       authority_level: 'official',
       verification_required: 'ALWAYS cross-check with official sources before using in professional legal work.',
     },
