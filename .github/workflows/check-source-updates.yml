@@ -1,0 +1,206 @@
+name: Check for Legal Data Updates
+
+on:
+  schedule:
+    - cron: '0 6 * * 1' # Weekly Monday at 06:00 UTC
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  check-updates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Check uscode.house.gov release points
+        id: check
+        run: npm run check:updates -- --github-output
+        continue-on-error: true
+
+      - name: Refresh federal data and validate
+        if: steps.check.outputs.status == 'ok'
+        run: |
+          npm run fetch:federal
+          npm run build:db
+          npm run ingest:all
+          npm run build
+          npm test
+          npm run test:contract
+
+      - name: Create pull request for refreshed legal data
+        if: steps.check.outputs.status == 'ok'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore(data): refresh federal US code data"
+          branch: "auto/uscode-data-refresh"
+          delete-branch: false
+          title: "[Auto] Refresh federal US Code data"
+          body: |
+            ## Automated Federal Data Refresh
+
+            This PR was created by the `check-updates` workflow after a successful US Code release-point check.
+
+            ### Detection metadata
+            - HTTP status: `${{ steps.check.outputs.http_status }}`
+            - Release links discovered: `${{ steps.check.outputs.release_links_count }}`
+            - Latest release link: `${{ steps.check.outputs.latest_release_link }}`
+            - Release digest: `${{ steps.check.outputs.digest }}`
+
+            ### Pipeline executed
+            1. `npm run fetch:federal`
+            2. `npm run build:db`
+            3. `npm run ingest:all`
+            4. `npm run build`
+            5. `npm test`
+            6. `npm run test:contract`
+          labels: |
+            data-update
+            automated
+          add-paths: |
+            data/source/usc/**
+            data/seed/federal/**
+            data/database.db
+            data/database-free.db
+            sources.yml
+
+      - name: Create issue when release-point digest changes
+        if: steps.check.outputs.status == 'ok'
+        uses: actions/github-script@v7
+        env:
+          RELEASE_DIGEST: ${{ steps.check.outputs.digest }}
+          RELEASE_LINKS_COUNT: ${{ steps.check.outputs.release_links_count }}
+          LATEST_RELEASE_LINK: ${{ steps.check.outputs.latest_release_link }}
+          RELEASE_HTTP_STATUS: ${{ steps.check.outputs.http_status }}
+        with:
+          script: |
+            const digest = process.env.RELEASE_DIGEST?.trim();
+            if (!digest) {
+              console.log('No digest returned from update check; skipping issue creation');
+              return;
+            }
+
+            // Check for existing issue (open or closed) with the same digest.
+            const existingIssues = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: 'data-update,automated',
+              state: 'all',
+              per_page: 100
+            });
+
+            const digestMarker = `Release digest: ${digest}`;
+            const duplicate = existingIssues.find((issue) =>
+              issue.pull_request === undefined && (issue.body || '').includes(digestMarker)
+            );
+
+            if (duplicate) {
+              console.log(`Digest already tracked in issue #${duplicate.number}; skipping creation`);
+              return;
+            }
+
+            const today = new Date().toISOString().split('T')[0];
+            const latestReleaseLink = process.env.LATEST_RELEASE_LINK || 'N/A';
+            const releaseLinksCount = process.env.RELEASE_LINKS_COUNT || '0';
+            const httpStatus = process.env.RELEASE_HTTP_STATUS || '0';
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[Auto] US Code release-point change detected - ${today}`,
+              body: [
+                '## US Code Update Check',
+                '',
+                'A change was detected on the US Code release-point index page.',
+                '',
+                '### Detection details',
+                `- HTTP status: ${httpStatus}`,
+                `- Release links discovered: ${releaseLinksCount}`,
+                `- Latest release link: ${latestReleaseLink}`,
+                `- Release digest: ${digest}`,
+                '',
+                '### Sources',
+                '- [US Code Release Points](https://uscode.house.gov/download/releasepoints/us/pl/index.html)',
+                '- [Recent Public Laws](https://www.congress.gov/public-laws)',
+                '- [USLM XML Bulk Data](https://uscode.house.gov/download/download.shtml)',
+                '',
+                '### Actions',
+                '1. Verify whether the new release point affects tracked federal sections',
+                '2. If updates exist, run `npm run fetch:all` to download new data',
+                '3. Run `npm run build:db && npm run ingest:all` to rebuild the database',
+                '4. Run `npm test && npm run test:contract` to validate',
+                '5. Close this issue when done',
+                '',
+                '_This issue was created automatically by the check-updates workflow._'
+              ].join('\n'),
+              labels: ['data-update', 'automated']
+            });
+
+      - name: Create issue when update check fails
+        if: steps.check.outputs.status != 'ok'
+        uses: actions/github-script@v7
+        env:
+          RELEASE_HTTP_STATUS: ${{ steps.check.outputs.http_status }}
+          RELEASE_ERROR: ${{ steps.check.outputs.error }}
+        with:
+          script: |
+            const title = '[Auto] US Code update check failed';
+
+            const existingIssues = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: 'data-update,automated,monitoring-failure',
+              state: 'open',
+              per_page: 100
+            });
+
+            const duplicate = existingIssues.find((issue) => issue.title === title);
+            if (duplicate) {
+              console.log(`Failure issue already open (#${duplicate.number}); skipping creation`);
+              return;
+            }
+
+            const httpStatus = process.env.RELEASE_HTTP_STATUS || '0';
+            const error = process.env.RELEASE_ERROR || 'unknown';
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body: [
+                '## US Code Update Check Failure',
+                '',
+                'The automated update check failed and needs investigation.',
+                '',
+                `- HTTP status: ${httpStatus}`,
+                `- Error: ${error}`,
+                '',
+                '### Suggested actions',
+                '1. Re-run workflow manually from Actions tab',
+                '2. Verify uscode.house.gov availability',
+                '3. Verify GitHub runner outbound network access',
+                '4. Fix monitor if parsing logic changed'
+              ].join('\n'),
+              labels: ['data-update', 'automated', 'monitoring-failure']
+            });
