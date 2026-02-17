@@ -1,0 +1,23 @@
+# Gitleaks configuration for Law MCP
+# https://github.com/gitleaks/gitleaks
+
+title = "Law MCP - Secret Detection"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Known false positives and example credentials"
+regexes = [
+  '''dev-token''',
+  '''example-token''',
+  '''your-token-here''',
+  '''<password>''',
+  '''user:pass''',
+]
+paths = [
+  '''tests/fixtures/.*''',
+  '''data/seed/.*\.json$''',
+  '''\.env\.local$''',
+  '''\.env\..*\.local$''',
+]

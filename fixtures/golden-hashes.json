@@ -1,0 +1,17 @@
+{
+  "$schema": "./golden-hashes.schema.json",
+  "version": "1.0",
+  "mcp_name": "US Law MCP",
+  "jurisdiction": "US",
+  "description": "Drift detection anchors for US Law MCP.",
+  "provisions": [
+    {
+      "id": "us-hash-001",
+      "description": "Primary legal source anchor",
+      "upstream_url": "https://uscode.house.gov/view.xhtml?path=/prelim@title15/chapter2B&edition=prelim",
+      "selector_hint": "official publication content",
+      "expected_sha256": "COMPUTE_ON_FIRST_RUN",
+      "expected_snippet": "PLACEHOLDER_SNIPPET"
+    }
+  ]
+}
