@@ -1,5 +1,6 @@
 import type { Database } from '@ansvar/mcp-sqlite';
 import { generateResponseMetadata, type ToolResponse } from '../utils/metadata.js';
+import { validateJurisdiction, validateNonEmptyString } from '../utils/validate.js';
 
 export interface ValidateCitationInput {
   citation: string;
@@ -27,6 +28,8 @@ export async function validateCitation(
   input: ValidateCitationInput,
 ): Promise<ToolResponse<ValidateCitationResult>> {
   const { citation, jurisdiction } = input;
+  validateNonEmptyString(citation, 'citation');
+  validateJurisdiction(jurisdiction, false);
   const trimmed = citation.trim();
 
   // Try matching against document identifier, short_name, or provision section_number

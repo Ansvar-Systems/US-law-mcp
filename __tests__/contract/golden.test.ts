@@ -12,6 +12,8 @@ import { compareRequirements } from '../../src/tools/compare-requirements.js';
 import { getStateRequirements } from '../../src/tools/get-state-requirements.js';
 import { validateCitation } from '../../src/tools/validate-citation.js';
 import { checkCurrency } from '../../src/tools/check-currency.js';
+import { buildLegalStance } from '../../src/tools/build-legal-stance.js';
+import { ValidationError } from '../../src/utils/validate.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -233,13 +235,13 @@ describe('get_state_requirements', () => {
 // ---------------------------------------------------------------------------
 
 describe('negative cases', () => {
-  it('returns empty results when searching with non-existent jurisdiction US-ZZ', async () => {
-    const res = await searchLegislation(db, {
-      query: 'breach notification',
-      jurisdiction: 'US-ZZ',
-    });
-
-    expect(res.results).toHaveLength(0);
+  it('throws ValidationError for invalid jurisdiction US-ZZ', async () => {
+    await expect(
+      searchLegislation(db, {
+        query: 'breach notification',
+        jurisdiction: 'US-ZZ',
+      }),
+    ).rejects.toThrow(ValidationError);
   });
 
   it('returns empty results for a non-existent law', async () => {
@@ -368,6 +370,9 @@ describe('golden fixture alignment', () => {
           break;
         case 'check_currency':
           output = await checkCurrency(db, tc.input as unknown as Parameters<typeof checkCurrency>[1]);
+          break;
+        case 'build_legal_stance':
+          output = await buildLegalStance(db, tc.input as unknown as Parameters<typeof buildLegalStance>[1]);
           break;
         default:
           throw new Error(`Unsupported fixture tool "${tc.tool}" in ${tc.id}`);

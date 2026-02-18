@@ -1,6 +1,7 @@
 import type { Database } from '@ansvar/mcp-sqlite';
 import { JURISDICTIONS } from '../types/index.js';
 import { generateResponseMetadata, type ToolResponse } from '../utils/metadata.js';
+import { validateJurisdiction } from '../utils/validate.js';
 
 export interface GetStateRequirementsInput {
   jurisdiction: string;
@@ -30,6 +31,8 @@ export async function getStateRequirements(
   db: Database,
   input: GetStateRequirementsInput,
 ): Promise<ToolResponse<GetStateRequirementsResult[]>> {
+  validateJurisdiction(input.jurisdiction, true);
+
   const conditions: string[] = ['sr.jurisdiction = ?'];
   const params: string[] = [input.jurisdiction];
 
@@ -61,6 +64,7 @@ export async function getStateRequirements(
     LEFT JOIN legal_provisions AS p ON sr.provision_id = p.id
     WHERE ${conditions.join(' AND ')}
     ORDER BY rc.category, rc.subcategory
+    LIMIT 100
   `;
 
   const rows = db.prepare(sql).all(...params) as Array<{

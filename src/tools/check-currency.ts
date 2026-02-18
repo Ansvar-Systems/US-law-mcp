@@ -1,5 +1,6 @@
 import type { Database } from '@ansvar/mcp-sqlite';
 import { generateResponseMetadata, type ToolResponse } from '../utils/metadata.js';
+import { validateJurisdiction } from '../utils/validate.js';
 
 export interface CheckCurrencyInput {
   law_identifier?: string;
@@ -24,6 +25,7 @@ export async function checkCurrency(
   input: CheckCurrencyInput,
 ): Promise<ToolResponse<CheckCurrencyResult>> {
   const { jurisdiction } = input;
+  validateJurisdiction(jurisdiction, true);
 
   let docSql: string;
   let docParams: string[];

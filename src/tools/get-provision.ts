@@ -1,5 +1,6 @@
 import type { Database } from '@ansvar/mcp-sqlite';
 import { generateResponseMetadata, type ToolResponse } from '../utils/metadata.js';
+import { validateJurisdiction } from '../utils/validate.js';
 
 export interface GetProvisionInput {
   law_identifier?: string;
@@ -107,6 +108,7 @@ export async function getProvision(
   input: GetProvisionInput,
 ): Promise<GetProvisionResponse> {
   const { jurisdiction, section_number } = input;
+  validateJurisdiction(jurisdiction, true);
 
   if (!input.law_identifier && !input.short_name) {
     return {

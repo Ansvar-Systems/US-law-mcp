@@ -18,38 +18,80 @@ import { compareRequirements, type CompareRequirementsInput } from './compare-re
 import { getStateRequirements, type GetStateRequirementsInput } from './get-state-requirements.js';
 import { validateCitation, type ValidateCitationInput } from './validate-citation.js';
 import { checkCurrency, type CheckCurrencyInput } from './check-currency.js';
+import { buildLegalStance, type BuildLegalStanceInput } from './build-legal-stance.js';
+import { ValidationError } from '../utils/validate.js';
 
 export const TOOLS: Tool[] = [
   {
     name: 'search_legislation',
-    description: 'Search US federal and state statutes by keyword. Searches FTS-indexed provisions from uscode.house.gov and state legislative portals. Use jurisdiction to filter by state (e.g. "US-CA", "US-NY") or "US-FED" for federal.',
+    description:
+      'Full-text search across US federal and state cybersecurity/privacy statutes. ' +
+      'Returns BM25-ranked results with highlighted snippets from 55 jurisdictions (federal + 50 states + DC + territories). ' +
+      'Covers breach notification, data privacy, cybersecurity, and sector-specific laws. ' +
+      'Use this tool when you need to find provisions by keyword or topic. ' +
+      'Do NOT use this when you already know the exact law and section — use get_provision instead. ' +
+      'Multi-word queries use AND by default with OR fallback if no results found.',
     inputSchema: {
       type: 'object' as const,
       properties: {
-        query: { type: 'string', description: 'Search terms' },
-        jurisdiction: { type: 'string', description: 'Jurisdiction code (e.g. "US-FED", "US-CA", "US-NY"). Omit for all jurisdictions.' },
-        limit: { type: 'number', description: 'Max results (1-50, default 10)' },
+        query: {
+          type: 'string',
+          description: 'Search terms (e.g. "breach notification", "encryption personal information", "right to delete"). Supports FTS5 syntax: AND, OR, NOT, "exact phrase", prefix*.',
+        },
+        jurisdiction: {
+          type: 'string',
+          description: 'Filter to a single jurisdiction. Format: "US-FED" for federal, "US-XX" for states (e.g. "US-CA", "US-NY", "US-TX"). Omit to search all jurisdictions. Use list_sources to see available jurisdictions.',
+        },
+        limit: {
+          type: 'number',
+          description: 'Maximum results to return (1-50, default 10). Lower values are faster and use fewer tokens.',
+          minimum: 1,
+          maximum: 50,
+          default: 10,
+        },
       },
       required: ['query'],
     },
   },
   {
     name: 'get_provision',
-    description: 'Retrieve a specific provision from a US statute. Use law_identifier (e.g. "18 USC 1030") or short_name (e.g. "CFAA", "CCPA") with jurisdiction.',
+    description:
+      'Retrieve the full text of a specific US statute provision. ' +
+      'Use this when you know which law you want — by short name (e.g. "CFAA", "CCPA/CPRA", "SHIELD Act") or identifier (e.g. "18 USC 1030"). ' +
+      'Returns all provisions for the law, or a specific section if section_number is provided. ' +
+      'Supports partial short_name matching (e.g. "CCPA" matches "CCPA/CPRA"). ' +
+      'If no results are found, returns hints listing available laws in the jurisdiction. ' +
+      'Do NOT use this for keyword search — use search_legislation instead.',
     inputSchema: {
       type: 'object' as const,
       properties: {
-        law_identifier: { type: 'string', description: 'Statute identifier (e.g. "18 USC 1030", "Cal. Civ. Code § 1798.100")' },
-        short_name: { type: 'string', description: 'Short name (e.g. "CFAA", "CCPA", "SHIELD Act")' },
-        section_number: { type: 'string', description: 'Specific section to retrieve (e.g. "§ 1030(a)")' },
-        jurisdiction: { type: 'string', description: 'Jurisdiction code (e.g. "US-FED", "US-CA")' },
+        law_identifier: {
+          type: 'string',
+          description: 'Formal statute identifier (e.g. "18 USC 1030", "Cal. Civ. Code § 1798.100"). Use either this or short_name, not both.',
+        },
+        short_name: {
+          type: 'string',
+          description: 'Common short name of the law (e.g. "CFAA", "CCPA/CPRA", "SHIELD Act", "HIPAA", "GLBA", "COPPA", "TX Breach"). Supports partial matching. Use either this or law_identifier.',
+        },
+        section_number: {
+          type: 'string',
+          description: 'Specific section to retrieve (e.g. "§ 1030", "§ 1798.100", "§ 899-aa"). Omit to get all provisions of the law. Supports parent/child matching.',
+        },
+        jurisdiction: {
+          type: 'string',
+          description: 'Required. Jurisdiction code: "US-FED" for federal, "US-XX" for states (e.g. "US-CA", "US-NY"). Use list_sources to see available jurisdictions.',
+        },
       },
       required: ['jurisdiction'],
     },
   },
   {
     name: 'list_sources',
-    description: 'List all jurisdictions available in the US Law database with document and provision counts.',
+    description:
+      'List all jurisdictions available in the US Law database with document and provision counts per jurisdiction. ' +
+      'Use this tool first when you need to discover available data or verify which states are covered. ' +
+      'Returns jurisdiction codes (e.g. "US-FED", "US-CA"), human-readable names, and counts. ' +
+      'Currently covers 55 jurisdictions: Federal + 50 states + DC + Guam + Puerto Rico + US Virgin Islands.',
     inputSchema: {
       type: 'object' as const,
       properties: {},
@@ -58,16 +100,33 @@ export const TOOLS: Tool[] = [
   },
   {
     name: 'compare_requirements',
-    description: 'Compare cybersecurity/privacy requirements across US states. Categories: breach_notification, privacy_rights, cybersecurity, sector_specific. Example: compare breach notification timelines across CA, NY, TX.',
+    description:
+      'Compare cybersecurity/privacy legal requirements across multiple US states side by side. ' +
+      'This is the key cross-state analysis tool — use it when comparing how different states handle the same requirement. ' +
+      'Returns structured data including notification timelines, penalty maximums, scope, and applicability for each state. ' +
+      'Example: compare breach notification timelines across CA, NY, TX to see that TX requires 60-day notification. ' +
+      'Do NOT use this for single-state lookup — use get_state_requirements instead.',
     inputSchema: {
       type: 'object' as const,
       properties: {
-        category: { type: 'string', description: 'Category: breach_notification, privacy_rights, cybersecurity, sector_specific' },
-        subcategory: { type: 'string', description: 'Subcategory (e.g. "timeline", "penalties", "right_to_delete")' },
+        category: {
+          type: 'string',
+          description: 'Requirement category to compare.',
+          enum: ['breach_notification', 'privacy_rights', 'cybersecurity', 'sector_specific'],
+        },
+        subcategory: {
+          type: 'string',
+          description:
+            'Optional subcategory filter. ' +
+            'For breach_notification: timeline, definition, scope, notification_target, exemptions, penalties. ' +
+            'For privacy_rights: right_to_know, right_to_delete, right_to_opt_out, right_to_correct, right_to_portability. ' +
+            'For cybersecurity: security_requirements, risk_assessment, incident_response, encryption, vendor_management. ' +
+            'For sector_specific: financial, healthcare, education, insurance.',
+        },
         jurisdictions: {
           type: 'array',
           items: { type: 'string' },
-          description: 'Array of jurisdiction codes (e.g. ["US-CA", "US-NY", "US-TX"]). Use ["all"] for all states.',
+          description: 'Array of jurisdiction codes to compare (e.g. ["US-CA", "US-NY", "US-TX"]). Use ["all"] for all states with data for this category.',
         },
       },
       required: ['category', 'jurisdictions'],
@@ -75,39 +134,104 @@ export const TOOLS: Tool[] = [
   },
   {
     name: 'get_state_requirements',
-    description: 'Get all classified cybersecurity/privacy requirements for a specific US state. Returns structured data for breach notification, privacy rights, and cybersecurity requirements.',
+    description:
+      'Get all classified cybersecurity/privacy requirements for a single US state. ' +
+      'Returns structured data: breach notification timelines, privacy rights, cybersecurity obligations, and sector-specific rules. ' +
+      'Each requirement includes summary, notification days, penalty maximum, private right of action, and linked law. ' +
+      'Use this for single-state deep dive. For multi-state comparison, use compare_requirements instead.',
     inputSchema: {
       type: 'object' as const,
       properties: {
-        jurisdiction: { type: 'string', description: 'Jurisdiction code (e.g. "US-CA", "US-NY")' },
-        category: { type: 'string', description: 'Filter by category: breach_notification, privacy_rights, cybersecurity, sector_specific' },
+        jurisdiction: {
+          type: 'string',
+          description: 'Required. State jurisdiction code (e.g. "US-CA", "US-NY", "US-TX"). Must be a state code, not "US-FED".',
+        },
+        category: {
+          type: 'string',
+          description: 'Filter to a specific category. Omit for all categories.',
+          enum: ['breach_notification', 'privacy_rights', 'cybersecurity', 'sector_specific'],
+        },
       },
       required: ['jurisdiction'],
     },
   },
   {
     name: 'validate_citation',
-    description: 'Validate a US legal citation. Checks if the cited statute/provision exists in the database.',
+    description:
+      'Validate whether a US legal citation exists in the database. ' +
+      'Checks short names (e.g. "CFAA", "HIPAA"), identifiers (e.g. "18 USC 1030"), and provision section numbers. ' +
+      'Returns the matched document and provision if found. Use this as a zero-hallucination check before citing a law. ' +
+      'Returns valid=false with null matches if the citation is not found.',
     inputSchema: {
       type: 'object' as const,
       properties: {
-        citation: { type: 'string', description: 'Citation to validate (e.g. "18 USC 1030", "CCPA", "Cal. Civ. Code § 1798.100")' },
-        jurisdiction: { type: 'string', description: 'Jurisdiction code to narrow search' },
+        citation: {
+          type: 'string',
+          description: 'Citation to validate. Accepts short names ("CFAA", "HIPAA"), identifiers ("18 USC 1030"), section references ("§ 1798.100"), or partial matches.',
+        },
+        jurisdiction: {
+          type: 'string',
+          description: 'Optional jurisdiction code to narrow the search (e.g. "US-FED", "US-CA").',
+        },
       },
       required: ['citation'],
     },
   },
   {
     name: 'check_currency',
-    description: 'Check if a US statute is currently in force. Returns status, effective date, and last amendment date.',
+    description:
+      'Check whether a US statute is currently in force, repealed, or superseded. ' +
+      'Returns status (in_force, amended, repealed, superseded, not_found), effective date, and last amendment date. ' +
+      'Use this to verify that a law is still valid before relying on it. ' +
+      'Provide either law_identifier or short_name (not both).',
     inputSchema: {
       type: 'object' as const,
       properties: {
-        law_identifier: { type: 'string', description: 'Statute identifier' },
-        short_name: { type: 'string', description: 'Short name (e.g. "CFAA")' },
-        jurisdiction: { type: 'string', description: 'Jurisdiction code' },
+        law_identifier: {
+          type: 'string',
+          description: 'Formal statute identifier (e.g. "18 USC 1030"). Use either this or short_name.',
+        },
+        short_name: {
+          type: 'string',
+          description: 'Common short name (e.g. "CFAA", "HIPAA", "CCPA/CPRA"). Use either this or law_identifier.',
+        },
+        jurisdiction: {
+          type: 'string',
+          description: 'Required. Jurisdiction code (e.g. "US-FED", "US-CA").',
+        },
       },
       required: ['jurisdiction'],
+    },
+  },
+  {
+    name: 'build_legal_stance',
+    description:
+      'Build a comprehensive legal research summary for a US cybersecurity/privacy question. ' +
+      'Searches statutes, state requirements, and cross-references simultaneously to aggregate relevant citations. ' +
+      'Use this for broad legal research questions like "What are the breach notification requirements for companies operating in multiple states?" ' +
+      'Returns statute matches, classified requirements, and metadata. ' +
+      'For targeted single-tool queries, use the specific tools instead.',
+    inputSchema: {
+      type: 'object' as const,
+      properties: {
+        query: {
+          type: 'string',
+          description: 'Legal question or topic to research (e.g. "breach notification requirements for financial institutions", "encryption requirements across states").',
+        },
+        jurisdictions: {
+          type: 'array',
+          items: { type: 'string' },
+          description: 'Optional. Jurisdictions to include (e.g. ["US-CA", "US-NY"]). Omit to search all.',
+        },
+        limit: {
+          type: 'number',
+          description: 'Max results per category (default 5, max 20).',
+          minimum: 1,
+          maximum: 20,
+          default: 5,
+        },
+      },
+      required: ['query'],
     },
   },
 ];
@@ -148,6 +272,9 @@ export function registerTools(
         case 'check_currency':
           result = await checkCurrency(db, args as unknown as CheckCurrencyInput);
           break;
+        case 'build_legal_stance':
+          result = await buildLegalStance(db, args as unknown as BuildLegalStanceInput);
+          break;
         default:
           return {
             content: [{ type: 'text' as const, text: `Error: Unknown tool "${name}".` }],
@@ -160,8 +287,14 @@ export function registerTools(
       };
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
+      const isValidation = error instanceof ValidationError;
       return {
-        content: [{ type: 'text' as const, text: `Error executing ${name}: ${message}` }],
+        content: [{
+          type: 'text' as const,
+          text: isValidation
+            ? `Validation error: ${message}`
+            : `Error executing ${name}: ${message}`,
+        }],
         isError: true,
       };
     }

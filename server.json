@@ -30,5 +30,11 @@
         "type": "stdio"
       }
     }
+  ],
+  "remotes": [
+    {
+      "transportType": "streamableHttp",
+      "url": "https://us-law-mcp.vercel.app/mcp"
+    }
   ]
 }
