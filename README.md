@@ -9,9 +9,9 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![GitHub stars](https://img.shields.io/github/stars/Ansvar-Systems/US-law-mcp?style=social)](https://github.com/Ansvar-Systems/US-law-mcp)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Ansvar-Systems/US-law-mcp/badge)](https://scorecard.dev/viewer/?uri=github.com/Ansvar-Systems/US-law-mcp)
-[![Provisions](https://img.shields.io/badge/provisions-504-blue)](#whats-included)
+[![Provisions](https://img.shields.io/badge/provisions-484-blue)](#whats-included)
 
-Query **91 US federal and state statutes** across **all 50 states + DC + key US territories** -- from CFAA and HIPAA to California's CCPA/CPRA, New York's SHIELD Act, and Texas TDPSA -- directly from Claude, Cursor, or any MCP-compatible client.
+Query **93 US federal and state statutes** across **all 50 states + DC + key US territories** -- from CFAA and HIPAA to California's CCPA/CPRA, New York's SHIELD Act, and Texas TDPSA -- directly from Claude, Cursor, or any MCP-compatible client.
 
 If you're building legal tech, compliance tools, or doing US cybersecurity/privacy research, this is your verified reference database.
 
@@ -131,9 +131,9 @@ Once connected, just ask naturally:
 | Category | Count | Details |
 |----------|-------|---------|
 | **Federal Statutes** | 15 laws | CFAA, HIPAA, ECPA, GLBA, COPPA, FISMA, CISA, FTC Act, and more |
-| **State Statutes** | 76 laws | All 50 states + DC + Guam/Puerto Rico/US Virgin Islands: breach notification, privacy, cybersecurity |
-| **Provisions** | 504 sections | Full-text searchable with FTS5 |
-| **State Requirements** | 104 classified | Breach notification, privacy rights, cybersecurity obligations |
+| **State Statutes** | 78 laws | All 50 states + DC + Guam/Puerto Rico/US Virgin Islands: breach notification, privacy, cybersecurity |
+| **Provisions** | 484 sections | Full-text searchable with FTS5 |
+| **State Requirements** | 145 classified | Breach notification, privacy rights, cybersecurity obligations |
 | **Requirement Categories** | 20 types | Timeline, scope, penalties, rights, obligations |
 | **Jurisdictions** | 55 | Federal + 50 states + DC + Guam/Puerto Rico/US Virgin Islands |
 | **Database Size** | ~3 MB | Optimized SQLite, portable |
@@ -143,7 +143,7 @@ Once connected, just ask naturally:
 
 ---
 
-## Available Tools (7)
+## Available Tools (8)
 
 | Tool | Description |
 |------|-------------|
@@ -154,6 +154,7 @@ Once connected, just ask naturally:
 | `get_state_requirements` | Get classified requirements for a specific state (breach notification, privacy rights, etc.) |
 | `validate_citation` | Validate a legal citation against the database (zero-hallucination check) |
 | `check_currency` | Check if a statute is currently in force, amended, repealed, or superseded |
+| `build_legal_stance` | Aggregate statute search + state requirements for comprehensive legal research |
 
 ### Cross-State Comparison
 
@@ -243,6 +244,12 @@ npm test
 npm run dev                                       # Start MCP server (stdio)
 npx @anthropic/mcp-inspector node dist/index.js   # Test with MCP Inspector
 ```
+
+### Environment Variables
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `US_LAW_DB_PATH` | `data/database.db` (relative to dist) | Custom path to the SQLite database file |
 
 ### Data Management
 

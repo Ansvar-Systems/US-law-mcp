@@ -271,10 +271,10 @@ describe('list_sources', () => {
     expect(jurisdictions).toContain('US-TX');
     expect(jurisdictions).toContain('US-FL');
     expect(jurisdictions).toContain('US-IL');
-    // Each jurisdiction has documents and provisions
+    // Each jurisdiction has at least one document and a readable name
     for (const r of res.results) {
       expect(r.document_count).toBeGreaterThanOrEqual(1);
-      expect(r.provision_count).toBeGreaterThanOrEqual(1);
+      expect(r.provision_count).toBeGreaterThanOrEqual(0);
       expect(r.jurisdiction_name).toBeTruthy();
     }
   });
@@ -298,6 +298,7 @@ describe('validate_citation', () => {
     const res = await validateCitation(db, { citation: 'CFAA' });
 
     expect(res.results.valid).toBe(true);
+    expect(res.results.match_quality).toBe('document_only');
     expect(res.results.matched_document).not.toBeNull();
     expect(res.results.matched_document!.short_name).toBe('CFAA');
     expect(res.results.matched_document!.jurisdiction).toBe('US-FED');
@@ -307,6 +308,7 @@ describe('validate_citation', () => {
     const res = await validateCitation(db, { citation: 'ZZZZZ_FAKE_LAW_999' });
 
     expect(res.results.valid).toBe(false);
+    expect(res.results.match_quality).toBe('none');
     expect(res.results.matched_document).toBeNull();
   });
 });

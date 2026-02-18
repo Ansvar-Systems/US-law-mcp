@@ -30,7 +30,8 @@ export const TOOLS: Tool[] = [
       'Covers breach notification, data privacy, cybersecurity, and sector-specific laws. ' +
       'Use this tool when you need to find provisions by keyword or topic. ' +
       'Do NOT use this when you already know the exact law and section — use get_provision instead. ' +
-      'Multi-word queries use AND by default with OR fallback if no results found.',
+      'Multi-word queries use AND by default with OR fallback if no results found. ' +
+      'To get full text of a result, pass its short_name and jurisdiction to get_provision.',
     inputSchema: {
       type: 'object' as const,
       properties: {
@@ -161,7 +162,8 @@ export const TOOLS: Tool[] = [
       'Validate whether a US legal citation exists in the database. ' +
       'Checks short names (e.g. "CFAA", "HIPAA"), identifiers (e.g. "18 USC 1030"), and provision section numbers. ' +
       'Returns the matched document and provision if found. Use this as a zero-hallucination check before citing a law. ' +
-      'Returns valid=false with null matches if the citation is not found.',
+      'Returns valid=false with match_quality="none" if the citation is not found. ' +
+      'match_quality indicates confidence: "section_exact" (section matched directly), "section_fuzzy" (section matched via number extraction), or "document_only" (law found but specific section not confirmed — matched_provision is a representative first section).',
     inputSchema: {
       type: 'object' as const,
       properties: {
@@ -182,8 +184,9 @@ export const TOOLS: Tool[] = [
     description:
       'Check whether a US statute is currently in force, repealed, or superseded. ' +
       'Returns status (in_force, amended, repealed, superseded, not_found), effective date, and last amendment date. ' +
+      'is_current is true for both "in_force" and "amended" statuses (an amended law is still current). ' +
       'Use this to verify that a law is still valid before relying on it. ' +
-      'Provide either law_identifier or short_name (not both).',
+      'Provide either law_identifier or short_name (required, not both).',
     inputSchema: {
       type: 'object' as const,
       properties: {
@@ -207,10 +210,11 @@ export const TOOLS: Tool[] = [
     name: 'build_legal_stance',
     description:
       'Build a comprehensive legal research summary for a US cybersecurity/privacy question. ' +
-      'Searches statutes, state requirements, and cross-references simultaneously to aggregate relevant citations. ' +
+      'Searches statutes and state requirements simultaneously to aggregate relevant citations. ' +
       'Use this for broad legal research questions like "What are the breach notification requirements for companies operating in multiple states?" ' +
       'Returns statute matches, classified requirements, and metadata. ' +
-      'For targeted single-tool queries, use the specific tools instead.',
+      'For targeted single-tool queries, use the specific tools instead. ' +
+      'To drill into a specific result, pass its short_name and jurisdiction to get_provision for full text, or use compare_requirements for cross-state analysis.',
     inputSchema: {
       type: 'object' as const,
       properties: {

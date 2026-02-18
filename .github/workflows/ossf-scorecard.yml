@@ -12,6 +12,7 @@ permissions: {}
 jobs:
   analysis:
     name: OSSF Scorecard analysis
+    timeout-minutes: 15
     runs-on: ubuntu-latest
     permissions:
       security-events: write

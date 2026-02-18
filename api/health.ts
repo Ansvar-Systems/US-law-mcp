@@ -52,12 +52,15 @@ function getDbStats(): { tier: string; documents: number; provisions: number; ju
     if (!existsSync(dbPath)) return { tier: 'unknown', documents: 0, provisions: 0, jurisdictions: 0 };
 
     const db = new Database(dbPath, { readonly: true });
-    const meta = readDbMetadata(db);
-    const docs = (db.prepare('SELECT COUNT(*) AS c FROM legal_documents').get() as { c: number }).c;
-    const provs = (db.prepare('SELECT COUNT(*) AS c FROM legal_provisions').get() as { c: number }).c;
-    const juris = (db.prepare('SELECT COUNT(DISTINCT jurisdiction) AS c FROM legal_documents').get() as { c: number }).c;
-    db.close();
-    return { tier: meta.tier, documents: docs, provisions: provs, jurisdictions: juris };
+    try {
+      const meta = readDbMetadata(db);
+      const docs = (db.prepare('SELECT COUNT(*) AS c FROM legal_documents').get() as { c: number }).c;
+      const provs = (db.prepare('SELECT COUNT(*) AS c FROM legal_provisions').get() as { c: number }).c;
+      const juris = (db.prepare('SELECT COUNT(DISTINCT jurisdiction) AS c FROM legal_documents').get() as { c: number }).c;
+      return { tier: meta.tier, documents: docs, provisions: provs, jurisdictions: juris };
+    } finally {
+      db.close();
+    }
   } catch {
     return { tier: 'unknown', documents: 0, provisions: 0, jurisdictions: 0 };
   }

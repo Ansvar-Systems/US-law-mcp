@@ -36,7 +36,8 @@
     "ingest:federal": "tsx scripts/ingest/federal.ts",
     "ingest:states": "tsx scripts/ingest/states.ts",
     "ingest:classify": "tsx scripts/ingest/classify.ts",
-    "ingest:all": "npm run ingest:federal && npm run ingest:states && npm run ingest:classify"
+    "ingest:all": "npm run ingest:federal && npm run ingest:states && npm run ingest:classify",
+    "prepublishOnly": "npm run build:db && npm run ingest:all && npm run build"
   },
   "dependencies": {
     "@ansvar/mcp-sqlite": "^1.0.0",

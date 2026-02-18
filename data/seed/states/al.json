@@ -33,80 +33,40 @@
       "document_index": 0,
       "jurisdiction": "US-AL",
       "section_number": "",
-      "title": "LawServer",
-      "text": "Ask a business law question, get an answer ASAP!Thousands of highly rated, verified business lawyers.Click here to chat with a lawyer about your rights.",
-      "order_index": 3
-    },
-    {
-      "document_index": 0,
-      "jurisdiction": "US-AL",
-      "section_number": "",
-      "title": "LawServer",
-      "text": "Ask a business law question, get an answer ASAP!Thousands of highly rated, verified business lawyers.Click here to chat with a lawyer about your rights.",
-      "order_index": 4
-    },
-    {
-      "document_index": 0,
-      "jurisdiction": "US-AL",
-      "section_number": "",
-      "title": "LawServer",
-      "text": "Ask a business law question, get an answer ASAP!Thousands of highly rated, verified business lawyers.Click here to chat with a lawyer about your rights.",
-      "order_index": 5
-    },
-    {
-      "document_index": 0,
-      "jurisdiction": "US-AL",
-      "section_number": "",
-      "title": "LawServer",
-      "text": "Ask a business law question, get an answer ASAP!Thousands of highly rated, verified business lawyers.Click here to chat with a lawyer about your rights.",
-      "order_index": 6
-    },
-    {
-      "document_index": 0,
-      "jurisdiction": "US-AL",
-      "section_number": "",
-      "title": "LawServer",
-      "text": "Ask a business law question, get an answer ASAP!Thousands of highly rated, verified business lawyers.Click here to chat with a lawyer about your rights.\n\nIf a covered entity discovers circumstances requiring notice under Section 8-38-5 of more than 1,000 individuals at a single time, the entity shall also notify, without unreasonable delay, all consumer reporting agencies that compile and maintain files on consumers on a nationwide basis, as defined in the Fair Credit Reporting Act, 15 U.S.C. § 1681a, of the timing, distribution, and content of the notices.",
+      "title": "",
+      "text": "If a covered entity discovers circumstances requiring notice under Section 8-38-5 of more than 1,000 individuals at a single time, the entity shall also notify, without unreasonable delay, all consumer reporting agencies that compile and maintain files on consumers on a nationwide basis, as defined in the Fair Credit Reporting Act, 15 U.S.C. § 1681a, of the timing, distribution, and content of the notices.",
       "order_index": 7
     },
     {
       "document_index": 0,
       "jurisdiction": "US-AL",
       "section_number": "",
-      "title": "LawServer",
-      "text": "Ask a business law question, get an answer ASAP!Thousands of highly rated, verified business lawyers.Click here to chat with a lawyer about your rights.\n\nIn the event a third-party agent has experienced a breach of security in the system maintained by the agent, the agent shall notify the covered entity of the breach of security as expeditiously as possible and without unreasonable delay, but no later than 10 days following the determination of the breach of security or reason to believe the breach occurred. After receiving notice from a third-party agent, a covered entity shall provide notices required under Sections 8-38-5 and 8-38-6. A third-party agent, in cooperation with a covered entity, shall provide information in the possession of the third-party agent so that the covered entity can comply with its notice requirements. A covered entity may enter into a contractual agreement with a third-party agent whereby the third-party agent agrees to handle notifications required under this chapter.",
+      "title": "",
+      "text": "In the event a third-party agent has experienced a breach of security in the system maintained by the agent, the agent shall notify the covered entity of the breach of security as expeditiously as possible and without unreasonable delay, but no later than 10 days following the determination of the breach of security or reason to believe the breach occurred. After receiving notice from a third-party agent, a covered entity shall provide notices required under Sections 8-38-5 and 8-38-6. A third-party agent, in cooperation with a covered entity, shall provide information in the possession of the third-party agent so that the covered entity can comply with its notice requirements. A covered entity may enter into a contractual agreement with a third-party agent whereby the third-party agent agrees to handle notifications required under this chapter.",
       "order_index": 8
     },
     {
       "document_index": 0,
       "jurisdiction": "US-AL",
       "section_number": "",
-      "title": "LawServer",
-      "text": "Ask a business law question, get an answer ASAP!Thousands of highly rated, verified business lawyers.Click here to chat with a lawyer about your rights.",
-      "order_index": 9
-    },
-    {
-      "document_index": 0,
-      "jurisdiction": "US-AL",
-      "section_number": "",
-      "title": "LawServer",
-      "text": "Ask a business law question, get an answer ASAP!Thousands of highly rated, verified business lawyers.Click here to chat with a lawyer about your rights.\n\nA covered entity or third-party agent shall take reasonable measures to dispose, or arrange for the disposal, of records containing sensitive personally identifying information within its custody or control when the records are no longer to be retained pursuant to applicable law, regulations, or business needs. Disposal shall include shredding, erasing, or otherwise modifying the personal information in the records to make it unreadable or undecipherable through any reasonable means consistent with industry standards.",
+      "title": "",
+      "text": "A covered entity or third-party agent shall take reasonable measures to dispose, or arrange for the disposal, of records containing sensitive personally identifying information within its custody or control when the records are no longer to be retained pursuant to applicable law, regulations, or business needs. Disposal shall include shredding, erasing, or otherwise modifying the personal information in the records to make it unreadable or undecipherable through any reasonable means consistent with industry standards.",
       "order_index": 10
     },
     {
       "document_index": 0,
       "jurisdiction": "US-AL",
       "section_number": "",
-      "title": "LawServer",
-      "text": "An entity subject to or regulated by federal laws, rules, regulations, procedures, or guidance on data breach notification established or enforced by the federal government is exempt from this chapter as long as the entity does all of the following:\n\nAsk a business law question, get an answer ASAP!Thousands of highly rated, verified business lawyers.Click here to chat with a lawyer about your rights.",
+      "title": "",
+      "text": "An entity subject to or regulated by federal laws, rules, regulations, procedures, or guidance on data breach notification established or enforced by the federal government is exempt from this chapter as long as the entity does all of the following:",
       "order_index": 11
     },
     {
       "document_index": 0,
       "jurisdiction": "US-AL",
       "section_number": "",
-      "title": "LawServer",
-      "text": "An entity subject to or regulated by state laws, rules, regulations, procedures, or guidance on data breach notification that are established or enforced by state government, and are at least as thorough as the notice requirements provided by this chapter, is exempt from this chapter so long as the entity does all of the following:\n\nAsk a business law question, get an answer ASAP!Thousands of highly rated, verified business lawyers.Click here to chat with a lawyer about your rights.",
+      "title": "",
+      "text": "An entity subject to or regulated by state laws, rules, regulations, procedures, or guidance on data breach notification that are established or enforced by state government, and are at least as thorough as the notice requirements provided by this chapter, is exempt from this chapter so long as the entity does all of the following:",
       "order_index": 12
     }
   ]

@@ -20,7 +20,7 @@ sources:
 
   - name: "State Legislative Portals"
     authority: "Individual state legislatures (50 states)"
-    official_portal: "Various (see state-law-index.yml)"
+    official_portal: "Various (see data/manifests/state-targets.ts)"
     retrieval_method: "HTML_SCRAPE"
     update_frequency: "quarterly"
     license_or_terms:

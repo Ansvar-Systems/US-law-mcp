@@ -37,7 +37,7 @@ jobs:
         run: npm install -g @socketsecurity/cli
 
       - name: Run Socket analysis
-        run: socket npm audit --json > socket-results.json || true
+        run: socket npm audit --json > socket-results.json
         env:
           SOCKET_SECURITY_API_KEY: ${{ secrets.SOCKET_SECURITY_API_KEY }}
 

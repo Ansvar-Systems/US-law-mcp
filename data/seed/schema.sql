@@ -88,3 +88,8 @@ CREATE INDEX IF NOT EXISTS idx_provs_jurisdiction ON legal_provisions(jurisdicti
 CREATE INDEX IF NOT EXISTS idx_provs_document_id ON legal_provisions(document_id);
 CREATE INDEX IF NOT EXISTS idx_requirements_jurisdiction ON state_requirements(jurisdiction);
 CREATE INDEX IF NOT EXISTS idx_requirements_category ON state_requirements(category_id);
+CREATE INDEX IF NOT EXISTS idx_docs_identifier ON legal_documents(identifier);
+CREATE INDEX IF NOT EXISTS idx_docs_status ON legal_documents(status);
+CREATE INDEX IF NOT EXISTS idx_provs_section_number ON legal_provisions(section_number);
+CREATE INDEX IF NOT EXISTS idx_requirements_document ON state_requirements(document_id);
+CREATE INDEX IF NOT EXISTS idx_requirements_provision ON state_requirements(provision_id);
