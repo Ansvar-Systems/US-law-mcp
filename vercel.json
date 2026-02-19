@@ -10,7 +10,8 @@
     },
     "api/health.ts": {
       "maxDuration": 10,
-      "memory": 256
+      "memory": 256,
+      "includeFiles": "{data/database.db,node_modules/node-sqlite3-wasm/dist/node-sqlite3-wasm.wasm,node_modules/.pnpm/node-sqlite3-wasm*/node_modules/node-sqlite3-wasm/dist/node-sqlite3-wasm.wasm}"
     }
   },
   "rewrites": [
