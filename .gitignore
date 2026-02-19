@@ -8,3 +8,6 @@ data/source/
 .vercel/
 .env
 .vercel
+coverage/
+data/*.db
+data/*.db.gz
