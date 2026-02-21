@@ -20,6 +20,14 @@ import { validateCitation, type ValidateCitationInput } from './validate-citatio
 import { checkCurrency, type CheckCurrencyInput } from './check-currency.js';
 import { buildLegalStance, type BuildLegalStanceInput } from './build-legal-stance.js';
 import { ValidationError } from '../utils/validate.js';
+import {
+  getProvisionHistory,
+  diffProvision,
+  getRecentChanges,
+  type GetProvisionHistoryInput,
+  type DiffProvisionInput,
+  type GetRecentChangesInput,
+} from './version-tracking.js';
 
 export const TOOLS: Tool[] = [
   {
@@ -238,6 +246,89 @@ export const TOOLS: Tool[] = [
       required: ['query'],
     },
   },
+  // --- Premium tools: version tracking ---
+  {
+    name: 'get_provision_history',
+    description:
+      'Get the full version timeline for a specific US statute provision, showing all amendments with dates and change summaries. ' +
+      'Premium feature — requires Ansvar Intelligence Portal.',
+    inputSchema: {
+      type: 'object' as const,
+      properties: {
+        short_name: {
+          type: 'string',
+          description: 'Short name of the law (e.g. "CFAA", "CCPA/CPRA", "HIPAA").',
+        },
+        jurisdiction: {
+          type: 'string',
+          description: 'Jurisdiction code (e.g. "US-FED", "US-CA").',
+        },
+        section_number: {
+          type: 'string',
+          description: 'Specific section (e.g. "§ 1030"). Omit for law-level history.',
+        },
+      },
+      required: ['short_name', 'jurisdiction'],
+    },
+  },
+  {
+    name: 'diff_provision',
+    description:
+      'Show what changed in a US statute provision between two dates, including a unified diff and change summary. ' +
+      'Premium feature — requires Ansvar Intelligence Portal.',
+    inputSchema: {
+      type: 'object' as const,
+      properties: {
+        short_name: {
+          type: 'string',
+          description: 'Short name of the law (e.g. "CFAA", "CCPA/CPRA").',
+        },
+        jurisdiction: {
+          type: 'string',
+          description: 'Jurisdiction code (e.g. "US-FED", "US-CA").',
+        },
+        section_number: {
+          type: 'string',
+          description: 'Specific section (e.g. "§ 1030"). Omit for law-level diff.',
+        },
+        from_date: {
+          type: 'string',
+          description: 'ISO date to diff from (e.g. "2024-01-01").',
+        },
+        to_date: {
+          type: 'string',
+          description: 'ISO date to diff to (defaults to current).',
+        },
+      },
+      required: ['short_name', 'jurisdiction', 'from_date'],
+    },
+  },
+  {
+    name: 'get_recent_changes',
+    description:
+      'List all US statute provisions that changed since a given date, with change summaries. Optionally filter to a specific jurisdiction. ' +
+      'Premium feature — requires Ansvar Intelligence Portal.',
+    inputSchema: {
+      type: 'object' as const,
+      properties: {
+        since: {
+          type: 'string',
+          description: 'ISO date (e.g. "2024-06-01").',
+        },
+        jurisdiction: {
+          type: 'string',
+          description: 'Filter to a specific jurisdiction (e.g. "US-CA"). Omit for all.',
+        },
+        limit: {
+          type: 'number',
+          description: 'Maximum changes to return. Default: 50, max: 200.',
+          minimum: 1,
+          maximum: 200,
+        },
+      },
+      required: ['since'],
+    },
+  },
 ];
 
 export function registerTools(
@@ -278,6 +369,15 @@ export function registerTools(
           break;
         case 'build_legal_stance':
           result = await buildLegalStance(db, args as unknown as BuildLegalStanceInput);
+          break;
+        case 'get_provision_history':
+          result = await getProvisionHistory(db, args as unknown as GetProvisionHistoryInput);
+          break;
+        case 'diff_provision':
+          result = await diffProvision(db, args as unknown as DiffProvisionInput);
+          break;
+        case 'get_recent_changes':
+          result = await getRecentChanges(db, args as unknown as GetRecentChangesInput);
           break;
         default:
           return {
