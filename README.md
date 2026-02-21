@@ -227,6 +227,18 @@ See [SECURITY.md](SECURITY.md) for the full policy and vulnerability reporting.
 
 ## Development
 
+### Branching Strategy
+
+This repository uses a `dev` integration branch. **Do not push directly to `main`.**
+
+```
+feature-branch → PR to dev → verify on dev → PR to main → deploy
+```
+
+- `main` is production-ready. Only receives merges from `dev` via PR.
+- `dev` is the integration branch. All changes land here first.
+- Feature branches are created from `dev`.
+
 ### Setup
 
 ```bash
