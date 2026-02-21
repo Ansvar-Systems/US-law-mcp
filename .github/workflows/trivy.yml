@@ -16,6 +16,7 @@ permissions:
 jobs:
   scan:
     name: Trivy vulnerability scan
+    timeout-minutes: 15
     runs-on: ubuntu-latest
 
     steps:
@@ -45,5 +46,5 @@ jobs:
           scan-ref: '.'
           scanners: 'vuln'
           format: 'table'
-          exit-code: 0
+          exit-code: 1
           severity: 'CRITICAL,HIGH'

@@ -12,14 +12,5 @@
       "source_url": "https://legislature.vermont.gov/statutes/chapter/09/062"
     }
   ],
-  "provisions": [
-    {
-      "document_index": 0,
-      "jurisdiction": "US-VT",
-      "section_number": "",
-      "title": "LawServer",
-      "text": "Ask a business law question, get an answer ASAP!Thousands of highly rated, verified business lawyers.Click here to chat with a lawyer about your rights.",
-      "order_index": 1
-    }
-  ]
+  "provisions": []
 }

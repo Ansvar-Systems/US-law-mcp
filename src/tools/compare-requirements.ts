@@ -1,6 +1,7 @@
 import type { Database } from '@ansvar/mcp-sqlite';
 import { JURISDICTIONS } from '../types/index.js';
 import { generateResponseMetadata, type ToolResponse } from '../utils/metadata.js';
+import { validateJurisdiction, validateNonEmptyString } from '../utils/validate.js';
 
 export interface CompareRequirementsInput {
   category: string;
@@ -30,6 +31,8 @@ export async function compareRequirements(
   db: Database,
   input: CompareRequirementsInput,
 ): Promise<ToolResponse<CompareRequirementsResult[]>> {
+  validateNonEmptyString(input.category, 'category');
+
   const conditions: string[] = ['rc.category = ?'];
   const params: (string | number)[] = [input.category];
 
@@ -40,6 +43,9 @@ export async function compareRequirements(
 
   const isAll = Array.isArray(input.jurisdictions) && input.jurisdictions.length === 1 && input.jurisdictions[0] === 'all';
   if (!isAll && Array.isArray(input.jurisdictions)) {
+    for (const j of input.jurisdictions) {
+      validateJurisdiction(j, true);
+    }
     if (input.jurisdictions.length === 0) {
       return { results: [], _metadata: generateResponseMetadata(db) };
     }
@@ -69,6 +75,7 @@ export async function compareRequirements(
     LEFT JOIN legal_documents AS d ON sr.document_id = d.id
     WHERE ${conditions.join(' AND ')}
     ORDER BY sr.jurisdiction, rc.subcategory
+    LIMIT 200
   `;
 
   const rows = db.prepare(sql).all(...params) as Array<{

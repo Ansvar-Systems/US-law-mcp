@@ -1,5 +1,6 @@
 import type { Database } from '@ansvar/mcp-sqlite';
 import { generateResponseMetadata, type ToolResponse } from '../utils/metadata.js';
+import { validateJurisdiction, ValidationError } from '../utils/validate.js';
 
 export interface CheckCurrencyInput {
   law_identifier?: string;
@@ -24,6 +25,7 @@ export async function checkCurrency(
   input: CheckCurrencyInput,
 ): Promise<ToolResponse<CheckCurrencyResult>> {
   const { jurisdiction } = input;
+  validateJurisdiction(jurisdiction, true);
 
   let docSql: string;
   let docParams: string[];
@@ -35,14 +37,10 @@ export async function checkCurrency(
     docSql = 'SELECT jurisdiction, title, identifier, short_name, status, effective_date, last_amended FROM legal_documents WHERE jurisdiction = ? AND short_name = ?';
     docParams = [jurisdiction, input.short_name];
   } else {
-    return {
-      results: {
-        jurisdiction, title: '', identifier: null, short_name: null,
-        status: 'not_found', is_current: false, effective_date: null,
-        last_amended: null, warnings: ['No law_identifier or short_name provided'],
-      },
-      _metadata: generateResponseMetadata(db),
-    };
+    throw new ValidationError(
+      'Provide either law_identifier (e.g. "18 USC 1030") or short_name (e.g. "CFAA", "HIPAA"). ' +
+      'Use list_sources to discover available laws.',
+    );
   }
 
   const row = db.prepare(docSql).get(...docParams) as {

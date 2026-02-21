@@ -1,5 +1,6 @@
 import type { Database } from '@ansvar/mcp-sqlite';
 import { generateResponseMetadata, type ToolResponse } from '../utils/metadata.js';
+import { validateJurisdiction, ValidationError } from '../utils/validate.js';
 
 export interface GetProvisionInput {
   law_identifier?: string;
@@ -107,13 +108,13 @@ export async function getProvision(
   input: GetProvisionInput,
 ): Promise<GetProvisionResponse> {
   const { jurisdiction, section_number } = input;
+  validateJurisdiction(jurisdiction, true);
 
   if (!input.law_identifier && !input.short_name) {
-    return {
-      results: [],
-      hints: ['Provide either law_identifier or short_name.'],
-      _metadata: generateResponseMetadata(db),
-    };
+    throw new ValidationError(
+      'Provide either law_identifier (e.g. "18 USC 1030") or short_name (e.g. "CFAA", "CCPA/CPRA"). ' +
+      'Use search_legislation to find laws by keyword if you do not know the identifier.',
+    );
   }
 
   const docFilter = buildDocumentFilter(input);

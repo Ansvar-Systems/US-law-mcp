@@ -5,6 +5,8 @@ on:
     branches: ['**']
   pull_request:
     branches: [main]
+  schedule:
+    - cron: '0 5 * * 1' # Weekly Monday at 5 AM UTC
   workflow_dispatch:
 
 concurrency:
@@ -18,6 +20,7 @@ jobs:
   scan:
     name: Scan for secrets
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: Checkout code

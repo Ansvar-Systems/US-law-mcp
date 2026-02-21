@@ -6,7 +6,8 @@
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "us-law-mcp": "dist/index.js"
+    "us-law-mcp": "dist/index.js",
+    "us-law-mcp-http": "dist/http-server.js"
   },
   "files": [
     "dist",
@@ -14,11 +15,13 @@
     "server.json"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && chmod +x dist/index.js dist/http-server.js",
     "build:db": "tsx scripts/build-db.ts",
     "build:db:free": "tsx scripts/build-db-free.ts",
     "dev": "tsx src/index.ts",
     "start": "node dist/index.js",
+    "start:http": "node dist/http-server.js",
+    "dev:http": "tsx src/http-server.ts",
     "test": "vitest run --exclude __tests__/contract/**",
     "test:contract": "vitest run __tests__/contract/",
     "test:coverage": "vitest run --coverage",
@@ -36,7 +39,8 @@
     "ingest:federal": "tsx scripts/ingest/federal.ts",
     "ingest:states": "tsx scripts/ingest/states.ts",
     "ingest:classify": "tsx scripts/ingest/classify.ts",
-    "ingest:all": "npm run ingest:federal && npm run ingest:states && npm run ingest:classify"
+    "ingest:all": "npm run ingest:federal && npm run ingest:states && npm run ingest:classify",
+    "prepublishOnly": "npm run build:db && npm run ingest:all && npm run build"
   },
   "dependencies": {
     "@ansvar/mcp-sqlite": "^1.0.0",

@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "date": "2026-02-16",
+    "note": "LawServer.com URLs for 16 US states' breach notification statutes. Several states are NOT available on LawServer and require alternative sources."
+  },
+  "states": {
+    "AK": {
+      "statute": "Alaska Stat. § 45.48.010 et seq.",
+      "pathSegment": "ak-statutes",
+      "status": "FOUND",
+      "chapterUrl": "https://www.lawserver.com/law/state/alaska/ak-statutes/alaska_statutes_chapter_45-48",
+      "individualStatuteUrl": "https://www.lawserver.com/law/state/alaska/ak-statutes/alaska_statutes_45-48-010",
+      "notes": "Chapter 45-48: Personal Information Protection Act. Verified working."
+    },
+    "AZ": {
+      "statute": "Ariz. Rev. Stat. § 18-552",
+      "pathSegment": "az-laws",
+      "status": "FOUND",
+      "chapterUrl": "https://www.lawserver.com/law/state/arizona/az-laws/arizona_laws_title_18_chapter_5_article_4",
+      "individualStatuteUrl": "https://www.lawserver.com/law/state/arizona/az-laws/arizona_laws_18-552",
+      "notes": "Title 18, Chapter 5, Article 4: Data Security Breaches. Verified working."
+    },
+    "AR": {
+      "statute": "Ark. Code § 4-110-101 et seq.",
+      "pathSegment": "UNKNOWN",
+      "status": "NOT_FOUND",
+      "chapterUrl": null,
+      "individualStatuteUrl": null,
+      "notes": "Not indexed on LawServer. Use Arkansas Legislature website or alternative source."
+    },
+    "CO": {
+      "statute": "Colo. Rev. Stat. § 6-1-716",
+      "pathSegment": "UNKNOWN",
+      "status": "NOT_FOUND",
+      "chapterUrl": null,
+      "individualStatuteUrl": null,
+      "notes": "Not indexed on LawServer. Use Colorado Legislature website or alternative source."
+    },
+    "DC": {
+      "statute": "D.C. Code § 28-3851 et seq.",
+      "pathSegment": "UNKNOWN",
+      "status": "NOT_FOUND",
+      "chapterUrl": null,
+      "individualStatuteUrl": null,
+      "notes": "Not indexed on LawServer. Use DC Code official website or alternative source."
+    },
+    "GA": {
+      "statute": "Ga. Code § 10-1-910 et seq.",
+      "pathSegment": "UNKNOWN",
+      "status": "NOT_FOUND",
+      "chapterUrl": null,
+      "individualStatuteUrl": null,
+      "notes": "Not indexed on LawServer. Use Georgia General Assembly website or alternative source."
+    },
+    "ME": {
+      "statute": "Me. Rev. Stat. tit. 10, § 1346 et seq.",
+      "pathSegment": "me-statutes",
+      "status": "FOUND",
+      "chapterUrl": "https://www.lawserver.com/law/state/maine/me-statutes/maine_revised_statutes_title_10_part_3_chapter_210-b",
+      "individualStatuteUrl": "https://www.lawserver.com/law/state/maine/me-statutes/maine_revised_statutes_title_10_1346",
+      "notes": "Title 10, Chapter 210-B: Notice of Risk to Personal Data. Verified working."
+    },
+    "MS": {
+      "statute": "Miss. Code § 75-24-29",
+      "pathSegment": "UNKNOWN",
+      "status": "NOT_FOUND",
+      "chapterUrl": null,
+      "individualStatuteUrl": null,
+      "notes": "Not indexed on LawServer. Use Mississippi Legislature website or alternative source."
+    },
+    "NE": {
+      "statute": "Neb. Rev. Stat. § 87-801 et seq.",
+      "pathSegment": "ne-statutes",
+      "status": "PARTIAL",
+      "chapterUrl": null,
+      "individualStatuteUrl": null,
+      "notes": "LawServer has Nebraska statutes but § 87-801 series not directly indexed. Found reference to § 87-807. May need alternative source."
+    },
+    "NH": {
+      "statute": "N.H. Rev. Stat. § 359-C:19 et seq.",
+      "pathSegment": "nh-statutes",
+      "status": "FOUND",
+      "chapterUrl": "https://www.lawserver.com/law/state/new-hampshire/nh-statutes/new_hampshire_revised_statutes_chapter_359-c",
+      "individualStatuteUrl": "https://www.lawserver.com/law/state/new-hampshire/nh-statutes/new_hampshire_revised_statutes_359-c_19",
+      "notes": "Chapter 359-C: Right to Privacy. § 359-C:19 (Definitions) and § 359-C:20 (Notification). Verified working."
+    },
+    "OK": {
+      "statute": "Okla. Stat. tit. 24, § 161 et seq.",
+      "pathSegment": "UNKNOWN",
+      "status": "NOT_FOUND",
+      "chapterUrl": null,
+      "individualStatuteUrl": null,
+      "notes": "Not indexed on LawServer. Use Oklahoma Legislature website or alternative source."
+    },
+    "PA": {
+      "statute": "73 Pa. Stat. § 2301 et seq.",
+      "pathSegment": "UNKNOWN",
+      "status": "NOT_FOUND",
+      "chapterUrl": null,
+      "individualStatuteUrl": null,
+      "notes": "Not indexed on LawServer. Use Pennsylvania General Assembly website or alternative source."
+    },
+    "RI": {
+      "statute": "R.I. Gen. Laws § 11-49.3-1 et seq.",
+      "pathSegment": "ri-laws",
+      "status": "FOUND",
+      "chapterUrl": "https://www.lawserver.com/law/state/rhode-island/ri-laws/rhode_island_general_laws_chapter_11-49-3",
+      "individualStatuteUrl": "https://www.lawserver.com/law/state/rhode-island/ri-laws/rhode_island_general_laws_11-49-3-1",
+      "notes": "Chapter 11-49.3: Identity Theft Protection Act of 2015. Verified working."
+    },
+    "SD": {
+      "statute": "S.D. Codified Laws § 22-40-19 et seq.",
+      "pathSegment": "sd-laws",
+      "status": "PARTIAL",
+      "chapterUrl": "https://www.lawserver.com/law/state/south-dakota/sd-laws/south_dakota_laws_title_22_chapter_40",
+      "individualStatuteUrl": null,
+      "notes": "LawServer has Title 22, Chapter 40 (Identity Crimes) but § 22-40-19 not directly indexed. May need alternative source."
+    },
+    "WI": {
+      "statute": "Wis. Stat. § 134.98",
+      "pathSegment": "wi-laws",
+      "status": "FOUND",
+      "chapterUrl": "https://www.lawserver.com/law/state/wisconsin/wi-laws/wisconsin_laws_chapter_134",
+      "individualStatuteUrl": "https://www.lawserver.com/law/state/wisconsin/wi-laws/wisconsin_laws_134-98",
+      "notes": "Chapter 134: Miscellaneous trade regulations. § 134.98: Notice of unauthorized acquisition of personal information. Verified working."
+    },
+    "WY": {
+      "statute": "Wyo. Stat. § 40-12-501 et seq.",
+      "pathSegment": "UNKNOWN",
+      "status": "NOT_FOUND",
+      "chapterUrl": null,
+      "individualStatuteUrl": null,
+      "notes": "Not indexed on LawServer. Use Wyoming Legislature website or alternative source."
+    }
+  },
+  "summary": {
+    "total_states": 16,
+    "found_on_lawserver": 5,
+    "partial_on_lawserver": 2,
+    "not_on_lawserver": 9,
+    "alternative_sources_needed": [
+      "AR - Arkansas Legislature: https://www.arkleg.state.ar.us/",
+      "CO - Colorado Legislature: https://leg.colorado.gov/",
+      "DC - DC Code: https://code.dccouncil.gov/",
+      "GA - Georgia General Assembly: https://www.legis.ga.gov/",
+      "MS - Mississippi Legislature: http://www.legislature.ms.gov/",
+      "NE - Nebraska Legislature: https://nebraskalegislature.gov/",
+      "OK - Oklahoma Legislature: http://www.oklegislature.gov/",
+      "PA - Pennsylvania General Assembly: https://www.legis.state.pa.us/",
+      "SD - South Dakota Legislature: https://sdlegislature.gov/",
+      "WY - Wyoming Legislature: https://www.wyoleg.gov/"
+    ]
+  },
+  "url_pattern_notes": {
+    "alaska": "Pattern: /law/state/alaska/ak-statutes/alaska_statutes_{chapter}",
+    "arizona": "Pattern: /law/state/arizona/az-laws/arizona_laws_{section}",
+    "maine": "Pattern: /law/state/maine/me-statutes/maine_revised_statutes_title_{title}_{section}",
+    "new_hampshire": "Pattern: /law/state/new-hampshire/nh-statutes/new_hampshire_revised_statutes_{section}",
+    "rhode_island": "Pattern: /law/state/rhode-island/ri-laws/rhode_island_general_laws_{section}",
+    "wisconsin": "Pattern: /law/state/wisconsin/wi-laws/wisconsin_laws_{section}"
+  }
+}
