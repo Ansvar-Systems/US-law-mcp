@@ -1,6 +1,6 @@
 {
   "name": "@ansvar/us-law-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "mcpName": "eu.ansvar/us-law-mcp",
   "description": "US federal and state cybersecurity/privacy law MCP server with cross-state comparison",
   "type": "module",
