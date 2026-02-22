@@ -37,7 +37,9 @@
     "ingest:states": "tsx scripts/ingest/states.ts",
     "ingest:classify": "tsx scripts/ingest/classify.ts",
     "ingest:all": "npm run ingest:federal && npm run ingest:states && npm run ingest:classify",
-    "prepublishOnly": "npm run build:db && npm run ingest:all && npm run build"
+    "prepublishOnly": "npm run build:db && npm run ingest:all && npm run build",
+    "check-updates": "node --import tsx scripts/check-updates.ts",
+    "drift:detect": "node --import tsx scripts/drift-detect.ts"
   },
   "dependencies": {
     "@ansvar/mcp-sqlite": "^1.0.0",
