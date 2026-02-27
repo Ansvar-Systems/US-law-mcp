@@ -1,0 +1,784 @@
+{
+  "summary": {
+    "jurisdiction": "United States",
+    "source": "https://uscode.house.gov",
+    "total_laws": 93,
+    "total_provisions": 484,
+    "total_ingested": 80,
+    "ingestable": 80,
+    "not_ingestable": 13,
+    "generated_at": "2026-02-27T05:49:09.356935Z"
+  },
+  "laws": [
+    {
+      "id": "1",
+      "title": "Federal Trade Commission Act - Section 5",
+      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title15-section45&num=0&edition=prelim&f=xml",
+      "provisions": 1,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "2",
+      "title": "Children's Online Privacy Protection Act",
+      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title15-section6501&num=0&edition=prelim&f=xml",
+      "provisions": 6,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "3",
+      "title": "Gramm-Leach-Bliley Act (Financial Privacy)",
+      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title15-section6801&num=0&edition=prelim&f=xml",
+      "provisions": 16,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "4",
+      "title": "Controlling the Assault of Non-Solicited Pornography And Marketing Act",
+      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title15-section7701&num=0&edition=prelim&f=xml",
+      "provisions": 13,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "5",
+      "title": "Fair Credit Reporting Act",
+      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title15-section1681&num=0&edition=prelim&f=xml",
+      "provisions": 25,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "6",
+      "title": "Computer Fraud and Abuse Act",
+      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title18-section1030&num=0&edition=prelim&f=xml",
+      "provisions": 1,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "7",
+      "title": "Wiretap Act (Title III)",
+      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title18-section2511&num=0&edition=prelim&f=xml",
+      "provisions": 11,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "8",
+      "title": "Stored Communications Act",
+      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title18-section2701&num=0&edition=prelim&f=xml",
+      "provisions": 12,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "9",
+      "title": "Identity Theft and Aggravated Identity Theft",
+      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title18-section1028&num=0&edition=prelim&f=xml",
+      "provisions": 2,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "10",
+      "title": "Pen Register and Trap and Trace Devices",
+      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title18-section3121&num=0&edition=prelim&f=xml",
+      "provisions": 7,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "11",
+      "title": "Family Educational Rights and Privacy Act",
+      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title20-section1232g&num=0&edition=prelim&f=xml",
+      "provisions": 1,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "12",
+      "title": "Health Insurance Portability and Accountability Act",
+      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title42-section1320d&num=0&edition=prelim&f=xml",
+      "provisions": 10,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "13",
+      "title": "Federal Information Security Modernization Act",
+      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title44-section3551&num=0&edition=prelim&f=xml",
+      "provisions": 8,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "14",
+      "title": "Customer Proprietary Network Information",
+      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title47-section222&num=0&edition=prelim&f=xml",
+      "provisions": 1,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "15",
+      "title": "Cable Communications Policy Act - Subscriber Privacy",
+      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title47-section551&num=0&edition=prelim&f=xml",
+      "provisions": 1,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "16",
+      "title": "Cyber Incident Reporting for Critical Infrastructure Act",
+      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title6-section681&num=0&edition=prelim&f=xml",
+      "provisions": 7,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "17",
+      "title": "Alaska Personal Information Protection Act",
+      "url": "https://www.akleg.gov/basis/statutes.asp#45.48",
+      "provisions": 5,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "18",
+      "title": "Alabama Data Breach Notification Act",
+      "url": "https://alisondb.legislature.state.al.us/alison/CodeOfAlabama/1975/Coatoc.htm",
+      "provisions": 7,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "19",
+      "title": "Arkansas Personal Information Protection Act",
+      "url": "https://www.arkleg.state.ar.us/Bills/FTPDocument?path=%2FACS%2F2005%2FPublic%2FACT1526.pdf",
+      "provisions": 4,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "20",
+      "title": "Arizona Data Breach Notification Law",
+      "url": "https://www.azleg.gov/ars/18/00552.htm",
+      "provisions": 1,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "21",
+      "title": "California Data Breach Notification Law",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1798.82.&lawCode=CIV",
+      "provisions": 2,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "22",
+      "title": "California Consumer Privacy Act / California Privacy Rights Act",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?division=3.&part=4.&lawCode=CIV&title=1.81.5",
+      "provisions": 45,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "23",
+      "title": "Colorado Consumer Data Breach Notification",
+      "url": "https://leg.colorado.gov/sites/default/files/images/olls/crs2023-title-06.pdf",
+      "provisions": 1,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "24",
+      "title": "Colorado Privacy Act",
+      "url": "https://leg.colorado.gov/bills/sb21-190",
+      "provisions": 2,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "25",
+      "title": "Connecticut Data Breach Notification Law",
+      "url": "https://www.cga.ct.gov/current/pub/chap_669.htm#sec_36a-701b",
+      "provisions": 1,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "26",
+      "title": "Connecticut Data Privacy Act",
+      "url": "https://www.cga.ct.gov/current/pub/chap_743dd.htm",
+      "provisions": 0,
+      "ingested": false,
+      "classification": "metadata_only",
+      "not_ingestable": true,
+      "not_ingestable_reason": "seed_provisions_not_linked"
+    },
+    {
+      "id": "27",
+      "title": "DC Security Breach Notification Act",
+      "url": "https://code.dccouncil.gov/us/dc/council/code/titles/28/chapters/38/subchapters/II",
+      "provisions": 3,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "28",
+      "title": "Delaware Computer Security Breaches",
+      "url": "https://delcode.delaware.gov/title6/c012b/index.html",
+      "provisions": 5,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "29",
+      "title": "Delaware Personal Data Privacy Act",
+      "url": "https://delcode.delaware.gov/title6/c012d/index.html",
+      "provisions": 0,
+      "ingested": false,
+      "classification": "metadata_only",
+      "not_ingestable": true,
+      "not_ingestable_reason": "seed_provisions_not_linked"
+    },
+    {
+      "id": "30",
+      "title": "Florida Information Protection Act",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0501/Sections/0501.171.html",
+      "provisions": 6,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "31",
+      "title": "Georgia Personal Identity Protection Act",
+      "url": "https://www.legis.ga.gov/api/legislation/document/20052006/24776",
+      "provisions": 2,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "32",
+      "title": "Guam Data Breach Notification Act",
+      "url": "https://www.guamlegislature.com/laws-and-codes/",
+      "provisions": 2,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "33",
+      "title": "Hawaii Security Breach of Personal Information",
+      "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0487N/HRS_0487N-0002.htm",
+      "provisions": 8,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "34",
+      "title": "Iowa Breach of Security Notification",
+      "url": "https://www.legis.iowa.gov/law/iowaCode/sections?codeChapter=715C",
+      "provisions": 2,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "35",
+      "title": "Iowa Consumer Data Protection Act",
+      "url": "https://www.legis.iowa.gov/law/iowaCode/sections?codeChapter=715D",
+      "provisions": 0,
+      "ingested": false,
+      "classification": "metadata_only",
+      "not_ingestable": true,
+      "not_ingestable_reason": "seed_provisions_not_linked"
+    },
+    {
+      "id": "36",
+      "title": "Idaho Data Breach Notification Act",
+      "url": "https://legislature.idaho.gov/statutesrules/idstat/Title28/T28CH51/",
+      "provisions": 0,
+      "ingested": false,
+      "classification": "metadata_only",
+      "not_ingestable": true,
+      "not_ingestable_reason": "no_seed_provisions"
+    },
+    {
+      "id": "37",
+      "title": "Illinois Personal Information Protection Act",
+      "url": "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2702&ChapterID=67",
+      "provisions": 4,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "38",
+      "title": "Biometric Information Privacy Act",
+      "url": "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=3004&ChapterID=57",
+      "provisions": 4,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "39",
+      "title": "Indiana Disclosure of Security Breach",
+      "url": "http://iga.in.gov/laws/2024/ic/titles/24#24-4.9",
+      "provisions": 1,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "40",
+      "title": "Indiana Consumer Data Protection Act",
+      "url": "http://iga.in.gov/laws/2024/ic/titles/24#24-15",
+      "provisions": 1,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "41",
+      "title": "Kansas Consumer Protection — Breach of Security",
+      "url": "https://www.ksrevisor.org/statutes/chapters/ch50/050_007a_0001.html",
+      "provisions": 4,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "42",
+      "title": "Kentucky Data Breach Notification",
+      "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=54484",
+      "provisions": 3,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "43",
+      "title": "Kentucky Consumer Data Protection Act",
+      "url": "https://apps.legislature.ky.gov/law/statutes/chapter.aspx?id=39365",
+      "provisions": 0,
+      "ingested": false,
+      "classification": "metadata_only",
+      "not_ingestable": true,
+      "not_ingestable_reason": "seed_provisions_not_linked"
+    },
+    {
+      "id": "44",
+      "title": "Louisiana Database Security Breach Notification Law",
+      "url": "https://www.legis.la.gov/legis/Law.aspx?d=322028",
+      "provisions": 7,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "45",
+      "title": "Massachusetts Data Breach Notification Law",
+      "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXV/Chapter93H",
+      "provisions": 7,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "46",
+      "title": "Massachusetts Standards for Protection of Personal Information",
+      "url": "https://www.mass.gov/regulations/201-CMR-17-standards-for-the-protection-of-personal-information-of-residents-of-the-commonwealth",
+      "provisions": 0,
+      "ingested": false,
+      "classification": "metadata_only",
+      "not_ingestable": true,
+      "not_ingestable_reason": "seed_provisions_not_linked"
+    },
+    {
+      "id": "47",
+      "title": "Maryland Personal Information Protection Act",
+      "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcl&section=14-3504",
+      "provisions": 7,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "48",
+      "title": "Maryland Online Data Privacy Act",
+      "url": "https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/sb0541?ys=2024RS",
+      "provisions": 0,
+      "ingested": false,
+      "classification": "metadata_only",
+      "not_ingestable": true,
+      "not_ingestable_reason": "seed_provisions_not_linked"
+    },
+    {
+      "id": "49",
+      "title": "Maine Notice of Risk to Personal Data Act",
+      "url": "https://legislature.maine.gov/statutes/10/title10sec1348.html",
+      "provisions": 3,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "50",
+      "title": "Michigan Identity Theft Protection Act",
+      "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-445-72",
+      "provisions": 0,
+      "ingested": false,
+      "classification": "metadata_only",
+      "not_ingestable": true,
+      "not_ingestable_reason": "no_seed_provisions"
+    },
+    {
+      "id": "51",
+      "title": "Minnesota Data Breach Notification",
+      "url": "https://www.revisor.mn.gov/statutes/cite/325E.61",
+      "provisions": 3,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "52",
+      "title": "Minnesota Consumer Data Privacy Act",
+      "url": "https://www.revisor.mn.gov/statutes/cite/325O",
+      "provisions": 0,
+      "ingested": false,
+      "classification": "metadata_only",
+      "not_ingestable": true,
+      "not_ingestable_reason": "seed_provisions_not_linked"
+    },
+    {
+      "id": "53",
+      "title": "Missouri Breach Notification Law",
+      "url": "https://revisor.mo.gov/main/OneSection.aspx?section=407.1500",
+      "provisions": 3,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "54",
+      "title": "Mississippi Data Breach Notification Law",
+      "url": "https://law.justia.com/codes/mississippi/title-75/chapter-24/in-general/section-75-24-29/",
+      "provisions": 1,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "55",
+      "title": "Montana Data Breach Notification",
+      "url": "https://leg.mt.gov/bills/mca/title_0300/chapter_0140/part_0170/section_0040/0300-0140-0170-0040.html",
+      "provisions": 24,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "56",
+      "title": "Montana Consumer Data Privacy Act",
+      "url": "https://leg.mt.gov/bills/mca/title_0300/chapter_0140/part_0280/sections_index.html",
+      "provisions": 15,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "57",
+      "title": "North Carolina Identity Theft Protection Act",
+      "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/PDF/BySection/Chapter_75/GS_75-65.pdf",
+      "provisions": 8,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "58",
+      "title": "North Dakota Data Breach Notification",
+      "url": "https://www.ndlegis.gov/cencode/t51c30.pdf",
+      "provisions": 8,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "59",
+      "title": "Nebraska Financial Data Protection and Consumer Notification Act",
+      "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=87-801",
+      "provisions": 2,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "60",
+      "title": "Nebraska Data Privacy Act",
+      "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=87-1101",
+      "provisions": 0,
+      "ingested": false,
+      "classification": "metadata_only",
+      "not_ingestable": true,
+      "not_ingestable_reason": "seed_provisions_not_linked"
+    },
+    {
+      "id": "61",
+      "title": "New Hampshire Data Breach Notification",
+      "url": "https://www.gencourt.state.nh.us/rsa/html/XXXI/359-C/359-C-mrg.htm",
+      "provisions": 3,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "62",
+      "title": "New Hampshire Privacy Act",
+      "url": "https://www.gencourt.state.nh.us/rsa/html/LII/507-H/507-H-mrg.htm",
+      "provisions": 1,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "63",
+      "title": "New Jersey Data Breach Notification Law",
+      "url": "https://www.njleg.state.nj.us/Bills/2004/AL05/198_.HTM",
+      "provisions": 8,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "64",
+      "title": "New Jersey Data Privacy Act",
+      "url": "https://www.njleg.state.nj.us/Bills/2024/S0332_R3.HTM",
+      "provisions": 0,
+      "ingested": false,
+      "classification": "metadata_only",
+      "not_ingestable": true,
+      "not_ingestable_reason": "seed_provisions_not_linked"
+    },
+    {
+      "id": "65",
+      "title": "New Mexico Data Breach Notification Act",
+      "url": "https://nmonesource.com/nmos/nmsa/en/item/4352/index.do#!fragment/zoupio-_Toc128411024",
+      "provisions": 12,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "66",
+      "title": "Nevada Data Breach Notification",
+      "url": "https://www.leg.state.nv.us/nrs/nrs-603a.html",
+      "provisions": 2,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "67",
+      "title": "New York Information Security Breach and Notification Act",
+      "url": "https://www.nysenate.gov/legislation/laws/GBS/899-AA",
+      "provisions": 1,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "68",
+      "title": "Stop Hacks and Improve Electronic Data Security Act",
+      "url": "https://www.nysenate.gov/legislation/laws/GBS/899-BB",
+      "provisions": 1,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "69",
+      "title": "Ohio Data Breach Notification",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-1349.19",
+      "provisions": 5,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "70",
+      "title": "Ohio Data Protection Act (Cybersecurity Safe Harbor)",
+      "url": "https://codes.ohio.gov/ohio-revised-code/chapter-1354",
+      "provisions": 8,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "71",
+      "title": "Oklahoma Security Breach Notification Act",
+      "url": "https://www.oscn.net/applications/oscn/deliverdocument.asp?citeID=440863",
+      "provisions": 1,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "72",
+      "title": "Oregon Consumer Identity Theft Protection Act",
+      "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html",
+      "provisions": 3,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "73",
+      "title": "Oregon Consumer Privacy Act",
+      "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html",
+      "provisions": 0,
+      "ingested": false,
+      "classification": "metadata_only",
+      "not_ingestable": true,
+      "not_ingestable_reason": "seed_provisions_not_linked"
+    },
+    {
+      "id": "74",
+      "title": "Pennsylvania Breach of Personal Information Notification Act",
+      "url": "https://www.legis.state.pa.us/cfdocs/legis/LI/uconsCheck.cfm?txtType=HTM&yr=2005&sessInd=0&smthLwInd=0&act=94&chpt=0&sctn=3&subsctn=0",
+      "provisions": 2,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "75",
+      "title": "Puerto Rico Citizen Information on Data Banks Security Act",
+      "url": "https://www.lexjuris.com/",
+      "provisions": 2,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "76",
+      "title": "Rhode Island Identity Theft Protection Act",
+      "url": "http://webserver.rilegislature.gov/Statutes/TITLE11/11-49.3/INDEX.htm",
+      "provisions": 2,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "77",
+      "title": "Rhode Island Data Transparency and Privacy Protection Act",
+      "url": "http://webserver.rilegislature.gov/Statutes/TITLE6/6-48.1/INDEX.htm",
+      "provisions": 1,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "78",
+      "title": "South Carolina Financial Identity Fraud and Identity Theft Protection Act",
+      "url": "https://www.scstatehouse.gov/code/t39c001.php",
+      "provisions": 3,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "79",
+      "title": "South Dakota Data Breach Notification",
+      "url": "https://sdlegislature.gov/Statutes/Codified_Laws/2078844",
+      "provisions": 8,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "80",
+      "title": "Tennessee Data Breach Notification",
+      "url": "https://www.tn.gov/content/dam/tn/attorneygeneral/documents/foi/breach-notification-statutes.pdf",
+      "provisions": 4,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "81",
+      "title": "Tennessee Information Protection Act",
+      "url": "https://publications.tnsosfiles.com/acts/113/pub/pc0408.pdf",
+      "provisions": 7,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "82",
+      "title": "Texas Identity Theft Enforcement and Protection Act",
+      "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.521.htm",
+      "provisions": 10,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "83",
+      "title": "Texas Data Privacy and Security Act",
+      "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm",
+      "provisions": 34,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "84",
+      "title": "Utah Protection of Personal Information Act",
+      "url": "https://le.utah.gov/xcode/Title13/Chapter44/13-44.html",
+      "provisions": 3,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "85",
+      "title": "Utah Consumer Privacy Act",
+      "url": "https://le.utah.gov/xcode/Title13/Chapter61/13-61.html",
+      "provisions": 1,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "86",
+      "title": "Virginia Breach of Personal Information Notification",
+      "url": "https://law.lis.virginia.gov/vacode/title18.2/chapter6/section18.2-186.6/",
+      "provisions": 7,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "87",
+      "title": "Virginia Consumer Data Protection Act",
+      "url": "https://law.lis.virginia.gov/vacodefull/title59.1/chapter53/",
+      "provisions": 21,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "88",
+      "title": "Virgin Islands Identity Theft Prevention Act",
+      "url": "https://www.vilegislature.org/",
+      "provisions": 1,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "89",
+      "title": "Vermont Security Breach Notice Act",
+      "url": "https://legislature.vermont.gov/statutes/chapter/09/062",
+      "provisions": 0,
+      "ingested": false,
+      "classification": "metadata_only",
+      "not_ingestable": true,
+      "not_ingestable_reason": "no_seed_provisions"
+    },
+    {
+      "id": "90",
+      "title": "Washington Data Breach Notification",
+      "url": "https://app.leg.wa.gov/rcw/default.aspx?cite=19.255",
+      "provisions": 6,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "91",
+      "title": "Wisconsin Notice of Unauthorized Acquisition of Personal Information",
+      "url": "https://docs.legis.wisconsin.gov/statutes/statutes/134/98",
+      "provisions": 1,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "92",
+      "title": "West Virginia Breach of Security of Consumer Information",
+      "url": "https://www.wvlegislature.gov/wvcode/ChapterEntire.cfm?chap=46a&art=2A",
+      "provisions": 1,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "93",
+      "title": "Wyoming Data Breach Notification",
+      "url": "https://wyoleg.gov/NXT/gateway.dll/Statutes/title40/chapter12/article5",
+      "provisions": 2,
+      "ingested": true,
+      "classification": "full"
+    }
+  ]
+}
