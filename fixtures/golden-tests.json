@@ -5,9 +5,9 @@
     {
       "id": "us-001",
       "category": "article_retrieval",
-      "description": "Retrieve CFAA § 1030 from federal statutes",
+      "description": "Retrieve USC Title 18 § 1030 (CFAA) from federal statutes",
       "tool": "get_provision",
-      "input": { "jurisdiction": "US-FED", "short_name": "CFAA", "section_number": "§ 1030" },
+      "input": { "jurisdiction": "US-FED", "short_name": "USC Title 18", "section_number": "§ 1030" },
       "assertions": { "result_not_empty": true, "text_contains": ["protected computer"] }
     },
     {
@@ -45,17 +45,17 @@
     {
       "id": "us-006",
       "category": "citation_roundtrip",
-      "description": "Validate CFAA as a known citation",
+      "description": "Validate 18 USC as a known citation",
       "tool": "validate_citation",
-      "input": { "citation": "CFAA" },
+      "input": { "citation": "18 USC" },
       "assertions": { "field_equals": { "valid": true } }
     },
     {
       "id": "us-007",
       "category": "citation_roundtrip",
-      "description": "Validate HIPAA as a known citation",
+      "description": "Validate USC Title 35 (Patents) as a known citation",
       "tool": "validate_citation",
-      "input": { "citation": "HIPAA" },
+      "input": { "citation": "USC Title 35" },
       "assertions": { "field_equals": { "valid": true } }
     },
     {
@@ -89,9 +89,9 @@
     {
       "id": "us-011",
       "category": "currency_check",
-      "description": "HIPAA should be in force",
+      "description": "USC Title 18 should be in force",
       "tool": "check_currency",
-      "input": { "jurisdiction": "US-FED", "short_name": "HIPAA" },
+      "input": { "jurisdiction": "US-FED", "short_name": "USC Title 18" },
       "assertions": { "field_equals": { "is_current": true, "status": "in_force" } }
     },
     {
