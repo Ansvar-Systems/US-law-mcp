@@ -2,7 +2,7 @@
   "name": "@ansvar/us-law-mcp",
   "version": "0.1.0",
   "mcpName": "eu.ansvar/us-law-mcp",
-  "description": "US federal and state law MCP server — full US Code (49 titles, 42K+ provisions) with cross-state comparison",
+  "description": "US federal and state law MCP server — full US Code (53 titles, 46K+ provisions) with cross-state comparison",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
