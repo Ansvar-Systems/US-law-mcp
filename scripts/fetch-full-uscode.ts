@@ -23,6 +23,9 @@ const ROOT = path.resolve(__dirname, '..');
 const CACHE_DIR = path.join(ROOT, 'data', 'source', 'usc-bulk');
 const SEED_DIR = path.join(ROOT, 'data', 'seed', 'federal');
 
+// Source priority: GitHub mirror (fast, reliable) > uscode.house.gov > GovInfo
+const GITHUB_MIRROR = 'https://raw.githubusercontent.com/BlackacreLabs/uscode-xml/master/data';
+const USCODE_HOUSE = 'https://uscode.house.gov/download/releasepoints/us/pl';
 const GOVINFO_BASE = 'https://www.govinfo.gov/bulkdata/USCODE';
 const USER_AGENT = 'Ansvar-US-Law-MCP/1.0 (legal-research; https://github.com/Ansvar-Systems/US-law-mcp)';
 
@@ -51,6 +54,26 @@ function parseFlags(): CliFlags {
   return flags;
 }
 
+function isValidUslmXml(content: string): boolean {
+  return content.length > 200 && !content.includes('<!DOCTYPE html') &&
+    (content.includes('<section') || content.includes('<lawDoc') || content.includes('<uscDoc'));
+}
+
+async function tryFetch(url: string, timeoutMs: number = 120_000): Promise<string | null> {
+  try {
+    const resp = await fetch(url, {
+      signal: AbortSignal.timeout(timeoutMs),
+      headers: { 'User-Agent': USER_AGENT },
+      redirect: 'follow',
+    });
+    if (!resp.ok) return null;
+    const text = await resp.text();
+    return isValidUslmXml(text) ? text : null;
+  } catch {
+    return null;
+  }
+}
+
 async function downloadTitleXml(titleNum: number, year: number): Promise<string | null> {
   const padded = padTitle(titleNum);
   const cacheFile = path.join(CACHE_DIR, `usc${padded}.xml`);
@@ -60,36 +83,36 @@ async function downloadTitleXml(titleNum: number, year: number): Promise<string 
     const stat = fs.statSync(cacheFile);
     const ageMs = Date.now() - stat.mtimeMs;
     if (ageMs < 30 * 24 * 60 * 60 * 1000) {
-      return fs.readFileSync(cacheFile, 'utf-8');
+      const cached = fs.readFileSync(cacheFile, 'utf-8');
+      if (isValidUslmXml(cached)) return cached;
     }
   }
 
-  // Try current year, then previous year
+  // Source 1: GitHub mirror (OLRC XML, fast and reliable from any network)
+  const githubUrl = `${GITHUB_MIRROR}/usc${padded}.xml`;
+  console.log(`  Trying GitHub mirror: usc${padded}.xml`);
+  const githubXml = await tryFetch(githubUrl, 60_000);
+  if (githubXml) {
+    fs.mkdirSync(CACHE_DIR, { recursive: true });
+    fs.writeFileSync(cacheFile, githubXml, 'utf-8');
+    console.log(`  Cached from GitHub (${(githubXml.length / 1024 / 1024).toFixed(1)} MB)`);
+    return githubXml;
+  }
+
+  // Source 2: GovInfo bulk data (may be slow or unavailable from cloud VMs)
   for (const y of [year, year - 1]) {
-    const url = `${GOVINFO_BASE}/${y}/usc${padded}/USCODE-${y}-title${titleNum}.xml`;
-    try {
-      console.log(`  Downloading: ${url}`);
-      const resp = await fetch(url, {
-        signal: AbortSignal.timeout(120_000),
-        headers: { 'User-Agent': USER_AGENT },
-        redirect: 'follow',
-      });
-      if (resp.ok) {
-        const xml = await resp.text();
-        if (xml.length > 100 && (xml.includes('<section') || xml.includes('<lawDoc') || xml.includes('section'))) {
-          fs.mkdirSync(CACHE_DIR, { recursive: true });
-          fs.writeFileSync(cacheFile, xml, 'utf-8');
-          console.log(`  Cached: ${cacheFile} (${(xml.length / 1024 / 1024).toFixed(1)} MB)`);
-          return xml;
-        }
-      }
-      console.warn(`  HTTP ${resp.status} for year ${y}`);
-    } catch (error) {
-      const message = error instanceof Error ? error.message : String(error);
-      console.warn(`  Fetch failed for year ${y}: ${message}`);
+    const govUrl = `${GOVINFO_BASE}/${y}/usc${padded}/USCODE-${y}-title${titleNum}.xml`;
+    console.log(`  Trying GovInfo: year ${y}`);
+    const govXml = await tryFetch(govUrl);
+    if (govXml) {
+      fs.mkdirSync(CACHE_DIR, { recursive: true });
+      fs.writeFileSync(cacheFile, govXml, 'utf-8');
+      console.log(`  Cached from GovInfo (${(govXml.length / 1024 / 1024).toFixed(1)} MB)`);
+      return govXml;
     }
   }
 
+  console.warn(`  FAILED: Title ${padded} not available from any source`);
   return null;
 }
 
