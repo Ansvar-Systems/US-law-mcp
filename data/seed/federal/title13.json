@@ -1,0 +1,537 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-FED",
+      "title": "Census",
+      "identifier": "13 USC",
+      "short_name": "USC Title 13",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "",
+      "last_amended": "",
+      "source_url": "https://uscode.house.gov/view.xhtml?path=/prelim@title13"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 1",
+      "title": "Definitions",
+      "text": "As used in this title, unless the context requires another meaning or unless it is otherwise provided—(1) “Bureau” means the Bureau of the Census;\n\n(2) “Secretary” means the Secretary of Commerce; and\n\n(3) “respondent” includes a corporation, company, association, firm, partnership, proprietorship, society, joint stock company, individual, or other organization or entity which reported information, or on behalf of which information was reported, in response to a questionnaire, inquiry, or other request of the Bureau.",
+      "order_index": 1
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 2",
+      "title": "Bureau of the Census",
+      "text": "The Bureau is continued as an agency within, and under the jurisdiction of, the Department of Commerce.",
+      "order_index": 2
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 3",
+      "title": "Seal",
+      "text": "The Bureau shall have a seal containing such device as has been selected heretofore, or as the Secretary may select hereafter. A description of such seal with an impression thereof shall be filed in the office of the Secretary of State. The seal shall remain in the custody of the Secretary or such officer or employee of the Bureau as he designates, and shall be affixed to all documents authenticated by the Bureau. Judicial notice shall be taken of the seal.",
+      "order_index": 3
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 4",
+      "title": "Functions of Secretary; regulations; delegation",
+      "text": "The Secretary shall perform the functions and duties imposed upon him by this title, may issue such rules and regulations as he deems necessary to carry out such functions and duties, and may delegate the performance of such functions and duties and the authority to issue such rules and regulations to such officers and employees of the Department of Commerce as he may designate.",
+      "order_index": 4
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 5",
+      "title": "Questionnaires; number, form, and scope of inquiries",
+      "text": "The Secretary shall prepare questionnaires, and shall determine the inquiries, and the number, form, and subdivisions thereof, for the statistics, surveys, and censuses provided for in this title.",
+      "order_index": 5
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 6",
+      "title": "Information from other Federal departments and agencies; acquisition of reports from other governmental and private sources",
+      "text": "(a) The Secretary, whenever he considers it advisable, may call upon any other department, agency, or establishment of the Federal Government, or of the government of the District of Columbia, for information pertinent to the work provided for in this title.\n\n(b) The Secretary may acquire, by purchase or otherwise, from States, counties, cities, or other units of government, or their instrumentalities, or from private persons and agencies, such copies of records, reports, and other material as may be required for the efficient and economical conduct of the censuses and surveys provided for in this title.\n\n(c) To the maximum extent possible and consistent with the kind, timeliness, quality and scope of the statistics required, the Secretary shall acquire and use information available from any source referred to in subsection (a) or (b) of this section instead of conducting direct inquiries.",
+      "order_index": 6
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 7",
+      "title": "Printing; requisitions upon Public Printer; publication of bulletins and reports",
+      "text": "The Secretary may make requisition upon the Public Printer for miscellaneous printing necessary to carry out the provisions of this title. He may further have printed by the Public Printer, in such editions as he deems necessary, preliminary and other census bulletins, and final reports of the results of the several investigations authorized by this title, and may publish and distribute such bulletins and reports.",
+      "order_index": 7
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 8",
+      "title": "Authenticated transcripts or copies of certain returns; other data; restriction on use; disposition of fees received",
+      "text": "(a) The Secretary may, upon written request, furnish to any respondent, or to the heir, successor, or authorized agent of such respondent, authenticated transcripts or copies of reports (or portions thereof) containing information furnished by, or on behalf of, such respondent in connection with the surveys and census provided for in this title, upon payment of the actual or estimated cost of searching the rec­ords and furnishing such transcripts or copies.\n\n(b) Subject to the limitations contained in sections 6(c) and 9 of this title, the Secretary may furnish copies of tabulations and other statistical materials which do not disclose the information reported by, or on behalf of, any particular respondent, and may make special statistical compilations and surveys, for departments, agencies, and establishments of the Federal Government, the government of the District of Columbia, the government of any possession or area (including political subdivisions thereof) referred to in section 191(a) of this title, State or local agencies, or other public and private persons and agencies, upon payment of the actual or estimated cost of such work. In the case of nonprofit agencies or organizations, the Secretary may engage in joint statistical projects, the purpose of which are otherwise authorized by law, but only if the cost of such projects are shared equitably, as determined by the Secretary.\n\n(c) In no case shall information furnished under this section be used to the detriment of any respondent or other person to whom such information relates, except in the prosecution of alleged violations of this title.\n\n(d) All moneys received in payment for work or services enumerated under this section shall be deposited in a separate account which may be used to pay directly the costs of such work or services, to repay appropriations which initially bore all or part of such costs, or to refund excess sums when necessary.",
+      "order_index": 8
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 9",
+      "title": "Information as confidential; exception",
+      "text": "(a) Neither the Secretary, nor any other officer or employee of the Department of Commerce or bureau or agency thereof, or local government census liaison, may, except as provided in section 8 or 16 or chapter 10 of this title or section 210 of the Departments of Commerce, Justice, and State, the Judiciary, and Related Agencies Appropriations Act, 1998 or section 2(f) of the Census of Agriculture Act of 1997—(1) use the information furnished under the provisions of this title for any purpose other than the statistical purposes for which it is supplied; or\n\n(2) make any publication whereby the data furnished by any particular establishment or individual under this title can be identified; or\n\n(3) permit anyone other than the sworn officers and employees of the Department or bureau or agency thereof to examine the individual reports.\n\nNo department, bureau, agency, officer, or employee of the Government, except the Secretary in carrying out the purposes of this title, shall require, for any reason, copies of census reports which have been retained by any such establishment or individual. Copies of census reports which have been so retained shall be immune from legal process, and shall not, without the consent of the individual or establishment concerned, be admitted as evidence or used for any purpose in any action, suit, or other judicial or administrative proceeding.\n\n(b) The provisions of subsection (a) of this section relating to the confidential treatment of data for particular individuals and establishments, shall not apply to the censuses of governments provided for by subchapter III of chapter 5 of this title, nor to interim current data provided for by subchapter IV of chapter 5 of this title as to the subjects covered by censuses of governments, with respect to any information obtained therefor that is compiled from, or customarily provided in, public rec­ords.",
+      "order_index": 9
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 11",
+      "title": "Authorization of appropriations",
+      "text": "There is authorized to be appropriated, out of the Treasury of the United States, such sums as may be necessary to carry out all provisions of this title.",
+      "order_index": 10
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 12",
+      "title": "Mechanical and electronic development",
+      "text": "The Secretary is authorized to have conducted mechanical and electronic development work as he determines is needed to further the functions and duties of carrying out the purposes of this title and may enter into such developmental contracts as he may determine to be in the best interest of the Government.",
+      "order_index": 11
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 13",
+      "title": "Procurement of professional services",
+      "text": "The Secretary shall have authority to contract with educational and other research organizations for the preparation of monographs and other reports and materials of a similar nature.",
+      "order_index": 12
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 15",
+      "title": "Leases for 1980 decennial census",
+      "text": "The 15 percent limitation contained in section 322 1 of the Act of June 30, 1932 (47 Stat. 412) shall not apply to leases entered into by the Secretary for the purpose of carrying out the 1980 decennial census, but no lease may be entered into for such purpose at a rental in excess of 105 percent of the appraised fair annual rental of the leased premises, or a proportionate part of the appraised fair annual rental in the case of a lease for less than a year.",
+      "order_index": 13
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 16",
+      "title": "Address information reviewed by States and local governments",
+      "text": "(a) The Secretary, to assist efforts to ensure the accuracy of censuses and surveys under this title, shall—(1) publish standards defining the content and structure of address information which States and local units of general purpose government may submit to the Secretary to be used in developing a national address list;\n\n(2)(A) develop and publish a timetable for the Bureau to receive, review, and respond to submissions of information under paragraph (1) before the decennial census date; and\n\n(B) provide for a response by the Bureau with respect to such submissions in which the Bureau specifies its determinations regarding such information and the reasons for such determinations; and\n\n(3) be subject to the review process developed under section 3 of the Census Address List Improvement Act of 1994 relating to responses pursuant to paragraph (2).\n\n(b)(1) The Secretary—(A) shall provide officials who are designated as census liaisons by a local unit of general purpose government with access to census address information for the purpose of verifying the accuracy of the address information of the Bureau for census and survey purposes; and\n\n(B) together with such access, should provide an explanation of duties and obligations under this title.\n\n(2) Access under paragraph (1) shall be limited to address information concerning addresses within the local unit of general purpose government represented by the census liaison or an adjacent local unit of general purpose government.\n\n(3) The Bureau should respond to each recommendation made by a census liaison concerning the accuracy of address information, including the determination (and reasons therefor) of the Bureau regarding each such recommendation.\n\n(4) For the purposes of paragraph (1), in a case in which a local unit of general purpose government is within another local unit of general purpose government and is not independent of the enclosing unit, the census liaison shall be designated by the local unit of general purpose government which is within the enclosing local unit of general purpose government.\n\n(5) A census liaison may not use information made available under paragraph (1) for any purpose other than the purpose specified in paragraph (1).\n\n(c) For the purposes of this section—(1) the term “local unit of general purpose government” has the meaning given such term by section 184(1) of this title; and\n\n(2) the term “State” includes the District of Columbia, the Commonwealth of Puerto Rico, the Commonwealth of the Northern Mariana Islands, American Samoa, Guam, the Virgin Islands, and any other territory or possession of the United States.",
+      "order_index": 14
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 21",
+      "title": "Director of the Census; duties",
+      "text": "(a) Appointment.—(1) In general.—The Bureau shall be headed by a Director of the Census, appointed by the President, by and with the advice and consent of the Senate, without regard to political affiliation.\n\n(2) Qualifications.—Such appointment shall be made from individuals who have a demonstrated ability in managing large organizations and experience in the collection, analysis, and use of statistical data.\n\n(b) Term of Office.—(1) In general.—The term of office of the Director shall be 5 years, and shall begin on January 1, 2012, and every fifth year thereafter. An individual may not serve more than 2 full terms as Director.\n\n(2) Vacancies.—Any individual appointed to fill a vacancy in such position, occurring before the expiration of the term for which such individual’s predecessor was appointed, shall be appointed for the remainder of that term. The Director may serve after the end of the Director’s term until reappointed or until a successor has been appointed, but in no event longer than 1 year after the end of such term.\n\n(3) Removal.—An individual serving as Director may be removed from office by the President. The President shall communicate in writing the reasons for any such removal to both Houses of Congress not later than 60 days before the removal.\n\n(4) Personnel actions.—Except as provided under paragraph (3), nothing in this subsection shall prohibit a personnel action otherwise authorized by law with respect to the Director of the Census, other than removal.\n\n(c) Duties.—The Director shall perform such duties as may be imposed upon the Director by law, regulations, or orders of the Secretary.",
+      "order_index": 15
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 22",
+      "title": "Qualifications of permanent personnel",
+      "text": "All permanent officers and employees of the Bureau shall be citizens of the United States.",
+      "order_index": 16
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 23",
+      "title": "Additional officers and employees",
+      "text": "(a) The Secretary may establish, at rates of compensation to be fixed by him without regard to the Classification Act of 1949, as many temporary positions as may be necessary to meet the requirements of the work provided for by law. Bureau employees who are transferred to any such temporary positions shall not lose their permanent civil service status by reason of the transfer. The Secretary may make appointments to such temporary positions in conformity with the civil service laws and rules.\n\n(b) In addition to employees of the Department of Commerce, employees of other departments and independent offices of the Government may, with the consent of the head of the respective department or office, be employed and compensated for field work in connection with the work provided for by law without regard to section 301 of the Dual Compensation Act.\n\n(c) The Secretary may utilize temporary staff, including employees of Federal, State, or local agencies or instrumentalities, and employees of private organizations to assist the Bureau in performing the work authorized by this title, but only if such temporary staff is sworn to observe the limitations imposed by section 9 of this title.",
+      "order_index": 17
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 24",
+      "title": "Special employment provisions",
+      "text": "(a) The Secretary may utilize the services of nontemporary employees of the Bureau (by assignment, promotion, appointment, detail, or otherwise) in temporary positions established for any census, for not to exceed the period during which appropriations are available for that census. Whenever the Secretary determines that the services of an employee which have been utilized under this section are no longer required in such a temporary position, he may, without regard to the provisions of any other law, return the employee to a continuing position, with rank and compensation not less than that which he held in his last permanent position in the Bureau: Provided, That no employee shall, by reason of his service in a temporary position under this subsection, lose the protection of any law or regulation with respect to his separation, suspension, furlough, or reduction in rank or compensation below the level held in his last permanent position in the Bureau. Service by a nontemporary employee in a temporary position under this subsection shall be creditable for step-increases (both periodic and longevity) under title VII of the Classification Act of 1949, as amended, as though it were a continuation of service in his last permanent position.\n\n(b) As used in this title with respect to appointments or positions, “temporary” shall be construed to mean not in excess of one year, or not in excess of the specific period during which appropriations are available for the conduct of a particular census, whichever is longer. No employee of the Bureau who holds only a temporary appointment within the meaning of this section shall be considered as other than strictly temporary for purposes of any other provision of law relating to separations, suspensions, or reductions in rank or compensation.\n\n(c) The enlisted men and officers of the uniformed services may be appointed and compensated for service in temporary enumerator positions for the enumeration of personnel of the uniformed services.\n\n(d) The Secretary may fix compensation on a piece-price basis without limitation as to the amount earned per diem, and payments may be made to enumerators for the use of private automobiles on official business without regard to section 4 of the Travel Expense Act of 1949, as amended (5 U.S.C. 837), but at rates not in excess of the rates provided by that Act.\n\n(e) The Secretary may authorize the expenditure of necessary sums for travel expenses of persons selected for appointment for attendance at training courses held by the Department of Commerce with respect to any of the work provided for by law.\n\n(f) Notwithstanding any other provision of law prohibiting the expenditure of public money for telephone service, the Secretary, under such regulations as he shall prescribe, may authorize reimbursement for tolls or charges for telephone service from private residences or private apartments to the extent such charges are determined by the Secretary to have been incurred to facilitate the collection of information in connection with the censuses and surveys authorized by this title.",
+      "order_index": 18
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 25",
+      "title": "Duties of supervisors, enumerators, and other employees",
+      "text": "(a) Each supervisor shall perform the duties imposed upon him by the Secretary in the enforcement of chapter 5 of this title in accordance with the Secretary’s orders and instructions.\n\n(b) Each enumerator or other employee detailed to serve as enumerator shall be charged with the collection in his subdivision of the facts and statistics called for on such schedules as the Secretary determines shall be used by him in connection with any census or survey provided for by chapter 5 of this title.",
+      "order_index": 19
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 26",
+      "title": "Transportation by contract",
+      "text": "The Secretary may contract with field employees for the rental and use within the continental limits of the United States of means of transportation, other than motorcycle, automobile, or airplane, and for the rental and use outside of the continental United States of any means of transportation, which means may be owned by the field employee. Such rental contracts shall be made without regard to section 4 of the Travel Expense Act of 1949, as amended (5 U.S.C. 837). The rentals shall be at rates equivalent to the prevailing rental rates of the locality. The rental contracts within the continental United States may be entered into only when the use by the field employee of such other means of transportation is safer, more economical, or more advantageous to the Government than use of his motorcycle, automobile, or airplane in conducting the census.",
+      "order_index": 20
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 41",
+      "title": "Collection and publication",
+      "text": "The Secretary shall collect and publish statistics concerning the—(1) amount of cotton ginned;\n\n(2) quantity of raw cotton consumed in manufacturing establishments of every character;\n\n(3) quantity of baled cotton on hand;\n\n(4) number of active consuming cotton spindles;\n\n(5) number of active spindle hours; and\n\n(6) quantity of cotton imported and exported, with the country of origin and destination.",
+      "order_index": 21
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 42",
+      "title": "Contents of reports; number of bales of linter; distribution; publication by Department of Agriculture",
+      "text": "(a) The statistics of the quantity of cotton ginned shall show the quantity ginned from each crop prior to August 1, September 1, September 15, October 1, October 15, November 1, November 15, December 1, December 15, January 1, January 15, February 1, and March 1; but the Secretary may limit the canvasses of August 1 and September 1 to those sections of the cotton-growing States in which cotton has been ginned.\n\n(b) The quantity of cotton consumed in manufacturing establishments, the quantity of baled cotton on hand, the number of active consuming cotton spindles, the number of active spindle-hours, and the statistics of cotton imported and exported shall relate to each month, and shall be published as soon as possible after the close of the month.\n\n(c) In collecting and publishing statistics of cotton on hand in warehouses and other storage establishments, and of cotton known as the “carry-over” in the United States, the Secretary shall ascertain and publish as a separate item in the report of cotton statistics the number of bales of linters as distinguished from the number of bales of cotton.\n\n(d) The Secretary shall furnish to the Department of Agriculture, immediately prior to the publication of each report of that Department regarding the cotton crop, the latest available statistics hereinbefore mentioned, and the Department of Agriculture shall publish the same in connection with each of its reports concerning cotton.",
+      "order_index": 22
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 43",
+      "title": "Records and reports of cotton ginners",
+      "text": "Every cotton ginner shall keep a record of the county or parish in which each bale of cotton ginned by him is grown and report at the completion of the ginning season, but not later than the March canvass, of each year a segregation of the total number of bales ginned by counties or parishes in which grown.",
+      "order_index": 23
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 44",
+      "title": "Foreign cotton statistics",
+      "text": "In addition to the information regarding cotton in the United States provided for in this subchapter, the Secretary shall compile, by correspondence or the use of published reports and documents, any available information concerning the production, consumption, and stocks of cotton in foreign countries, and the number of cotton-consuming spindles in such countries. Each report published by the Department of Commerce or agency or bureau thereof regarding cotton shall contain an abstract of the latest available information obtained under the provisions of this section, and the Secretary shall furnish the same to the Department of Agriculture for publication in connection with the reports of that department concerning cotton in the same manner as in the case of statistics relating to the United States.",
+      "order_index": 24
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 45",
+      "title": "Simultaneous publication of cotton reports",
+      "text": "The reports of cotton ginned to the dates as of which the Department of Agriculture is also required to issue cotton crop reports shall be issued simultaneously with the cotton crop reports of that department, the two reports to be issued from the same place at 3 o’clock postmeridian on or before the 12th day of the month to which the respective reports relate.",
+      "order_index": 25
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 61",
+      "title": "Collection and publication",
+      "text": "(a) The Secretary shall collect, collate, and publish monthly statistics concerning—(1) the quantities of—(A) cotton seed, soybeans, peanuts, flaxseed, corn germs, copra, sesame seed, babassu nuts and kernels, and other oilseeds, nuts, and kernels received, crushed, and on hand at oil mills;\n\n(B) crude and refined oils, cakes, and meals, and other primary products, by type or kind, of the seeds, nuts, and kernels referred to in clause (A) of this paragraph, manufactured, shipped out, and on hand at oil mills and processing establishments;\n\n(C) crude and refined vegetable oils, by type or kind, used by class of product and held by manufacturers of vegetable short­ening, margarine, soap, and other principal products using large quantities of vegetable oils;\n\n(D) crude and refined vegetable oils, by type or kind, held in warehouses and in transit to consuming establishments; and\n\n(2) the quantities, by types or kinds, of—(A) animal fats and oils and greases produced;\n\n(B) animal fats and oils and greases shipped and held by producers;\n\n(C) animal fats and oils and greases, fish and marine mammal oils used by class of product and held by manufacturers of short­ening, margarine, soap, and other principal products which require the use of large quantities of animal fats and oils and greases, fish and marine mammal oils;\n\n(D) animal fats and oils and greases, fish and marine mammal oils held in warehouses, cold storage, and in transit to consuming establishments.\n\n(b) The Secretary shall not be required to collect, more frequently than he deems necessary to provide reliable statistical reports, information from any person who produces, holds, or consumes fats and oils in inconsequential quantities.",
+      "order_index": 26
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 62",
+      "title": "Additional statistics",
+      "text": "This subchapter does not restrict or limit the Secretary in the collection and publication, under the general authority of the Secretary, of such statistics on fats and oils or products thereof not specifically required in this subchapter, as he deems to be in the public interest.",
+      "order_index": 27
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 63",
+      "title": "Duplicate collection of statistics prohibited; access to available statistics",
+      "text": "Statistics required under Federal law, as of the effective date of this title, to be collected by any other Federal department or agency in a manner comparable both as to form and period of time to the collection of statistics provided for by this subchapter shall not be collected by the Secretary under the authority of this subchapter. Immediately upon his request, the Secretary shall have access to any such statistics and shall include them in the publication required by this subchapter.",
+      "order_index": 28
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 81",
+      "title": "Statistics on apparel and textile industries",
+      "text": "The Secretary shall collect and publish quarterly statistics relating to domestic apparel and textile industries.",
+      "order_index": 29
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 91",
+      "title": "Collection and publication",
+      "text": "(a) The Secretary shall collect and publish quarterly financial statistics of business operations, organization, practices, management, and relation to other businesses, including data on sales, expenses, profits, assets, liabilities, stockholders’ equity, and related accounts generally used by businesses in income statements, balance sheets, and other measures of financial condition.\n\n(b) Except to the extent determined otherwise by the Secretary on the basis of changed circumstances, the nature of statistics collected and published under this section, and the manner of the collection and publication of such statistics, shall conform to the quarterly financial reporting program carried out by the Federal Trade Commission before the effective date of this section under section 6(b) of the Federal Trade Commission Act.\n\n(c) For purposes of section 6103(j)(1) of the Internal Revenue Code of 1986, the conducting of the quarterly financial report program under this section shall be considered as the conducting of a related statistical activity authorized by law.\n\n(d)(1) The Secretary shall not select an organization or entity for participation in a survey, if—(A) the organization or entity—(i) has assets of less than $50,000,000;\n\n(ii) completed participation in a prior survey in the preceding 10-year period, as determined by the Secretary; and\n\n(iii) was selected for that prior survey participation after September 30, 1990; or\n\n(B) the organization or entity—(i) has assets of more than $50,000,000 and less than $100,000,000;\n\n(ii) completed participation in a prior survey in the preceding 2-year period, as determined by the Secretary; and\n\n(iii) was selected for that prior survey participation after September 30, 1995.\n\n(2)(A) The Secretary shall furnish advice and similar assistance to ease the burden of a small business concern which is attempting to compile and furnish the business information required of organizations and entities participating in the survey.\n\n(B) To facilitate the provision of the assistance under subparagraph (A), the Secretary shall establish a toll-free telephone number.\n\n(C) The Secretary shall expand the use of statistical sampling techniques to select organizations and entities having assets less than $100,000,000 to participate in the survey.\n\n(3) The Secretary may undertake such additional paperwork burden reduction initiatives with respect to the conduct of the survey as may be deemed appropriate by the Secretary.\n\n(4) For purposes of this subsection:(A) The term “small business concern” means a business concern that meets the requirements of section 3(a) of the Small Business Act and the regulations promulgated pursuant thereto.\n\n(B) The term “survey” means the collection of information by the Secretary pursuant to this section for the purpose of preparing the publication entitled “Quarterly Financial Report for Manufacturing, Mining, and Trade Corporations”.",
+      "order_index": 30
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 101",
+      "title": "Defective, dependent, and delinquent classes; crime",
+      "text": "(a) The Secretary may collect decennially statistics relating—(1) to the defective, dependent, and delinquent classes; and\n\n(2) to crime, including judicial statistics pertaining thereto.\n\n(b) The statistics authorized by subsection (a) of this section shall include information upon the following questions, namely: age, sex, color, nativity, parentage, literacy by race, color, nativity, and parentage, and such other questions relating to such subjects as the Secretary deems proper.\n\n(c) In addition to the decennial collections authorized by subsections (a) and (b) of this section, the Secretary may compile and publish annually statistics relating to crime and to the defective, dependent, and delinquent classes.",
+      "order_index": 31
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 102",
+      "title": "Religion",
+      "text": "The Secretary may collect decennially statistics relating to religious bodies.",
+      "order_index": 32
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 103",
+      "title": "Designation of reports",
+      "text": "All reports covering any of the statistics collected under the provisions of this subchapter shall be designated as “Special Reports” followed by the name of whatever bureau or agency of the Department of Commerce is designated by the Secretary to collect and compile such statistics.",
+      "order_index": 33
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 131",
+      "title": "Collection and publication; five-year periods",
+      "text": "The Secretary shall take, compile, and publish censuses of manufactures, of mineral industries, and of other businesses, including the distributive trades, service establishments, and transportation (exclusive of means of transportation for which statistics are required by law to be filed with, and are compiled and published by, a designated regulatory body), in the year 1964, then in the year 1968, and every fifth year thereafter, and each such census shall relate to the year immediately preceding the taking thereof.",
+      "order_index": 34
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 132",
+      "title": "Controlling law; effect on other agencies",
+      "text": "To the extent that the provisions of this subchapter or subchapter IV of this chapter conflict with any other provision of this title or other law, pertaining to the Secretary of the Department of Commerce, the provisions of this title shall control; but nothing in this title shall be deemed to revoke or impair the authority of any other Federal agency with respect to the collection or release of information.",
+      "order_index": 35
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 141",
+      "title": "Population and other census information",
+      "text": "(a) The Secretary shall, in the year 1980 and every 10 years thereafter, take a decennial census of population as of the first day of April of such year, which date shall be known as the “decennial census date”, in such form and content as he may determine, including the use of sampling procedures and special surveys. In connection with any such census, the Secretary is authorized to obtain such other census information as necessary.\n\n(b) The tabulation of total population by States under subsection (a) of this section as required for the apportionment of Representatives in Congress among the several States shall be completed within 9 months after the census date and reported by the Secretary to the President of the United States.\n\n(c) The officers or public bodies having initial responsibility for the legislative apportionment or districting of each State may, not later than 3 years before the decennial census date, submit to the Secretary a plan identifying the geographic areas for which specific tabulations of population are desired. Each such plan shall be developed in accordance with criteria established by the Secretary, which he shall furnish to such officers or public bodies not later than April 1 of the fourth year preceding the decennial census date. Such criteria shall include requirements which assure that such plan shall be developed in a nonpartisan manner. Should the Secretary find that a plan submitted by such officers or public bodies does not meet the criteria established by him, he shall consult to the extent necessary with such officers or public bodies in order to achieve the alterations in such plan that he deems necessary to bring it into accord with such criteria. Any issues with respect to such plan remaining unresolved after such consultation shall be resolved by the Secretary, and in all cases he shall have final authority for determining the geographic format of such plan. Tabulations of population for the areas identified in any plan approved by the Secretary shall be completed by him as expeditiously as possible after the decennial census date and reported to the Governor of the State involved and to the officers or public bodies having responsibility for legislative apportionment or districting of such State, except that such tabulations of population of each State requesting a tabulation plan, and basic tabulations of population of each other State, shall, in any event, be completed, reported, and transmitted to each respective State within one year after the decennial census date.\n\n(d) Without regard to subsections (a), (b), and (c) of this section, the Secretary, in the year 1985 and every 10 years thereafter, shall conduct a mid-decade census of population in such form and content as he may determine, including the use of sampling procedures and special surveys, taking into account the extent to which information to be obtained from such census will serve in lieu of information collected annually or less frequently in surveys or other statistical studies. The census shall be taken as of the first day of April of each such year, which date shall be known as the “mid-decade census date”.\n\n(e)(1) If—(A) in the administration of any program established by or under Federal law which provides benefits to State or local governments or to other recipients, eligibility for or the amount of such benefits would (without regard to this paragraph) be determined by taking into account data obtained in the most recent decennial census, and\n\n(B) comparable data is obtained in a mid-decade census conducted after such decennial census,\n\nthen in the determination of such eligibility or amount of benefits the most recent data available from either the mid-decade or decennial census shall be used.\n\n(2) Information obtained in any mid-decade census shall not be used for apportionment of Representatives in Congress among the several States, nor shall such information be used in prescribing congressional districts.\n\n(f) With respect to each decennial and mid-decade census conducted under subsection (a) or (d) of this section, the Secretary shall submit to the committees of Congress having legislative jurisdiction over the census—(1) not later than 3 years before the appropriate census date, a report containing the Secretary’s determination of the subjects proposed to be included, and the types of information to be compiled, in such census;\n\n(2) not later than 2 years before the appropriate census date, a report containing the Secretary’s determination of the questions proposed to be included in such census; and\n\n(3) after submission of a report under paragraph (1) or (2) of this subsection and before the appropriate census date, if the Secretary finds new circumstances exist which necessitate that the subjects, types of information, or questions contained in reports so submitted be modified, a report containing the Secretary’s determination of the subjects, types of information, or questions as proposed to be modified.\n\n(g) As used in this section, “census of population” means a census of population, housing, and matters relating to population and housing.",
+      "order_index": 36
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 161",
+      "title": "Quinquennial censuses; inclusion of certain data",
+      "text": "The Secretary shall take, compile, and publish for the year 1957 and for every fifth year thereafter a census of governments. Each such census shall include, but shall not be limited to, data on taxes and tax valuations, governmental receipts, expenditures, indebtedness, and employees of States, counties, cities, and other governmental units.",
+      "order_index": 37
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 163",
+      "title": "Authority of other agencies",
+      "text": "This subchapter does not revoke or impair the authority of any other Federal agency with respect to the collection or release of information.",
+      "order_index": 38
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 181",
+      "title": "Population",
+      "text": "(a) During the intervals between each census of population required under section 141 of this title, the Secretary, to the extent feasible, shall annually produce and publish for each State, county, and local unit of general purpose government which has a population of fifty thousand or more, current data on total population and population characteristics and, to the extent feasible, shall biennially produce and publish for other local units of general purpose government current data on total population. Such data shall be produced and published for each State, county, and other local unit of general purpose government for which data is compiled in the most recent census of population taken under section 141 of this title. Such data may be produced by means of sampling or other methods, which the Secretary determines will produce current, comprehensive, and reliable data.\n\n(b) If the Secretary is unable to produce and publish current data during any fiscal year on total population for any county and local unit of general purpose government as required by this section, a report shall be submitted by the Secretary to the President of the Senate and to the Speaker of the House of Representatives not later than 90 days before the commencement of the following fiscal year, enumerating each government excluded and giving the reasons for such exclusion.",
+      "order_index": 39
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 182",
+      "title": "Surveys",
+      "text": "The Secretary may make surveys deemed necessary to furnish annual and other interim current data on the subjects covered by the censuses provided for in this title.",
+      "order_index": 40
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 183",
+      "title": "Use of most recent population data",
+      "text": "(a) Except as provided in subsection (b), for the purpose of administering any law of the United States in which population or other population characteristics are used to determine the amount of benefit received by State, county, or local units of general purpose government, the Secretary shall transmit to the President for use by the appropriate departments and agencies of the executive branch the data most recently produced and published under this title.\n\n(b) This section shall not apply with respect to any law of the United States which, for purposes of determining the amount of benefit received by State, county, or local units of general purpose government, provides that only population or population characteristics data obtained in the most recent decennial census may be used in such determination.",
+      "order_index": 41
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 184",
+      "title": "Definitions",
+      "text": "For purposes of this subchapter—(1) the term “local unit of general purpose government” means the government of a county, municipality, township, Indian tribe, Alaskan native village, or other unit of government (other than a State) which is a unit of general government, and\n\n(2) the term “State” includes the District of Columbia.",
+      "order_index": 42
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 191",
+      "title": "Geographic scope of censuses",
+      "text": "(a) Each of the censuses authorized by this chapter shall include each State, the District of Columbia, the Virgin Islands, Guam, the Commonwealth of the Northern Mariana Islands, and the Commonwealth of Puerto Rico, and as may be determined by the Secretary, such other possessions and areas over which the United States exercises jurisdiction, control, or sovereignty. Inclusion of other areas over which the United States exercises jurisdiction or control shall be subject to the concurrence of the Secretary of State.\n\n(b) For censuses taken in the Virgin Islands, Guam, the Commonwealth of the Northern Mariana Islands, or any possession or area not specifically designated in subsection (a) of this section, the Secretary may use census information collected by the Governor or highest ranking Federal official, if such information was obtained in accordance with plans prescribed or approved by the Secretary.\n\n(c) If, pursuant to a determination by the Secretary under subsection (a) of this section, any census is not taken in a possession or area over which the United States exercises jurisdiction, control, or sovereignty, the Secretary may include data obtained from other Federal agencies or government sources in the census report. Any data obtained from foreign governments shall be obtained through the Secretary of State.",
+      "order_index": 43
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 193",
+      "title": "Preliminary and supplemental statistics",
+      "text": "In advance of, in conjunction with, or after the taking of each census provided for by this chapter, the Secretary may make surveys and collect such preliminary and supplementary statistics related to the main topic of the census as are necessary to the initiation, taking, or completion thereof.",
+      "order_index": 44
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 195",
+      "title": "Use of sampling",
+      "text": "Except for the determination of population for purposes of apportionment of Representatives in Congress among the several States, the Secretary shall, if he considers it feasible, authorize the use of the statistical method known as “sampling” in carrying out the provisions of this title.",
+      "order_index": 45
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 196",
+      "title": "Special censuses",
+      "text": "The Secretary may conduct special censuses for the government of any State, or of any county, city, or other political subdivision within a State, for the government of the District of Columbia, and for the government of any possession or area (including political subdivisions thereof) referred to in section 191(a) of this title, on subjects covered by the censuses provided for in this title, upon payment to the Secretary of the actual or estimated cost of each such special census. The results of each such special census shall be designated “Official Census Statistics”. These statistics may be used in the manner provided by applicable law.",
+      "order_index": 46
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 211",
+      "title": "Receiving or securing compensation for appointment of employees",
+      "text": "Whoever—(1) receives or secures to himself any fee, reward, or compensation as a consideration for the appointment of any person as supervisor, enumerator, clerk, or other officer or employee of the Department of Commerce or bureau or agency thereof, referred to in subchapter II of chapter 1 of this title; or\n\n(2) in any way receives or secures to himself any part of the compensation paid to any person so appointed—\nshall be fined not more than $3,000 or imprisoned not more than five years, or both.",
+      "order_index": 47
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 212",
+      "title": "Refusal or neglect of employees to perform duties",
+      "text": "Whoever, being an employee referred to in subchapter II of chapter 1 of this title, and having taken and subscribed the oath of office, neglects or refuses, without justifiable cause, to perform the duties enjoined on such employee by this title, shall be fined not more than $500.",
+      "order_index": 48
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 213",
+      "title": "False statements, certificates, and information",
+      "text": "(a) Whoever, being an officer or employee referred to in subchapter II of chapter 1 of this title, willfully and knowingly swears or affirms falsely as to the truth of any statement required to be made or subscribed by him under oath by or under authority of this title, shall be guilty of perjury, and shall be fined not more than $2,000 or imprisoned not more than five years, or both.\n\n(b) Whoever, being an officer or employee referred to in subchapter II of chapter 1 of this title—(1) willfully and knowingly makes a false certificate or fictitious return; or\n\n(2) knowingly or willfully furnishes or causes to be furnished, or, having been such an officer or employee, knowingly or willfully furnished or caused to be furnished, directly or indirectly, to the Secretary or to any other officer or employee of the Department of Commerce or bureau or agency thereof, any false statement or false information with reference to any inquiry for which he was authorized and required to collect information provided for in this title—\n\nshall be fined not more than $2,000 or imprisoned not more than five years, or both.",
+      "order_index": 49
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 214",
+      "title": "Wrongful disclosure of information",
+      "text": "Whoever, being or having been an employee or staff member referred to in subchapter II of chapter 1 of this title, having taken and subscribed the oath of office, or having sworn to observe the limitations imposed by section 9 of this title, or whoever, being or having been a census liaison within the meaning of section 16 of this title, publishes or communicates any information, the disclosure of which is prohibited under the provisions of section 9 of this title, and which comes into his possession by reason of his being employed (or otherwise providing services) under the provisions of this title, shall be fined not more than $5,000 or imprisoned not more than 5 years, or both.",
+      "order_index": 50
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 221",
+      "title": "Refusal or neglect to answer questions; false answers",
+      "text": "(a) Whoever, being over eighteen years of age, refuses or willfully neglects, when requested by the Secretary, or by any other authorized officer or employee of the Department of Commerce or bureau or agency thereof acting under the instructions of the Secretary or authorized officer, to answer, to the best of his knowledge, any of the questions on any schedule submitted to him in connection with any census or survey provided for by subchapters I, II, IV, and V of chapter 5 of this title, applying to himself or to the family to which he belongs or is related, or to the farm or farms of which he or his family is the occupant, shall be fined not more than $100.\n\n(b) Whoever, when answering questions described in subsection (a) of this section, and under the conditions or circumstances described in such subsection, willfully gives any answer that is false, shall be fined not more than $500.\n\n(c) Notwithstanding any other provision of this title, no person shall be compelled to disclose information relative to his religious beliefs or to membership in a religious body.",
+      "order_index": 51
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 222",
+      "title": "Giving suggestions or information with intent to cause inaccurate enumeration of population",
+      "text": "Whoever, either directly or indirectly, offers or renders to any officer or employee of the Department of Commerce or bureau or agency thereof engaged in making an enumeration of population under subchapter II, IV, or V of chapter 5 of this title, any suggestion, advice, information or assistance of any kind, with the intent or purpose of causing an inaccurate enumeration of population to be made, shall be fined not more than $1,000 or imprisoned not more than one year, or both.",
+      "order_index": 52
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 223",
+      "title": "Refusal, by owners, proprietors, etc., to assist census employees",
+      "text": "Whoever, being the owner, proprietor, manager, superintendent, or agent of any hotel, apartment house, boarding or lodging house, tenement, or other building, refuses or willfully neglects, when requested by the Secretary or by any other officer or employee of the Department of Commerce or bureau or agency thereof, acting under the instructions of the Secretary, to furnish the names of the occupants of such premises, or to give free ingress thereto and egress therefrom to any duly accredited representative of such Department or bureau or agency thereof, so as to permit the collection of statistics with respect to any census provided for in subchapters I and II of chapter 5 of this title, or any survey authorized by subchapter IV or V of such chapter insofar as such survey relates to any of the subjects for which censuses are provided by such subchapters I and II, including, when relevant to the census or survey being taken or made, the proper and correct enumeration of all persons having their usual place of abode in such premises, shall be fined not more than $500.",
+      "order_index": 53
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 224",
+      "title": "Failure to answer questions affecting companies, businesses, religious bodies, and other organizations; false answers",
+      "text": "Whoever, being the owner, official, agent, person in charge, or assistant to the person in charge, of any company, business, institution, establishment, religious body, or organization of any nature whatsoever, neglects or refuses, when requested by the Secretary or other authorized officer or employee of the Department of Commerce or bureau or agency thereof, to answer completely and correctly to the best of his knowledge all questions relating to his company, business, institution, establishment, religious body, or other organization, or to records or statistics in his official custody, contained on any census or other schedule or questionnaire prepared and submitted to him under the authority of this title, shall be fined not more than $500; and if he willfully gives a false answer to any such question, he shall be fined not more than $10,000.",
+      "order_index": 54
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 225",
+      "title": "Applicability of penal provisions in certain cases",
+      "text": "(a) In connection with any survey conducted by the Secretary or other authorized officer or employee of the Department of Commerce or bureau or agency thereof pursuant to subchapter IV of chapter 5 of this title, the provisions of sections 221, 222, 223 and 224 of this title shall apply—(1) with respect to the answering of questions and furnishing of information, only to such inquiries as are within the scope of the schedules and questionnaires and of the type and character heretofore used in connection with the taking of complete censuses under subchapters I and II of chapter 5 of this title, or in connection with any censuses hereafter taken pursuant to such subchapters;\n\n(2) only after publication of a determination with reasons therefor certified by the Secretary, or by some other authorized officer or employee of the Department of Commerce or bureau or agency thereof with the approval of the Secretary, that the information called for is needed to aid or permit the efficient performance of essential governmental functions or services, or has significant application to the needs of the public, business, or industry and is not publicly available from nongovernmental or other governmental sources;\n\n(3) in the case of any new survey, only after public notice, given by the Secretary or other authorized officer or employee of the Department of Commerce or bureau or agency thereof at least thirty days in advance of requesting a return, that such survey is under consideration.\n\n(b) The provisions for imprisonment provided by section 222 of this title shall not apply in connection with any survey conducted pursuant to subchapter II of chapter 3 of this title, or to subchapter IV of chapter 5 of this title.\n\n(c) The provisions of sections 221, 222, 223, and 224 of this title shall not apply to any censuses or surveys of governments provided for by subchapters III and IV of chapter 5 of this title, nor to other surveys provided for by subchapter IV of such chapter which are taken more frequently than annually.\n\n(d) Where the doctrine, teaching, or discipline of any religious denomination or church prohibits the disclosure of information relative to membership, a refusal, in such circumstances, to furnish such information shall not be an offense under this chapter.",
+      "order_index": 55
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 241",
+      "title": "Evidence",
+      "text": "When any request for information, made by the Secretary or other authorized officer or employee of the Department of Commerce or bureau or agency thereof, is made by registered or certified mail or telegram, the return receipt therefor or other written receipt thereof shall be prima facie evidence of an official request in any prosecution under such section.",
+      "order_index": 56
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 301",
+      "title": "Collection and publication",
+      "text": "(a) The Secretary is authorized to collect information from all persons exporting from, or importing into, the United States and the noncontiguous areas over which the United States exercises sovereignty, jurisdiction, or control, and from all persons engaged in trade between the United States and such noncontiguous areas and between those areas, or from the owners, or operators of carriers engaged in such foreign commerce or trade, and shall compile and publish such information pertaining to exports, imports, trade, and transportation relating thereto, as he deems necessary or appropriate to enable him to foster, promote, develop, and further the commerce, domestic and foreign, of the United States and for other lawful purposes.\n\n(b) The Secretary shall submit to the Committee on Ways and Means of the House of Representatives and the Committee on Finance of the Senate, on quarterly and cumulative bases, statistics on United States imports for consumption and United States exports by country and by product. Statistics on United States imports shall be submitted in accordance with the Harmonized Tariff Schedule of the United States Annotated for Statistical Reporting Purposes and general statistical note 1 thereof, in detail as follows:(1) net quantity;\n\n(2) United States customs value;\n\n(3) purchase price or its equivalent;\n\n(4) equivalent of arm’s length value;\n\n(5) aggregate cost from port of exportation to United States port of entry;\n\n(6) a United States port of entry value comprised of (5) plus (4), if applicable, or, if not applicable, (5) plus (3); and\n\n(7) for transactions where (3) and (4) are equal, the total value of such transactions.\n\nThe data for paragraphs (1), (2), (3), (5), and (6) shall be reported separately for nonrelated and related party transactions, and shall also be reported as a total of all transactions.\n\n(c) In submitting any information under subsection (b) with respect to exports, the Secretary shall state separately from the total value of all exports—(1)(A) the value of agricultural commodities exported under the Food for Peace Act, as amended; and\n\n(B) the total amount of all export subsidies paid to exporters by the United States under such Act for the exportation of such commodities; and\n\n(2) the value of goods exported under the Foreign Assistance Act of 1961.\n\n(d) To assist the Secretary to carry out the provisions of subsections (b) and (c)—(1) the Secretary of Agriculture shall furnish information to the Secretary concerning the value of agricultural commodities exported under provisions of the Food for Peace Act, as amended, and the total amounts of all export subsidies paid to exporters by the United States under such Act for the exportation of such commodities; and\n\n(2) the Secretary of State shall furnish information to the Secretary concerning the value of goods exported under the provisions of the Foreign Assistance Act of 1961, as amended.\n\n(e) There shall be reported, on monthly and cumulative bases, for each heading or subheading in the Harmonized Tariff Schedule of the United States Annotated for Statistical Reporting Purposes, the United States port of entry value (as determined under subsection (b)(6)). There shall be reported, on monthly and cumulative bases, the balance of international trade for the United States reflecting (1) the aggregate value of all United States imports as reported in accordance with the first sentence of this subsection, and (2) the aggregate value of all United States exports. The information required to be reported under this subsection shall be reported in a form that is adjusted for economic inflation or deflation (on a constant dollar basis consistent with the reporting of the National Income and Product Accounts), and in a form that is not so adjusted.\n\n(f) On or before January 1, 1981, and as often thereafter as may be necessary to reflect significant changes in rates, there shall be reported for each heading or subheading in the Harmonized Tariff Schedule of the United States Annotated for Statistical Reporting Purposes, the ad valorem or ad valorem equivalent rate of duty which would have been required to be imposed on dutiable imports under that heading or subheading, if the United States customs values of such imports were based on the United States port of entry value (as reported in accordance with the first sentence of subsection (e)) in order to collect the same amount of duties on imports under that heading or subheading as are currently collected.\n\n(g) Shippers’ Export Declarations (or any successor document), wherever located, shall be exempt from public disclosure unless the Secretary determines that such exemption would be contrary to the national interest.\n\n(h) The Secretary is authorized to require by regulation the filing of Shippers’ Export Declarations under this chapter through an automated and electronic system for the filing of export information established by the Department of the Treasury.",
+      "order_index": 57
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 302",
+      "title": "Rules, regulations, and orders",
+      "text": "The Secretary may make such rules, regulations, and orders as he deems necessary or appropriate to carry out the provisions of this chapter. Any rules, regulations, or orders issued pursuant to this authority may be established in such form or manner, may contain such classifications or differentiations, and may provide for such adjustments and reasonable exceptions as in the judgment of the Secretary are necessary or proper to effectuate the purpose of this chapter, or to prevent circumvention or evasion of any rule, regulation, or order issued hereunder. The Secretary may also provide by rule or regulation, for such confidentiality, publication, or disclosure, of information collected hereunder as he may deem necessary or appropriate in the public interest. Rules, regulations, and orders, or amendments thereto shall have the concurrence of the Secretary of the Treasury prior to promulgation.",
+      "order_index": 58
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 303",
+      "title": "Secretary of Treasury functions",
+      "text": "To assist the Secretary to carry out the provisions of this chapter, the Secretary of the Treasury shall collect information in the form and manner prescribed by the regulations issued pursuant to this chapter from persons engaged in foreign commerce or trade and from the owners or operators of carriers.",
+      "order_index": 59
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 304",
+      "title": "Filing export information, delayed filings, penalties for failure to file",
+      "text": "(a) The information or reports in connection with the exportation or transportation of cargo required to be filed by carriers with the Secretary of the Treasury under any rule, regulation, or order issued pursuant to this chapter may be filed after the departure of such carrier from the port or place of exportation or transportation, whether such departing carrier is destined directly to a foreign port or place or to a noncontiguous area, or proceeds by way of other ports or places of the United States, provided that a bond in an approved form in a penal sum of $10,000 is filed with the Secretary of the Treasury. The Secretary of Commerce may, by a rule, regulation, or order issued in conformity herewith, prescribe a maximum period after such departure during which the required information or reports may be filed. In the event any such information or report is not filed within such prescribed period, a penalty not to exceed $1,000 for each day’s delinquency beyond the prescribed period, but not more than $10,000 per violation shall be exacted. Civil suit may be instituted in the name of the United States against the principal and surety for the recovery of any penalties that may accrue and be exacted in accordance with the terms of the bond.\n\n(b) Any person, other than a person described in subsection (a), required to submit export information, shall file such information in accordance with any rule, regulation, or order issued pursuant to this chapter. In the event any such information or reports are not filed within such prescribed period, the Secretary of Commerce (and officers of the Department of Commerce specifically designated by the Secretary) may impose a civil penalty not to exceed $1,000 for each day’s delinquency beyond the prescribed period, but not more than $10,000 per violation.\n\n(c) The Secretary may remit or mitigate any penalty incurred for violations of this section and regulations issued pursuant thereto if, in his opinion, they were incurred without willful negligence or fraud, or other circumstances justify a remission or mitigation.",
+      "order_index": 60
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 305",
+      "title": "Penalties for unlawful export information activities",
+      "text": "(a) Criminal Penalties.—(1) Failure to file; submission of false or misleading information.—Any person who knowingly fails to file or knowingly submits false or misleading export information through the Shippers Export Declaration (SED) (or any successor document) or the Automated Export System (AES) shall be subject to a fine not to exceed $10,000 per violation or imprisonment for not more than 5 years, or both.\n\n(2) Furtherance of illegal activities.—Any person who knowingly reports any information on or uses the SED or the AES to further any illegal activity shall be subject to a fine not to exceed $10,000 per violation or imprisonment for not more than 5 years, or both.\n\n(3) Forfeiture penalties.—Any person who is convicted under this subsection shall, in addition to any other penalty, be subject to forfeiting to the United States—(A) any of that person’s interest in, security of, claim against, or property or contractual rights of any kind in the goods or tangible items that were the subject of the violation;\n\n(B) any of that person’s interest in, security of, claim against, or property or contractual rights of any kind in tangible property that was used in the export or attempt to export that was the subject of the violation; and\n\n(C) any of that person’s property constituting, or derived from, any proceeds obtained directly or indirectly as a result of the violation.\n\n(b) Civil Penalties.—The Secretary (and officers of the Department of Commerce specifically designated by the Secretary) may impose a civil penalty not to exceed $10,000 per violation on any person violating the provisions of this chapter or any rule, regulation, or order issued thereunder, except as provided in section 304. Such penalty may be in addition to any other penalty imposed by law.\n\n(c) Civil Penalty Procedure.—(1) In general.—Whenever a civil penalty is sought for a violation of this section or of section 304, the charged party is entitled to receive a formal complaint specifying the charges and, at his or her request, to contest the charges in a hearing before an administrative law judge. Any such hearing shall be conducted in accordance with sections 556 and 557 of title 5, United States Code.\n\n(2) Commencement of civil actions.—If any person fails to pay a civil penalty imposed under this chapter, the Secretary may request the Attorney General to commence a civil action in an appropriate district court of the United States to recover the amount imposed (plus interest at currently prevailing rates from the date of the final order). No such action may be commenced more than 5 years after the date the order imposing the civil penalty becomes final. In such action, the validity, amount, and appropriateness of such penalty shall not be subject to review.\n\n(3) Remission or mitigation of penalties.—The Secretary may remit or mitigate any penalties imposed under paragraph (1) if, in the Secretary’s opinion—(A) the penalties were incurred without willful negligence or fraud; or\n\n(B) other circumstances exist that justify a remission or mitigation.\n\n(4) Applicable law for delegated functions.—If, pursuant to section 306, the Secretary delegates functions under this section to another agency, the provisions of law of that agency relating to penalty assessment, remission or mitigation of such penalties, collection of such penalties, and limitations of actions and compromise of claims, shall apply.\n\n(5) Deposit of payments in general fund of the treasury.—Any amount paid in satisfaction of a civil penalty imposed under this section or section 304 shall be deposited into the general fund of the Treasury and credited as miscellaneous receipts.\n\n(d) Enforcement.—(1) By the secretary of commerce.—The Secretary of Commerce may designate officers or employees of the Office of Export Enforcement to conduct investigations pursuant to this chapter. In conducting such investigations, those officers or employees may, to the extent necessary or appropriate to the enforcement of this chapter, exercise such authorities as are conferred upon them by other laws of the United States, subject to policies and procedures approved by the Attorney General.\n\n(2) By the commissioner of customs.—The Commissioner of Customs may designate officers or employees of the Customs Service to enforce the provisions of this chapter, or to conduct investigations pursuant to this chapter.\n\n(e) Regulations.—The Secretary of Commerce shall promulgate regulations for the implementation and enforcement of this section.\n\n(f) Exemption.—The criminal fines provided for in this section are exempt from the provisions of section 3571 of title 18, United States Code.",
+      "order_index": 61
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 306",
+      "title": "Delegation of functions",
+      "text": "Subject to the concurrence of the head of the department or agency concerned, the Secretary may make such provisions as he shall deem appropriate, authorizing the performance by any officer, agency, or employee of the United States Government departments or offices, or the governments of any areas over which the United States exercises sovereignty, jurisdiction, or control, of any function of the Secretary, contained in this chapter.",
+      "order_index": 62
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 307",
+      "title": "Relationship to general census law",
+      "text": "The following sections only, 1, 2, 3, 4, 5, 6, 7, 11, 21, 22, 23, 24, 211, 212, 213, and 214, of chapters 1 through 7 of this title are applicable to this chapter.",
+      "order_index": 63
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 401",
+      "title": "Exchange of census information with Bureau of Economic Analysis",
+      "text": "(a) Exchange of Information.—The Bureau of the Census shall exchange with the Bureau of Economic Analysis of the Department of Commerce information collected under this title, and under the International Investment and Trade in Services Survey Act, that pertains to any business enterprise that is operating in the United States, if the Secretary of Commerce determines such information is appropriate to augment and improve the quality of data collected under the International Investment and Trade in Services Survey Act. Information provided to the Bureau of Economic Analysis by the Bureau of the Census shall be only those data collected directly from respondents by the Bureau of the Census.\n\n(b) Requests for Information.—The Director of the Bureau requesting information under this section shall make the request in writing and shall certify that the information will be used only for statistical activities performed to improve the quality of data collected under the authority of title 13, United States Code, and the International Investment and Trade in Services Survey Act.\n\n(c) Definition.—As used in subsection (a), the terms “business enterprise” and “United States” have the meanings given those terms in section 3 of the International Investment and Trade in Services Survey Act.",
+      "order_index": 64
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 402",
+      "title": "Providing business data to Designated Statistical Agencies",
+      "text": "The Bureau of the Census may provide business data to the Bureau of Economic Analysis and the Bureau of Labor Statistics (“Designated Statistical Agencies”) if such information is required for an authorized statistical purpose and the provision is the subject of a written agreement with that Designated Statistical Agency, or their successors, as defined in the Confidential Information Protection and Statistical Efficiency Act of 2002.",
+      "order_index": 65
+    }
+  ]
+}

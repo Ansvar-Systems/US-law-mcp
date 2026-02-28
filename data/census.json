@@ -1,145 +1,445 @@
 {
   "summary": {
     "jurisdiction": "United States",
-    "source": "https://uscode.house.gov",
-    "total_laws": 93,
-    "total_provisions": 484,
-    "total_ingested": 80,
-    "ingestable": 80,
-    "not_ingestable": 13,
-    "generated_at": "2026-02-27T05:49:09.356935Z"
+    "source": "https://uscode.house.gov + https://www.law.cornell.edu/uscode",
+    "total_laws": 130,
+    "total_provisions": 46646,
+    "total_ingested": 130,
+    "ingestable": 130,
+    "not_ingestable": 0,
+    "federal_titles": 53,
+    "federal_provisions": 45987,
+    "state_laws": 77,
+    "state_provisions": 659,
+    "generated_at": "2026-02-28T18:51:35.799072Z"
   },
   "laws": [
     {
-      "id": "1",
-      "title": "Federal Trade Commission Act - Section 5",
-      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title15-section45&num=0&edition=prelim&f=xml",
-      "provisions": 1,
+      "id": "1 USC",
+      "title": "General Provisions",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title1",
+      "provisions": 53,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "2",
-      "title": "Children's Online Privacy Protection Act",
-      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title15-section6501&num=0&edition=prelim&f=xml",
-      "provisions": 6,
+      "id": "2 USC",
+      "title": "The Congress",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title2",
+      "provisions": 1036,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "3",
-      "title": "Gramm-Leach-Bliley Act (Financial Privacy)",
-      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title15-section6801&num=0&edition=prelim&f=xml",
-      "provisions": 16,
+      "id": "3 USC",
+      "title": "The President",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title3",
+      "provisions": 76,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "4",
-      "title": "Controlling the Assault of Non-Solicited Pornography And Marketing Act",
-      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title15-section7701&num=0&edition=prelim&f=xml",
-      "provisions": 13,
+      "id": "4 USC",
+      "title": "Flag and Seal, Seat of Government, and the States",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title4",
+      "provisions": 51,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "5",
-      "title": "Fair Credit Reporting Act",
-      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title15-section1681&num=0&edition=prelim&f=xml",
-      "provisions": 25,
+      "id": "5 USC",
+      "title": "Government Organization and Employees",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title5",
+      "provisions": 1094,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "6",
-      "title": "Computer Fraud and Abuse Act",
-      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title18-section1030&num=0&edition=prelim&f=xml",
-      "provisions": 1,
+      "id": "6 USC",
+      "title": "Domestic Security",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title6",
+      "provisions": 415,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "7",
-      "title": "Wiretap Act (Title III)",
-      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title18-section2511&num=0&edition=prelim&f=xml",
-      "provisions": 11,
+      "id": "7 USC",
+      "title": "Agriculture",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title7",
+      "provisions": 2464,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "8",
-      "title": "Stored Communications Act",
-      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title18-section2701&num=0&edition=prelim&f=xml",
-      "provisions": 12,
+      "id": "8 USC",
+      "title": "Aliens and Nationality",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title8",
+      "provisions": 327,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "9",
-      "title": "Identity Theft and Aggravated Identity Theft",
-      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title18-section1028&num=0&edition=prelim&f=xml",
-      "provisions": 2,
+      "id": "9 USC",
+      "title": "Arbitration",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title9",
+      "provisions": 31,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "10",
-      "title": "Pen Register and Trap and Trace Devices",
-      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title18-section3121&num=0&edition=prelim&f=xml",
-      "provisions": 7,
+      "id": "10 USC",
+      "title": "Armed Forces",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title10",
+      "provisions": 3009,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "11",
-      "title": "Family Educational Rights and Privacy Act",
-      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title20-section1232g&num=0&edition=prelim&f=xml",
-      "provisions": 1,
+      "id": "11 USC",
+      "title": "Bankruptcy",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title11",
+      "provisions": 264,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "12",
-      "title": "Health Insurance Portability and Accountability Act",
-      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title42-section1320d&num=0&edition=prelim&f=xml",
-      "provisions": 10,
+      "id": "12 USC",
+      "title": "Banks and Banking",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title12",
+      "provisions": 1740,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "13",
-      "title": "Federal Information Security Modernization Act",
-      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title44-section3551&num=0&edition=prelim&f=xml",
-      "provisions": 8,
+      "id": "13 USC",
+      "title": "Census",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title13",
+      "provisions": 65,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "14",
-      "title": "Customer Proprietary Network Information",
-      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title47-section222&num=0&edition=prelim&f=xml",
-      "provisions": 1,
+      "id": "14 USC",
+      "title": "Coast Guard",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title14",
+      "provisions": 335,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "15",
-      "title": "Cable Communications Policy Act - Subscriber Privacy",
-      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title47-section551&num=0&edition=prelim&f=xml",
-      "provisions": 1,
+      "id": "15 USC",
+      "title": "Commerce and Trade",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title15",
+      "provisions": 2278,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "16",
-      "title": "Cyber Incident Reporting for Critical Infrastructure Act",
-      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title6-section681&num=0&edition=prelim&f=xml",
-      "provisions": 7,
+      "id": "16 USC",
+      "title": "Conservation",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title16",
+      "provisions": 4793,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "17",
+      "id": "17 USC",
+      "title": "Copyrights",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title17",
+      "provisions": 136,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "18 USC",
+      "title": "Crimes and Criminal Procedure",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title18",
+      "provisions": 1306,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "19 USC",
+      "title": "Customs Duties",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title19",
+      "provisions": 944,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "20 USC",
+      "title": "Education",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title20",
+      "provisions": 1842,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "21 USC",
+      "title": "Food and Drugs",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title21",
+      "provisions": 593,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "22 USC",
+      "title": "Foreign Relations and Intercourse",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title22",
+      "provisions": 2802,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "23 USC",
+      "title": "Highways",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title23",
+      "provisions": 152,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "24 USC",
+      "title": "Hospitals and Asylums",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title24",
+      "provisions": 59,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "25 USC",
+      "title": "Indians",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title25",
+      "provisions": 2190,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "26 USC",
+      "title": "Internal Revenue Code",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title26",
+      "provisions": 1948,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "27 USC",
+      "title": "Intoxicating Liquors",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title27",
+      "provisions": 22,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "28 USC",
+      "title": "Judiciary and Judicial Procedure",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title28",
+      "provisions": 841,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "29 USC",
+      "title": "Labor",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title29",
+      "provisions": 669,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "30 USC",
+      "title": "Mineral Lands and Mining",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title30",
+      "provisions": 607,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "31 USC",
+      "title": "Money and Finance",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title31",
+      "provisions": 524,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "32 USC",
+      "title": "National Guard",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title32",
+      "provisions": 70,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "33 USC",
+      "title": "Navigation and Navigable Waters",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title33",
+      "provisions": 1226,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "34 USC",
+      "title": "Crime Control and Law Enforcement",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title34",
+      "provisions": 710,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "35 USC",
+      "title": "Patents",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title35",
+      "provisions": 180,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "36 USC",
+      "title": "Patriotic and National Observances, Ceremonies, and Organizations",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title36",
+      "provisions": 1187,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "37 USC",
+      "title": "Pay and Allowances of the Uniformed Services",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title37",
+      "provisions": 203,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "38 USC",
+      "title": "Veterans' Benefits",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title38",
+      "provisions": 1073,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "39 USC",
+      "title": "Postal Service",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title39",
+      "provisions": 170,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "40 USC",
+      "title": "Public Buildings, Property, and Works",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title40",
+      "provisions": 457,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "41 USC",
+      "title": "Public Contracts",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title41",
+      "provisions": 229,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "42 USC",
+      "title": "The Public Health and Welfare",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title42",
+      "provisions": 1292,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "43 USC",
+      "title": "Public Lands",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title43",
+      "provisions": 1201,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "44 USC",
+      "title": "Public Printing and Documents",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title44",
+      "provisions": 390,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "45 USC",
+      "title": "Railroads",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title45",
+      "provisions": 239,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "46 USC",
+      "title": "Shipping",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title46",
+      "provisions": 906,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "47 USC",
+      "title": "Telecommunications",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title47",
+      "provisions": 386,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "48 USC",
+      "title": "Territories and Insular Possessions",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title48",
+      "provisions": 487,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "49 USC",
+      "title": "Transportation",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title49",
+      "provisions": 1348,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "50 USC",
+      "title": "War and National Defense",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title50",
+      "provisions": 804,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "51 USC",
+      "title": "National and Commercial Space Programs",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title51",
+      "provisions": 250,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "52 USC",
+      "title": "Voting and Elections",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title52",
+      "provisions": 167,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "54 USC",
+      "title": "National Park Service and Related Programs",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title54",
+      "provisions": 346,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "Alaska Stat. \u00a7 45.48.010 et seq.",
       "title": "Alaska Personal Information Protection Act",
       "url": "https://www.akleg.gov/basis/statutes.asp#45.48",
       "provisions": 5,
@@ -147,15 +447,15 @@
       "classification": "full"
     },
     {
-      "id": "18",
+      "id": "Ala. Code \u00a7 8-38-1 et seq.",
       "title": "Alabama Data Breach Notification Act",
       "url": "https://alisondb.legislature.state.al.us/alison/CodeOfAlabama/1975/Coatoc.htm",
-      "provisions": 7,
+      "provisions": 12,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "19",
+      "id": "Ark. Code \u00a7 4-110-101 et seq.",
       "title": "Arkansas Personal Information Protection Act",
       "url": "https://www.arkleg.state.ar.us/Bills/FTPDocument?path=%2FACS%2F2005%2FPublic%2FACT1526.pdf",
       "provisions": 4,
@@ -163,7 +463,7 @@
       "classification": "full"
     },
     {
-      "id": "20",
+      "id": "Ariz. Rev. Stat. \u00a7 18-552",
       "title": "Arizona Data Breach Notification Law",
       "url": "https://www.azleg.gov/ars/18/00552.htm",
       "provisions": 1,
@@ -171,39 +471,39 @@
       "classification": "full"
     },
     {
-      "id": "21",
+      "id": "Cal. Civ. Code \u00a7 1798.82",
       "title": "California Data Breach Notification Law",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1798.82.&lawCode=CIV",
-      "provisions": 2,
+      "provisions": 47,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "22",
+      "id": "Cal. Civ. Code \u00a7 1798.100 et seq.",
       "title": "California Consumer Privacy Act / California Privacy Rights Act",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?division=3.&part=4.&lawCode=CIV&title=1.81.5",
-      "provisions": 45,
+      "provisions": 47,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "23",
+      "id": "Colo. Rev. Stat. \u00a7 6-1-716",
       "title": "Colorado Consumer Data Breach Notification",
       "url": "https://leg.colorado.gov/sites/default/files/images/olls/crs2023-title-06.pdf",
-      "provisions": 1,
+      "provisions": 3,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "24",
+      "id": "Colo. Rev. Stat. \u00a7 6-1-1301 et seq.",
       "title": "Colorado Privacy Act",
       "url": "https://leg.colorado.gov/bills/sb21-190",
-      "provisions": 2,
+      "provisions": 3,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "25",
+      "id": "Conn. Gen. Stat. \u00a7 36a-701b",
       "title": "Connecticut Data Breach Notification Law",
       "url": "https://www.cga.ct.gov/current/pub/chap_669.htm#sec_36a-701b",
       "provisions": 1,
@@ -211,17 +511,15 @@
       "classification": "full"
     },
     {
-      "id": "26",
+      "id": "Conn. Gen. Stat. \u00a7 42-515 et seq.",
       "title": "Connecticut Data Privacy Act",
       "url": "https://www.cga.ct.gov/current/pub/chap_743dd.htm",
-      "provisions": 0,
-      "ingested": false,
-      "classification": "metadata_only",
-      "not_ingestable": true,
-      "not_ingestable_reason": "seed_provisions_not_linked"
+      "provisions": 1,
+      "ingested": true,
+      "classification": "full"
     },
     {
-      "id": "27",
+      "id": "D.C. Code \u00a7 28-3851 et seq.",
       "title": "DC Security Breach Notification Act",
       "url": "https://code.dccouncil.gov/us/dc/council/code/titles/28/chapters/38/subchapters/II",
       "provisions": 3,
@@ -229,7 +527,7 @@
       "classification": "full"
     },
     {
-      "id": "28",
+      "id": "Del. Code tit. 6, \u00a7 12B-101 et seq.",
       "title": "Delaware Computer Security Breaches",
       "url": "https://delcode.delaware.gov/title6/c012b/index.html",
       "provisions": 5,
@@ -237,25 +535,23 @@
       "classification": "full"
     },
     {
-      "id": "29",
+      "id": "Del. Code tit. 6, ch. 12D",
       "title": "Delaware Personal Data Privacy Act",
       "url": "https://delcode.delaware.gov/title6/c012d/index.html",
-      "provisions": 0,
-      "ingested": false,
-      "classification": "metadata_only",
-      "not_ingestable": true,
-      "not_ingestable_reason": "seed_provisions_not_linked"
-    },
-    {
-      "id": "30",
-      "title": "Florida Information Protection Act",
-      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0501/Sections/0501.171.html",
-      "provisions": 6,
+      "provisions": 5,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "31",
+      "id": "Fla. Stat. \u00a7 501.171",
+      "title": "Florida Information Protection Act",
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0501/Sections/0501.171.html",
+      "provisions": 9,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "Ga. Code \u00a7 10-1-912",
       "title": "Georgia Personal Identity Protection Act",
       "url": "https://www.legis.ga.gov/api/legislation/document/20052006/24776",
       "provisions": 2,
@@ -263,7 +559,7 @@
       "classification": "full"
     },
     {
-      "id": "32",
+      "id": "10 GCA \u00a7 48A101 et seq.",
       "title": "Guam Data Breach Notification Act",
       "url": "https://www.guamlegislature.com/laws-and-codes/",
       "provisions": 2,
@@ -271,7 +567,7 @@
       "classification": "full"
     },
     {
-      "id": "33",
+      "id": "Haw. Rev. Stat. \u00a7 487N-2",
       "title": "Hawaii Security Breach of Personal Information",
       "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0487N/HRS_0487N-0002.htm",
       "provisions": 8,
@@ -279,75 +575,71 @@
       "classification": "full"
     },
     {
-      "id": "34",
+      "id": "Iowa Code \u00a7 715C.1 et seq.",
       "title": "Iowa Breach of Security Notification",
       "url": "https://www.legis.iowa.gov/law/iowaCode/sections?codeChapter=715C",
+      "provisions": 3,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "Iowa Code ch. 715D",
+      "title": "Iowa Consumer Data Protection Act",
+      "url": "https://www.legis.iowa.gov/law/iowaCode/sections?codeChapter=715D",
+      "provisions": 3,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "Idaho Code \u00a7 28-51-104 et seq.",
+      "title": "Idaho Data Breach Notification Act",
+      "url": "https://legislature.idaho.gov/statutesrules/idstat/Title28/T28CH51/",
+      "provisions": 5,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "815 ILCS 530/",
+      "title": "Illinois Personal Information Protection Act",
+      "url": "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2702&ChapterID=67",
+      "provisions": 8,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "740 ILCS 14/",
+      "title": "Biometric Information Privacy Act",
+      "url": "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=3004&ChapterID=57",
+      "provisions": 8,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "Ind. Code \u00a7 24-4.9-1-1 et seq.",
+      "title": "Indiana Disclosure of Security Breach",
+      "url": "http://iga.in.gov/laws/2024/ic/titles/24#24-4.9",
       "provisions": 2,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "35",
-      "title": "Iowa Consumer Data Protection Act",
-      "url": "https://www.legis.iowa.gov/law/iowaCode/sections?codeChapter=715D",
-      "provisions": 0,
-      "ingested": false,
-      "classification": "metadata_only",
-      "not_ingestable": true,
-      "not_ingestable_reason": "seed_provisions_not_linked"
-    },
-    {
-      "id": "36",
-      "title": "Idaho Data Breach Notification Act",
-      "url": "https://legislature.idaho.gov/statutesrules/idstat/Title28/T28CH51/",
-      "provisions": 0,
-      "ingested": false,
-      "classification": "metadata_only",
-      "not_ingestable": true,
-      "not_ingestable_reason": "no_seed_provisions"
-    },
-    {
-      "id": "37",
-      "title": "Illinois Personal Information Protection Act",
-      "url": "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2702&ChapterID=67",
-      "provisions": 4,
-      "ingested": true,
-      "classification": "full"
-    },
-    {
-      "id": "38",
-      "title": "Biometric Information Privacy Act",
-      "url": "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=3004&ChapterID=57",
-      "provisions": 4,
-      "ingested": true,
-      "classification": "full"
-    },
-    {
-      "id": "39",
-      "title": "Indiana Disclosure of Security Breach",
-      "url": "http://iga.in.gov/laws/2024/ic/titles/24#24-4.9",
-      "provisions": 1,
-      "ingested": true,
-      "classification": "full"
-    },
-    {
-      "id": "40",
+      "id": "Ind. Code \u00a7 24-15-1-1 et seq.",
       "title": "Indiana Consumer Data Protection Act",
       "url": "http://iga.in.gov/laws/2024/ic/titles/24#24-15",
-      "provisions": 1,
+      "provisions": 2,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "41",
-      "title": "Kansas Consumer Protection — Breach of Security",
+      "id": "Kan. Stat. \u00a7 50-7a01 et seq.",
+      "title": "Kansas Consumer Protection \u2014 Breach of Security",
       "url": "https://www.ksrevisor.org/statutes/chapters/ch50/050_007a_0001.html",
       "provisions": 4,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "42",
+      "id": "Ky. Rev. Stat. \u00a7 365.732",
       "title": "Kentucky Data Breach Notification",
       "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=54484",
       "provisions": 3,
@@ -355,17 +647,15 @@
       "classification": "full"
     },
     {
-      "id": "43",
+      "id": "Ky. Rev. Stat. ch. 367.500 et seq.",
       "title": "Kentucky Consumer Data Protection Act",
       "url": "https://apps.legislature.ky.gov/law/statutes/chapter.aspx?id=39365",
-      "provisions": 0,
-      "ingested": false,
-      "classification": "metadata_only",
-      "not_ingestable": true,
-      "not_ingestable_reason": "seed_provisions_not_linked"
+      "provisions": 3,
+      "ingested": true,
+      "classification": "full"
     },
     {
-      "id": "44",
+      "id": "La. Rev. Stat. \u00a7 51:3071 et seq.",
       "title": "Louisiana Database Security Breach Notification Law",
       "url": "https://www.legis.la.gov/legis/Law.aspx?d=322028",
       "provisions": 7,
@@ -373,7 +663,7 @@
       "classification": "full"
     },
     {
-      "id": "45",
+      "id": "Mass. Gen. Laws ch. 93H",
       "title": "Massachusetts Data Breach Notification Law",
       "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXV/Chapter93H",
       "provisions": 7,
@@ -381,35 +671,31 @@
       "classification": "full"
     },
     {
-      "id": "46",
+      "id": "201 CMR 17.00",
       "title": "Massachusetts Standards for Protection of Personal Information",
       "url": "https://www.mass.gov/regulations/201-CMR-17-standards-for-the-protection-of-personal-information-of-residents-of-the-commonwealth",
-      "provisions": 0,
-      "ingested": false,
-      "classification": "metadata_only",
-      "not_ingestable": true,
-      "not_ingestable_reason": "seed_provisions_not_linked"
-    },
-    {
-      "id": "47",
-      "title": "Maryland Personal Information Protection Act",
-      "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcl&section=14-3504",
       "provisions": 7,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "48",
-      "title": "Maryland Online Data Privacy Act",
-      "url": "https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/sb0541?ys=2024RS",
-      "provisions": 0,
-      "ingested": false,
-      "classification": "metadata_only",
-      "not_ingestable": true,
-      "not_ingestable_reason": "seed_provisions_not_linked"
+      "id": "Md. Code, Com. Law \u00a7 14-3501 et seq.",
+      "title": "Maryland Personal Information Protection Act",
+      "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcl&section=14-3504",
+      "provisions": 8,
+      "ingested": true,
+      "classification": "full"
     },
     {
-      "id": "49",
+      "id": "Md. Code, Com. Law \u00a7 14-4601 et seq.",
+      "title": "Maryland Online Data Privacy Act",
+      "url": "https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/sb0541?ys=2024RS",
+      "provisions": 8,
+      "ingested": true,
+      "classification": "full"
+    },
+    {
+      "id": "Me. Rev. Stat. tit. 10, \u00a7 1348 et seq.",
       "title": "Maine Notice of Risk to Personal Data Act",
       "url": "https://legislature.maine.gov/statutes/10/title10sec1348.html",
       "provisions": 3,
@@ -417,17 +703,15 @@
       "classification": "full"
     },
     {
-      "id": "50",
+      "id": "Mich. Comp. Laws \u00a7 445.72",
       "title": "Michigan Identity Theft Protection Act",
       "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-445-72",
-      "provisions": 0,
-      "ingested": false,
-      "classification": "metadata_only",
-      "not_ingestable": true,
-      "not_ingestable_reason": "no_seed_provisions"
+      "provisions": 3,
+      "ingested": true,
+      "classification": "full"
     },
     {
-      "id": "51",
+      "id": "Minn. Stat. \u00a7 325E.61",
       "title": "Minnesota Data Breach Notification",
       "url": "https://www.revisor.mn.gov/statutes/cite/325E.61",
       "provisions": 3,
@@ -435,17 +719,15 @@
       "classification": "full"
     },
     {
-      "id": "52",
+      "id": "Minn. Stat. ch. 325O",
       "title": "Minnesota Consumer Data Privacy Act",
       "url": "https://www.revisor.mn.gov/statutes/cite/325O",
-      "provisions": 0,
-      "ingested": false,
-      "classification": "metadata_only",
-      "not_ingestable": true,
-      "not_ingestable_reason": "seed_provisions_not_linked"
+      "provisions": 3,
+      "ingested": true,
+      "classification": "full"
     },
     {
-      "id": "53",
+      "id": "Mo. Rev. Stat. \u00a7 407.1500",
       "title": "Missouri Breach Notification Law",
       "url": "https://revisor.mo.gov/main/OneSection.aspx?section=407.1500",
       "provisions": 3,
@@ -453,7 +735,7 @@
       "classification": "full"
     },
     {
-      "id": "54",
+      "id": "Miss. Code \u00a7 75-24-29",
       "title": "Mississippi Data Breach Notification Law",
       "url": "https://law.justia.com/codes/mississippi/title-75/chapter-24/in-general/section-75-24-29/",
       "provisions": 1,
@@ -461,31 +743,31 @@
       "classification": "full"
     },
     {
-      "id": "55",
+      "id": "Mont. Code \u00a7 30-14-1704",
       "title": "Montana Data Breach Notification",
       "url": "https://leg.mt.gov/bills/mca/title_0300/chapter_0140/part_0170/section_0040/0300-0140-0170-0040.html",
-      "provisions": 24,
+      "provisions": 40,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "56",
+      "id": "Mont. Code \u00a7 30-14-2801 et seq.",
       "title": "Montana Consumer Data Privacy Act",
       "url": "https://leg.mt.gov/bills/mca/title_0300/chapter_0140/part_0280/sections_index.html",
-      "provisions": 15,
+      "provisions": 40,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "57",
+      "id": "N.C. Gen. Stat. \u00a7 75-61 et seq.",
       "title": "North Carolina Identity Theft Protection Act",
       "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/PDF/BySection/Chapter_75/GS_75-65.pdf",
-      "provisions": 8,
+      "provisions": 9,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "58",
+      "id": "N.D. Cent. Code \u00a7 51-30-01 et seq.",
       "title": "North Dakota Data Breach Notification",
       "url": "https://www.ndlegis.gov/cencode/t51c30.pdf",
       "provisions": 8,
@@ -493,7 +775,7 @@
       "classification": "full"
     },
     {
-      "id": "59",
+      "id": "Neb. Rev. Stat. \u00a7 87-801 et seq.",
       "title": "Nebraska Financial Data Protection and Consumer Notification Act",
       "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=87-801",
       "provisions": 2,
@@ -501,33 +783,31 @@
       "classification": "full"
     },
     {
-      "id": "60",
+      "id": "Neb. Rev. Stat. \u00a7 87-1101 et seq.",
       "title": "Nebraska Data Privacy Act",
       "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=87-1101",
-      "provisions": 0,
-      "ingested": false,
-      "classification": "metadata_only",
-      "not_ingestable": true,
-      "not_ingestable_reason": "seed_provisions_not_linked"
+      "provisions": 2,
+      "ingested": true,
+      "classification": "full"
     },
     {
-      "id": "61",
+      "id": "N.H. Rev. Stat. \u00a7 359-C:19 et seq.",
       "title": "New Hampshire Data Breach Notification",
       "url": "https://www.gencourt.state.nh.us/rsa/html/XXXI/359-C/359-C-mrg.htm",
-      "provisions": 3,
+      "provisions": 4,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "62",
+      "id": "N.H. Rev. Stat. ch. 507-H",
       "title": "New Hampshire Privacy Act",
       "url": "https://www.gencourt.state.nh.us/rsa/html/LII/507-H/507-H-mrg.htm",
-      "provisions": 1,
+      "provisions": 4,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "63",
+      "id": "N.J. Stat. \u00a7 56:8-161 et seq.",
       "title": "New Jersey Data Breach Notification Law",
       "url": "https://www.njleg.state.nj.us/Bills/2004/AL05/198_.HTM",
       "provisions": 8,
@@ -535,17 +815,15 @@
       "classification": "full"
     },
     {
-      "id": "64",
+      "id": "N.J. Stat. \u00a7 56:8-166.1 et seq.",
       "title": "New Jersey Data Privacy Act",
       "url": "https://www.njleg.state.nj.us/Bills/2024/S0332_R3.HTM",
-      "provisions": 0,
-      "ingested": false,
-      "classification": "metadata_only",
-      "not_ingestable": true,
-      "not_ingestable_reason": "seed_provisions_not_linked"
+      "provisions": 8,
+      "ingested": true,
+      "classification": "full"
     },
     {
-      "id": "65",
+      "id": "N.M. Stat. \u00a7 57-12C-1 et seq.",
       "title": "New Mexico Data Breach Notification Act",
       "url": "https://nmonesource.com/nmos/nmsa/en/item/4352/index.do#!fragment/zoupio-_Toc128411024",
       "provisions": 12,
@@ -553,7 +831,7 @@
       "classification": "full"
     },
     {
-      "id": "66",
+      "id": "Nev. Rev. Stat. \u00a7 603A.010 et seq.",
       "title": "Nevada Data Breach Notification",
       "url": "https://www.leg.state.nv.us/nrs/nrs-603a.html",
       "provisions": 2,
@@ -561,39 +839,39 @@
       "classification": "full"
     },
     {
-      "id": "67",
+      "id": "N.Y. Gen. Bus. Law \u00a7 899-aa",
       "title": "New York Information Security Breach and Notification Act",
       "url": "https://www.nysenate.gov/legislation/laws/GBS/899-AA",
-      "provisions": 1,
+      "provisions": 2,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "68",
+      "id": "N.Y. Gen. Bus. Law \u00a7 899-bb",
       "title": "Stop Hacks and Improve Electronic Data Security Act",
       "url": "https://www.nysenate.gov/legislation/laws/GBS/899-BB",
-      "provisions": 1,
+      "provisions": 2,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "69",
+      "id": "Ohio Rev. Code \u00a7 1349.19",
       "title": "Ohio Data Breach Notification",
       "url": "https://codes.ohio.gov/ohio-revised-code/section-1349.19",
-      "provisions": 5,
+      "provisions": 13,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "70",
+      "id": "Ohio Rev. Code \u00a7 1354.01 et seq.",
       "title": "Ohio Data Protection Act (Cybersecurity Safe Harbor)",
       "url": "https://codes.ohio.gov/ohio-revised-code/chapter-1354",
-      "provisions": 8,
+      "provisions": 13,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "71",
+      "id": "Okla. Stat. tit. 24, \u00a7 161 et seq.",
       "title": "Oklahoma Security Breach Notification Act",
       "url": "https://www.oscn.net/applications/oscn/deliverdocument.asp?citeID=440863",
       "provisions": 1,
@@ -601,7 +879,7 @@
       "classification": "full"
     },
     {
-      "id": "72",
+      "id": "Or. Rev. Stat. \u00a7 646A.604",
       "title": "Oregon Consumer Identity Theft Protection Act",
       "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html",
       "provisions": 3,
@@ -609,17 +887,15 @@
       "classification": "full"
     },
     {
-      "id": "73",
+      "id": "Or. Rev. Stat. \u00a7 646A.570 et seq.",
       "title": "Oregon Consumer Privacy Act",
       "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html",
-      "provisions": 0,
-      "ingested": false,
-      "classification": "metadata_only",
-      "not_ingestable": true,
-      "not_ingestable_reason": "seed_provisions_not_linked"
+      "provisions": 3,
+      "ingested": true,
+      "classification": "full"
     },
     {
-      "id": "74",
+      "id": "73 Pa. Stat. \u00a7 2303",
       "title": "Pennsylvania Breach of Personal Information Notification Act",
       "url": "https://www.legis.state.pa.us/cfdocs/legis/LI/uconsCheck.cfm?txtType=HTM&yr=2005&sessInd=0&smthLwInd=0&act=94&chpt=0&sctn=3&subsctn=0",
       "provisions": 2,
@@ -627,7 +903,7 @@
       "classification": "full"
     },
     {
-      "id": "75",
+      "id": "P.R. Laws tit. 10, \u00a7 4051 et seq.",
       "title": "Puerto Rico Citizen Information on Data Banks Security Act",
       "url": "https://www.lexjuris.com/",
       "provisions": 2,
@@ -635,23 +911,23 @@
       "classification": "full"
     },
     {
-      "id": "76",
+      "id": "R.I. Gen. Laws \u00a7 11-49.3-1 et seq.",
       "title": "Rhode Island Identity Theft Protection Act",
       "url": "http://webserver.rilegislature.gov/Statutes/TITLE11/11-49.3/INDEX.htm",
-      "provisions": 2,
+      "provisions": 3,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "77",
+      "id": "R.I. Gen. Laws \u00a7 6-48.1-1 et seq.",
       "title": "Rhode Island Data Transparency and Privacy Protection Act",
       "url": "http://webserver.rilegislature.gov/Statutes/TITLE6/6-48.1/INDEX.htm",
-      "provisions": 1,
+      "provisions": 3,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "78",
+      "id": "S.C. Code \u00a7 39-1-90",
       "title": "South Carolina Financial Identity Fraud and Identity Theft Protection Act",
       "url": "https://www.scstatehouse.gov/code/t39c001.php",
       "provisions": 3,
@@ -659,7 +935,7 @@
       "classification": "full"
     },
     {
-      "id": "79",
+      "id": "S.D. Codified Laws \u00a7 22-40-19 et seq.",
       "title": "South Dakota Data Breach Notification",
       "url": "https://sdlegislature.gov/Statutes/Codified_Laws/2078844",
       "provisions": 8,
@@ -667,71 +943,71 @@
       "classification": "full"
     },
     {
-      "id": "80",
+      "id": "Tenn. Code \u00a7 47-18-2107",
       "title": "Tennessee Data Breach Notification",
       "url": "https://www.tn.gov/content/dam/tn/attorneygeneral/documents/foi/breach-notification-statutes.pdf",
-      "provisions": 4,
+      "provisions": 11,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "81",
+      "id": "Tenn. Code \u00a7 47-18-3201 et seq.",
       "title": "Tennessee Information Protection Act",
       "url": "https://publications.tnsosfiles.com/acts/113/pub/pc0408.pdf",
-      "provisions": 7,
+      "provisions": 11,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "82",
+      "id": "Tex. Bus. & Com. Code \u00a7 521.053",
       "title": "Texas Identity Theft Enforcement and Protection Act",
       "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.521.htm",
-      "provisions": 10,
+      "provisions": 48,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "83",
+      "id": "Tex. Bus. & Com. Code ch. 541",
       "title": "Texas Data Privacy and Security Act",
       "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm",
-      "provisions": 34,
+      "provisions": 48,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "84",
+      "id": "Utah Code \u00a7 13-44-101 et seq.",
       "title": "Utah Protection of Personal Information Act",
       "url": "https://le.utah.gov/xcode/Title13/Chapter44/13-44.html",
-      "provisions": 3,
+      "provisions": 12,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "85",
+      "id": "Utah Code \u00a7 13-61-101 et seq.",
       "title": "Utah Consumer Privacy Act",
       "url": "https://le.utah.gov/xcode/Title13/Chapter61/13-61.html",
-      "provisions": 1,
+      "provisions": 12,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "86",
+      "id": "Va. Code \u00a7 18.2-186.6",
       "title": "Virginia Breach of Personal Information Notification",
       "url": "https://law.lis.virginia.gov/vacode/title18.2/chapter6/section18.2-186.6/",
-      "provisions": 7,
+      "provisions": 28,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "87",
+      "id": "Va. Code \u00a7 59.1-575 et seq.",
       "title": "Virginia Consumer Data Protection Act",
       "url": "https://law.lis.virginia.gov/vacodefull/title59.1/chapter53/",
-      "provisions": 21,
+      "provisions": 28,
       "ingested": true,
       "classification": "full"
     },
     {
-      "id": "88",
+      "id": "V.I. Code tit. 14, \u00a7 2208",
       "title": "Virgin Islands Identity Theft Prevention Act",
       "url": "https://www.vilegislature.org/",
       "provisions": 1,
@@ -739,17 +1015,15 @@
       "classification": "full"
     },
     {
-      "id": "89",
+      "id": "Vt. Stat. tit. 9, \u00a7 2430 et seq.",
       "title": "Vermont Security Breach Notice Act",
       "url": "https://legislature.vermont.gov/statutes/chapter/09/062",
-      "provisions": 0,
-      "ingested": false,
-      "classification": "metadata_only",
-      "not_ingestable": true,
-      "not_ingestable_reason": "no_seed_provisions"
+      "provisions": 1,
+      "ingested": true,
+      "classification": "full"
     },
     {
-      "id": "90",
+      "id": "Wash. Rev. Code \u00a7 19.255.010 et seq.",
       "title": "Washington Data Breach Notification",
       "url": "https://app.leg.wa.gov/rcw/default.aspx?cite=19.255",
       "provisions": 6,
@@ -757,7 +1031,7 @@
       "classification": "full"
     },
     {
-      "id": "91",
+      "id": "Wis. Stat. \u00a7 134.98",
       "title": "Wisconsin Notice of Unauthorized Acquisition of Personal Information",
       "url": "https://docs.legis.wisconsin.gov/statutes/statutes/134/98",
       "provisions": 1,
@@ -765,7 +1039,7 @@
       "classification": "full"
     },
     {
-      "id": "92",
+      "id": "W. Va. Code \u00a7 46A-2A-101 et seq.",
       "title": "West Virginia Breach of Security of Consumer Information",
       "url": "https://www.wvlegislature.gov/wvcode/ChapterEntire.cfm?chap=46a&art=2A",
       "provisions": 1,
@@ -773,7 +1047,7 @@
       "classification": "full"
     },
     {
-      "id": "93",
+      "id": "Wyo. Stat. \u00a7 40-12-501 et seq.",
       "title": "Wyoming Data Breach Notification",
       "url": "https://wyoleg.gov/NXT/gateway.dll/Statutes/title40/chapter12/article5",
       "provisions": 2,

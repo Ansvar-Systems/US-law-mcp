@@ -1,0 +1,441 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-FED",
+      "title": "General Provisions",
+      "identifier": "1 USC",
+      "short_name": "USC Title 1",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "",
+      "last_amended": "",
+      "source_url": "https://uscode.house.gov/view.xhtml?path=/prelim@title1"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 1",
+      "title": "Words denoting number, gender, and so forth",
+      "text": "In determining the meaning of any Act of Congress, unless the context indicates otherwise—\nwords importing the singular include and apply to several persons, parties, or things;\nwords importing the plural include the singular;\nwords importing the masculine gender include the feminine as well;\nwords used in the present tense include the future as well as the present;\nthe words “insane” and “insane person” shall include every idiot, insane person, and person non compos mentis;\nthe words “person” and “whoever” include corporations, companies, associations, firms, partnerships, societies, and joint stock companies, as well as individuals;\n“officer” includes any person authorized by law to perform the duties of the office;\n“signature” or “subscription” includes a mark when the person making the same intended it as such;\n“oath” includes affirmation, and “sworn” includes affirmed;\n“writing” includes printing and typewriting and reproductions of visual symbols by photographing, multigraphing, mimeographing, manifolding, or otherwise.",
+      "order_index": 1
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 2",
+      "title": "“County” as including “parish”, and so forth",
+      "text": "The word “county” includes a parish, or any other equivalent subdivision of a State or Territory of the United States.",
+      "order_index": 2
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 3",
+      "title": "“Vessel” as including all means of water transportation",
+      "text": "The word “vessel” includes every description of watercraft or other artificial contrivance used, or capable of being used, as a means of transportation on water.",
+      "order_index": 3
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 4",
+      "title": "“Vehicle” as including all means of land transportation",
+      "text": "The word “vehicle” includes every description of carriage or other artificial contrivance used, or capable of being used, as a means of transportation on land.",
+      "order_index": 4
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 5",
+      "title": "“Company” or “association” as including successors and assigns",
+      "text": "The word “company” or “association”, when used in reference to a corporation, shall be deemed to embrace the words “successors and assigns of such company or association”, in like manner as if these last-named words, or words of similar import, were expressed.",
+      "order_index": 5
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 6",
+      "title": "Limitation of term “products of American fisheries”",
+      "text": "Wherever, in the statutes of the United States or in the rulings, regulations, or interpretations of various administrative bureaus and agencies of the United States there appears or may appear the term “products of American fisheries” said term shall not include fresh or frozen fish fillets, fresh or frozen fish steaks, or fresh or frozen slices of fish substantially free of bone (including any of the foregoing divided into sections), produced in a foreign country or its territorial waters, in whole or in part with the use of the labor of persons who are not residents of the United States.",
+      "order_index": 6
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 7",
+      "title": "Definition of “marriage” and “spouse”",
+      "text": "In determining the meaning of any Act of Congress, or of any ruling, regulation, or interpretation of the various administrative bureaus and agencies of the United States, the word “marriage” means only a legal union between one man and one woman as husband and wife, and the word “spouse” refers only to a person of the opposite sex who is a husband or a wife.",
+      "order_index": 7
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 8",
+      "title": "“Person”, “human being”, “child”, and “individual” as including born-alive infant",
+      "text": "(a) In determining the meaning of any Act of Congress, or of any ruling, regulation, or interpretation of the various administrative bureaus and agencies of the United States, the words “person”, “human being”, “child”, and “individual”, shall include every infant member of the species homo sapiens who is born alive at any stage of development.\n\n(b) As used in this section, the term “born alive”, with respect to a member of the species homo sapiens, means the complete expulsion or extraction from his or her mother of that member, at any stage of development, who after such expulsion or extraction breathes or has a beating heart, pulsation of the umbilical cord, or definite movement of voluntary muscles, regardless of whether the umbilical cord has been cut, and regardless of whether the expulsion or extraction occurs as a result of natural or induced labor, cesarean section, or induced abortion.\n\n(c) Nothing in this section shall be construed to affirm, deny, expand, or contract any legal status or legal right applicable to any member of the species homo sapiens at any point prior to being “born alive” as defined in this section.",
+      "order_index": 8
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 101",
+      "title": "Enacting clause",
+      "text": "The enacting clause of all Acts of Congress shall be in the following form: “Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled.”",
+      "order_index": 9
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 102",
+      "title": "Resolving clause",
+      "text": "The resolving clause of all joint resolutions shall be in the following form: “Resolved by the Senate and House of Representatives of the United States of America in Congress assembled.”",
+      "order_index": 10
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 103",
+      "title": "Enacting or resolving words after first section",
+      "text": "No enacting or resolving words shall be used in any section of an Act or resolution of Congress except in the first.",
+      "order_index": 11
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 104",
+      "title": "Numbering of sections; single proposition",
+      "text": "Each section shall be numbered, and shall contain, as nearly as may be, a single proposition of enactment.",
+      "order_index": 12
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 105",
+      "title": "Title of appropriation Acts",
+      "text": "The style and title of all Acts making appropriations for the support of Government shall be as follows: “An Act making appropriations (here insert the object) for the year ending September 30 (here insert the calendar year).”",
+      "order_index": 13
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 106",
+      "title": "Printing bills and joint resolutions",
+      "text": "Every bill or joint resolution in each House of Congress shall, when such bill or resolution passes either House, be printed, and such printed copy shall be called the engrossed bill or resolution as the case may be. Said engrossed bill or resolution shall be signed by the Clerk of the House or the Secretary of the Senate, and shall be sent to the other House, and in that form shall be dealt with by that House and its officers, and, if passed, returned signed by said Clerk or Secretary. When such bill, or joint resolution shall have passed both Houses, it shall be printed and shall then be called the enrolled bill, or joint resolution, as the case may be, and shall be signed by the presiding officers of both Houses and sent to the President of the United States. During the last six days of a session such engrossing and enrolling of bills and joint resolutions may be done otherwise than as above prescribed, upon the order of Congress by concurrent resolution.",
+      "order_index": 14
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 1",
+      "title": "WAIVER OF REQUIREMENT FOR PARCHMENT PRINTING.",
+      "text": "“(a) Waiver.—The provisions of sections 106 and 107 of title 1, United States Code, are waived with respect to the printing (on parchment or otherwise) of the enrollment of any appropriation measure of the One Hundred Fourth Congress presented to the President after the enactment of this joint resolution [Sept. 30, 1996].\n\n“(b) Certification of Enrollment by Committee on House Oversight.—The enrollment of any such measure shall be in such form as the Committee on House Oversight of the House of Representatives certifies to be a true enrollment.",
+      "order_index": 15
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 2",
+      "title": "APPROPRIATION MEASURE DEFINED.",
+      "text": "“For purposes of this joint resolution, the term ‘appropriation measure’ means a bill or joint resolution that includes provisions making general or continuing appropriations for the fiscal year ending September 30, 1997.”",
+      "order_index": 16
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 201",
+      "title": "WAIVER OF REQUIREMENT FOR PARCHMENT PRINTING.",
+      "text": "“(a) Waiver.—The provisions of sections 106 and 107 of title 1, United States Code, are waived with respect to the printing (on parchment or otherwise) of the enrollment of any of the following measures of the first session of the One Hundred Fourth Congress presented to the President after the enactment of this joint resolution [Nov. 20, 1995]:“(1) A continuing resolution.\n\n“(2) A debt limit extension measure.\n\n“(3) A reconciliation bill.\n\n“(b) Certification by Committee on House Oversight.—The enrollment of a measure to which subsection (a) applies shall be in such form as the Committee on House Oversight of the House of Representatives certifies to be a true enrollment.",
+      "order_index": 17
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 202",
+      "title": "DEFINITIONS.",
+      "text": "“As used in this joint resolution:“(1) Continuing resolution.—The term ‘continuing resolution’ means a bill or joint resolution that includes provisions making further continuing appropriations for fiscal year 1996.\n\n“(2) Debt limit extension measure.—The term ‘debt limit extension measure’ means a bill or joint resolution that includes provisions increasing or waiving (for a temporary period or otherwise) the public debt limit under section 3101(b) of title 31, United States Code.\n\n“(3) Reconciliation bill.—The term ‘reconciliation bill’ means a bill that is a reconciliation bill within the meaning of section 310 of the Congressional Budget Act of 1974 [2 U.S.C. 641].”",
+      "order_index": 18
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 1",
+      "title": "WAIVER OF REQUIREMENT FOR PARCHMENT PRINTING.",
+      "text": "“The provisions of sections 106 and 107 of title 1, United States Code, are waived with respect to the printing (on parchment or otherwise) of the enrollment of H.R. 4210 of the 102d Congress [H.R. 4210 was vetoed by the President on Mar. 20, 1992].",
+      "order_index": 19
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 2",
+      "title": "CERTIFICATION BY COMMITTEE ON HOUSE ADMINISTRATION.",
+      "text": "“The enrollment of H.R. 4210 of the 102d Congress shall be in such form as the Committee on House Administration of the House of Representatives certifies to be a true enrollment.”",
+      "order_index": 20
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 1",
+      "title": "WAIVER OF REQUIREMENT FOR PARCHMENT PRINTING OF ENROLLMENT OF CERTAIN MEASURES.",
+      "text": "“(a) Waiver.—The provisions of sections 106 and 107 of title 1, United States Code, are waived with respect to the printing (on parchment or otherwise) of the enrollment of S. 2830 [Pub. L. 101–624, Nov. 28, 1990, 104 Stat. 3359].\n\n“(b) Certification of Enrollment by the Secretary of the Senate.—The enrollment of S. 2830 shall be in such form as the Secretary of the Senate certifies to be a true enrollment.",
+      "order_index": 21
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 2",
+      "title": "SUBSEQUENT PREPARATION AND CERTIFICATION OF PRINTED ENROLLMENT.",
+      "text": "“(a) Preparation.—“(1) In general.—If S. 2830 is presented to the President in the form of a hand enrollment pursuant to the authority of section 1, then upon the enactment of that bill the Secretary of the Senate shall prepare a printed enrollment of the bill as in the case of a bill to which sections 106 and 107 of title 1, United States Code, apply.\n\n“(2) Typographical corrections.—A printed enrollment prepared pursuant to paragraph (1) may, in order to conform to customary style for printed laws, include corrections in indentation, type face, and type size and may include notations (in the margins or as otherwise appropriate) of obvious errors in spelling or punctuation in the hand enrollment.\n\n“(b) Transmittal to President.—A printed enrollment prepared pursuant to subsection (a), after being certified by the Secretary of the Senate to be a correct printing of the hand enrollment, shall be signed by the presiding officer of each House of Congress and transmitted to the President.\n\n“(c) Certification by President; Preservation in Archives.—Upon certification by the President that a printed enrollment transmitted pursuant to subsection (b) is a correct printing of the hand enrollment, such printed enrollment shall be transmitted to the Archivist of the United States, who shall preserve it with the hand enrollment.\n\n“(d) Publication of Law.—In preparing the bill or joint resolution for publication in slip form and in the United States Statutes at Large pursuant to section 112 of title 1, United States Code, the Archivist of the United States shall use the printed enrollment certified by the President under subsection (c) in lieu of the hand enrollment.",
+      "order_index": 22
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 3",
+      "title": "DEFINITIONS.",
+      "text": "“As used in this resolution:“(1) [sic] Hand enrollment.—The term ‘hand enrollment’ means the enrollment, as authorized by section 1, of a bill or joint resolution for presentment to the President in a form other than the printed form required by sections 106 and 107 of title 1, United States Code.”",
+      "order_index": 23
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 1",
+      "title": "WAIVER OF REQUIREMENT FOR PARCHMENT PRINTING OF ENROLLMENT OF CERTAIN MEASURES.",
+      "text": "“(a) Waiver.—The provisions of sections 106 and 107 of title 1, United States Code, are waived with respect to the printing (on parchment or otherwise) of the enrollment of any reconciliation bill, appropriation bill, or continuing resolution of the One Hundred First Congress presented to the President after the enactment of this joint resolution [Oct. 27, 1990].\n\n“(b) Certification of Enrollment by Committee on House Administration.—The enrollment of any such bill or joint resolution shall be in such form as the Committee on House Administration of the House of Representatives certifies to be a true enrollment.",
+      "order_index": 24
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 2",
+      "title": "SUBSEQUENT PREPARATION AND CERTIFICATION OF PRINTED ENROLLMENT.",
+      "text": "“(a) Preparation.—“(1) In general.—If a reconciliation bill, appropriation bill, or continuing resolution is presented to the President in the form of a hand enrollment pursuant to the authority of section 1, then upon the enactment of that bill or joint resolution the Clerk of the House of Representatives shall prepare a printed enrollment of the bill or joint resolution as in the case of a bill or joint resolution to which sections 106 and 107 of title 1, United States Code, apply.\n\n“(2) Typographical corrections.—A printed enrollment prepared pursuant to paragraph (1) may, in order to conform to customary style for printed laws, include corrections in indentation, type face, and type size and may include notations (in the margins or as otherwise appropriate) of obvious errors in spelling or punctuation in the hand enrollment.\n\n“(b) Transmittal to President.—A printed enrollment prepared pursuant to subsection (a), after being certified by the Committee on House Administration of the House of Representatives to be a correct printing of the hand enrollment, shall be signed by the presiding officer of each House of Congress and transmitted to the President.\n\n“(c) Certification by President; Preservation in Archives.—Upon certification by the President that a printed enrollment transmitted pursuant to subsection (b) is a correct printing of the hand enrollment, such printed enrollment shall be transmitted to the Archivist of the United States, who shall preserve it with the hand enrollment.\n\n“(d) Publication of Law.—In preparing the bill or joint resolution for publication in slip form and in the United States Statutes at Large pursuant to section 112 of title 1, United States Code, the Archivist of the United States shall use the printed enrollment certified by the President under subsection (c) in lieu of the hand enrollment.",
+      "order_index": 25
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 3",
+      "title": "DEFINITIONS.",
+      "text": "“As used in this resolution:“(1) Reconciliation bill.—The term ‘reconciliation bill’ means a bill to provide for reconciliation pursuant to section 4 of the concurrent resolution on the budget for fiscal year 1991.\n\n“(2) Appropriation bill.—The term ‘appropriation bill’ means a general appropriation bill making appropriations for the fiscal year ending September 30, 1991.\n\n“(3) Continuing resolution.—The term ‘continuing resolution’ means a joint resolution making continuing appropriations for the fiscal year 1991.\n\n“(4) Hand enrollment.—The term ‘hand enrollment’ means the enrollment, as authorized by section 1, of a bill or joint resolution for presentment to the President in a form other than the printed form required by sections 106 and 107 of title 1, United States Code.”",
+      "order_index": 26
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 1",
+      "title": "HAND ENROLLMENT AUTHORIZED FOR GENERAL APPROPRIATIONS BILLS.",
+      "text": "“(a) Waiver of Certain Laws With Respect to Printing of Enrolled Bills.—During the remainder of the second session of the One Hundredth Congress, the provisions of sections 106 and 107 of title 1, United States Code, are waived with respect to the printing (on parchment or otherwise) of the enrollment of any general appropriations bill making appropriations for the fiscal year ending September 30, 1989.\n\n“(b) Certification by Committee on House Administration.—The enrollment of any such bill shall be in such form as the Committee on House Administration of the House of Representatives certifies to be a true enrollment.",
+      "order_index": 27
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 2",
+      "title": "SUBSEQUENT PREPARATION AND CERTIFICATION OF PRINTED ENROLLMENTS.",
+      "text": "“(a) Preparation.—“(1) In general.—Upon the enactment of a bill following presentment of such bill to the President in the form of a hand enrollment pursuant to the authority of section 1 of this resolution, the Clerk of the House of Representatives shall prepare a printed enrollment of that bill as in the case of a bill to which sections 106 and 107 of title 1, United States Code, apply.\n\n“(2) Limited stylistic corrections.—A printed enrollment prepared pursuant to paragraph (1) may, in order to conform to customary style for printed laws, include corrections in spelling, punctuation, indentation, type face, and type size and other necessary stylistic corrections to the hand enrollment. Such a printed enrollment shall include notations (in the margins or as otherwise appropriate) of all such corrections.\n\n“(b) Transmittal to President.—A printed enrollment prepared pursuant to subsection (a) shall be signed by the presiding officer of each House of Congress as a correct printing of the hand enrollment and shall be transmitted to the President.\n\n“(c) Certification by President; Legal Effect.—Upon certification by the President that a printed enrollment transmitted pursuant to subsection (b) is a correct printing of the hand enrollment, such printed enrollment shall be considered for all purposes as the original enrollment of the bill concerned and as valid evidence of the enactment of that bill.\n\n“(d) Archives.—A printed enrollment certified by the President under subsection (c) shall be transmitted to the Archivist of the United States, who shall preserve it with the hand enrollment. In preparing the bill concerned for publication in slip form and in the United States Statutes at Large pursuant to section 112 of title 1, United States Code, the Archivist of the United States shall use the printed enrollment certified by the President under subsection (c) in lieu of the hand enrollment.\n\n“(e) Hand Enrollment Defined.—As used in this section, the term ‘hand enrollment’ means the enrollment, as authorized by section 1, of a bill for presentment to the President in a form other than the printed form required by sections 106 and 107 of title 1, United States Code.”",
+      "order_index": 28
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 106a",
+      "title": "Promulgation of laws",
+      "text": "Whenever a bill, order, resolution, or vote of the Senate and House of Representatives, having been approved by the President, or not having been returned by him with his objections, becomes a law or takes effect, it shall forthwith be received by the Archivist of the United States from the President; and whenever a bill, order, resolution, or vote is returned by the President with his objections, and, on being reconsidered, is agreed to be passed, and is approved by two-thirds of both Houses of Congress, and thereby becomes a law or takes effect, it shall be received by the Archivist of the United States from the President of the Senate, or Speaker of the House of Representatives in whichsoever House it shall last have been so approved, and he shall carefully preserve the originals.",
+      "order_index": 29
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 106b",
+      "title": "Amendments to Constitution",
+      "text": "Whenever official notice is received at the National Archives and Records Administration that any amendment proposed to the Constitution of the United States has been adopted, according to the provisions of the Constitution, the Archivist of the United States shall forthwith cause the amendment to be published, with his certificate, specifying the States by which the same may have been adopted, and that the same has become valid, to all intents and purposes, as a part of the Constitution of the United States.",
+      "order_index": 30
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 107",
+      "title": "Parchment or paper for printing enrolled bills or resolutions",
+      "text": "Enrolled bills and resolutions of either House of Congress shall be printed on parchment or paper of suitable quality as shall be determined by the Joint Committee on Printing.",
+      "order_index": 31
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 108",
+      "title": "Repeal of repealing act",
+      "text": "Whenever an Act is repealed, which repealed a former Act, such former Act shall not thereby be revived, unless it shall be expressly so provided.",
+      "order_index": 32
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 109",
+      "title": "Repeal of statutes as affecting existing liabilities",
+      "text": "The repeal of any statute shall not have the effect to release or extinguish any penalty, forfeiture, or liability incurred under such statute, unless the repealing Act shall so expressly provide, and such statute shall be treated as still remaining in force for the purpose of sustaining any proper action or prosecution for the enforcement of such penalty, forfeiture, or liability. The expiration of a temporary statute shall not have the effect to release or extinguish any penalty, forfeiture, or liability incurred under such statute, unless the temporary statute shall so expressly provide, and such statute shall be treated as still remaining in force for the purpose of sustaining any proper action or prosecution for the enforcement of such penalty, forfeiture, or liability.",
+      "order_index": 33
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 110",
+      "title": "Saving clause of Revised Statutes",
+      "text": "All acts of limitation, whether applicable to civil causes and proceedings, or to the prosecution of offenses, or for the recovery of penalties or forfeitures, embraced in the Revised Statutes and covered by the repeal contained therein, shall not be affected thereby, but all suits, proceedings, or prosecutions, whether civil or criminal, for causes arising, or acts done or committed prior to said repeal, may be commenced and prosecuted within the same time as if said repeal had not been made.",
+      "order_index": 34
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 111",
+      "title": "Repeals as evidence of prior effectiveness",
+      "text": "No inference shall be raised by the enactment of the Act of March 3, 1933 (ch. 202, 47 Stat. 1431), that the sections of the Revised Statutes repealed by such Act were in force or effect at the time of such enactment: Provided, however, That any rights or liabilities existing under such repealed sections shall not be affected by their repeal.",
+      "order_index": 35
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 112",
+      "title": "Statutes at Large; contents; admissibility in evidence",
+      "text": "The Archivist of the United States shall cause to be compiled, edited, indexed, and published, the United States Statutes at Large, which shall contain all the laws and concurrent resolutions enacted during each regular session of Congress; all proclamations by the President in the numbered series issued since the date of the adjournment of the regular session of Congress next preceding; and also any amendments to the Constitution of the United States proposed or ratified pursuant to article V thereof since that date, together with the certificate of the Archivist of the United States issued in compliance with the provision contained in section 106b of this title. In the event of an extra session of Congress, the Archivist of the United States shall cause all the laws and concurrent resolutions enacted during said extra session to be consolidated with, and published as part of, the contents of the volume for the next regular session. The United States Statutes at Large shall be legal evidence of laws, concurrent resolutions, treaties, international agreements other than treaties, proclamations by the President, and proposed or ratified amendments to the Constitution of the United States therein contained, in all the courts of the United States, the several States, and the Territories and insular possessions of the United States.",
+      "order_index": 36
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 112a",
+      "title": "United States Treaties and Other International Agreements; contents; admissibility in evidence",
+      "text": "(a) The Secretary of State shall cause to be compiled, edited, indexed, and published, beginning as of January 1, 1950, a compilation entitled “United States Treaties and Other International Agreements,” which shall contain all treaties to which the United States is a party that have been proclaimed during each calendar year, and all international agreements other than treaties to which the United States is a party that have been signed, proclaimed, or with reference to which any other final formality has been executed, during each calendar year. The said United States Treaties and Other International Agreements shall be legal evidence of the treaties, international agreements other than treaties, and proclamations by the President of such treaties and agreements, therein contained, in all the courts of the United States, the several States, and the Territories and insular possessions of the United States.\n\n(b) The Secretary of State may determine that publication of certain categories of agreements is not required, if the following criteria are met:(1) such agreements are not treaties which have been brought into force for the United States after having received Senate advice and consent pursuant to section 2(2) of Article II of the Constitution of the United States;\n\n(2) the public interest in such agreements is insufficient to justify their publication, because (A) as of the date of enactment of the Foreign Relations Authorization Act, Fiscal Years 1994 and 1995, the agreements are no longer in force,1 (B) the agreements do not create private rights or duties, or establish standards intended to govern government action in the treatment of private individuals; (C) in view of the limited or specialized nature of the public interest in such agreements, such interest can adequately be satisfied by an alternative means; or (D) the public disclosure of the text of the agreement would, in the opinion of the President, be prejudicial to the national security of the United States; and\n\n(3) copies of such agreements (other than those in paragraph (2)(D)), including certified copies where necessary for litigation or similar purposes, will be made available by the Department of State upon request.\n\n(c) Any determination pursuant to subsection (b) shall be published in the Federal Register.\n\n(d) The Secretary of State shall make publicly available through the Internet website of the Department of State each treaty or international agreement proposed to be published in the compilation entitled “United States Treaties and Other International Agreements” not later than 180 days after the date on which the treaty or agreement enters into force.",
+      "order_index": 37
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 112b",
+      "title": "United States international agreements; transmission to Congress",
+      "text": "(a) The Secretary of State shall transmit to the Congress the text of any international agreement (including the text of any oral international agreement, which agreement shall be reduced to writing), other than a treaty, to which the United States is a party as soon as practicable after such agreement has entered into force with respect to the United States but in no event later than sixty days thereafter. However, any such agreement the immediate public disclosure of which would, in the opinion of the President, be prejudicial to the national security of the United States shall not be so transmitted to the Congress but shall be transmitted to the Committee on Foreign Relations of the Senate and the Committee on International Relations of the House of Representatives under an appropriate injunction of secrecy to be removed only upon due notice from the President. Any department or agency of the United States Government which enters into any international agreement on behalf of the United States shall transmit to the Department of State the text of such agreement not later than twenty days after such agreement has been signed.\n\n(b) Not later than March 1, 1979, and at yearly intervals thereafter, the President shall, under his own signature, transmit to the Speaker of the House of Representatives and the chairman of the Committee on Foreign Relations of the Senate a report with respect to each international agreement which, during the preceding year, was transmitted to the Congress after the expiration of the 60-day period referred to in the first sentence of subsection (a), describing fully and completely the reasons for the late transmittal.\n\n(c) Notwithstanding any other provision of law, an international agreement may not be signed or otherwise concluded on behalf of the United States without prior consultation with the Secretary of State. Such consultation may encompass a class of agreements rather than a particular agreement.\n\n(d)(1) The Secretary of State shall annually submit to Congress a report that contains an index of all international agreements, listed by country, date, title, and summary of each such agreement (including a description of the duration of activities under the agreement and the agreement itself), that the United States—(A) has signed, proclaimed, or with reference to which any other final formality has been executed, or that has been extended or otherwise modified, during the preceding calendar year; and\n\n(B) has not been published, or is not proposed to be published, in the compilation entitled “United States Treaties and Other International Agreements”.\n\n(2) The report described in paragraph (1) may be submitted in classified form.\n\n(e)(1) Subject to paragraph (2), the Secretary of State shall determine for and within the executive branch whether an arrangement constitutes an international agreement within the meaning of this section.\n\n(2)(A) An arrangement shall constitute an international agreement within the meaning of this section (other than subsection (c)) irrespective of the duration of activities under the arrangement or the arrangement itself.\n\n(B) Arrangements that constitute an international agreement within the meaning of this section (other than subsection (c)) include the following:(i) A bilateral or multilateral counterterrorism agreement.\n\n(ii) A bilateral agreement with a country that is subject to a determination under section 6(j)(1)(A) of the Export Administration Act of 1979 (50 U.S.C. App. 2405(j)(1)(A)), section 620A(a) of the Foreign Assistance Act of 1961 (22 U.S.C. 2371(a)), or section 40(d) of the Arms Export Control Act (22 U.S.C. 2780(d)).\n\n(f) The President shall, through the Secretary of State, promulgate such rules and regulations as may be necessary to carry out this section.",
+      "order_index": 38
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 113",
+      "title": "“Little and Brown’s” edition of laws and treaties; slip laws; Treaties and Other International Acts Series; admissibility in evidence",
+      "text": "The edition of the laws and treaties of the United States, published by Little and Brown, and the publications in slip or pamphlet form of the laws of the United States issued under the authority of the Archivist of the United States, and the Treaties and Other International Acts Series issued under the authority of the Secretary of State shall be competent evidence of the several public and private Acts of Congress, and of the treaties, international agreements other than treaties, and proclamations by the President of such treaties and international agreements other than treaties, as the case may be, therein contained, in all the courts of law and equity and of maritime jurisdiction, and in all the tribunals and public offices of the United States, and of the several States, without any further proof or authentication thereof.",
+      "order_index": 39
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 114",
+      "title": "Sealing of instruments",
+      "text": "In all cases where a seal is necessary by law to any commission, process, or other instrument provided for by the laws of Congress, it shall be lawful to affix the proper seal by making an impression therewith directly on the paper to which such seal is necessary; which shall be as valid as if made on wax or other adhesive substance.",
+      "order_index": 40
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 201",
+      "title": "Publication and distribution of Code of Laws of United States and Supplements and District of Columbia Code and Supplements",
+      "text": "In order to avoid duplication and waste—(a) Publishing in slip or pamphlet form or in Statutes at Large.—Publication in slip or pamphlet form or in the Statutes at Large of any of the volumes or publications enumerated in sections 202 and 203 of this title, shall, in event of enactment, be dispensed with whenever the Committee on the Judiciary of the House of Representatives so directs the Archivist of the United States;\n\n(b) Curtailing number of copies published.—Curtailment of the number provided by law to be printed and distributed of the volumes or publications enumerated in sections 202 and 203 of this title may be directed by such committee, except that the Public Printer shall print such numbers as are necessary for depository library distribution and for sale; and\n\n(c) Dispensing with publication of more than one Supplement for each Congress.—Such committee may direct that the printing and distribution of any supplement to the Code of Laws of the United States or to the Code of the District of Columbia be dispensed with entirely, except that there shall be printed and distributed for each Congress at least one supplement to each such code, containing the legislation of such Congress.",
+      "order_index": 41
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 202",
+      "title": "Preparation and publication of Codes and Supplements",
+      "text": "There shall be prepared and published under the supervision of the Committee on the Judiciary of the House of Representatives—(a) Cumulative Supplements to Code of Laws of United States for each session of Congress.—A supplement for each session of the Congress to the then current edition of the Code of Laws of the United States, cumulatively embracing the legislation of the then current supplement, and correcting errors in such edition and supplement;\n\n(b) Cumulative Supplement to District of Columbia Code for each session of Congress.—A supplement for each session of the Congress to the then current edition of the Code of the District of Columbia, cumulatively embracing the legislation of the then current supplement, and correcting errors in such edition and supplement;\n\n(c) New editions of Codes and Supplements.—New editions of the Code of Laws of the United States and of the Code of the District of Columbia, correcting errors and incorporating the then current supplement. In the case of each code new editions shall not be published oftener than once in each five years. Copies of each such edition shall be distributed in the same manner as provided in the case of supplements to the code of which it is a new edition. Supplements published after any new edition shall not contain the legislation of supplements published before such new edition.",
+      "order_index": 42
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 203",
+      "title": "District of Columbia Code; preparation and publication; cumulative supplements",
+      "text": "The Committee on the Judiciary of the House of Representatives is authorized to print bills to codify, revise, and reenact the general and permanent laws relating to the District of Columbia and cumulative supplements thereto, similar in style, respectively, to the Code of Laws of the United States, and supplements thereto, and to so continue until final enactment thereof in both Houses of the Congress of the United States.",
+      "order_index": 43
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 204",
+      "title": "Codes and Supplements as evidence of the laws of United States and District of Columbia; citation of Codes and Supplements",
+      "text": "In all courts, tribunals, and public offices of the United States, at home or abroad, of the District of Columbia, and of each State, Territory, or insular possession of the United States—(a) United States Code.—The matter set forth in the edition of the Code of Laws of the United States current at any time shall, together with the then current supplement, if any, establish prima facie the laws of the United States, general and permanent in their nature, in force on the day preceding the commencement of the session following the last session the legislation of which is included: Provided, however, That whenever titles of such Code shall have been enacted into positive law the text thereof shall be legal evidence of the laws therein contained, in all the courts of the United States, the several States, and the Territories and insular possessions of the United States.\n\n(b) District of Columbia Code.—The matter set forth in the edition of the Code of the District of Columbia current at any time shall, together with the then current supplement, if any, establish prima facie the laws, general and permanent in their nature, relating to or in force in the District of Columbia on the day preceding the commencement of the session following the last session the legislation of which is included, except such laws as are of application in the District of Columbia by reason of being laws of the United States general and permanent in their nature.\n\n(c) District of Columbia Code; citation.—The Code of the District of Columbia may be cited as “D.C. Code”.\n\n(d) Supplements to Codes; citation.—Supplements to the Code of Laws of the United States and to the Code of the District of Columbia may be cited, respectively, as “U.S.C., Sup.  ”, and “D.C. Code, Sup.  ”, the blank in each case being filled with Roman figures denoting the number of the supplement.\n\n(e) New edition of Codes; citation.—New editions of each of such codes may be cited, respectively, as “U.S.C.,  ed.”, and “D.C. Code,     ed.”, the blank in each case being filled with figures denoting the last year the legislation of which is included in whole or in part.",
+      "order_index": 44
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 205",
+      "title": "Codes and Supplement; where printed; form and style; ancillaries",
+      "text": "The publications provided for in sections 202, 203 of this title shall be printed at the Government Printing Office and shall be in such form and style and with such ancillaries as may be prescribed by the Committee on the Judiciary of the House of Representatives. The Librarian of Congress is directed to cooperate with such committee in the preparation of such ancillaries. Such publications shall be furnished with such thumb insets and other devices to distinguish parts, with such facilities for the insertion of additional matter, and with such explanatory and advertising slips, and shall be printed on such paper and bound in such material, as may be prescribed by such committee.",
+      "order_index": 45
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 206",
+      "title": "Bills and resolutions of Committee on the Judiciary of House of Representatives; form and style; ancillaries; curtailment of copies",
+      "text": "All bills and resolutions relating to the revision of the laws referred to or reported by the Committee on the Judiciary of the House of Representatives shall be printed in such form and style, and with such ancillaries, as such committee may prescribe as being economical and suitable, to so continue until final enactment thereof in both Houses of Congress; and such committee may also curtail the number of copies of such bills to be printed in the various parliamentary stages in the House of Representatives.",
+      "order_index": 46
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 207",
+      "title": "Copies of acts and resolutions in slip form; additional number printed for Committee on the Judiciary of House of Representatives",
+      "text": "The Public Printer is directed to print, in addition to the number provided by existing law, and, as soon as printed, to distribute in such manner as the Committee on the Judiciary of the House of Representatives shall determine, twenty copies in slip form of each public Act and joint resolution.",
+      "order_index": 47
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 208",
+      "title": "Delegation of function of Committee on the Judiciary to other agencies; printing, and so forth, under direction of Joint Committee on Printing",
+      "text": "The functions vested by sections 201, 202, 204–207 of this title in the Committee on the Judiciary of the House of Representatives may from time to time be vested in such other agency as the Congress may by concurrent resolution provide: Provided, That the printing, binding, and distribution of the volumes and publications enumerated in sections 202, 203 of this title shall be done under the direction of the Joint Committee on Printing.",
+      "order_index": 48
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 209",
+      "title": "Copies of Supplements to Code of Laws of United States and of District of Columbia Code and Supplements; conclusive evidence of original",
+      "text": "Copies of the Code of Laws relating to the District of Columbia and copies of the supplements provided for by sections 202 and 203 of this title printed at the Government Printing Office and bearing its imprint, shall be conclusive evidence of the original of such code and supplements in the custody of the Administrator of General Services.",
+      "order_index": 49
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 210",
+      "title": "Distribution of Supplements to Code of Laws of United States and of District of Columbia Code and Supplements; slip and pamphlet copies",
+      "text": "Copies of the Code of Laws relating to the District of Columbia, and of the supplements provided for by sections 202, 203 of this title shall be distributed by the Superintendent of Documents in the same manner as bound volumes of the Statutes at Large: Provided, That no slip or pamphlet copies of the Code of Laws relating to the District of Columbia, and of the supplements provided for by sections 202, 203 of this title need be printed or distributed.",
+      "order_index": 50
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 211",
+      "title": "Copies to Members of Congress",
+      "text": "In addition to quotas provided for by section 210 of this title there shall be printed, published, and distributed of the Code of Laws relating to the District of Columbia with tables, index, and other ancillaries, suitably bound and with thumb inserts and other convenient devices to distinguish the parts, and of the supplements to both codes as provided for by sections 202, 203 of this title, ten copies of each for each Member of the Senate and House of Representatives of the Congress in which the original authorized publication is made, for his use and distribution, and in addition for the Committee on the Judiciary of the House of Representatives and the Committee on the Judiciary of the Senate a number of bound copies of each equal to ten times the number of members of such committees, and one bound copy of each for the use of each committee of the Senate and House of Representatives.",
+      "order_index": 51
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 212",
+      "title": "Additional distribution at each new Congress",
+      "text": "In addition the Superintendent of Documents shall, at the beginning of the first session of each Congress, supply to each Senator and Representative in such Congress, who may in writing apply for the same, one copy each of the Code of Laws of the United States, the Code of Laws relating to the District of Columbia, and the latest supplement to each code: Provided, That such applicant shall certify in his written application for the same that the volume or volumes for which he applies is intended for his personal use exclusively: And provided further, That no Senator or Representative during his term of service shall receive under this section more than one copy each of the volumes enumerated herein.",
+      "order_index": 52
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 213",
+      "title": "Appropriation for preparing and editing supplements",
+      "text": "For preparation and editing an annual appropriation of $6,500 is authorized to carry out the purposes of sections 202 and 203 of this title.",
+      "order_index": 53
+    }
+  ]
+}
