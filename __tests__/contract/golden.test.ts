@@ -29,7 +29,7 @@ beforeAll(() => {
 
   db = new Database(DB_PATH, { readonly: true });
   db.pragma('foreign_keys = ON');
-}, { timeout: 300_000 });
+}, 300_000);
 
 afterAll(() => {
   db?.close();

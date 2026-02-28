@@ -49,9 +49,9 @@ describe('parseUslmTitle', () => {
   it('creates a single document for the title', () => {
     const result = parseUslmTitle(xml, 99, 'Sample Title for Testing');
     expect(result.documents.length).toBe(1);
-    expect(result.documents[0].identifier).toBe('99 USC');
-    expect(result.documents[0].jurisdiction).toBe('US-FED');
-    expect(result.documents[0].short_name).toBe('USC Title 99');
+    expect(result.documents[0]!.identifier).toBe('99 USC');
+    expect(result.documents[0]!.jurisdiction).toBe('US-FED');
+    expect(result.documents[0]!.short_name).toBe('USC Title 99');
   });
 
   it('assigns sequential order_index values', () => {

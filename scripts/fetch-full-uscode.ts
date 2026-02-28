@@ -47,9 +47,9 @@ function parseFlags(): CliFlags {
   for (let i = 0; i < args.length; i++) {
     const arg = args[i];
     if (arg === '--dry-run') flags.dryRun = true;
-    else if (arg === '--title' && args[i + 1]) { flags.titleFilter = parseInt(args[++i], 10); }
-    else if (arg === '--concurrency' && args[i + 1]) { flags.concurrency = parseInt(args[++i], 10); }
-    else if (arg === '--year' && args[i + 1]) { flags.year = parseInt(args[++i], 10); }
+    else if (arg === '--title' && args[i + 1]) { flags.titleFilter = parseInt(args[++i]!, 10); }
+    else if (arg === '--concurrency' && args[i + 1]) { flags.concurrency = parseInt(args[++i]!, 10); }
+    else if (arg === '--year' && args[i + 1]) { flags.year = parseInt(args[++i]!, 10); }
   }
   return flags;
 }

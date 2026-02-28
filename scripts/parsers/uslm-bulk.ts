@@ -42,7 +42,7 @@ function normalizeText(raw: string): string {
     .trim();
 }
 
-function extractSectionText($: cheerio.CheerioAPI, sectionEl: cheerio.Cheerio<cheerio.Element>): string {
+function extractSectionText($: cheerio.CheerioAPI, sectionEl: cheerio.Cheerio<any>): string {
   const clone = sectionEl.clone();
   clone.find('sourceCredit, note, notes, editorialNote, toc, analyzedTitle').remove();
   clone.children('num').first().remove();
@@ -50,7 +50,7 @@ function extractSectionText($: cheerio.CheerioAPI, sectionEl: cheerio.Cheerio<ch
   return normalizeText(clone.text());
 }
 
-function extractSectionNumber($: cheerio.CheerioAPI, sectionEl: cheerio.Cheerio<cheerio.Element>): string {
+function extractSectionNumber($: cheerio.CheerioAPI, sectionEl: cheerio.Cheerio<any>): string {
   const numEl = sectionEl.children('num').first();
   const value = numEl.attr('value') ?? '';
   const text = numEl.text().trim();
@@ -58,7 +58,7 @@ function extractSectionNumber($: cheerio.CheerioAPI, sectionEl: cheerio.Cheerio<
   if (value) return `§ ${value}`;
 
   const match = text.match(/(?:§|Sec\.?)\s*(\S+)/);
-  if (match) return `§ ${match[1].replace(/\.$/, '')}`;
+  if (match?.[1]) return `§ ${match[1].replace(/\.$/, '')}`;
 
   return text.replace(/\.$/, '');
 }
