@@ -11,3 +11,5 @@ data/source/
 coverage/
 data/*.db
 data/*.db.gz
+.claude/
+.serena/
