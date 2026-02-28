@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lawDoc xmlns="http://xml.house.gov/schemas/uslm/1.0"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        identifier="/us/usc/t99">
+  <meta>
+    <dc:title>Title 99 — Sample</dc:title>
+  </meta>
+  <main>
+    <title identifier="/us/usc/t99">
+      <num value="99">Title 99</num>
+      <heading>Sample Title for Testing</heading>
+      <chapter identifier="/us/usc/t99/ch1">
+        <num value="1">CHAPTER 1</num>
+        <heading>General Provisions</heading>
+        <section identifier="/us/usc/t99/s101">
+          <num value="101">§ 101.</num>
+          <heading>Definitions</heading>
+          <subsection identifier="/us/usc/t99/s101/a">
+            <num value="a">(a)</num>
+            <heading>In general</heading>
+            <content>For purposes of this chapter, the term "protected system" means any computer system.</content>
+          </subsection>
+          <subsection identifier="/us/usc/t99/s101/b">
+            <num value="b">(b)</num>
+            <content>The term "operator" means any person who controls a protected system.</content>
+          </subsection>
+        </section>
+        <section identifier="/us/usc/t99/s102">
+          <num value="102">§ 102.</num>
+          <heading>Prohibited conduct</heading>
+          <content>It shall be unlawful for any person to knowingly access a protected system without authorization.</content>
+        </section>
+      </chapter>
+      <chapter identifier="/us/usc/t99/ch2">
+        <num value="2">CHAPTER 2</num>
+        <heading>Enforcement</heading>
+        <section identifier="/us/usc/t99/s201">
+          <num value="201">§ 201.</num>
+          <heading>Penalties</heading>
+          <subsection identifier="/us/usc/t99/s201/a">
+            <num value="a">(a)</num>
+            <content>Any person who violates section 102 shall be fined not more than $250,000.</content>
+          </subsection>
+        </section>
+      </chapter>
+    </title>
+  </main>
+</lawDoc>
