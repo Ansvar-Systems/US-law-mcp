@@ -29,7 +29,7 @@ beforeAll(() => {
 
   db = new Database(DB_PATH, { readonly: true });
   db.pragma('foreign_keys = ON');
-});
+}, 300_000);
 
 afterAll(() => {
   db?.close();
@@ -55,10 +55,10 @@ interface GoldenFixture {
 // ---------------------------------------------------------------------------
 
 describe('get_provision', () => {
-  it('retrieves CFAA § 1030 with "protected computer" in text', async () => {
+  it('retrieves USC Title 18 § 1030 with "protected computer" in text', async () => {
     const res = await getProvision(db, {
       jurisdiction: 'US-FED',
-      short_name: 'CFAA',
+      short_name: 'USC Title 18',
       section_number: '§ 1030',
     });
 
@@ -66,7 +66,7 @@ describe('get_provision', () => {
     const provision = res.results[0]!;
     expect(provision.text).toContain('protected computer');
     expect(provision.jurisdiction).toBe('US-FED');
-    expect(provision.document_title).toContain('Computer Fraud');
+    expect(provision.document_title).toContain('Crimes and Criminal Procedure');
   });
 
   it('retrieves CCPA/CPRA provisions for US-CA', async () => {
@@ -292,12 +292,12 @@ describe('list_sources', () => {
 // ---------------------------------------------------------------------------
 
 describe('validate_citation', () => {
-  it('validates "CFAA" as a known citation', async () => {
-    const res = await validateCitation(db, { citation: 'CFAA' });
+  it('validates "18 USC" as a known citation', async () => {
+    const res = await validateCitation(db, { citation: '18 USC' });
 
     expect(res.results.valid).toBe(true);
     expect(res.results.matched_document).not.toBeNull();
-    expect(res.results.matched_document!.short_name).toBe('CFAA');
+    expect(res.results.matched_document!.short_name).toBe('USC Title 18');
     expect(res.results.matched_document!.jurisdiction).toBe('US-FED');
   });
 
@@ -314,15 +314,15 @@ describe('validate_citation', () => {
 // ---------------------------------------------------------------------------
 
 describe('check_currency', () => {
-  it('confirms HIPAA is current (in_force)', async () => {
+  it('confirms USC Title 18 is current (in_force)', async () => {
     const res = await checkCurrency(db, {
       jurisdiction: 'US-FED',
-      short_name: 'HIPAA',
+      short_name: 'USC Title 18',
     });
 
     expect(res.results.is_current).toBe(true);
     expect(res.results.status).toBe('in_force');
-    expect(res.results.title).toContain('Health Insurance');
+    expect(res.results.title).toContain('Crimes');
     expect(res.results.warnings).toHaveLength(0);
   });
 

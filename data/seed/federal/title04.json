@@ -1,0 +1,425 @@
+{
+  "documents": [
+    {
+      "jurisdiction": "US-FED",
+      "title": "Flag and Seal, Seat of Government, and the States",
+      "identifier": "4 USC",
+      "short_name": "USC Title 4",
+      "document_type": "statute",
+      "status": "in_force",
+      "effective_date": "",
+      "last_amended": "",
+      "source_url": "https://uscode.house.gov/view.xhtml?path=/prelim@title4"
+    }
+  ],
+  "provisions": [
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 1",
+      "title": "Flag; stripes and stars on",
+      "text": "The flag of the United States shall be thirteen horizontal stripes, alternate red and white; and the union of the flag shall be forty-eight stars, white in a blue field.",
+      "order_index": 1
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 2",
+      "title": "Same; additional stars",
+      "text": "On the admission of a new State into the Union one star shall be added to the union of the flag; and such addition shall take effect on the fourth day of July then next succeeding such admission.",
+      "order_index": 2
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 3",
+      "title": "Use of flag for advertising purposes; mutilation of flag",
+      "text": "Any person who, within the District of Columbia, in any manner, for exhibition or display, shall place or cause to be placed any word, figure, mark, picture, design, drawing, or any advertisement of any nature upon any flag, standard, colors, or ensign of the United States of America; or shall expose or cause to be exposed to public view any such flag, standard, colors, or ensign upon which shall have been printed, painted, or otherwise placed, or to which shall be attached, appended, affixed, or annexed any word, figure, mark, picture, design, or drawing, or any advertisement of any nature; or who, within the District of Columbia, shall manufacture, sell, expose for sale, or to public view, or give away or have in possession for sale, or to be given away or for use for any purpose, any article or substance being an article of merchandise, or a receptacle for merchandise or article or thing for carrying or transporting merchandise, upon which shall have been printed, painted, attached, or otherwise placed a representation of any such flag, standard, colors, or ensign, to advertise, call attention to, decorate, mark, or distinguish the article or substance on which so placed shall be deemed guilty of a misdemeanor and shall be punished by a fine not exceeding $100 or by imprisonment for not more than thirty days, or both, in the discretion of the court. The words “flag, standard, colors, or ensign”, as used herein, shall include any flag, standard, colors, ensign, or any picture or representation of either, or of any part or parts of either, made of any substance or represented on any substance, of any size evidently purporting to be either of said flag, standard, colors, or ensign of the United States of America or a picture or a representation of either, upon which shall be shown the colors, the stars and the stripes, in any number of either thereof, or of any part or parts of either, by which the average person seeing the same without deliberation may believe the same to represent the flag, colors, standard, or ensign of the United States of America.",
+      "order_index": 3
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 4",
+      "title": "Pledge of allegiance to the flag; manner of delivery",
+      "text": "The Pledge of Allegiance to the Flag: “I pledge allegiance to the Flag of the United States of America, and to the Republic for which it stands, one Nation under God, indivisible, with liberty and justice for all.”, should be rendered by standing at attention facing the flag with the right hand over the heart. When not in uniform men should remove any non-religious headdress with their right hand and hold it at the left shoulder, the hand being over the heart. Persons in uniform should remain silent, face the flag, and render the military salute.",
+      "order_index": 4
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 5",
+      "title": "Display and use of flag by civilians; codification of rules and customs; definition",
+      "text": "The following codification of existing rules and customs pertaining to the display and use of the flag of the United States of America is established for the use of such civilians or civilian groups or organizations as may not be required to conform with regulations promulgated by one or more executive departments of the Government of the United States. The flag of the United States for the purpose of this chapter shall be defined according to sections 1 and 2 of this title and Executive Order 10834 issued pursuant thereto.",
+      "order_index": 5
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 1",
+      "title": "SHORT TITLE.",
+      "text": "“This Act may be cited as the ‘Freedom to Display the American Flag Act of 2005’.",
+      "order_index": 6
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 2",
+      "title": "DEFINITIONS.",
+      "text": "“For purposes of this Act—“(1) the term ‘flag of the United States’ has the meaning given the term ‘flag, standard, colors, or ensign’ under section 3 of title 4, United States Code;\n\n“(2) the terms ‘condominium association’ and ‘cooperative association’ have the meanings given such terms under section 604 of Public Law 96–399 (15 U.S.C. 3603);\n\n“(3) the term ‘residential real estate management association’ has the meaning given such term under section 528 of the Internal Revenue Code of 1986 (26 U.S.C. 528); and\n\n“(4) the term ‘member’—“(A) as used with respect to a condominium association, means an owner of a condominium unit (as defined under section 604 of Public Law 96–399 (15 U.S.C. 3603)) within such association;\n\n“(B) as used with respect to a cooperative association, means a cooperative unit owner (as defined under section 604 of Public Law 96–399 (15 U.S.C. 3603)) within such association; and\n\n“(C) as used with respect to a residential real estate management association, means an owner of a residential property within a subdivision, development, or similar area subject to any policy or restriction adopted by such association.",
+      "order_index": 7
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 3",
+      "title": "RIGHT TO DISPLAY THE FLAG OF THE UNITED STATES.",
+      "text": "“A condominium association, cooperative association, or residential real estate management association may not adopt or enforce any policy, or enter into any agreement, that would restrict or prevent a member of the association from displaying the flag of the United States on residential property within the association with respect to which such member has a separate ownership interest or a right to exclusive possession or use.",
+      "order_index": 8
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 4",
+      "title": "LIMITATIONS.",
+      "text": "“Nothing in this Act shall be considered to permit any display or use that is inconsistent with—“(1) any provision of chapter 1 of title 4, United States Code, or any rule or custom pertaining to the proper display or use of the flag of the United States (as established pursuant to such chapter or any otherwise applicable provision of law); or\n\n“(2) any reasonable restriction pertaining to the time, place, or manner of displaying the flag of the United States necessary to protect a substantial interest of the condominium association, cooperative association, or residential real estate management association.”",
+      "order_index": 9
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 6",
+      "title": "Time and occasions for display",
+      "text": "(a) It is the universal custom to display the flag only from sunrise to sunset on buildings and on stationary flagstaffs in the open. However, when a patriotic effect is desired, the flag may be displayed 24 hours a day if properly illuminated during the hours of darkness.\n\n(b) The flag should be hoisted briskly and lowered ceremoniously.\n\n(c) The flag should not be displayed on days when the weather is inclement, except when an all weather flag is displayed.\n\n(d) The flag should be displayed on all days, especially on New Year’s Day, January 1; Inauguration Day, January 20; Martin Luther King Jr.’s birthday, third Monday in January; Lincoln’s Birthday, February 12; Washington’s Birthday, third Monday in February; Easter Sunday (variable); Mother’s Day, second Sunday in May; Armed Forces Day, third Saturday in May; Memorial Day (half-staff until noon), the last Monday in May; Flag Day, June 14; Father’s Day, third Sunday in June; Independence Day, July 4; National Korean War Veterans Armistice Day, July 27; Labor Day, first Monday in September; Constitution Day, September 17; Columbus Day, second Monday in October; Navy Day, October 27; Veterans Day, November 11; Thanksgiving Day, fourth Thursday in November; Christmas Day, December 25; and such other days as may be proclaimed by the President of the United States; the birthdays of States (date of admission); and on State holidays.\n\n(e) The flag should be displayed daily on or near the main administration building of every public institution.\n\n(f) The flag should be displayed in or near every polling place on election days.\n\n(g) The flag should be displayed during school days in or near every schoolhouse.",
+      "order_index": 10
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 7",
+      "title": "Position and manner of display",
+      "text": "The flag, when carried in a procession with another flag or flags, should be either on the marching right; that is, the flag’s own right, or, if there is a line of other flags, in front of the center of that line.(a) The flag should not be displayed on a float in a parade except from a staff, or as provided in subsection (i) of this section.\n\n(b) The flag should not be draped over the hood, top, sides, or back of a vehicle or of a railroad train or a boat. When the flag is displayed on a motorcar, the staff shall be fixed firmly to the chassis or clamped to the right fender.\n\n(c) No other flag or pennant should be placed above or, if on the same level, to the right of the flag of the United States of America, except during church services conducted by naval chaplains at sea, when the church pennant may be flown above the flag during church services for the personnel of the Navy. No person shall display the flag of the United Nations or any other national or international flag equal, above, or in a position of superior prominence or honor to, or in place of, the flag of the United States at any place within the United States or any Territory or possession thereof: Provided, That nothing in this section shall make unlawful the continuance of the practice heretofore followed of displaying the flag of the United Nations in a position of superior prominence or honor, and other national flags in positions of equal prominence or honor, with that of the flag of the United States at the headquarters of the United Nations.\n\n(d) The flag of the United States of America, when it is displayed with another flag against a wall from crossed staffs, should be on the right, the flag’s own right, and its staff should be in front of the staff of the other flag.\n\n(e) The flag of the United States of America should be at the center and at the highest point of the group when a number of flags of States or localities or pennants of societies are grouped and displayed from staffs.\n\n(f) When flags of States, cities, or localities, or pennants of societies are flown on the same halyard with the flag of the United States, the latter should always be at the peak. When the flags are flown from adjacent staffs, the flag of the United States should be hoisted first and lowered last. No such flag or pennant may be placed above the flag of the United States or to the United States flag’s right.\n\n(g) When flags of two or more nations are displayed, they are to be flown from separate staffs of the same height. The flags should be of approximately equal size. International usage forbids the display of the flag of one nation above that of another nation in time of peace.\n\n(h) When the flag of the United States is displayed from a staff projecting horizontally or at an angle from the window sill, balcony, or front of a building, the union of the flag should be placed at the peak of the staff unless the flag is at half-staff. When the flag is suspended over a sidewalk from a rope extending from a house to a pole at the edge of the sidewalk, the flag should be hoisted out, union first, from the building.\n\n(i) When displayed either horizontally or vertically against a wall, the union should be uppermost and to the flag’s own right, that is, to the observer’s left. When displayed in a window, the flag should be displayed in the same way, with the union or blue field to the left of the observer in the street.\n\n(j) When the flag is displayed over the middle of the street, it should be suspended vertically with the union to the north in an east and west street or to the east in a north and south street.\n\n(k) When used on a speaker’s platform, the flag, if displayed flat, should be displayed above and behind the speaker. When displayed from a staff in a church or public auditorium, the flag of the United States of America should hold the position of superior prominence, in advance of the audience, and in the position of honor at the clergyman’s or speaker’s right as he faces the audience. Any other flag so displayed should be placed on the left of the clergyman or speaker or to the right of the audience.\n\n(l) The flag should form a distinctive feature of the ceremony of unveiling a statue or monument, but it should never be used as the covering for the statue or monument.\n\n(m) The flag, when flown at half-staff, should be first hoisted to the peak for an instant and then lowered to the half-staff position. The flag should be again raised to the peak before it is lowered for the day. On Memorial Day the flag should be displayed at half-staff until noon only, then raised to the top of the staff. By order of the President, the flag shall be flown at half-staff upon the death of principal figures of the United States Government and the Governor of a State, territory, or possession, as a mark of respect to their memory. In the event of the death of other officials or foreign dignitaries, the flag is to be displayed at half-staff according to Presidential instructions or orders, or in accordance with recognized customs or practices not inconsistent with law. In the event of the death of a present or former official of the government of any State, territory, or possession of the United States or the death of a member of the Armed Forces from any State, territory, or possession who dies while serving on active duty, the Governor of that State, territory, or possession may proclaim that the National flag shall be flown at half-staff, and the same authority is provided to the Mayor of the District of Columbia with respect to present or former officials of the District of Columbia and members of the Armed Forces from the District of Columbia. When the Governor of a State, territory, or possession, or the Mayor of the District of Columbia, issues a proclamation under the preceding sentence that the National flag be flown at half-staff in that State, territory, or possession or in the District of Columbia because of the death of a member of the Armed Forces, the National flag flown at any Federal installation or facility in the area covered by that proclamation shall be flown at half-staff consistent with that proclamation. The flag shall be flown at half-staff 30 days from the death of the President or a former President; 10 days from the day of death of the Vice President, the Chief Justice or a retired Chief Justice of the United States, or the Speaker of the House of Representatives; from the day of death until interment of an Associate Justice of the Supreme Court, a Secretary of an executive or military department, a former Vice President, or the Governor of a State, territory, or possession; and on the day of death and the following day for a Member of Congress. The flag shall be flown at half-staff on Peace Officers Memorial Day, unless that day is also Armed Forces Day. As used in this subsection—(1) the term “half-staff” means the position of the flag when it is one-half the distance between the top and bottom of the staff;\n\n(2) the term “executive or military department” means any agency listed under sections 101 and 102 of title 5, United States Code; and\n\n(3) the term “Member of Congress” means a Senator, a Representative, a Delegate, or the Resident Commissioner from Puerto Rico.\n\n(n) When the flag is used to cover a casket, it should be so placed that the union is at the head and over the left shoulder. The flag should not be lowered into the grave or allowed to touch the ground.\n\n(o) When the flag is suspended across a corridor or lobby in a building with only one main entrance, it should be suspended vertically with the union of the flag to the observer’s left upon entering. If the building has more than one main entrance, the flag should be suspended vertically near the center of the corridor or lobby with the union to the north, when entrances are to the east and west or to the east when entrances are to the north and south. If there are entrances in more than two directions, the union should be to the east.",
+      "order_index": 11
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 8",
+      "title": "Respect for flag",
+      "text": "No disrespect should be shown to the flag of the United States of America; the flag should not be dipped to any person or thing. Regimental colors, State flags, and organization or institutional flags are to be dipped as a mark of honor.(a) The flag should never be displayed with the union down, except as a signal of dire distress in instances of extreme danger to life or property.\n\n(b) The flag should never touch anything beneath it, such as the ground, the floor, water, or merchandise.\n\n(c) The flag should never be carried flat or horizontally, but always aloft and free.\n\n(d) The flag should never be used as wearing apparel, bedding, or drapery. It should never be festooned, drawn back, nor up, in folds, but always allowed to fall free. Bunting of blue, white, and red, always arranged with the blue above, the white in the middle, and the red below, should be used for covering a speaker’s desk, draping the front of the platform, and for decoration in general.\n\n(e) The flag should never be fastened, displayed, used, or stored in such a manner as to permit it to be easily torn, soiled, or damaged in any way.\n\n(f) The flag should never be used as a covering for a ceiling.\n\n(g) The flag should never have placed upon it, nor on any part of it, nor attached to it any mark, insignia, letter, word, figure, design, picture, or drawing of any nature.\n\n(h) The flag should never be used as a receptacle for receiving, holding, carrying, or delivering anything.\n\n(i) The flag should never be used for advertising purposes in any manner whatsoever. It should not be embroidered on such articles as cushions or handkerchiefs and the like, printed or otherwise impressed on paper napkins or boxes or anything that is designed for temporary use and discard. Advertising signs should not be fastened to a staff or halyard from which the flag is flown.\n\n(j) No part of the flag should ever be used as a costume or athletic uniform. However, a flag patch may be affixed to the uniform of military personnel, firemen, policemen, and members of patriotic organizations. The flag represents a living country and is itself considered a living thing. Therefore, the lapel flag pin being a replica, should be worn on the left lapel near the heart.\n\n(k) The flag, when it is in such condition that it is no longer a fitting emblem for display, should be destroyed in a dignified way, preferably by burning.",
+      "order_index": 12
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 9",
+      "title": "Conduct during hoisting, lowering or passing of flag",
+      "text": "During the ceremony of hoisting or lowering the flag or when the flag is passing in a parade or in review, all persons present in uniform should render the military salute. Members of the Armed Forces and veterans who are present but not in uniform may render the military salute. All other persons present should face the flag and stand at attention with their right hand over the heart, or if applicable, remove their headdress with their right hand and hold it at the left shoulder, the hand being over the heart. Citizens of other countries present should stand at attention. All such conduct toward the flag in a moving column should be rendered at the moment the flag passes.",
+      "order_index": 13
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 10",
+      "title": "Modification of rules and customs by President",
+      "text": "Any rule or custom pertaining to the display of the flag of the United States of America, set forth herein, may be altered, modified, or repealed, or additional rules with respect thereto may be prescribed, by the Commander in Chief of the Armed Forces of the United States, whenever he deems it to be appropriate or desirable; and any such alteration or additional rule shall be set forth in a proclamation.",
+      "order_index": 14
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 41",
+      "title": "Seal of the United States",
+      "text": "The seal heretofore used by the United States in Congress assembled is declared to be the seal of the United States.",
+      "order_index": 15
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 42",
+      "title": "Same; custody and use of",
+      "text": "The Secretary of State shall have the custody and charge of such seal. Except as provided by section 2902(a) of title 5, the seal shall not be affixed to any instrument without the special warrant of the President therefor.",
+      "order_index": 16
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 71",
+      "title": "Permanent seat of Government",
+      "text": "All that part of the territory of the United States included within the present limits of the District of Columbia shall be the permanent seat of government of the United States.",
+      "order_index": 17
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 72",
+      "title": "Public offices; at seat of Government",
+      "text": "All offices attached to the seat of government shall be exercised in the District of Columbia, and not elsewhere, except as otherwise expressly provided by law.",
+      "order_index": 18
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 73",
+      "title": "Same; removal from seat of Government",
+      "text": "In case of the prevalence of a contagious or epidemic disease at the seat of government, the President may permit and direct the removal of any or all the public offices to such other place or places as he shall deem most safe and convenient for conducting the public business.",
+      "order_index": 19
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 101",
+      "title": "Oath by members of legislatures and officers",
+      "text": "Every member of a State legislature, and every executive and judicial officer of a State, shall, before he proceeds to execute the duties of his office, take an oath in the following form, to wit: “I, A B, do solemnly swear that I will support the Constitution of the United States.”",
+      "order_index": 20
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 102",
+      "title": "Same; by whom administered",
+      "text": "Such oath may be administered by any person who, by the law of the State, is authorized to administer the oath of office; and the person so administering such oath shall cause a record or certificate thereof to be made in the same manner, as by the law of the State, he is directed to record or certify the oath of office.",
+      "order_index": 21
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 103",
+      "title": "Assent to purchase of lands for forts",
+      "text": "The President of the United States is authorized to procure the assent of the legislature of any State, within which any purchase of land has been made for the erection of forts, magazines, arsenals, dockyards, and other needful buildings, without such consent having been obtained.",
+      "order_index": 22
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 104",
+      "title": "Tax on motor fuel sold on military or other reservation 11 So in original. Probably should be followed by a semicolon. reports to State taxing authority",
+      "text": "(a) All taxes levied by any State, Territory, or the District of Columbia upon, with respect to, or measured by, sales, purchases, storage, or use of gasoline or other motor vehicle fuels may be levied, in the same manner and to the same extent, with respect to such fuels when sold by or through post exchanges, ship stores, ship service stores, commissaries, filling stations, licensed traders, and other similar agencies, located on United States military or other reservations, when such fuels are not for the exclusive use of the United States. Such taxes, so levied, shall be paid to the proper taxing authorities of the State, Territory, or the District of Columbia, within whose borders the reservation affected may be located.\n\n(b) The officer in charge of such reservation shall, on or before the fifteenth day of each month, submit a written statement to the proper taxing authorities of the State, Territory, or the District of Columbia within whose borders the reservation is located, showing the amount of such motor fuel with respect to which taxes are payable under subsection (a) for the preceding month.\n\n(c) As used in this section, the term “Territory” shall include Guam.",
+      "order_index": 23
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 105",
+      "title": "State, and so forth, taxation affecting Federal areas; sales or use tax",
+      "text": "(a) No person shall be relieved from liability for payment of, collection of, or accounting for any sales or use tax levied by any State, or by any duly constituted taxing authority therein, having jurisdiction to levy such a tax, on the ground that the sale or use, with respect to which such tax is levied, occurred in whole or in part within a Federal area; and such State or taxing authority shall have full jurisdiction and power to levy and collect any such tax in any Federal area within such State to the same extent and with the same effect as though such area was not a Federal area.\n\n(b) The provisions of subsection (a) shall be applicable only with respect to sales or purchases made, receipts from sales received, or storage or use occurring, after December 31, 1940.",
+      "order_index": 24
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 106",
+      "title": "Same; income tax",
+      "text": "(a) No person shall be relieved from liability for any income tax levied by any State, or by any duly constituted taxing authority therein, having jurisdiction to levy such a tax, by reason of his residing within a Federal area or receiving income from transactions occurring or services performed in such area; and such State or taxing authority shall have full jurisdiction and power to levy and collect such tax in any Federal area within such State to the same extent and with the same effect as though such area was not a Federal area.\n\n(b) The provisions of subsection (a) shall be applicable only with respect to income or receipts received after December 31, 1940.",
+      "order_index": 25
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 107",
+      "title": "Same; exception of United States, its instrumentalities, and authorized purchases 11 So in original. Probably should be “purchasers”. therefrom",
+      "text": "(a) The provisions of sections 105 and 106 of this title shall not be deemed to authorize the levy or collection of any tax on or from the United States or any instrumentality thereof, or the levy or collection of any tax with respect to sale, purchase, storage, or use of tangible personal property sold by the United States or any instrumentality thereof to any authorized purchaser.\n\n(b) A person shall be deemed to be an authorized purchaser under this section only with respect to purchases which he is permitted to make from commissaries, ship’s stores, or voluntary unincorporated organizations of personnel of any branch of the Armed Forces of the United States, under regulations promulgated by the departmental Secretary having jurisdiction over such branch.",
+      "order_index": 26
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 108",
+      "title": "Same; jurisdiction of United States over Federal areas unaffected",
+      "text": "The provisions of sections 105–110 of this title shall not for the purposes of any other provision of law be deemed to deprive the United States of exclusive jurisdiction over any Federal area over which it would otherwise have exclusive jurisdiction or to limit the jurisdiction of the United States over any Federal area.",
+      "order_index": 27
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 109",
+      "title": "Same; exception of Indians",
+      "text": "Nothing in sections 105 and 106 of this title shall be deemed to authorize the levy or collection of any tax on or from any Indian not otherwise taxed.",
+      "order_index": 28
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 110",
+      "title": "Same; definitions",
+      "text": "As used in sections 105–109 of this title—(a) The term “person” shall have the meaning assigned to it in section 3797 of title 26.\n\n(b) The term “sales or use tax” means any tax levied on, with respect to, or measured by, sales, receipts from sales, purchases, storage, or use of tangible personal property, except a tax with respect to which the provisions of section 104 of this title are applicable.\n\n(c) The term “income tax” means any tax levied on, with respect to, or measured by, net income, gross income, or gross receipts.\n\n(d) The term “State” includes any Territory or possession of the United States.\n\n(e) The term “Federal area” means any lands or premises held or acquired by or for the use of the United States or any department, establishment, or agency, of the United States; and any Federal area, or any part thereof, which is located within the exterior boundaries of any State, shall be deemed to be a Federal area located within such State.",
+      "order_index": 29
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 111",
+      "title": "Same; taxation affecting Federal employees; income tax",
+      "text": "(a) General Rule.—The United States consents to the taxation of pay or compensation for personal service as an officer or employee of the United States, a territory or possession or political subdivision thereof, the government of the District of Columbia, or an agency or instrumentality of one or more of the foregoing, by a duly constituted taxing authority having jurisdiction, if the taxation does not discriminate against the officer or employee because of the source of the pay or compensation.\n\n(b) Treatment of Certain Federal Employees Employed at Federal Hydroelectric Facilities Located on the Columbia River.—Pay or compensation paid by the United States for personal services as an employee of the United States at a hydroelectric facility—(1) which is owned by the United States;\n\n(2) which is located on the Columbia River; and\n\n(3) portions of which are within the States of Oregon and Washington,\n\nshall be subject to taxation by the State or any political subdivision thereof of which such employee is a resident.\n\n(c) Treatment of Certain Federal Employees Employed at Federal Hydroelectric Facilities Located on the Missouri River.—Pay or compensation paid by the United States for personal services as an employee of the United States at a hydroelectric facility—(1) which is owned by the United States;\n\n(2) which is located on the Missouri River; and\n\n(3) portions of which are within the States of South Dakota and Nebraska,\n\nshall be subject to taxation by the State or any political subdivision thereof of which such employee is a resident.",
+      "order_index": 30
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 112",
+      "title": "Compacts between States for cooperation in prevention of crime; consent of Congress",
+      "text": "(a) The consent of Congress is hereby given to any two or more States to enter into agreements or compacts for cooperative effort and mutual assistance in the prevention of crime and in the enforcement of their respective criminal laws and policies, and to establish such agencies, joint or otherwise, as they may deem desirable for making effective such agreements and compacts.\n\n(b) For the purpose of this section, the term “States” means the several States and Alaska, Hawaii, the Commonwealth of Puerto Rico, the Virgin Islands, Guam, and the District of Columbia.",
+      "order_index": 31
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 113",
+      "title": "Residence of Members of Congress for State income tax laws",
+      "text": "(a) No State, or political subdivision thereof, in which a Member of Congress maintains a place of abode for purposes of attending sessions of Congress may, for purposes of any income tax (as defined in section 110(c) of this title) levied by such State or political subdivision thereof—(1) treat such Member as a resident or domiciliary of such State or political subdivision thereof; or\n\n(2) treat any compensation paid by the United States to such Member as income for services performed within, or from sources within, such State or political subdivision thereof,\n\nunless such Member represents such State or a district in such State.\n\n(b) For purposes of subsection (a)—(1) the term “Member of Congress” includes the delegates from the District of Columbia, Guam, and the Virgin Islands, and the Resident Commissioner from Puerto Rico; and\n\n(2) the term “State” includes the District of Columbia.",
+      "order_index": 32
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 114",
+      "title": "Limitation on State income taxation of certain pension income",
+      "text": "(a) No State may impose an income tax on any retirement income of an individual who is not a resident or domiciliary of such State (as determined under the laws of such State).\n\n(b) For purposes of this section—(1) The term “retirement income” means any income from—(A) a qualified trust under section 401(a) of the Internal Revenue Code of 1986 that is exempt under section 501(a) from taxation;\n\n(B) a simplified employee pension as defined in section 408(k) of such Code;\n\n(C) an annuity plan described in section 403(a) of such Code;\n\n(D) an annuity contract described in section 403(b) of such Code;\n\n(E) an individual retirement plan described in section 7701(a)(37) of such Code;\n\n(F) an eligible deferred compensation plan (as defined in section 457 of such Code);\n\n(G) a governmental plan (as defined in section 414(d) of such Code);\n\n(H) a trust described in section 501(c)(18) of such Code; or\n\n(I) any plan, program, or arrangement described in section 3121(v)(2)(C) of such Code (or any plan, program, or arrangement that is in writing, that provides for retirement payments in recognition of prior service to be made to a retired partner, and that is in effect immediately before retirement begins), if such income—(i) is part of a series of substantially equal periodic payments (not less frequently than annually which may include income described in subparagraphs (A) through (H)) made for—(I) the life or life expectancy of the recipient (or the joint lives or joint life expectancies of the recipient and the designated beneficiary of the recipient), or\n\n(II) a period of not less than 10 years, or\n\n(ii) is a payment received after termination of employment and under a plan, program, or arrangement (to which such employment relates) maintained solely for the purpose of providing retirement benefits for employees in excess of the limitations imposed by 1 or more of sections 401(a)(17), 401(k), 401(m), 402(g), 403(b), 408(k), or 415 of such Code or any other limitation on contributions or benefits in such Code on plans to which any of such sections apply.\n\nThe fact that payments may be adjusted from time to time pursuant to such plan, program, or arrangement to limit total disbursements under a predetermined formula, or to provide cost of living or similar adjustments, will not cause the periodic payments provided under such plan, program, or arrangement to fail the “substantially equal periodic payments” test.\n\nSuch term includes any retired or retainer pay of a member or former member of a uniform service computed under chapter 71 of title 10, United States Code.\n\n(2) The term “income tax” has the meaning given such term by section 110(c).\n\n(3) The term “State” includes any political subdivision of a State, the District of Columbia, and the possessions of the United States.\n\n(4) For purposes of this section, the term “retired partner” is an individual who is described as a partner in section 7701(a)(2) of the Internal Revenue Code of 1986 and who is retired under such individual’s partnership agreement.\n\n(e) 1 Nothing in this section shall be construed as having any effect on the application of section 514 of the Employee Retirement Income Security Act of 1974.",
+      "order_index": 33
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 115",
+      "title": "Limitation on State authority to tax compensation paid to individuals performing services at Fort Campbell, Kentucky",
+      "text": "Pay and compensation paid to an individual for personal services at Fort Campbell, Kentucky, shall be subject to taxation by the State or any political subdivision thereof of which such employee is a resident.",
+      "order_index": 34
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 116",
+      "title": "Rules for determining State and local government treatment of charges related to mobile telecommunications services",
+      "text": "(a) Application of This Section Through Section 126.—This section through 1 126 of this title apply to any tax, charge, or fee levied by a taxing jurisdiction as a fixed charge for each customer or measured by gross amounts charged to customers for mobile telecommunications services, regardless of whether such tax, charge, or fee is imposed on the vendor or customer of the service and regardless of the terminology used to describe the tax, charge, or fee.\n\n(b) General Exceptions.—This section through 1 126 of this title do not apply to—(1) any tax, charge, or fee levied upon or measured by the net income, capital stock, net worth, or property value of the provider of mobile telecommunications service;\n\n(2) any tax, charge, or fee that is applied to an equitably apportioned amount that is not determined on a transactional basis;\n\n(3) any tax, charge, or fee that represents compensation for a mobile telecommunications service provider’s use of public rights of way or other public property, provided that such tax, charge, or fee is not levied by the taxing jurisdiction as a fixed charge for each customer or measured by gross amounts charged to customers for mobile telecommunication services;\n\n(4) any generally applicable business and occupation tax that is imposed by a State, is applied to gross receipts or gross proceeds, is the legal liability of the home service provider, and that statutorily allows the home service provider to elect to use the sourcing method required in this section through 1 126 of this title;\n\n(5) any fee related to obligations under section 254 of the Communications Act of 1934; or\n\n(6) any tax, charge, or fee imposed by the Federal Communications Commission.\n\n(c) Specific Exceptions.—This section through 1 126 of this title—(1) do not apply to the determination of the taxing situs of prepaid telephone calling services;\n\n(2) do not affect the taxability of either the initial sale of mobile telecommunications services or subsequent resale of such services, whether as sales of such services alone or as a part of a bundled product, if the Internet Tax Freedom Act would preclude a taxing jurisdiction from subjecting the charges of the sale of such services to a tax, charge, or fee, but this section provides no evidence of the intent of Congress with respect to the applicability of the Internet Tax Freedom Act to such charges; and\n\n(3) do not apply to the determination of the taxing situs of air-ground radiotelephone service as defined in section 22.99 of title 47 of the Code of Federal Regulations as in effect on June 1, 1999.",
+      "order_index": 35
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 117",
+      "title": "Sourcing rules",
+      "text": "(a) Treatment of Charges for Mobile Telecommunications Services.—Notwithstanding the law of any State or political subdivision of any State, mobile telecommunications services provided in a taxing jurisdiction to a customer, the charges for which are billed by or for the customer’s home service provider, shall be deemed to be provided by the customer’s home service provider.\n\n(b) Jurisdiction.—All charges for mobile telecommunications services that are deemed to be provided by the customer’s home service provider under sections 116 through 126 of this title are authorized to be subjected to tax, charge, or fee by the taxing jurisdictions whose territorial limits encompass the customer’s place of primary use, regardless of where the mobile telecommunication services originate, terminate, or pass through, and no other taxing jurisdiction may impose taxes, charges, or fees on charges for such mobile telecommunications services.",
+      "order_index": 36
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 118",
+      "title": "Limitations",
+      "text": "Sections 116 through 126 of this title do not—(1) provide authority to a taxing jurisdiction to impose a tax, charge, or fee that the laws of such jurisdiction do not authorize such jurisdiction to impose; or\n\n(2) modify, impair, supersede, or authorize the modification, impairment, or supersession of the law of any taxing jurisdiction pertaining to taxation except as expressly provided in sections 116 through 126 of this title.",
+      "order_index": 37
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 119",
+      "title": "Electronic databases for nationwide standard numeric jurisdictional codes",
+      "text": "(a) Electronic Database.—(1) Provision of database.—A State may provide an electronic database to a home service provider or, if a State does not provide such an electronic database to home service providers, then the designated database provider may provide an electronic database to a home service provider.\n\n(2) Format.—(A) Such electronic database, whether provided by the State or the designated database provider, shall be provided in a format approved by the American National Standards Institute’s Accredited Standards Committee X12, that, allowing for de minimis deviations, designates for each street address in the State, including to the extent practicable, any multiple postal street addresses applicable to one street location, the appropriate taxing jurisdictions, and the appropriate code for each taxing jurisdiction, for each level of taxing jurisdiction, identified by one nationwide standard numeric code.\n\n(B) Such electronic database shall also provide the appropriate code for each street address with respect to political subdivisions which are not taxing jurisdictions when reasonably needed to determine the proper taxing jurisdiction.\n\n(C) The nationwide standard numeric codes shall contain the same number of numeric digits with each digit or combination of digits referring to the same level of taxing jurisdiction throughout the United States using a format similar to FIPS 55–3 or other appropriate standard approved by the Federation of Tax Administrators and the Multistate Tax Commission, or their successors. Each address shall be provided in standard postal format.\n\n(b) Notice; Updates.—A State or designated database provider that provides or maintains an electronic database described in subsection (a) shall provide notice of the availability of the then current electronic database, and any subsequent revisions thereof, by publication in the manner normally employed for the publication of informational tax, charge, or fee notices to taxpayers in such State.\n\n(c) User Held Harmless.—A home service provider using the data contained in an electronic database described in subsection (a) shall be held harmless from any tax, charge, or fee liability that otherwise would be due solely as a result of any error or omission in such database provided by a State or designated database provider. The home service provider shall reflect changes made to such database during a calendar quarter not later than 30 days after the end of such calendar quarter for each State that issues notice of the availability of an electronic database reflecting such changes under subsection (b).",
+      "order_index": 38
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 120",
+      "title": "Procedure if no electronic database provided",
+      "text": "(a) Safe Harbor.—If neither a State nor designated database provider provides an electronic database under section 119, a home service provider shall be held harmless from any tax, charge, or fee liability in such State that otherwise would be due solely as a result of an assignment of a street address to an incorrect taxing jurisdiction if, subject to section 121, the home service provider employs an enhanced zip code to assign each street address to a specific taxing jurisdiction for each level of taxing jurisdiction and exercises due diligence at each level of taxing jurisdiction to ensure that each such street address is assigned to the correct taxing jurisdiction. If an enhanced zip code overlaps boundaries of taxing jurisdictions of the same level, the home service provider must designate one specific jurisdiction within such enhanced zip code for use in taxing the activity for such enhanced zip code for each level of taxing jurisdiction. Any enhanced zip code assignment changed in accordance with section 121 is deemed to be in compliance with this section. For purposes of this section, there is a rebuttable presumption that a home service provider has exercised due diligence if such home service provider demonstrates that it has—(1) expended reasonable resources to implement and maintain an appropriately detailed electronic database of street address assignments to taxing jurisdictions;\n\n(2) implemented and maintained reasonable internal controls to promptly correct misassignments of street addresses to taxing jurisdictions; and\n\n(3) used all reasonably obtainable and usable data pertaining to municipal annexations, incorporations, reorganizations and any other changes in jurisdictional boundaries that materially affect the accuracy of such database.\n\n(b) Termination of Safe Harbor.—Subsection (a) applies to a home service provider that is in compliance with the requirements of subsection (a), with respect to a State for which an electronic database is not provided under section 119 until the later of—(1) 18 months after the nationwide standard numeric code described in section 119(a) has been approved by the Federation of Tax Administrators and the Multistate Tax Commission; or\n\n(2) 6 months after such State or a designated database provider in such State provides such database as prescribed in section 119(a).",
+      "order_index": 39
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 121",
+      "title": "Correction of erroneous data for place of primary use",
+      "text": "(a) 1 In General.—A taxing jurisdiction, or a State on behalf of any taxing jurisdiction or taxing jurisdictions within such State, may—(1) determine that the address used for purposes of determining the taxing jurisdictions to which taxes, charges, or fees for mobile telecommunications services are remitted does not meet the definition of place of primary use in section 124(8) and give binding notice to the home service provider to change the place of primary use on a prospective basis from the date of notice of determination if—(A) if the taxing jurisdiction making such determination is not a State, such taxing jurisdiction obtains the consent of all affected taxing jurisdictions within the State before giving such notice of determination; and\n\n(B) before the taxing jurisdiction gives such notice of determination, the customer is given an opportunity to demonstrate in accordance with applicable State or local tax, charge, or fee administrative procedures that the address is the customer’s place of primary use;\n\n(2) determine that the assignment of a taxing jurisdiction by a home service provider under section 120 does not reflect the correct taxing jurisdiction and give binding notice to the home service provider to change the assignment on a prospective basis from the date of notice of determination if—(A) if the taxing jurisdiction making such determination is not a State, such taxing jurisdiction obtains the consent of all affected taxing jurisdictions within the State before giving such notice of determination; and\n\n(B) the home service provider is given an opportunity to demonstrate in accordance with applicable State or local tax, charge, or fee administrative procedures that the assignment reflects the correct taxing jurisdiction.",
+      "order_index": 40
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 122",
+      "title": "Determination of place of primary use",
+      "text": "(a) Place of Primary Use.—A home service provider shall be responsible for obtaining and maintaining the customer’s place of primary use (as defined in section 124). Subject to section 121, and if the home service provider’s reliance on information provided by its customer is in good faith, a taxing jurisdiction shall—(1) allow a home service provider to rely on the applicable residential or business street address supplied by the home service provider’s customer; and\n\n(2) not hold a home service provider liable for any additional taxes, charges, or fees based on a different determination of the place of primary use for taxes, charges, or fees that are customarily passed on to the customer as a separate itemized charge.\n\n(b) Address Under Existing Agreements.—Except as provided in section 121, a taxing jurisdiction shall allow a home service provider to treat the address used by the home service provider for tax purposes for any customer under a service contract or agreement in effect 2 years after the date of the enactment of the Mobile Telecommunications Sourcing Act as that customer’s place of primary use for the remaining term of such service contract or agreement, excluding any extension or renewal of such service contract or agreement, for purposes of determining the taxing jurisdictions to which taxes, charges, or fees on charges for mobile telecommunications services are remitted.",
+      "order_index": 41
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 123",
+      "title": "Scope; special rules",
+      "text": "(a) Act Does Not Supersede Customer’s Liability to Taxing Jurisdiction.—Nothing in sections 116 through 126 modifies, impairs, supersedes, or authorizes the modification, impairment, or supersession of, any law allowing a taxing jurisdiction to collect a tax, charge, or fee from a customer that has failed to provide its place of primary use.\n\n(b) Additional Taxable Charges.—If a taxing jurisdiction does not otherwise subject charges for mobile telecommunications services to taxation and if these charges are aggregated with and not separately stated from charges that are subject to taxation, then the charges for nontaxable mobile telecommunications services may be subject to taxation unless the home service provider can reasonably identify charges not subject to such tax, charge, or fee from its books and records that are kept in the regular course of business.\n\n(c) Nontaxable Charges.—If a taxing jurisdiction does not subject charges for mobile telecommunications services to taxation, a customer may not rely upon the nontaxability of charges for mobile telecommunications services unless the customer’s home service provider separately states the charges for nontaxable mobile telecommunications services from taxable charges or the home service provider elects, after receiving a written request from the customer in the form required by the provider, to provide verifiable data based upon the home service provider’s books and records that are kept in the regular course of business that reasonably identifies the nontaxable charges.",
+      "order_index": 42
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 124",
+      "title": "Definitions",
+      "text": "In sections 116 through 126 of this title:(1) Charges for mobile telecommunications services.—The term “charges for mobile telecommunications services” means any charge for, or associated with, the provision of commercial mobile radio service, as defined in section 20.3 of title 47 of the Code of Federal Regulations as in effect on June 1, 1999, or any charge for, or associated with, a service provided as an adjunct to a commercial mobile radio service, that is billed to the customer by or for the customer’s home service provider regardless of whether individual transmissions originate or terminate within the licensed service area of the home service provider.\n\n(2) Customer.—(A) In general.—The term “customer” means—(i) the person or entity that contracts with the home service provider for mobile telecommunications services; or\n\n(ii) if the end user of mobile telecommunications services is not the contracting party, the end user of the mobile telecommunications service, but this clause applies only for the purpose of determining the place of primary use.\n\n(B) The term “customer” does not include—(i) a reseller of mobile telecommunications service; or\n\n(ii) a serving carrier under an arrangement to serve the customer outside the home service provider’s licensed service area.\n\n(3) Designated database provider.—The term “designated database provider” means a corporation, association, or other entity representing all the political subdivisions of a State that is—(A) responsible for providing an electronic database prescribed in section 119(a) if the State has not provided such electronic database; and\n\n(B) approved by municipal and county associations or leagues of the State whose responsibility it would otherwise be to provide such database prescribed by sections 116 through 126 of this title.\n\n(4) Enhanced zip code.—The term “enhanced zip code” means a United States postal zip code of 9 or more digits.\n\n(5) Home service provider.—The term “home service provider” means the facilities-based carrier or reseller with which the customer contracts for the provision of mobile telecommunications services.\n\n(6) Licensed service area.—The term “licensed service area” means the geographic area in which the home service provider is authorized by law or contract to provide commercial mobile radio service to the customer.\n\n(7) Mobile telecommunications service.—The term “mobile telecommunications service” means commercial mobile radio service, as defined in section 20.3 of title 47 of the Code of Federal Regulations as in effect on June 1, 1999.\n\n(8) Place of primary use.—The term “place of primary use” means the street address representative of where the customer’s use of the mobile telecommunications service primarily occurs, which must be—(A) the residential street address or the primary business street address of the customer; and\n\n(B) within the licensed service area of the home service provider.\n\n(9) Prepaid telephone calling services.—The term “prepaid telephone calling service” means the right to purchase exclusively telecommunications services that must be paid for in advance, that enables the origination of calls using an access number, authorization code, or both, whether manually or electronically dialed, if the remaining amount of units of service that have been prepaid is known by the provider of the prepaid service on a continuous basis.\n\n(10) Reseller.—The term “reseller”—(A) means a provider who purchases telecommunications services from another telecommunications service provider and then resells, uses as a component part of, or integrates the purchased services into a mobile telecommunications service; and\n\n(B) does not include a serving carrier with which a home service provider arranges for the services to its customers outside the home service provider’s licensed service area.\n\n(11) Serving carrier.—The term “serving carrier” means a facilities-based carrier providing mobile telecommunications service to a customer outside a home service provider’s or reseller’s licensed service area.\n\n(12) Taxing jurisdiction.—The term “taxing jurisdiction” means any of the several States, the District of Columbia, or any territory or possession of the United States, any municipality, city, county, township, parish, transportation district, or assessment jurisdiction, or any other political subdivision within the territorial limits of the United States with the authority to impose a tax, charge, or fee.",
+      "order_index": 43
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 125",
+      "title": "Nonseverability",
+      "text": "If a court of competent jurisdiction enters a final judgment on the merits that—(1) is based on Federal law;\n\n(2) is no longer subject to appeal; and\n\n(3) substantially limits or impairs the essential elements of sections 116 through 126 of this title,\nthen sections 116 through 126 of this title are invalid and have no legal effect as of the date of entry of such judgment.",
+      "order_index": 44
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 126",
+      "title": "No inference",
+      "text": "(a) Internet Tax Freedom Act.—Nothing in sections 116 through this section of this title shall be construed as bearing on Congressional intent in enacting the Internet Tax Freedom Act or to modify or supersede the operation of such Act.\n\n(b) Telecommunications Act of 1996.—Nothing in sections 116 through this section of this title shall limit or otherwise affect the implementation of the Telecommunications Act of 1996 or the amendments made by such Act.",
+      "order_index": 45
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 141",
+      "title": "Collection, preparation and publication",
+      "text": "The Archivist of the United States, hereinafter referred to in this chapter as the “Archivist”, shall continue to completion the work of collecting, editing, copying, and suitably arranging for issuance as a Government publication, the official papers relating to the Territories from which States of the United States were formed, in the national archives, as listed in Parker’s “Calendar of Papers in Washington” Archives Relating to the Territories of the United States (to 1873)”, being publication numbered 148 of the Carnegie Institution of Washington, together with such additional papers of like character which may be found.",
+      "order_index": 46
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 142",
+      "title": "Appointment of experts",
+      "text": "For the purpose of carrying on the work prescribed by section 141 of this title, the Archivist, without regard to the Classification Act of 1949 and the civil service laws and regulations thereunder, may engage the services, either in or outside of the District of Columbia, of not to exceed five historical experts who are especially informed on the various phases of the territorial history of the United States and are especially qualified for the editorial work necessary in arranging such territorial papers for publication.",
+      "order_index": 47
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 143",
+      "title": "Employment and utilization of other personnel; cost of copy reading and indexing",
+      "text": "(a) In carrying out his functions under this chapter, the Archivist may employ such clerical assistants as may be necessary.\n\n(b) The work of copy reading and index making for the publication of the papers described in section 141 of this title shall be done by the regular editorial staff of the National Archives and Records Administration, and the cost of this particular phase of the work (prorated each month according to the number of hours spent and the annual salaries of the clerks employed) shall be charged against the annual appropriations made under section 146 of this title.",
+      "order_index": 48
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 144",
+      "title": "Cooperation of departments and agencies",
+      "text": "The heads of the several executive departments and independent agencies and establishments shall cooperate with the Archivist in the work prescribed by section 141 of this title by permitting access to any records deemed by him to be necessary to the completion of such work.",
+      "order_index": 49
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 145",
+      "title": "Printing and distribution",
+      "text": "(a) The Public Printer shall print and bind each volume of the official papers relating to the Territories of the United States as provided for in this chapter, of which—(1) four hundred and twenty copies shall be delivered to the Superintendent of Documents, Government Printing Office, for distribution, on the basis of one copy each, and as directed by the Archivist, to those historical associations, commissions, museums, or libraries and other nondepository libraries, not to exceed eight in number within each State, Territory, or Possession, which have been or may be designated by the Governor thereof to receive such copies;\n\n(2) one hundred copies shall be delivered to the National Archives and Records Administration for the use of that Administration; and\n\n(3) one hundred copies shall be delivered to the Superintendent of Documents for distribution in such manner and number as may be authorized and directed by the Joint Committee on Printing.\n\n(b) The historical associations, commissions, museums, or libraries and other nondepository libraries within each State, Territory, or Possession which have been or may be designated by the Governor thereof to receive the publications referred to in subsection (a) of this section, shall, during their existence, receive the succeeding volumes, the distribution of which shall be made by the Superintendent of Documents in accordance with lists of designations transmitted to him by the Archivist. A new designation may be made to the Archivist by the Governor only when a designated association, commission, museum, or library shall cease to exist, or when authorized by law.",
+      "order_index": 50
+    },
+    {
+      "document_index": 0,
+      "jurisdiction": "US-FED",
+      "section_number": "§ 146",
+      "title": "Authorization of appropriations",
+      "text": "For the purposes of this chapter, there are authorized to be appropriated, out of any money in the Treasury not otherwise appropriated, sums of not more than $50,000 for any one fiscal year.",
+      "order_index": 51
+    }
+  ]
+}
