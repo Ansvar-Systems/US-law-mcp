@@ -1,19 +1,19 @@
 # US Law MCP Server
 
-**The US Code alternative for the AI age.**
+**The eCFR and US Code alternative for the AI age.**
 
-[![CI](https://github.com/Ansvar-Systems/US-law-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/Ansvar-Systems/US-law-mcp/actions/workflows/ci.yml)
-[![Daily Data Check](https://github.com/Ansvar-Systems/US-law-mcp/actions/workflows/check-updates.yml/badge.svg)](https://github.com/Ansvar-Systems/US-law-mcp/actions/workflows/check-updates.yml)
 [![npm version](https://badge.fury.io/js/@ansvar%2Fus-law-mcp.svg)](https://www.npmjs.com/package/@ansvar/us-law-mcp)
 [![MCP Registry](https://img.shields.io/badge/MCP-Registry-blue)](https://registry.modelcontextprotocol.io)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![GitHub stars](https://img.shields.io/github/stars/Ansvar-Systems/US-law-mcp?style=social)](https://github.com/Ansvar-Systems/US-law-mcp)
-[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Ansvar-Systems/US-law-mcp/badge)](https://scorecard.dev/viewer/?uri=github.com/Ansvar-Systems/US-law-mcp)
-[![Provisions](https://img.shields.io/badge/provisions-484-blue)](#whats-included)
+[![CI](https://github.com/Ansvar-Systems/US-law-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/Ansvar-Systems/US-law-mcp/actions/workflows/ci.yml)
+[![Daily Data Check](https://github.com/Ansvar-Systems/US-law-mcp/actions/workflows/check-updates.yml/badge.svg)](https://github.com/Ansvar-Systems/US-law-mcp/actions/workflows/check-updates.yml)
+[![Database](https://img.shields.io/badge/database-pre--built-green)](docs/INTERNATIONAL_ALIGNMENT.md)
+[![Provisions](https://img.shields.io/badge/provisions-46%2C646-blue)](docs/INTERNATIONAL_ALIGNMENT.md)
 
-Query **93 US federal and state statutes** across **all 50 states + DC + key US territories** -- from CFAA and HIPAA to California's CCPA/CPRA, New York's SHIELD Act, and Texas TDPSA -- directly from Claude, Cursor, or any MCP-compatible client.
+Query **130 curated US federal statutes and regulations** -- from HIPAA and CCPA to SOX, GLBA, FERPA, COPPA, FISMA, and more -- directly from Claude, Cursor, or any MCP-compatible client.
 
-If you're building legal tech, compliance tools, or doing US cybersecurity/privacy research, this is your verified reference database.
+If you're building legal tech, compliance tools, or doing US federal compliance research, this is your verified reference database.
 
 Built by [Ansvar Systems](https://ansvar.eu) -- Stockholm, Sweden
 
@@ -21,15 +21,18 @@ Built by [Ansvar Systems](https://ansvar.eu) -- Stockholm, Sweden
 
 ## Why This Exists
 
-US cybersecurity and privacy law is fragmented across 50+ jurisdictions. Whether you're:
-- A **compliance officer** comparing breach notification timelines across states
-- A **privacy engineer** checking which states require encryption of personal data
-- A **legal tech developer** building multi-state compliance tools
-- A **CISO** mapping state requirements to your incident response plan
+US compliance research means navigating eCFR (ecfr.gov), uscode.house.gov, and agency guidance across dozens of federal departments, reconciling statutes with implementing regulations, and manually checking for amendments in the Federal Register. Whether you're:
 
-...you shouldn't need to navigate dozens of state legislature websites and manually cross-reference PDFs. Ask Claude. Get the exact provision. Compare across states.
+- A **compliance officer** checking HIPAA obligations, CCPA requirements, or SOX controls
+- A **lawyer** validating citations in a brief or contract
+- A **legal tech developer** building tools on US federal compliance law
+- A **researcher** mapping US regulatory requirements against international frameworks
 
-This MCP server makes US cybersecurity, privacy, and breach notification law **searchable, comparable, and AI-readable**.
+...you shouldn't need dozens of browser tabs and manual cross-referencing. Ask Claude. Get the exact provision. With context.
+
+This MCP server makes US federal compliance law **searchable, cross-referenceable, and AI-readable**.
+
+> **Coverage note:** The database covers 130 curated statutes and regulations -- a compliance-focused subset of US federal law, not the complete US Code. The selection prioritises data protection, cybersecurity, financial regulation, healthcare, and cross-border compliance topics most relevant for enterprise compliance work.
 
 ---
 
@@ -109,20 +112,20 @@ npx @ansvar/us-law-mcp
 }
 ```
 
----
-
 ## Example Queries
 
 Once connected, just ask naturally:
 
-- *"What does 18 U.S.C. § 1030 say about protected computers?"*
-- *"Compare breach notification timelines across California, New York, and Texas"*
-- *"What are Florida's breach notification requirements?"*
-- *"Is HIPAA currently in force?"*
-- *"Find provisions about encryption of personal information"*
-- *"What privacy rights does California's CCPA/CPRA grant?"*
-- *"Validate the citation CFAA"*
-- *"Which states require notification within 30 days of a breach?"*
+- *"What does HIPAA say about protected health information (PHI) in § 164.514?"*
+- *"Find CCPA provisions about consumer rights to opt out of sale of personal information"*
+- *"What are the breach notification requirements under HIPAA?"*
+- *"Is GLBA Section 501 still in force?"*
+- *"What does FERPA say about student records and third-party disclosure?"*
+- *"Search for cybersecurity requirements across US federal statutes"*
+- *"What does FISMA require for federal information systems?"*
+- *"Build a legal stance on data breach notification under US federal law"*
+- *"Search for GDPR-equivalent requirements in US law: consent, purpose limitation, data subject rights"*
+- *"Find COPPA provisions about children's online privacy"*
 
 ---
 
@@ -130,68 +133,144 @@ Once connected, just ask naturally:
 
 | Category | Count | Details |
 |----------|-------|---------|
-| **Federal Statutes** | 15 laws | CFAA, HIPAA, ECPA, GLBA, COPPA, FISMA, CISA, FTC Act, and more |
-| **State Statutes** | 78 laws | All 50 states + DC + Guam/Puerto Rico/US Virgin Islands: breach notification, privacy, cybersecurity |
-| **Provisions** | 484 sections | Full-text searchable with FTS5 |
-| **State Requirements** | 145 classified | Breach notification, privacy rights, cybersecurity obligations |
-| **Requirement Categories** | 20 types | Timeline, scope, penalties, rights, obligations |
-| **Jurisdictions** | 55 | Federal + 50 states + DC + Guam/Puerto Rico/US Virgin Islands |
-| **Database Size** | ~3 MB | Optimized SQLite, portable |
-| **Weekly Updates** | Automated | Freshness checks against uscode.house.gov |
+| **Statutes & Regulations** | 130 instruments | Curated US federal compliance law |
+| **Provisions** | 46,646 sections | Full-text searchable with FTS5 |
+| **Preparatory Works** | 993,700 documents | Congressional records and Federal Register (Premium) |
+| **Database Size** | ~184 MB | Optimized SQLite, portable |
+| **Daily Updates** | Automated | Freshness checks against eCFR and US Code |
 
-**No LLM-generated statute text** -- provisions are fetched from published legal sources and stored verbatim for retrieval/search.
+### Key Laws and Regulations Included
+
+| Law / Regulation | Coverage |
+|-----------------|---------|
+| HIPAA (45 CFR Parts 160-164) | Privacy Rule, Security Rule, Breach Notification |
+| CCPA / CPRA | California Consumer Privacy Act + amendments |
+| SOX (Sarbanes-Oxley) | Full text, Sections 302, 404, 906 |
+| GLBA (Gramm-Leach-Bliley) | Financial privacy, safeguards rule |
+| FERPA | Family Educational Rights and Privacy Act |
+| COPPA (16 CFR Part 312) | Children's Online Privacy Protection Rule |
+| FISMA | Federal Information Security Modernization Act |
+| FCRA | Fair Credit Reporting Act |
+| CAN-SPAM | Commercial electronic messaging |
+| ECPA | Electronic Communications Privacy Act |
+
+**Verified data only** -- every citation is validated against official sources (ecfr.gov, uscode.house.gov). Zero LLM-generated content.
 
 ---
 
-## Available Tools (8)
+## See It In Action
+
+### Why This Works
+
+**Verbatim Source Text (No LLM Processing):**
+- All statute text is ingested from eCFR (ecfr.gov) and US Code (uscode.house.gov) official sources
+- Provisions are returned **unchanged** from SQLite FTS5 database rows
+- Zero LLM summarization or paraphrasing -- the database contains regulation text, not AI interpretations
+
+**Smart Context Management:**
+- Search returns ranked provisions with BM25 scoring (safe for context)
+- Provision retrieval gives exact text by CFR citation or USC section
+- Cross-references help navigate without loading everything at once
+
+**Technical Architecture:**
+```
+eCFR API + US Code → Parse → SQLite → FTS5 snippet() → MCP response
+                       ↑                      ↑
+                Provision parser       Verbatim database query
+```
+
+### Traditional Research vs. This MCP
+
+| Traditional Approach | This MCP Server |
+|---------------------|-----------------|
+| Search eCFR by CFR part | Search by plain English: *"protected health information"* |
+| Navigate multi-section regulations manually | Get the exact provision with context |
+| Manual cross-referencing between statutes and CFR | `build_legal_stance` aggregates across sources |
+| "Is this regulation still in force?" → check manually | `check_currency` tool → answer in seconds |
+| Find EU/international counterparts → manual research | `get_eu_basis` → comparative mapping instantly |
+| No API, no integration | MCP protocol → AI-native |
+
+**Traditional:** Search eCFR → Navigate 45 CFR → Ctrl+F → Cross-reference with NIST guidance → Repeat
+
+**This MCP:** *"What are the HIPAA Security Rule requirements for access control, and how do they compare to ISO 27001?"* → Done.
+
+---
+
+## Available Tools (13)
+
+### Core Legal Research Tools (8)
 
 | Tool | Description |
 |------|-------------|
-| `search_legislation` | FTS5 search across all federal and state provisions with BM25 ranking |
-| `get_provision` | Retrieve specific provision by jurisdiction, law identifier, or section number |
-| `list_sources` | List all available jurisdictions with document and provision counts |
-| `compare_requirements` | Compare requirements across states by category and subcategory |
-| `get_state_requirements` | Get classified requirements for a specific state (breach notification, privacy rights, etc.) |
-| `validate_citation` | Validate a legal citation against the database (zero-hallucination check) |
-| `check_currency` | Check if a statute is currently in force, amended, repealed, or superseded |
-| `build_legal_stance` | Aggregate statute search + state requirements for comprehensive legal research |
+| `search_legislation` | FTS5 search on 46,646 provisions with BM25 ranking |
+| `get_provision` | Retrieve specific provision by CFR citation or USC section |
+| `validate_citation` | Validate citation against database (zero-hallucination check) |
+| `build_legal_stance` | Aggregate citations from statutes and regulations |
+| `format_citation` | Format citations per US legal conventions (full/short/pinpoint) |
+| `check_currency` | Check if statute or regulation is in force, amended, or superseded |
+| `list_sources` | List all available statutes with metadata and data provenance |
+| `about` | Server info, capabilities, dataset statistics, and coverage summary |
 
-### Cross-State Comparison
+### International & Comparative Law Tools (5)
 
-The killer feature. `compare_requirements` lets you instantly compare how different states handle the same legal requirement:
-
-```
-compare_requirements(category: "breach_notification", subcategory: "timeline", jurisdictions: ["US-CA", "US-NY", "US-TX"])
-```
-
-Returns structured data with notification deadlines, scope, and penalties for each state -- the kind of research that normally takes hours of manual cross-referencing.
+| Tool | Description |
+|------|-------------|
+| `get_eu_basis` | Get EU regulatory equivalents for a US statute (comparative, not adequacy) |
+| `get_us_implementations` | Find US laws aligning with a specific international framework |
+| `search_eu_implementations` | Search international documents with US alignment counts |
+| `get_provision_eu_basis` | Get international law references for a specific provision |
+| `validate_eu_compliance` | Check comparative alignment status against EU frameworks |
 
 ---
 
-## Jurisdictions
+## International & Comparative Law Alignment
 
-**55 jurisdictions**: US Federal + all 50 states + DC + Guam/Puerto Rico/US Virgin Islands
+The US has no EU adequacy decision under GDPR for general commercial data transfers (the EU-US Data Privacy Framework covers organisations self-certified under that framework only). However, the comparative law tools allow you to explore regulatory alignment across frameworks.
 
-`US-FED` `US-AL` `US-AK` `US-AZ` `US-AR` `US-CA` `US-CO` `US-CT` `US-DE` `US-DC` `US-FL` `US-GA` `US-GU` `US-HI` `US-ID` `US-IL` `US-IN` `US-IA` `US-KS` `US-KY` `US-LA` `US-ME` `US-MD` `US-MA` `US-MI` `US-MN` `US-MS` `US-MO` `US-MT` `US-NE` `US-NV` `US-NH` `US-NJ` `US-NM` `US-NY` `US-NC` `US-ND` `US-OH` `US-OK` `US-OR` `US-PA` `US-PR` `US-RI` `US-SC` `US-SD` `US-TN` `US-TX` `US-UT` `US-VT` `US-VA` `US-VI` `US-WA` `US-WV` `US-WI` `US-WY`
+### Key Comparative Mappings
+
+| US Law | EU Equivalent | Alignment Notes |
+|--------|--------------|-----------------|
+| HIPAA Privacy Rule | GDPR Article 9 (health data) | Similar sensitivity classification; different consent mechanisms |
+| CCPA / CPRA | GDPR (general) | Similar rights (access, deletion, portability); no global adequacy |
+| GLBA Safeguards Rule | GDPR Article 32 (security) | Comparable security controls framework |
+| CAN-SPAM | ePrivacy Directive | Opt-out vs. opt-in distinction is the primary difference |
+| COPPA | GDPR Article 8 (children) | US threshold 13, EU threshold 16 (varies by member state) |
+| FISMA NIST 800-53 | ISO 27001 / NIS2 | Extensive control overlap, different certification models |
+
+> **Note on state law:** US legal advice varies by state bar jurisdiction. This database covers federal law only. State-level privacy laws (CPRA, VCDPA, CPA, etc.) require state-specific counsel. CCPA/CPRA is included as it has broad cross-state applicability for organisations with California customers.
+
+> **Note on adequacy:** The EU-US Data Privacy Framework (DPF) is not legislation -- it is a self-certification scheme. This database covers the underlying US statutory frameworks, not DPF compliance procedures.
 
 ---
 
 ## Data Sources & Freshness
 
-All content is sourced from authoritative legal publications:
+All content is sourced from authoritative US legal databases:
 
-- **[US Code (USLM)](https://uscode.house.gov/)** -- Office of the Law Revision Counsel, official XML
-- **[State Legislative Portals](https://www.congress.gov/state-legislature-websites)** -- individual state legislature publications and state-source captures
+- **[eCFR - Electronic Code of Federal Regulations](https://www.ecfr.gov/)** -- Office of the Federal Register
+- **[US Code](https://uscode.house.gov/)** -- Office of the Law Revision Counsel
 
-### Automated Freshness Checks (Weekly)
+### Data Provenance
 
-A [weekly GitHub Actions workflow](.github/workflows/check-updates.yml) monitors US Code release points, refreshes federal data, rebuilds the database, runs tests, and opens a PR when changes are detected.
+| Field | Value |
+|-------|-------|
+| **Authority** | Office of the Federal Register / Law Revision Counsel |
+| **Retrieval method** | eCFR API + US Code XML |
+| **Language** | English |
+| **License** | US Government Works (public domain) |
+| **Coverage** | 130 federal statutes and regulations (curated) |
+| **Last ingested** | 2026-02-25 |
+
+### Automated Freshness Checks (Daily)
+
+A [daily GitHub Actions workflow](.github/workflows/check-updates.yml) monitors all data sources:
 
 | Source | Check | Method |
 |--------|-------|--------|
-| **US Code releases** | uscode.house.gov release points | Release-link digest change detection |
-| **Public laws** | congress.gov/public-laws | Manual review triggered |
-| **State amendments** | State legislature portals | Periodic manual review |
+| **CFR amendments** | eCFR API date comparison | All covered CFR parts checked |
+| **US Code updates** | US Code XML date comparison | Covered USC titles checked |
+| **New Federal Register rules** | FR API (30-day window) | Relevant agency dockets monitored |
 
 ---
 
@@ -204,8 +283,11 @@ This project uses multiple layers of automated security scanning:
 | **CodeQL** | Static analysis for security vulnerabilities | Weekly + PRs |
 | **Semgrep** | SAST scanning (OWASP top 10, secrets, TypeScript) | Every push |
 | **Gitleaks** | Secret detection across git history | Every push |
-| **Trivy** | CVE scanning on filesystem and npm dependencies | Weekly |
+| **Trivy** | CVE scanning on filesystem and npm dependencies | Daily |
+| **Docker Security** | Container image scanning + SBOM generation | Daily |
+| **Socket.dev** | Supply chain attack detection | PRs |
 | **OSSF Scorecard** | OpenSSF best practices scoring | Weekly |
+| **Dependabot** | Automated dependency updates | Weekly |
 
 See [SECURITY.md](SECURITY.md) for the full policy and vulnerability reporting.
 
@@ -217,11 +299,29 @@ See [SECURITY.md](SECURITY.md) for the full policy and vulnerability reporting.
 
 > **THIS TOOL IS NOT LEGAL ADVICE**
 >
-> Statute text is sourced from official/legal publications. However:
+> Statute and regulation text is sourced from official eCFR and US Code publications. However:
 > - This is a **research tool**, not a substitute for professional legal counsel
-> - **State law coverage focuses on cybersecurity, privacy, and breach notification** -- it does not cover all areas of law
-> - **Verify critical citations** against primary sources for court filings
-> - **State laws change frequently** -- always confirm currency against official state sources
+> - **Coverage is limited** to 130 curated statutes -- not all US federal law is included
+> - **State law is not included** -- US legal advice varies by state bar jurisdiction; consult state-qualified counsel
+> - **Court case coverage is not included** -- do not rely on this for case law research
+> - **Agency guidance** (FDA guidance documents, FTC staff reports, etc.) is in Premium tier only
+> - **Verify critical citations** against primary sources (ecfr.gov, uscode.house.gov) for filings
+> - **EU cross-references** reflect comparative alignment, not adequacy or legal equivalence
+
+**Before using professionally, read:** [DISCLAIMER.md](DISCLAIMER.md) | [PRIVACY.md](PRIVACY.md)
+
+### Client Confidentiality
+
+Queries go through the Claude API. For privileged or confidential matters, use on-premise deployment. See [PRIVACY.md](PRIVACY.md) for American Bar Association (ABA) compliance guidance.
+
+---
+
+## Documentation
+
+- **[International Alignment Guide](docs/INTERNATIONAL_ALIGNMENT.md)** -- EU-US comparative law documentation
+- **[Security Policy](SECURITY.md)** -- Vulnerability reporting and scanning details
+- **[Disclaimer](DISCLAIMER.md)** -- Legal disclaimers and professional use notices
+- **[Privacy](PRIVACY.md)** -- Client confidentiality and data handling
 
 ---
 
@@ -233,7 +333,6 @@ See [SECURITY.md](SECURITY.md) for the full policy and vulnerability reporting.
 git clone https://github.com/Ansvar-Systems/US-law-mcp
 cd US-law-mcp
 npm install
-npm run build:db && npm run ingest:all
 npm run build
 npm test
 ```
@@ -241,28 +340,27 @@ npm test
 ### Running Locally
 
 ```bash
-npm run dev                                       # Start MCP server (stdio)
+npm run dev                                       # Start MCP server
 npx @anthropic/mcp-inspector node dist/index.js   # Test with MCP Inspector
 ```
-
-### Environment Variables
-
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `US_LAW_DB_PATH` | `data/database.db` (relative to dist) | Custom path to the SQLite database file |
 
 ### Data Management
 
 ```bash
-npm run fetch:federal          # Fetch federal statutes from uscode.house.gov
-npm run fetch:states           # Fetch state statutes
-npm run build:db               # Rebuild SQLite database
-npm run ingest:all             # Ingest all seed data (federal + states + classify)
-npm run build:db:free          # Build free-tier database (no case law/regulatory guidance)
-npm test                       # Run unit tests
-npm run test:contract          # Run golden contract tests
-npm run validate               # Lint + test + contract tests
+npm run fetch:federal              # Fetch US Code from uscode.house.gov
+npm run fetch:federal:full         # Full US Code fetch
+npm run ingest:federal             # Ingest US Code statutes
+npm run build:db                   # Rebuild SQLite database
+npm run drift:detect               # Run drift detection
+npm run check-updates              # Check for amendments
+npm run check:updates              # Check eCFR for updated CFR parts
 ```
+
+### Performance
+
+- **Search Speed:** <100ms for most FTS5 queries
+- **Database Size:** ~184 MB (comprehensive compliance corpus)
+- **Reliability:** 100% ingestion success rate
 
 ---
 
@@ -273,27 +371,64 @@ This server is part of **Ansvar's Compliance Suite** -- MCP servers that work to
 ### [@ansvar/eu-regulations-mcp](https://github.com/Ansvar-Systems/EU_compliance_MCP)
 **Query 49 EU regulations directly from Claude** -- GDPR, AI Act, DORA, NIS2, MiFID II, eIDAS, and more. Full regulatory text with article-level search. `npx @ansvar/eu-regulations-mcp`
 
-### [@ansvar/us-regulations-mcp](https://github.com/Ansvar-Systems/US_Compliance_MCP)
-**Query US federal compliance frameworks** -- HIPAA, SOX, GLBA, FERPA, and more. `npx @ansvar/us-regulations-mcp`
+### @ansvar/us-law-mcp (This Project)
+**Query 130 US federal compliance statutes and regulations directly from Claude** -- HIPAA, CCPA, SOX, GLBA, FERPA, FISMA, and more. `npx @ansvar/us-law-mcp`
 
-### [@ansvar/swedish-law-mcp](https://github.com/Ansvar-Systems/swedish-law-mcp)
-**Query 717 Swedish statutes directly from Claude** -- DSL, BrB, ABL, MB, and more. Full provision text with EU cross-references. `npx @ansvar/swedish-law-mcp`
+### [@ansvar/security-controls-mcp](https://github.com/Ansvar-Systems/security-controls-mcp)
+**Query 261 security frameworks** -- ISO 27001, NIST CSF, NIST 800-53, SOC 2, CIS Controls, SCF, and more. `npx @ansvar/security-controls-mcp`
 
-### [@ansvar/automotive-cybersecurity-mcp](https://github.com/Ansvar-Systems/Automotive-MCP)
-**Query UNECE R155/R156 and ISO 21434** -- Automotive cybersecurity compliance. `npx @ansvar/automotive-cybersecurity-mcp`
+### [@ansvar/ot-security-mcp](https://github.com/Ansvar-Systems/ot-security-mcp)
+**Query IEC 62443, NIST 800-82/53, and MITRE ATT&CK for ICS** -- Specialized for OT/ICS environments. `npx @ansvar/ot-security-mcp`
 
 ### [@ansvar/sanctions-mcp](https://github.com/Ansvar-Systems/Sanctions-MCP)
 **Offline-capable sanctions screening** -- OFAC, EU, UN sanctions lists. `pip install ansvar-sanctions-mcp`
+
+**70+ national law MCPs** covering Austria, Belgium, Brazil, Canada, Denmark, Finland, France, Germany, India, Ireland, Italy, Japan, Netherlands, Norway, Portugal, Singapore, Slovenia, South Korea, Sweden, Switzerland, UK, and more.
 
 ---
 
 ## Contributing
 
-Contributions welcome! Priority areas:
-- Expanding state law coverage beyond cybersecurity/privacy
-- Adding case law references
-- Historical statute versions and amendment tracking
-- Regulatory guidance cross-references
+Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+Priority areas:
+- Coverage expansion (additional CFR parts and USC titles)
+- State privacy law coverage (VCDPA, CPA, CTDPA, etc.)
+- Agency guidance documents (FTC, HHS, SEC)
+- EU-US comparative law mapping expansion
+- Court decision coverage (SCOTUS, circuit courts)
+
+---
+
+## Roadmap
+
+- [x] Core statute database with FTS5 search
+- [x] Corpus ingestion (130 statutes, 46,646 provisions)
+- [x] International/comparative law alignment tools
+- [x] Vercel Streamable HTTP deployment
+- [x] npm package publication
+- [x] Daily freshness checks
+- [ ] Coverage expansion (additional CFR parts)
+- [ ] State privacy law coverage (VCDPA, CPA, CTDPA, MHMDA)
+- [ ] Agency guidance documents (FTC, HHS OCR, SEC)
+- [ ] Court decision coverage (SCOTUS, key circuit cases)
+- [ ] EU-US DPF compliance procedure documentation
+
+---
+
+## Citation
+
+If you use this MCP server in academic research:
+
+```bibtex
+@software{us_law_mcp_2026,
+  author = {Ansvar Systems AB},
+  title = {US Law MCP Server: Production-Grade Federal Compliance Research Tool},
+  year = {2026},
+  url = {https://github.com/Ansvar-Systems/US-law-mcp},
+  note = {130 US federal compliance statutes with 46,646 provisions including HIPAA, CCPA, SOX, GLBA, and FERPA}
+}
+```
 
 ---
 
@@ -303,16 +438,16 @@ Apache License 2.0. See [LICENSE](./LICENSE) for details.
 
 ### Data Licenses
 
-- **US Code:** Public domain (Office of the Law Revision Counsel)
-- **State Statutes:** Public domain (individual state legislatures)
+- **Statutes & Regulations:** US Government Works (public domain -- 17 U.S.C. § 105)
+- **EU Metadata:** EUR-Lex (EU public domain)
 
 ---
 
 ## About Ansvar Systems
 
-We build AI-accelerated compliance and legal research tools. This MCP server started because comparing breach notification requirements across 50 states shouldn't require a week of manual research.
+We build AI-accelerated compliance and legal research tools for the global market. This MCP server helps organisations navigate US federal compliance law -- whether you're a US-headquartered company handling EU data transfers, or a European company entering the US market.
 
-So we're open-sourcing it. Multi-state compliance shouldn't be this hard.
+So we're open-sourcing it. Navigating 46,646 provisions across HIPAA, SOX, GLBA, and FERPA shouldn't require a JD from every state bar.
 
 **[ansvar.eu](https://ansvar.eu)** -- Stockholm, Sweden
 
