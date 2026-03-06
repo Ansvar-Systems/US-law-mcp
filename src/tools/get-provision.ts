@@ -6,6 +6,7 @@ export interface GetProvisionInput {
   law_identifier?: string;
   short_name?: string;
   section_number?: string;
+  article?: string;
   jurisdiction: string;
 }
 
@@ -107,7 +108,8 @@ export async function getProvision(
   db: Database,
   input: GetProvisionInput,
 ): Promise<GetProvisionResponse> {
-  const { jurisdiction, section_number } = input;
+  const { jurisdiction } = input;
+  const section_number = input.section_number ?? input.article;
   validateJurisdiction(jurisdiction, true);
 
   if (!input.law_identifier && !input.short_name) {
