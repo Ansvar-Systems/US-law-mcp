@@ -61,9 +61,9 @@
     {
       "id": "us-008",
       "category": "negative_test",
-      "description": "Non-existent jurisdiction US-ZZ returns empty",
+      "description": "Search for nonsensical term returns empty results",
       "tool": "search_legislation",
-      "input": { "query": "breach notification", "jurisdiction": "US-ZZ" },
+      "input": { "query": "xylophonezzznonexistent", "jurisdiction": "US-FED" },
       "assertions": { "result_empty": true }
     },
     {
@@ -101,6 +101,30 @@
       "tool": "check_currency",
       "input": { "jurisdiction": "US-FED", "short_name": "NONEXISTENT" },
       "assertions": { "field_equals": { "status": "not_found", "is_current": false } }
+    },
+    {
+      "id": "us-013",
+      "category": "cross_state_comparison",
+      "description": "Montana MTCDPA privacy_rights should now be indexed (was MCDPA mismatch)",
+      "tool": "get_state_requirements",
+      "input": { "jurisdiction": "US-MT", "category": "privacy_rights" },
+      "assertions": { "result_not_empty": true, "min_results": 2 }
+    },
+    {
+      "id": "us-014",
+      "category": "cross_state_comparison",
+      "description": "New Hampshire NHPA privacy_rights should now be indexed (was NHDPA mismatch)",
+      "tool": "get_state_requirements",
+      "input": { "jurisdiction": "US-NH", "category": "privacy_rights" },
+      "assertions": { "result_not_empty": true, "min_results": 2 }
+    },
+    {
+      "id": "us-015",
+      "category": "build_legal_stance",
+      "description": "Build legal stance for breach notification returns results from multiple sources",
+      "tool": "build_legal_stance",
+      "input": { "query": "breach notification" },
+      "assertions": { "result_not_empty": true }
     }
   ]
 }

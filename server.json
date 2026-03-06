@@ -7,7 +7,7 @@
     "source": "github"
   },
   "homepage": "https://ansvar.eu",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "Apache-2.0",
   "keywords": [
     "us-law",
@@ -25,10 +25,16 @@
     {
       "registryType": "npm",
       "identifier": "@ansvar/us-law-mcp",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "transport": {
         "type": "stdio"
       }
+    }
+  ],
+  "remotes": [
+    {
+      "url": "https://us-law-mcp.vercel.app/mcp",
+      "type": "streamable-http"
     }
   ]
 }

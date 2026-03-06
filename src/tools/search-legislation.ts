@@ -1,6 +1,7 @@
 import type { Database } from '@ansvar/mcp-sqlite';
 import { buildFtsQueryVariants } from '../utils/fts-query.js';
 import { generateResponseMetadata, type ToolResponse } from '../utils/metadata.js';
+import { validateJurisdiction, validateNonEmptyString } from '../utils/validate.js';
 
 export interface SearchLegislationInput {
   query: string;
@@ -65,7 +66,9 @@ export async function searchLegislation(
   db: Database,
   input: SearchLegislationInput,
 ): Promise<ToolResponse<SearchLegislationResult[]>> {
-  const { query, jurisdiction } = input;
+  const query = validateNonEmptyString(input.query, 'query');
+  const { jurisdiction } = input;
+  validateJurisdiction(jurisdiction, false);
   const limit = clampLimit(input.limit);
 
   const variants = buildFtsQueryVariants(query);

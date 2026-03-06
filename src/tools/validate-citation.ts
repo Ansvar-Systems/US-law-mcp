@@ -1,5 +1,6 @@
 import type { Database } from '@ansvar/mcp-sqlite';
 import { generateResponseMetadata, type ToolResponse } from '../utils/metadata.js';
+import { validateJurisdiction, validateNonEmptyString } from '../utils/validate.js';
 
 export interface ValidateCitationInput {
   citation: string;
@@ -9,6 +10,7 @@ export interface ValidateCitationInput {
 export interface ValidateCitationResult {
   valid: boolean;
   citation: string;
+  match_quality: 'section_exact' | 'section_fuzzy' | 'document_only' | 'none';
   matched_document: {
     jurisdiction: string;
     title: string;
@@ -27,6 +29,8 @@ export async function validateCitation(
   input: ValidateCitationInput,
 ): Promise<ToolResponse<ValidateCitationResult>> {
   const { citation, jurisdiction } = input;
+  validateNonEmptyString(citation, 'citation');
+  validateJurisdiction(jurisdiction, false);
   const trimmed = citation.trim();
 
   // Try matching against document identifier, short_name, or provision section_number
@@ -51,7 +55,7 @@ export async function validateCitation(
 
   if (!docRow) {
     return {
-      results: { valid: false, citation: trimmed, matched_document: null, matched_provision: null },
+      results: { valid: false, citation: trimmed, match_quality: 'none', matched_document: null, matched_provision: null },
       _metadata: generateResponseMetadata(db),
     };
   }
@@ -59,6 +63,7 @@ export async function validateCitation(
   // Try to match a provision section_number within the matched document
   // Strategy 1: direct LIKE match on citation
   let provRow: { section_number: string | null; title: string | null } | undefined;
+  let matchQuality: 'section_exact' | 'section_fuzzy' | 'document_only' = 'document_only';
   const provBaseSql = `
     SELECT p.section_number, p.title
     FROM legal_provisions AS p
@@ -71,6 +76,7 @@ export async function validateCitation(
   provRow = db.prepare(provBaseSql + ` AND p.section_number LIKE ? ESCAPE '\\' LIMIT 1`).get(
     docId, docShort, likePattern,
   ) as typeof provRow;
+  if (provRow) matchQuality = 'section_exact';
 
   // Strategy 2: extract section number from citation (e.g. "18 USC 1030" → "%1030%")
   if (!provRow) {
@@ -80,10 +86,12 @@ export async function validateCitation(
       provRow = db.prepare(provBaseSql + ` AND p.section_number LIKE ? ESCAPE '\\' LIMIT 1`).get(
         docId, docShort, `%${sectionRef}%`,
       ) as typeof provRow;
+      if (provRow) matchQuality = 'section_fuzzy';
     }
   }
 
   // Strategy 3: return first provision of the matched document as fallback
+  // match_quality remains 'document_only' — the provision is representative, not an exact match
   if (!provRow) {
     provRow = db.prepare(provBaseSql + ` ORDER BY p.order_index LIMIT 1`).get(
       docId, docShort,
@@ -94,6 +102,7 @@ export async function validateCitation(
     results: {
       valid: true,
       citation: trimmed,
+      match_quality: matchQuality,
       matched_document: {
         jurisdiction: docRow.jurisdiction,
         title: docRow.title,
