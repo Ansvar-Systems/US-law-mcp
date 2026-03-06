@@ -74,6 +74,10 @@ export async function buildLegalStance(
     };
   }
 
+  // Fetch extra rows to account for deduplication
+  const fetchLimit = limit * 2;
+  let queryStrategy: string | undefined;
+
   // 1. Search statutes via FTS
   const ftsConditions: string[] = ['provisions_fts MATCH ?'];
   const ftsParams: (string | number)[] = [variants.primary];
@@ -100,14 +104,22 @@ export async function buildLegalStance(
     ORDER BY bm25(provisions_fts)
     LIMIT ?
   `;
-  ftsParams.push(limit);
+  ftsParams.push(fetchLimit);
 
   let statuteMatches = db.prepare(ftsSql).all(...ftsParams) as StatuteMatch[];
 
-  // Fallback to OR query
-  if (statuteMatches.length === 0 && variants.fallback) {
+  if (statuteMatches.length > 0) {
+    statuteMatches = deduplicateStatuteMatches(statuteMatches, limit);
+  } else if (variants.fallback) {
+    // Fallback to OR query
     ftsParams[0] = variants.fallback;
-    statuteMatches = db.prepare(ftsSql).all(...ftsParams) as StatuteMatch[];
+    statuteMatches = deduplicateStatuteMatches(
+      db.prepare(ftsSql).all(...ftsParams) as StatuteMatch[],
+      limit,
+    );
+    if (statuteMatches.length > 0) {
+      queryStrategy = 'broadened';
+    }
   }
 
   // 2. Search requirements via LIKE on summary_text
@@ -187,6 +199,30 @@ export async function buildLegalStance(
       jurisdictions_covered: [...allJurisdictions].sort(),
       total_results: statuteMatches.length + requirementMatches.length,
     },
-    _metadata: generateResponseMetadata(db),
+    _metadata: {
+      ...generateResponseMetadata(db),
+      ...(queryStrategy ? { query_strategy: queryStrategy } : {}),
+    },
   };
+}
+
+/**
+ * Deduplicate statute matches by document_title + section_number.
+ * Duplicate document IDs (numeric vs slug) cause the same provision to appear twice.
+ * Keeps the first (highest-ranked) occurrence.
+ */
+function deduplicateStatuteMatches(
+  rows: StatuteMatch[],
+  limit: number,
+): StatuteMatch[] {
+  const seen = new Set<string>();
+  const deduped: StatuteMatch[] = [];
+  for (const row of rows) {
+    const key = `${row.document_title}::${row.section_number}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    deduped.push(row);
+    if (deduped.length >= limit) break;
+  }
+  return deduped;
 }
