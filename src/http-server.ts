@@ -116,7 +116,7 @@ async function main() {
     console.log('Shutting down...');
     for (const [, t] of sessions) t.close().catch(() => {});
     sessions.clear();
-    try { db.close(); } catch {}
+    try { db.close(); } catch { /* ignore */ }
     httpServer.close(() => process.exit(0));
     setTimeout(() => process.exit(1), 5000);
   };
