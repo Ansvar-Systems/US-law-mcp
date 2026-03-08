@@ -9,3 +9,8 @@ data/database.db
 .vercel/
 .env
 .vercel
+coverage/
+data/*.db
+data/*.db.gz
+.claude/
+.serena/

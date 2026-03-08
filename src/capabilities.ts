@@ -15,9 +15,7 @@ import type Database from '@ansvar/mcp-sqlite';
 export type Capability =
   | 'core_legislation'
   | 'state_requirements'
-  | 'requirement_categories'
-  | 'case_law'
-  | 'regulatory_guidance';
+  | 'requirement_categories';
 
 export type Tier = 'free' | 'professional' | 'unknown';
 
@@ -36,14 +34,11 @@ const CAPABILITY_TABLES: Record<Capability, string> = {
   core_legislation: 'legal_provisions',
   state_requirements: 'state_requirements',
   requirement_categories: 'requirement_categories',
-  case_law: 'case_law',
-  regulatory_guidance: 'regulatory_guidance',
 };
 
-const PROFESSIONAL_CAPABILITIES: Capability[] = [
-  'case_law',
-  'regulatory_guidance',
-];
+// Future professional-tier capabilities (case_law, regulatory_guidance)
+// will be added here when the corresponding tools are implemented.
+const PROFESSIONAL_CAPABILITIES: Capability[] = [];
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Detection

@@ -1,12 +1,13 @@
-const EXPLICIT_FTS_SYNTAX_PATTERN = /["*():^]|\bAND\b|\bOR\b|\bNOT\b/iu;
+const EXPLICIT_FTS_SYNTAX_PATTERN = /["():^]|\bAND\b|\bOR\b|\bNOT\b/iu;
 
 function sanitizeToken(token: string): string {
-  return token.replace(/[^\p{L}\p{N}_]/gu, '');
+  return token.replace(/[^\p{L}\p{N}_*]/gu, '');
 }
 
 function extractTokens(query: string): string[] {
-  const matches = query.normalize('NFC').match(/[\p{L}\p{N}_]+/gu) ?? [];
-  return matches.map(sanitizeToken).filter(token => token.length > 1);
+  // Capture word chars and trailing * (FTS5 prefix search)
+  const matches = query.normalize('NFC').match(/[\p{L}\p{N}_]+\*?/gu) ?? [];
+  return matches.map(sanitizeToken).filter(token => token.replace(/\*/g, '').length > 1);
 }
 
 function escapeExplicitQuery(query: string): string {
@@ -14,11 +15,11 @@ function escapeExplicitQuery(query: string): string {
 }
 
 function buildPrefixAndQuery(tokens: string[]): string {
-  return tokens.map(token => `${token}*`).join(' ');
+  return tokens.map(token => token.endsWith('*') ? token : `${token}*`).join(' ');
 }
 
 function buildPrefixOrQuery(tokens: string[]): string {
-  return tokens.map(token => `${token}*`).join(' OR ');
+  return tokens.map(token => token.endsWith('*') ? token : `${token}*`).join(' OR ');
 }
 
 export interface FtsQueryVariants {

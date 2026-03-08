@@ -82,7 +82,7 @@ function getDatabase(): Database {
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, mcp-session-id');
   res.setHeader('Access-Control-Expose-Headers', 'mcp-session-id');
 
@@ -102,7 +102,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   try {
     if (!existsSync(SOURCE_DB)) {
-      res.status(500).json({ error: `Database not found at ${SOURCE_DB}` });
+      res.status(500).json({
+        jsonrpc: '2.0',
+        error: { code: -32603, message: `Database not found at ${SOURCE_DB}` },
+        id: null,
+      });
       return;
     }
 
@@ -126,7 +130,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const message = err instanceof Error ? err.message : String(err);
     console.error('MCP handler error:', message);
     if (!res.headersSent) {
-      res.status(500).json({ error: message });
+      res.status(500).json({
+        jsonrpc: '2.0',
+        error: { code: -32603, message },
+        id: null,
+      });
     }
   }
 }
